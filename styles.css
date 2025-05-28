@@ -1,0 +1,729 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+.header {
+    padding: 1rem 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+.footer-logo {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    color: #f97316; /* naranja */
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo span {
+    display: block;
+    font-size: 1.25rem;
+}
+
+.social-icons {
+    color: #f97316;
+    font-size: 0.875rem;
+}
+
+.donate-button {
+    border: 2px solid #f97316;
+    color: #f97316;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    background: none;
+    cursor: pointer;
+}
+
+.quote {
+    color: #dc2626; /* rojo */
+    font-style: italic;
+}
+
+/* Navegación */
+.nav {
+    background-color: hwb(32 4% 13%);
+    padding: 0.75rem 0;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-link {
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    border: 2px solid #faf5f2;
+    background-color: hwb(32 4% 13%);
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f97316;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #f97316;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Secciones principales */
+.section {
+    border-top: 2px solid #f97316;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#quienes-somos .section-title {
+    margin-bottom: 1.5rem;
+}
+
+#quienes-somos p {
+    margin-bottom: 1rem;
+}
+
+#quienes-somos ul {
+    margin-bottom: 1rem;
+    padding-left: 1.2rem;
+}
+
+#quienes-somos .list-decimal li {
+    margin-bottom: 0.5rem;
+}
+
+#quienes-somos .quote {
+    color: #f97316;
+    font-style: italic;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+#quienes-somos .image-placeholder {
+    align-self: start;
+    min-height: 250px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+    #quienes-somos.grid-2 {
+        align-items: start;
+    }
+}
+
+#quienes-somos .quote {
+    color: #f97316;
+    font-style: italic;
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+#quienes-somos .contacto-info {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    #quienes-somos .quote {
+        grid-column: 1 / 2;
+        text-align: left;
+    }
+}
+
+.image-placeholder {
+    border: 2px solid #f97316;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    color: #f97316;
+}
+
+.modal-cookies {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.modal-contenido {
+    background-color: #333; /* Fondo oscuro para contrastar con texto claro */
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    animation: modalAppear 0.3s ease-out;
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#modal-cookies .modal-contenido h3,
+#modal-cookies .modal-contenido p,
+#modal-cookies .modal-contenido ol,
+#modal-cookies .modal-contenido li,
+#modal-cookies .modal-contenido strong {
+    color: #fffff1;
+}
+
+/* Asegurarnos de que los enlaces dentro del modal también tengan el color claro si es necesario */
+#modal-cookies .modal-contenido a {
+     color: #fffff1;
+     text-decoration: underline;
+}
+
+#modal-cookies .modal-contenido a:hover {
+    color: #cccccc; /* Un gris más claro al pasar el mouse */
+}
+
+.modal-botones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn-aceptar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-rechazar {
+    background-color: #f44336;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-aceptar:hover {
+    background-color: #45a049;
+}
+
+.btn-rechazar:hover {
+    background-color: #da190b;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    color: #f97316;
+    margin-bottom: 1rem;
+}
+
+.programas-grid, .novedades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contacto-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contacto-info {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contacto-info h3 {
+    color: #f97316;
+    margin-bottom: 1rem;
+}
+
+.contacto-form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #f97316;
+    box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.1);
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.btn-enviar {
+    background-color: #f97316;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #ea580c;
+}
+
+@media (min-width: 768px) {
+    .contacto-container {
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    .contacto-info {
+        text-align: left;
+        margin-bottom: 0;
+    }
+}
+
+/* Footer */
+.footer {
+    border-top: 2px solid #f97316;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    text-align: center;
+    color: #4b5563;
+    font-size: 0.875rem;
+    background-color: hwb(32 4% 13%);
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .container > img {
+    margin-bottom: 1rem;
+}
+
+.footer .container > p {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.footer .social-icons {
+    align-self: flex-end;
+    margin-bottom: 1rem;
+}
+
+.footer .social-icons a {
+    color: #f97316 !important;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.footer .social-icons a:hover {
+    color: #ea580c !important;
+    transform: scale(1.1);
+}
+
+.footer .social-icons a i {
+    transition: transform 0.3s ease;
+}
+
+.footer .social-icons a:hover i {
+    transform: translateY(-3px);
+}
+
+.footer-link {
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.footer-link:hover {
+    color: #f97316;
+    background-color: #ffffff;
+    text-shadow: none;
+    text-decoration: none !important;
+}
+
+/* Estilos para contenido de secciones reincorporadas */
+#vision-mision-objetivos p,
+#nuestro-equipo p,
+#programas p,
+#novedades p {
+    color: #4b5563; /* Color de texto gris por defecto, como en otras partes */
+    margin-bottom: 1rem;
+}
+
+#vision-mision-objetivos .section-title,
+#nuestro-equipo .section-title,
+#programas .section-title,
+#novedades .section-title {
+    color: #f97316; /* Color naranja primario para títulos */
+    margin-bottom: 1.5rem; /* Espacio debajo del título */
+}
+
+/* Si en el futuro hay listas en estas secciones */
+#vision-mision-objetivos ul,
+#nuestro-equipo ul,
+#programas ul,
+#novedades ul {
+    margin-bottom: 1rem;
+    padding-left: 1.2rem;
+    color: #4b5563; /* Color de texto gris por defecto para listas */
+}
+
+#vision-mision-objetivos ul li,
+#nuestro-equipo ul li,
+#programas ul li,
+#novedades ul li {
+     margin-bottom: 0.5rem;
+     color: #4b5563; /* Color de texto gris por defecto para items de lista */
+}
+
+/* Ajuste de alineación para títulos de secciones específicas */
+#vision-mision-objetivos .section-title,
+#nuestro-equipo .section-title {
+    text-align: left !important; /* Alinea estos títulos a la izquierda */
+}
+
+/* Aseguramos que los títulos de todas las secciones sigan siendo naranjas */
+.section-title {
+    color: #f97316;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center; /* La alineación central por defecto para otros títulos */
+    margin-bottom: 3rem;
+}
+
+/* Ajustes para títulos de sección específicos si se sobrescriben */
+/* Estos estilos se mantienen con alineación central si no se sobrescriben */
+#quienes-somos .section-title,
+#programas .section-title,
+#novedades .section-title,
+#contacto .section-title {
+    color: #f97316;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Estilos para la sección Programas */
+#programas .section-title {
+    color: #f97316;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.programa-sub-section {
+    margin-bottom: 4rem;
+}
+
+/* Estilos para CRUXES RSE */
+.programa-sub-section.cruxes-rse .programa-title,
+.programa-sub-section.cruxes-rse .programa-quote,
+.programa-sub-section.cruxes-rse .programa-subtitle,
+.programa-sub-section.cruxes-rse .programa-item h4,
+.programa-sub-section.cruxes-rse .programa-item p,
+.programa-sub-section.cruxes-rse .programa-item ul li {
+    color: #d93025; /* Bermellón */
+}
+
+.programa-sub-section.cruxes-rse .programa-title {
+    border-color: #d93025;
+}
+
+.programa-sub-section.cruxes-rse .programa-item {
+    border-color: #d93025;
+}
+
+/* Estilos para CRUXES SOLIDARIAS */
+.programa-sub-section.cruxes-solidarias .programa-title,
+.programa-sub-section.cruxes-solidarias .programa-quote,
+.programa-sub-section.cruxes-solidarias .programa-subtitle,
+.programa-sub-section.cruxes-solidarias .programa-item h4,
+.programa-sub-section.cruxes-solidarias .programa-item p,
+.programa-sub-section.cruxes-solidarias .programa-item ul li {
+    color: #f97316; /* Naranja Primario */
+}
+
+.programa-sub-section.cruxes-solidarias .programa-title {
+    border-color: #f97316;
+}
+
+.programa-sub-section.cruxes-solidarias .programa-item {
+    border-color: #f97316;
+}
+
+/* Estilos para CRUXES DE LUZ */
+.programa-sub-section.cruxes-de-luz .programa-title,
+.programa-sub-section.cruxes-de-luz .programa-quote,
+.programa-sub-section.cruxes-de-luz .programa-subtitle,
+.programa-sub-section.cruxes-de-luz .programa-item h4,
+.programa-sub-section.cruxes-de-luz .programa-item p,
+.programa-sub-section.cruxes-de-luz .programa-item ul li {
+    color: #ffeb3b; /* Amarillo */
+}
+
+.programa-sub-section.cruxes-de-luz .programa-title {
+    border-color: #ffeb3b;
+}
+
+.programa-sub-section.cruxes-de-luz .programa-item {
+    border-color: #ffeb3b;
+}
+
+.programa-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.programa-quote {
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.programa-subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.programas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.programa-item {
+    border: 2px solid;
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.programa-item h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.programa-item p,
+.programa-item ul {
+    color: #4b5563; /* Color de texto gris por defecto para el contenido que no sea título/quote */
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.programa-item ul {
+    padding-left: 1.2rem;
+}
+
+.programa-item ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para la sección Novedades */
+#novedades .section-title {
+    color: #f97316;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.novedades-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Grid responsive para los ítems */
+    gap: 2rem; /* Espacio entre los ítems */
+}
+
+.novedad-item {
+    border: 2px solid #f97316; /* Borde naranja alrededor de cada ítem */
+    padding: 1.5rem; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el espacio verticalmente */
+}
+
+.novedad-item h4 {
+    color: #f97316; /* Título de cada ítem */
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center; /* Centrar títulos */
+}
+
+.novedad-item p {
+    color: #4b5563; /* Color de texto gris para el contenido */
+    margin-bottom: 1rem;
+    flex-grow: 1; /* Para que el contenido ocupe el espacio disponible */
+}
+
+/* Estilo específico para las flechas placeholder */
+.novedad-item p[style="text-align: right;"] {
+    color: #f97316;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: auto; /* Empuja la flecha hacia abajo */
+    margin-bottom: 0;
+}
+  
+  
