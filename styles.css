@@ -116,7 +116,7 @@ body {
 }
 
 .nav-link.active {
-    color: #f97316;
+    color: black;
 }
 
 .nav-link.active::after {
