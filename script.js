@@ -1,48 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const modal = document.getElementById('modal-cookies');
-  const verPoliticaBtn = document.getElementById('ver-politica');
-  const aceptarBtn = document.getElementById('aceptar-cookies');
-  const rechazarBtn = document.getElementById('rechazar-cookies');
-
-  // Función para mostrar el modal
-  function mostrarModal() {
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden'; // Previene el scroll del body
-  }
-
-  // Función para ocultar el modal
-  function ocultarModal() {
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto'; // Restaura el scroll del body
-  }
-
-  // Event listeners
-  verPoliticaBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    mostrarModal();
-  });
-
-  aceptarBtn.addEventListener('click', function() {
-    // Aquí puedes agregar la lógica para guardar la preferencia del usuario
-    localStorage.setItem('cookiesAceptadas', 'true');
-    ocultarModal();
-  });
-
-  rechazarBtn.addEventListener('click', function() {
-    // Aquí puedes agregar la lógica para guardar la preferencia del usuario
-    localStorage.setItem('cookiesAceptadas', 'false');
-    ocultarModal();
-  });
-
-  // Cerrar el modal al hacer clic fuera del contenido
-  modal.addEventListener('click', function(e) {
-    if (e.target === modal) {
-      ocultarModal();
-    }
-  });
-
-  // Mostrar el modal automáticamente al cargar la página
-  mostrarModal();
 
   // Navegación suave
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -109,4 +65,20 @@ document.addEventListener('DOMContentLoaded', function() {
       contactoForm.reset();
     });
   }
+
+  // --- Lógica al cargar la página --- // Eliminado
+  // const savedConsent = localStorage.getItem('cookies_consent'); // Eliminado
+
+  // if (savedConsent === 'accepted') { // Eliminado
+  //     applyContentRestriction(true); // Asegurar acceso completo inmediatamente // Eliminado
+  //     hideModal(); // Asegurar que el modal esté oculto // Eliminado
+  // } else if (savedConsent === 'rejected') { // Eliminado
+  //     applyContentRestriction(false); // Aplicar restricción inmediatamente // Eliminado
+  //     hideModal(); // Asegurar que el modal esté oculto // Eliminado
+  // } else { // Eliminado
+  //     // Si no hay consentimiento guardado, mostrar el modal // Eliminado
+  // showModal(); // Mostrar el modal siempre para propósitos de prueba // Eliminado
+  //      // Opcional: aplicar restricción por defecto si no hay consentimiento visible // Eliminado
+  //      // applyContentRestriction(false); // Esto ocultaría las secciones hasta que el usuario elija // Eliminado
+  // } // Eliminado
 }); 

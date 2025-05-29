@@ -1,4 +1,6 @@
-/* Estilos generales */
+/* ==========================================================================
+   RESET Y ESTILOS BASE
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -6,26 +8,33 @@
     font-family: Arial, sans-serif;
 }
 
+/* Estilos base para enlaces */
 a {
     text-decoration: none;
     color: inherit;
 }
 
+/* Fondo general de la página */
 body {
     background-color: white;
 }
 
+/* Contenedor principal con ancho máximo */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
 }
 
-/* Header */
+/* ==========================================================================
+   HEADER Y NAVEGACIÓN
+   ========================================================================== */
+/* Estilos del encabezado */
 .header {
     padding: 1rem 0;
 }
 
+/* Contenedor flexible para el header */
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -33,12 +42,14 @@ body {
     flex-wrap: wrap;
 }
 
+/* Imagen del logo */
 .logo-img {
     height: 100px;
     width: auto;
     object-fit: contain;
 }
 
+/* Logo del footer */
 .footer-logo {
     height: 100px;
     width: auto;
@@ -46,23 +57,28 @@ body {
     margin-bottom: 1rem;
 }
 
+/* Estilos del texto del logo */
 .logo {
     color: #f97316; /* naranja */
     font-size: 2rem;
     font-weight: bold;
 }
 
+/* Subtítulo del logo */
 .logo span {
     display: block;
     font-size: 1.25rem;
 }
 
+/* Iconos sociales */
 .social-icons {
     color: #f97316;
-    font-size: 0.875rem;
+    font-size: 2rem;
 }
 
+/* Botón de donación */
 .donate-button {
+    margin: 1rem;
     border: 2px solid #f97316;
     color: #f97316;
     padding: 0.5rem 1rem;
@@ -71,17 +87,19 @@ body {
     cursor: pointer;
 }
 
+/* Estilo para citas */
 .quote {
     color: #dc2626; /* rojo */
     font-style: italic;
 }
 
-/* Navegación */
+/* Barra de navegación */
 .nav {
     background-color: hwb(32 4% 13%);
     padding: 0.75rem 0;
 }
 
+/* Lista de navegación */
 .nav-list {
     display: flex;
     justify-content: center;
@@ -89,6 +107,7 @@ body {
     list-style: none;
 }
 
+/* Enlaces de navegación */
 .nav-link {
     color: black;
     padding: 0.5rem 1rem;
@@ -100,6 +119,7 @@ body {
     transition: color 0.3s ease;
 }
 
+/* Efecto hover para enlaces de navegación */
 .nav-link::after {
     content: '';
     position: absolute;
@@ -111,19 +131,25 @@ body {
     transition: width 0.3s ease;
 }
 
+/* Efecto hover activo */
 .nav-link:hover::after {
     width: 100%;
 }
 
+/* Estado activo del enlace */
 .nav-link.active {
     color: black;
 }
 
+/* Línea indicadora de enlace activo */
 .nav-link.active::after {
     width: 100%;
 }
 
-/* Secciones principales */
+/* ==========================================================================
+   SECCIONES PRINCIPALES
+   ========================================================================== */
+/* Estilos base para secciones */
 .section {
     border-top: 2px solid #f97316;
     padding-top: 2rem;
@@ -133,6 +159,7 @@ body {
     flex-direction: column;
 }
 
+/* Estilos específicos para la sección Quiénes Somos */
 #quienes-somos .section-title {
     margin-bottom: 1.5rem;
 }
@@ -158,17 +185,20 @@ body {
     text-align: left;
 }
 
-#quienes-somos .image-placeholder {
+/* Placeholder para imágenes */
+.image-placeholder {
     align-self: start;
     min-height: 250px;
 }
 
+/* Grid de dos columnas */
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
 }
 
+/* Media queries para grid responsive */
 @media (min-width: 768px) {
     .grid-2 {
         grid-template-columns: 1fr 1fr;
@@ -178,6 +208,7 @@ body {
     }
 }
 
+/* Ajustes de citas en Quiénes Somos */
 #quienes-somos .quote {
     color: #f97316;
     font-style: italic;
@@ -185,11 +216,13 @@ body {
     text-align: left;
 }
 
+/* Información de contacto */
 #quienes-somos .contacto-info {
     text-align: left;
     margin-bottom: 0;
 }
 
+/* Ajustes responsive para citas */
 @media (min-width: 768px) {
     #quienes-somos .quote {
         grid-column: 1 / 2;
@@ -197,6 +230,7 @@ body {
     }
 }
 
+/* Placeholder para imágenes */
 .image-placeholder {
     border: 2px solid #f97316;
     display: flex;
@@ -206,34 +240,44 @@ body {
     color: #f97316;
 }
 
+/* ==========================================================================
+   MODAL DE COOKIES
+   ========================================================================== */
+/* Contenedor del modal (Banner inferior) */
 .modal-cookies {
-    display: none;
+    display: none; /* Controlado por JavaScript */
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    height: 30%;
+    width: 60%; /* Ocupa todo el ancho de la ventana */
+    /* height: auto; */ /* La altura se ajusta al contenido */
+    background-color: #2d2d2d; /* Color de fondo oscuro como en la imagen */
     z-index: 9999;
-    justify-content: center;
-    align-items: center;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
+    padding: 1rem; /* Espaciado interno del banner */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil en la parte superior */
+    /* Eliminados justify-content, align-items, backdrop-filter */
 }
 
+/* Contenido del modal - Centrado y tamaño reducido dentro del banner */
 .modal-contenido {
-    background-color: #333; /* Fondo oscuro para contrastar con texto claro */
-    padding: 2rem;
-    border-radius: 8px;
-    max-width: 800px;
-    width: 90%;
-    max-height: 80vh;
-    overflow-y: auto;
+    background-color: transparent; /* Fondo transparente, el color va en el contenedor padre */
+    padding: 0; /* Sin padding interno aquí */
+    border-radius: 0; /* Sin bordes redondeados */
+    max-width: 800px; /* Ancho máximo del contenido (puedes ajustar este valor) */
+    width: 100%; /* Ocupa todo el ancho disponible hasta el max-width */
+    margin: 0 auto; /* Centrar horizontalmente dentro del banner */
+    max-height: 80vh; /* Altura máxima si hay mucho contenido */
+    overflow-y: auto; /* Habilitar scroll vertical */
     position: relative;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    animation: modalAppear 0.3s ease-out;
+    /* Eliminada sombra y animación (pueden añadirse si se desea) */
+    display: flex; /* Usar flexbox para la distribución interna */
+    flex-direction: column; /* Elementos apilados verticalmente por defecto */
+    align-items: flex-start; /* Alinear elementos a la izquierda */
+    gap: 1rem; /* Espacio entre el contenido de texto y los botones */
 }
 
+/* Animación de entrada del modal */
 @keyframes modalAppear {
     from {
         opacity: 0;
@@ -245,74 +289,165 @@ body {
     }
 }
 
-#modal-cookies .modal-contenido h3,
-#modal-cookies .modal-contenido p,
-#modal-cookies .modal-contenido ol,
-#modal-cookies .modal-contenido li,
-#modal-cookies .modal-contenido strong {
-    color: #fffff1;
+/* Contenedor del texto para la funcionalidad 'leer más...' */
+.modal-text-content {
+    max-height: 150px; /* Altura máxima inicial del texto visible */
+    overflow-y: auto; /* Habilitar scroll vertical si el contenido excede la altura */
+    overflow-x: hidden; /* Ocultar scroll horizontal por si acaso */
+    position: relative;
 }
 
-/* Asegurarnos de que los enlaces dentro del modal también tengan el color claro si es necesario */
-#modal-cookies .modal-contenido a {
-     color: #fffff1;
+/* Gradiente para indicar que el texto está cortado */
+.modal-text-content::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px; /* Altura del gradiente */
+    background: linear-gradient(to top, #333, rgba(51, 51, 51, 0)); /* Gradiente que se desvanece */
+    pointer-events: none; /* Permite hacer clic en el texto debajo */
+}
+
+/* Clase para mostrar el contenido completo */
+.modal-text-content.expanded {
+    max-height: none; /* Elimina la altura máxima */
+    overflow: visible; /* Muestra todo el contenido */
+}
+
+/* Eliminar el gradiente cuando el contenido está expandido */
+.modal-text-content.expanded::after {
+    display: none;
+}
+
+/* Estilos de texto dentro del modal */
+.modal-contenido h3,
+.modal-contenido p,
+.modal-contenido ol,
+.modal-contenido li,
+.modal-contenido strong {
+    color: #e0e0e0; /* Color de texto claro */
+    margin-bottom: 0.8rem; /* Espacio después de los elementos de texto */
+    line-height: 1.5; /* Espaciado entre líneas para legibilidad */
+}
+
+/* Título del modal */
+.modal-contenido h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #f97316; /* Color de título, similar a la imagen */
+}
+
+/* Último párrafo/lista no necesita margen inferior extra */
+.modal-text-content > *:last-child {
+    margin-bottom: 0;
+}
+
+/* Enlaces dentro del modal */
+.modal-contenido a {
+     color: #f97316; /* Color naranja para enlaces */
      text-decoration: underline;
 }
 
-#modal-cookies .modal-contenido a:hover {
-    color: #cccccc; /* Un gris más claro al pasar el mouse */
+/* Hover para enlaces del modal */
+.modal-contenido a:hover {
+    color: #ea580c; /* Tono más oscuro en hover */
 }
 
+/* Botones del modal */
 .modal-botones {
     display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
-    margin-top: 1.5rem;
+    justify-content: flex-end; /* Alinear botones a la derecha */
+    gap: 0.8rem; /* Espacio entre botones */
+    margin-top: 0; /* No necesita margen superior aquí */
+    flex-wrap: wrap; /* Permitir que los botones se envuelvan en pantallas pequeñas */
 }
 
-.btn-aceptar {
-    background-color: #4CAF50;
-    color: white;
-    padding: 0.5rem 1.5rem;
+/* Estilos generales para los botones */
+.modal-botones button {
+    padding: 0.6rem 1.2rem; /* Padding ligeramente mayor */
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 600; /* Semi-bold */
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, opacity 0.3s ease; /* Transición también para opacidad */
 }
 
-.btn-rechazar {
-    background-color: #f44336;
-    color: white;
-    padding: 0.5rem 1.5rem;
-    border: none;
-    border-radius: 4px;
+.modal-botones button:hover {
+    opacity: 0.9; /* Ligera opacidad en hover */
+}
+
+/* Botón aceptar y rechazar (diseño similar en la imagen) */
+.btn-aceptar, .btn-rechazar {
+    background-color: #ea580c; /* Verde/amarillo claro como en la imagen */
+    color: white; /* Texto oscuro */
+}
+
+/* Botón gestionar preferencias (diseño transparente con borde) */
+.btn-manage-preferences {
+    background-color: transparent; /* Fondo transparente */
+    color: #e0e0e0; /* Texto claro */
+    border: 1px solid #e0e0e0; /* Borde claro */
+}
+
+/* Hover para botón gestionar */
+.btn-manage-preferences:hover {
+    background-color: rgba(224, 224, 224, 0.1); /* Ligero fondo semi-transparente en hover */
+}
+
+/* Estilo para el botón 'Leer más...' */
+.read-more-btn {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    color: #f97316; /* Color naranja */
     cursor: pointer;
-    font-weight: bold;
+    font-size: 0.9rem;
+    margin-top: 0.5rem; /* Espacio encima del botón */
+    text-align: left;
+    padding: 0;
 }
 
-.btn-aceptar:hover {
-    background-color: #45a049;
+.read-more-btn:hover {
+    text-decoration: underline; /* Subrayado en hover */
 }
 
-.btn-rechazar:hover {
-    background-color: #da190b;
+/* Media query para ajustar el ancho en pantallas más pequeñas si es necesario */
+@media (max-width: 576px) {
+    .modal-contenido {
+        padding: 1.5rem;
+    }
+    .modal-botones {
+        flex-direction: column; /* Apilar botones en pantallas pequeñas */
+        gap: 0.5rem;
+    }
+    .modal-botones button {
+        width: 100%; /* Botones de ancho completo en pantallas pequeñas */
+    }
 }
 
+/* Configuración de scroll suave */
 html {
     scroll-behavior: smooth;
 }
 
+/* ==========================================================================
+   SECCIÓN HERO
+   ========================================================================== */
+/* Sección hero */
 .hero-section {
     text-align: center;
     padding: 2rem 0;
 }
 
+/* Título de la sección hero */
 .hero-section h1 {
     font-size: 2.5rem;
     color: #f97316;
     margin-bottom: 1rem;
 }
 
+/* Grids para programas y novedades */
 .programas-grid, .novedades-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -320,6 +455,10 @@ html {
     margin-top: 2rem;
 }
 
+/* ==========================================================================
+   SECCIÓN CONTACTO
+   ========================================================================== */
+/* Contenedor de contacto */
 .contacto-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -328,16 +467,19 @@ html {
     margin: 0 auto;
 }
 
+/* Información de contacto */
 .contacto-info {
     text-align: center;
     margin-bottom: 2rem;
 }
 
+/* Título de información de contacto */
 .contacto-info h3 {
     color: #f97316;
     margin-bottom: 1rem;
 }
 
+/* Formulario de contacto */
 .contacto-form {
     background-color: #fff;
     padding: 2rem;
@@ -345,10 +487,12 @@ html {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Grupos de formulario */
 .form-group {
     margin-bottom: 1.5rem;
 }
 
+/* Etiquetas de formulario */
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
@@ -356,6 +500,7 @@ html {
     font-weight: 500;
 }
 
+/* Campos de formulario */
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -367,6 +512,7 @@ html {
     transition: border-color 0.3s ease;
 }
 
+/* Focus en campos de formulario */
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
@@ -375,6 +521,7 @@ html {
     box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.1);
 }
 
+/* Contenedor de checkbox */
 .checkbox-container {
     display: flex;
     align-items: center;
@@ -382,11 +529,13 @@ html {
     cursor: pointer;
 }
 
+/* Checkbox personalizado */
 .checkbox-container input[type="checkbox"] {
     width: auto;
     margin-right: 0.5rem;
 }
 
+/* Botón de envío */
 .btn-enviar {
     background-color: #f97316;
     color: white;
@@ -400,10 +549,12 @@ html {
     transition: background-color 0.3s ease;
 }
 
+/* Hover para botón de envío */
 .btn-enviar:hover {
     background-color: #ea580c;
 }
 
+/* Media queries para contacto */
 @media (min-width: 768px) {
     .contacto-container {
         grid-template-columns: 1fr 2fr;
@@ -415,7 +566,10 @@ html {
     }
 }
 
-/* Footer */
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+/* Estilos del footer */
 .footer {
     border-top: 2px solid #f97316;
     padding: 2rem 0;
@@ -426,16 +580,19 @@ html {
     background-color: hwb(32 4% 13%);
 }
 
+/* Contenedor del footer */
 .footer .container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Imagen del footer */
 .footer .container > img {
     margin-bottom: 1rem;
 }
 
+/* Texto del footer */
 .footer .container > p {
     color: #ffffff;
     font-size: 1.2rem;
@@ -444,32 +601,39 @@ html {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+/* Iconos sociales del footer */
 .footer .social-icons {
     align-self: flex-end;
     margin-bottom: 1rem;
 }
 
+/* Enlaces de iconos sociales */
 .footer .social-icons a {
     color: #f97316 !important;
-    font-size: 1.5rem;
-    margin: 0 0.5rem;
+    font-size: 2.5rem;
+    margin: 0 0.75rem;
     transition: all 0.3s ease;
     text-decoration: none;
 }
 
+/* Hover para iconos sociales */
 .footer .social-icons a:hover {
     color: #ea580c !important;
     transform: scale(1.1);
 }
 
+/* Iconos dentro de enlaces sociales */
 .footer .social-icons a i {
     transition: transform 0.3s ease;
+    font-size: 2.5rem;
 }
 
+/* Hover para iconos */
 .footer .social-icons a:hover i {
     transform: translateY(-3px);
 }
 
+/* Enlaces del footer */
 .footer-link {
     color: #ffffff;
     font-weight: 500;
@@ -481,6 +645,7 @@ html {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+/* Hover para enlaces del footer */
 .footer-link:hover {
     color: #f97316;
     background-color: #ffffff;
@@ -488,58 +653,62 @@ html {
     text-decoration: none !important;
 }
 
-/* Estilos para contenido de secciones reincorporadas */
+/* ==========================================================================
+   ESTILOS ESPECÍFICOS DE SECCIONES
+   ========================================================================== */
+/* Estilos comunes para párrafos de secciones */
 #vision-mision-objetivos p,
 #nuestro-equipo p,
 #programas p,
 #novedades p {
-    color: #4b5563; /* Color de texto gris por defecto, como en otras partes */
+    color: #4b5563; /* Color de texto gris por defecto */
     margin-bottom: 1rem;
 }
 
+/* Títulos de secciones */
 #vision-mision-objetivos .section-title,
 #nuestro-equipo .section-title,
 #programas .section-title,
 #novedades .section-title {
     color: #f97316; /* Color naranja primario para títulos */
-    margin-bottom: 1.5rem; /* Espacio debajo del título */
+    margin-bottom: 1.5rem;
 }
 
-/* Si en el futuro hay listas en estas secciones */
+/* Listas en secciones */
 #vision-mision-objetivos ul,
 #nuestro-equipo ul,
 #programas ul,
 #novedades ul {
     margin-bottom: 1rem;
     padding-left: 1.2rem;
-    color: #4b5563; /* Color de texto gris por defecto para listas */
+    color: #4b5563;
 }
 
+/* Items de lista */
 #vision-mision-objetivos ul li,
 #nuestro-equipo ul li,
 #programas ul li,
 #novedades ul li {
      margin-bottom: 0.5rem;
-     color: #4b5563; /* Color de texto gris por defecto para items de lista */
+     color: #4b5563;
 }
 
-/* Ajuste de alineación para títulos de secciones específicas */
+/* Alineación de títulos específicos */
 #vision-mision-objetivos .section-title,
 #nuestro-equipo .section-title {
-    text-align: left !important; /* Alinea estos títulos a la izquierda */
+    text-align: left !important;
 }
 
-/* Aseguramos que los títulos de todas las secciones sigan siendo naranjas */
+/* Estilos base para títulos de sección */
 .section-title {
     color: #f97316;
     font-size: 1.8rem;
     font-weight: 700;
-    text-align: center; /* La alineación central por defecto para otros títulos */
+    text-align: center;
     margin-bottom: 3rem;
 }
 
-/* Ajustes para títulos de sección específicos si se sobrescriben */
-/* Estos estilos se mantienen con alineación central si no se sobrescriben */
+/* Títulos específicos de secciones */
 #quienes-somos .section-title,
 #programas .section-title,
 #novedades .section-title,
@@ -551,7 +720,10 @@ html {
     margin-bottom: 3rem;
 }
 
-/* Estilos para la sección Programas */
+/* ==========================================================================
+   SECCIÓN PROGRAMAS
+   ========================================================================== */
+/* Título de programas */
 #programas .section-title {
     color: #f97316;
     font-size: 1.8rem;
@@ -560,6 +732,7 @@ html {
     margin-bottom: 3rem;
 }
 
+/* Subsecciones de programas */
 .programa-sub-section {
     margin-bottom: 4rem;
 }
@@ -618,6 +791,7 @@ html {
     border-color: #ffeb3b;
 }
 
+/* Título de programa */
 .programa-title {
     font-size: 1.5rem;
     font-weight: 600;
@@ -631,12 +805,14 @@ html {
     display: block;
 }
 
+/* Cita de programa */
 .programa-quote {
     font-style: italic;
     text-align: center;
     margin-bottom: 2rem;
 }
 
+/* Subtítulo de programa */
 .programa-subtitle {
     font-size: 1.2rem;
     font-weight: 600;
@@ -644,12 +820,14 @@ html {
     text-align: center;
 }
 
+/* Grid de programas */
 .programas-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 
+/* Items de programa */
 .programa-item {
     border: 2px solid;
     padding: 1.5rem;
@@ -658,28 +836,35 @@ html {
     flex-direction: column;
 }
 
+/* Títulos de items de programa */
 .programa-item h4 {
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
+/* Párrafos y listas de items de programa */
 .programa-item p,
 .programa-item ul {
-    color: #4b5563; /* Color de texto gris por defecto para el contenido que no sea título/quote */
+    color: #4b5563;
     margin-bottom: 1rem;
     flex-grow: 1;
 }
 
+/* Listas de items de programa */
 .programa-item ul {
     padding-left: 1.2rem;
 }
 
+/* Items de lista de programa */
 .programa-item ul li {
     margin-bottom: 0.5rem;
 }
 
-/* Estilos para la sección Novedades */
+/* ==========================================================================
+   SECCIÓN NOVEDADES
+   ========================================================================== */
+/* Título de novedades */
 #novedades .section-title {
     color: #f97316;
     font-size: 1.8rem;
@@ -688,42 +873,50 @@ html {
     margin-bottom: 3rem;
 }
 
+/* Contenedor de novedades */
 .novedades-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Grid responsive para los ítems */
-    gap: 2rem; /* Espacio entre los ítems */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
 }
 
+/* Items de novedad */
 .novedad-item {
-    border: 2px solid #f97316; /* Borde naranja alrededor de cada ítem */
-    padding: 1.5rem; /* Espaciado interno */
-    border-radius: 8px; /* Bordes redondeados */
+    border: 2px solid #f97316;
+    padding: 1.5rem;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribuye el espacio verticalmente */
+    justify-content: space-between;
 }
 
+/* Títulos de novedad */
 .novedad-item h4 {
-    color: #f97316; /* Título de cada ítem */
+    color: #f97316;
     font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    text-align: center; /* Centrar títulos */
+    text-align: center;
 }
 
+/* Párrafos de novedad */
 .novedad-item p {
-    color: #4b5563; /* Color de texto gris para el contenido */
+    color: #4b5563;
     margin-bottom: 1rem;
-    flex-grow: 1; /* Para que el contenido ocupe el espacio disponible */
+    flex-grow: 1;
 }
 
-/* Estilo específico para las flechas placeholder */
+/* Estilo para flechas placeholder */
 .novedad-item p[style="text-align: right;"] {
     color: #f97316;
     font-size: 1.5rem;
     font-weight: bold;
-    margin-top: auto; /* Empuja la flecha hacia abajo */
+    margin-top: auto;
     margin-bottom: 0;
+}
+
+.hidden-section {
+    display: none !important;
 }
   
   
