@@ -563,11 +563,13 @@ body {
         padding: 1.5rem;
     }
     .modal-botones {
-        flex-direction: column; /* Apilar botones en pantallas pequeñas */
+        flex-direction: row; /* Cambiado de column a row */
         gap: 0.5rem;
+        justify-content: center; /* Centrar los botones */
     }
     .modal-botones button {
-        width: 100%; /* Botones de ancho completo en pantallas pequeñas */
+        width: auto; /* Cambiado de 100% a auto */
+        min-width: 120px; /* Ancho mínimo para los botones */
     }
 }
 
