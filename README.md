@@ -18,7 +18,7 @@ Este es un proyecto frontend que no requiere instalación de dependencias comple
 
 1. Clona el repositorio:
    ```bash
-   git clone [URL_DEL_REPOSITORIO]
+   git clone git clone https://github.com/Crisca-cyver/ProyectoCruxes
    ```
 2. Navega al directorio del proyecto:
    ```bash
