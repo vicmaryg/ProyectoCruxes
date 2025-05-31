@@ -17,14 +17,14 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Resaltar sección activa en el nav
-  const sections = document.querySelectorAll('section[id]'); // Seleccionar solo secciones con ID
+  const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
 
   function highlightNavLink() {
     let scrollPosition = window.scrollY;
 
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100; // Ajusta este valor si es necesario
+      const sectionTop = section.offsetTop - 100;
       const sectionHeight = section.offsetHeight;
       const sectionId = section.getAttribute('id');
 
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   window.addEventListener('scroll', highlightNavLink);
-  highlightNavLink(); // Llamar una vez al cargar la página
+  highlightNavLink();
 
   // Manejo del formulario de contacto
   const contactoForm = document.getElementById('contacto-form');
@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
     contactoForm.addEventListener('submit', function(e) {
       e.preventDefault();
       
-      // Validación básica
       const nombre = document.getElementById('nombre').value.trim();
       const email = document.getElementById('email').value.trim();
       const mensaje = document.getElementById('mensaje').value.trim();
@@ -59,26 +58,40 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
       
-      // Aquí iría el código para enviar el formulario a un servidor
-      // Por ahora solo mostraremos un mensaje de éxito
       alert('¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.');
       contactoForm.reset();
     });
   }
 
-  // --- Lógica al cargar la página --- // Eliminado
-  // const savedConsent = localStorage.getItem('cookies_consent'); // Eliminado
+  // Control del menú hamburguesa
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav');
 
-  // if (savedConsent === 'accepted') { // Eliminado
-  //     applyContentRestriction(true); // Asegurar acceso completo inmediatamente // Eliminado
-  //     hideModal(); // Asegurar que el modal esté oculto // Eliminado
-  // } else if (savedConsent === 'rejected') { // Eliminado
-  //     applyContentRestriction(false); // Aplicar restricción inmediatamente // Eliminado
-  //     hideModal(); // Asegurar que el modal esté oculto // Eliminado
-  // } else { // Eliminado
-  //     // Si no hay consentimiento guardado, mostrar el modal // Eliminado
-  // showModal(); // Mostrar el modal siempre para propósitos de prueba // Eliminado
-  //      // Opcional: aplicar restricción por defecto si no hay consentimiento visible // Eliminado
-  //      // applyContentRestriction(false); // Esto ocultaría las secciones hasta que el usuario elija // Eliminado
-  // } // Eliminado
+  // Función para alternar el menú
+  function toggleMenu() {
+    menuToggle.classList.toggle('active');
+    nav.classList.toggle('active');
+    document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+  }
+
+  // Event listener para el botón del menú
+  menuToggle.addEventListener('click', toggleMenu);
+
+  // Cerrar el menú al hacer clic en un enlace
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (nav.classList.contains('active')) {
+        toggleMenu();
+      }
+    });
+  });
+
+  // Cerrar el menú al hacer clic fuera
+  document.addEventListener('click', (e) => {
+    if (nav.classList.contains('active') && 
+        !nav.contains(e.target) && 
+        !menuToggle.contains(e.target)) {
+      toggleMenu();
+    }
+  });
 }); 
