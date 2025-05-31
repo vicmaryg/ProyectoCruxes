@@ -393,6 +393,17 @@ body {
     /* Eliminados justify-content, align-items, backdrop-filter */
 }
 
+
+/* Media query para ajustar el ancho en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .modal-cookies {
+        width: 100%;
+        height: auto;
+        max-height: 80vh;
+    }
+}
+
+
 /* Contenido del modal - Centrado y tamaño reducido dentro del banner */
 .modal-contenido {
     background-color: transparent; /* Fondo transparente, el color va en el contenedor padre */
