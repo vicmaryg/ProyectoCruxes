@@ -39,7 +39,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 /* Imagen del logo */
@@ -262,6 +262,7 @@ body {
 
     /* Ajustes para el header en móvil */
     .header-content {
+        flex-direction: column;
         padding: 0.5rem;
     }
 
@@ -276,7 +277,7 @@ body {
     .donate-button {
         padding: 0.4rem 0.8rem;
         font-size: 0.9rem;
-        width: 200px; /* Ancho fijo para mejor alineación */
+        width: 200px;
     }
 }
 
@@ -379,18 +380,16 @@ body {
    ========================================================================== */
 /* Contenedor del modal (Banner inferior) */
 .modal-cookies {
-    display: none; /* Controlado por JavaScript */
+    display: flex; /* Cambiado de 'none' a 'flex' por defecto */
     position: fixed;
     bottom: 0;
     left: 0;
     height: 30%;
-    width: 60%; /* Ocupa todo el ancho de la ventana */
-    /* height: auto; */ /* La altura se ajusta al contenido */
-    background-color: #2d2d2d; /* Color de fondo oscuro como en la imagen */
+    width: 60%;
+    background-color: #2d2d2d;
     z-index: 9999;
-    padding: 1rem; /* Espaciado interno del banner */
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil en la parte superior */
-    /* Eliminados justify-content, align-items, backdrop-filter */
+    padding: 1rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -1106,6 +1105,11 @@ html {
         bottom: 15px;
         right: 15px;
     }
+}
+
+/* Clase para ocultar elementos */
+.hidden {
+    display: none !important;
 }
   
   

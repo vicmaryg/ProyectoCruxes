@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const showModal = () => {
         if(modal) {
             modal.style.display = 'flex';
-            // Deshabilitar scroll del body cuando el modal está visible
             document.body.style.overflow = 'hidden';
         }
     };
@@ -22,47 +21,58 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // --- Funcionalidad de restricción de contenido ---
-    const applyContentRestriction = (accepted) => {
+    // Función para manejar la aceptación de cookies
+    function handleAcceptCookies() {
+        localStorage.setItem('cookiesAccepted', 'true');
+        hideModal();
+        
+        // Mostrar el botón de WhatsApp
+        const whatsappButton = document.querySelector('.whatsapp-float');
+        if (whatsappButton) {
+            whatsappButton.classList.remove('hidden');
+        }
+
+        // Mostrar todas las secciones
+        const hiddenSections = document.querySelectorAll('.hidden-section');
+        hiddenSections.forEach(section => {
+            section.classList.remove('hidden-section');
+        });
+    }
+
+    // Función para manejar el rechazo de cookies
+    function handleRejectCookies() {
+        localStorage.setItem('cookiesAccepted', 'false');
+        hideModal();
+        
+        // Mantener oculto el botón de WhatsApp
+        const whatsappButton = document.querySelector('.whatsapp-float');
+        if (whatsappButton) {
+            whatsappButton.classList.add('hidden');
+        }
+
+        // Ocultar secciones después de "Quiénes Somos"
         const allSections = document.querySelectorAll('.section');
         let hideStartIndex = -1;
+        
         allSections.forEach((section, index) => {
             if (section.id === 'quienes-somos') {
                 hideStartIndex = index + 1;
             }
         });
+
         allSections.forEach((section, index) => {
             if (hideStartIndex !== -1 && index >= hideStartIndex) {
-                if (accepted) {
-                    section.classList.remove('hidden-section');
-                } else {
-                    section.classList.add('hidden-section');
-                }
-            } else {
-                section.classList.remove('hidden-section');
+                section.classList.add('hidden-section');
             }
         });
-        if (accepted) {
-            console.log("Cookies aceptadas. Acceso completo al contenido.");
-        } else {
-            console.log("Cookies rechazadas. Contenido restringido hasta 'Quiénes Somos'.");
-        }
-    };
+    }
 
     // --- Event Listeners para los botones del Modal ---
     if(btnAceptar) {
-        btnAceptar.addEventListener('click', () => {
-            localStorage.setItem('cookies_consent', 'accepted');
-            applyContentRestriction(true);
-            hideModal();
-        });
+        btnAceptar.addEventListener('click', handleAcceptCookies);
     }
     if(btnRechazar) {
-        btnRechazar.addEventListener('click', () => {
-            localStorage.setItem('cookies_consent', 'rejected');
-            applyContentRestriction(false);
-            hideModal();
-        });
+        btnRechazar.addEventListener('click', handleRejectCookies);
     }
     if(btnManage) {
         btnManage.addEventListener('click', () => {
@@ -70,23 +80,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Mostrar el modal siempre para pruebas
-    showModal();
-
-    /*
-    const savedConsent = localStorage.getItem('cookies_consent');
-
-    if (savedConsent === 'accepted') {
-        applyContentRestriction(true); // Asegurar acceso completo inmediatamente
-        hideModal(); // Asegurar que el modal esté oculto
-    } else if (savedConsent === 'rejected') {
-        applyContentRestriction(false); // Aplicar restricción inmediatamente
-        hideModal(); // Asegurar que el modal esté oculto
-    } else {
-        // Si no hay consentimiento guardado, mostrar el modal
+    // Verificar el estado de las cookies al cargar la página
+    const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+    const whatsappButton = document.querySelector('.whatsapp-float');
+    
+    // Si no hay preferencia guardada, mostrar el modal
+    if (!cookiesAccepted) {
         showModal();
-         // Opcional: aplicar restricción por defecto si no hay consentimiento visible
-         // applyContentRestriction(false); // Esto ocultaría las secciones hasta que el usuario elija
+    } else if (cookiesAccepted === 'true') {
+        if (whatsappButton) {
+            whatsappButton.classList.remove('hidden');
+        }
+        // Mostrar todas las secciones
+        const hiddenSections = document.querySelectorAll('.hidden-section');
+        hiddenSections.forEach(section => {
+            section.classList.remove('hidden-section');
+        });
+    } else if (cookiesAccepted === 'false') {
+        if (whatsappButton) {
+            whatsappButton.classList.add('hidden');
+        }
+        // Ocultar secciones después de "Quiénes Somos"
+        const allSections = document.querySelectorAll('.section');
+        let hideStartIndex = -1;
+        
+        allSections.forEach((section, index) => {
+            if (section.id === 'quienes-somos') {
+                hideStartIndex = index + 1;
+            }
+        });
+
+        allSections.forEach((section, index) => {
+            if (hideStartIndex !== -1 && index >= hideStartIndex) {
+                section.classList.add('hidden-section');
+            }
+        });
     }
-    */
 }); 
