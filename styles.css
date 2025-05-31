@@ -191,10 +191,12 @@ body {
 
 .menu-toggle.active .hamburger::before {
     transform: rotate(45deg);
+    top: 0;
 }
 
 .menu-toggle.active .hamburger::after {
     transform: rotate(-45deg);
+    top: 0;
 }
 
 /* Media queries para responsive */
