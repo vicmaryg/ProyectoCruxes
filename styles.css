@@ -159,8 +159,8 @@ body {
 .hamburger {
     display: block;
     position: relative;
-    width: 24px;
-    height: 2px;
+    width: 28px;
+    height: 3px;
     background: #f97316;
     transition: all 0.3s ease-in-out;
 }
@@ -169,18 +169,19 @@ body {
 .hamburger::after {
     content: '';
     position: absolute;
-    width: 24px;
-    height: 2px;
+    width: 28px;
+    height: 3px;
     background: #f97316;
     transition: all 0.3s ease-in-out;
+    left: 0;
 }
 
 .hamburger::before {
-    transform: translateY(-8px);
+    top: -8px;
 }
 
 .hamburger::after {
-    transform: translateY(8px);
+    top: 8px;
 }
 
 /* Animación del menú hamburguesa */
