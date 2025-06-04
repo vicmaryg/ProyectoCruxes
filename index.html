@@ -6,6 +6,10 @@
     <title>Cruxes de Luz</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Enlace a la fuente Inter de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -43,32 +47,48 @@
       </div>
     </nav>
 
-    <main class="container">
-      <!-- Sección INICIO -->
-      <section id="inicio" class="section">
-        <div class="hero-section">
-          <h1>Bienvenidos a Cruxes de Luz</h1>
-          <p class="quote">"AMOR en Revolución"</p>
-        </div>
-      </section>
+    <!-- Sección INICIO - Movida fuera del contenedor principal -->
+    <section id="inicio" class="section">
+      <div class="hero-section">
+        <!-- <img src="imagen/atardecer.webp" alt="atardecer" class="atardecer-img"> -->
+        <h1>Bienvenidos a Cruxes de Luz</h1>
+        <p class="quote">"AMOR en Revolución"</p>
+      </div>
+    </section>
 
+    <main class="container">
       <!-- Sección QUIENES SOMOS -->
       <section id="quienes-somos" class="section grid-2">
         <div>
-          <h2 class="section-title">QUIENES SOMOS</h2>
-          <p>*CÓDIGO DE ÉTICA</p>
-          <p class="font-semibold">NUESTROS EJES:</p>
-          <ul class="list-decimal">
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-          <p>CARTA DE PRESENTACIÓN (PDF)</p>
-          <p class="quote">FRASE</p>
+      <h2 class="section-title">¿Quiénes Somos?</h2>
+          <p>Somos una Fundación basada en <strong>valores cristianos</strong> e inscripta en el <strong>Código de Ética</strong>; Nuestro objetivo es promover la <strong>Espiritualidad, la Solidaridad y el Desarrollo Personal</strong>; Construir Puentes entre los diferentes sectores (privado, público y ONGs); Responder <strong>Dónde y Cómo ayudar</strong>, creando una Red de cruces de Alianzas y Oportunidades; Despertar nuestro ser espiritual y solidario; Comprometernos con los <strong>Objetivos de Desarrollo Sostenible</strong> y asistir en proyectos de <strong>Responsabilidad Social Empresarial (RSE)</strong>;</p>
+          <p>Brindar asesoramiento institucional una <strong>Propuesta innovadora</strong>, con una metodologia profesional, en especial, de trabajo social, y en articulación con otras organizaciones, tejlende redes desde Argentina al mundo.</p>
+          <!-- Botones para descargar PDFs -->
+          <div class="quienes-somos-buttons">
+            <a href="documentos/CartaDePresentacion.pdf" download class="button-link">Carta de presentación</a>
+            <a href="documentos/CodigoDeEtica.pdf" download class="button-link">Código de ética</a>
+          </div>
         </div>
-        <div class="image-placeholder">
-          <p>IMAGEN</p>
+        <div class="image-placeholder quienes-somos-img-container">
+          <!-- Imagen según el diseño -->
+          <img src="imagen/Frame 8 (2).webp" alt="La humanidad está a la espera..." class="quienes-somos-img">
         </div>
+
+        <!-- Contenedor de la imagen triangulos 1.webp -->
+        <div class="image-placeholder ejes-image">
+            <img src="imagen/triangulos 2.webp" alt="Nuestros Ejes: Creer, Ser, Hacer" class="quienes-somos-ejes-img">
+        </div>
+        <!-- Contenedor del texto Nuestros ejes -->
+        <div class="ejes-content">
+            <h3 class="ejes-title">Nuestros ejes</h3>
+            <ul>
+                <li><strong>ESPIRITUALIDAD-FE:</strong> Amar a Dios- Escuela de Espiritualidad y Desarrollo Personal. Jornadas y/o Retiros espirituales.</li>
+                <li><strong>SOLIDARIDAD-CARIDAD:</strong> Amar a los demás- Programa de Voluntariado, conectando con las ONGs que lo requieren, Capacitaciones, Proyectos Solidarios, RSE, entre otros.</li>
+                <li><strong>DESARROLLO PERSONAL-ESPERANZA:</strong> Amarse como Dios te ama- Bolsa de Oportunidades de Trabajo y Escuela de Valores (comunicación, habilidades sociales, liderazgo, etc).</li>
+            </ul>
+            <p class="ejes-quote">"Cruxes, un Sol Naciente, que desea iluminar el SER desde el Corazón, donde están las verdades de Dios, y actuar con Pasión y Amor"</p>
+        </div>
+
       </section>
 
       <!-- Sección VISIÓN, MISIÓN, OBJETIVOS -->

@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 /* Estilos base para enlaces */
@@ -21,7 +21,7 @@ body {
 
 /* Contenedor principal con ancho máximo */
 .container {
-    max-width: 1200px;
+    max-width: 1920px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -92,8 +92,8 @@ body {
 
 /* Estilo para citas */
 .quote {
-    color: #dc2626; /* rojo */
-    font-style: italic;
+    color: #f97316; /* naranja */
+    font-style: italic; /* Estilo italic para frases/citas */
 }
 
 /* Barra de navegación */
@@ -202,6 +202,13 @@ body {
     top: 0;
 }
 
+.atardecer-img {
+    width: 1320px;
+    height: 630px;
+    object-fit: cover;
+}
+
+ 
 /* Media queries para responsive */
 @media (max-width: 768px) {
     .menu-toggle {
@@ -287,20 +294,33 @@ body {
 /* Estilos base para secciones */
 .section {
     border-top: 2px solid #f97316;
-    padding-top: 2rem;
-    margin-top: 2rem;
-    padding: 4rem 0;
     display: flex;
     flex-direction: column;
 }
 
+/* Asegurar que la sección de inicio no tenga margen, relleno ni borde */
+#inicio {
+    margin: 0;
+    padding: 0;
+    border-top: none;
+}
+
 /* Estilos específicos para la sección Quiénes Somos */
+#quienes-somos {
+    margin-top: 3rem;
+    border-top: none;
+}
+
 #quienes-somos .section-title {
-    margin-bottom: 1.5rem;
+    text-align: left;
+    color: #E84E1D;
+    height: 36px;
+    font-size: 30px;
 }
 
 #quienes-somos p {
     margin-bottom: 1rem;
+    font-size: 18px; /* Ajustar tamaño de letra a 18px */
 }
 
 #quienes-somos ul {
@@ -322,8 +342,45 @@ body {
 
 /* Placeholder para imágenes */
 .image-placeholder {
-    align-self: start;
-    min-height: 250px;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px; 
+}
+
+/* Estilos para la imagen en Quiénes Somos */
+.quienes-somos-img {
+    width: 597px;
+    height: 340px;
+    margin-top: 4rem;
+    display: block; /* Eliminar espacio extra debajo de la imagen */
+}
+
+/* Contenedor de botones en Quiénes Somos */
+.quienes-somos-buttons {
+    display: flex;
+    gap: 1rem; /* Espacio entre botones */
+    margin-top: 1.5rem; /* Espacio ऊपर del contenedor de botones */
+    flex-wrap: wrap; /* Permitir que los botones se envuelvan en pantallas pequeñas */
+}
+
+/* Estilos para los enlaces/botones de descarga */
+.button-link {
+    display: inline-block;
+    background-color:#E84E1D;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    height: 40px; /* Alto especificado */
+    font-size: 20px; /* Tamaño de letra especificado */
+}
+
+.button-link:hover {
+    background-color: #ea580c; 
 }
 
 /* Grid de dos columnas */
@@ -340,15 +397,26 @@ body {
     }
     #quienes-somos.grid-2 {
         align-items: start;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
     }
-}
-
-/* Ajustes de citas en Quiénes Somos */
-#quienes-somos .quote {
-    color: #f97316;
-    font-style: italic;
-    margin-top: 1.5rem;
-    text-align: left;
+    #quienes-somos > div:nth-child(1) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    #quienes-somos > div.quienes-somos-img-container {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+    #quienes-somos > div.ejes-image {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    #quienes-somos > div.ejes-content {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        text-align: left;
+    }
 }
 
 /* Información de contacto */
@@ -367,7 +435,7 @@ body {
 
 /* Placeholder para imágenes */
 .image-placeholder {
-    border: 2px solid #f97316;
+    /* border: 2px solid #f97316; */ /* Comentado */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -380,7 +448,7 @@ body {
    ========================================================================== */
 /* Contenedor del modal (Banner inferior) */
 .modal-cookies {
-    display: flex; /* Cambiado de 'none' a 'flex' por defecto */
+    display: flex;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -392,7 +460,6 @@ body {
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
 }
 
-
 /* Media query para ajustar el ancho en pantallas más pequeñas */
 @media (max-width: 768px) {
     .modal-cookies {
@@ -402,23 +469,21 @@ body {
     }
 }
 
-
-/* Contenido del modal - Centrado y tamaño reducido dentro del banner */
+/* Contenido del modal */
 .modal-contenido {
-    background-color: transparent; /* Fondo transparente, el color va en el contenedor padre */
-    padding: 0; /* Sin padding interno aquí */
-    border-radius: 0; /* Sin bordes redondeados */
-    max-width: 800px; /* Ancho máximo del contenido (puedes ajustar este valor) */
-    width: 100%; /* Ocupa todo el ancho disponible hasta el max-width */
-    margin: 0 auto; /* Centrar horizontalmente dentro del banner */
-    max-height: 80vh; /* Altura máxima si hay mucho contenido */
-    overflow-y: auto; /* Habilitar scroll vertical */
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    max-height: 80vh;
+    overflow-y: auto;
     position: relative;
-    /* Eliminada sombra y animación (pueden añadirse si se desea) */
-    display: flex; /* Usar flexbox para la distribución interna */
-    flex-direction: column; /* Elementos apilados verticalmente por defecto */
-    align-items: flex-start; /* Alinear elementos a la izquierda */
-    gap: 1rem; /* Espacio entre el contenido de texto y los botones */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
 }
 
 /* Animación de entrada del modal */
@@ -435,9 +500,9 @@ body {
 
 /* Contenedor del texto para la funcionalidad 'leer más...' */
 .modal-text-content {
-    max-height: 150px; /* Altura máxima inicial del texto visible */
-    overflow-y: auto; /* Habilitar scroll vertical si el contenido excede la altura */
-    overflow-x: hidden; /* Ocultar scroll horizontal por si acaso */
+    max-height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
     position: relative;
 }
 
@@ -448,15 +513,15 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 30px; /* Altura del gradiente */
-    background: linear-gradient(to top, #333, rgba(51, 51, 51, 0)); /* Gradiente que se desvanece */
-    pointer-events: none; /* Permite hacer clic en el texto debajo */
+    height: 30px;
+    background: linear-gradient(to top, #333, rgba(51, 51, 51, 0));
+    pointer-events: none;
 }
 
 /* Clase para mostrar el contenido completo */
 .modal-text-content.expanded {
-    max-height: none; /* Elimina la altura máxima */
-    overflow: visible; /* Muestra todo el contenido */
+    max-height: none;
+    overflow: visible;
 }
 
 /* Eliminar el gradiente cuando el contenido está expandido */
@@ -470,16 +535,16 @@ body {
 .modal-contenido ol,
 .modal-contenido li,
 .modal-contenido strong {
-    color: #e0e0e0; /* Color de texto claro */
-    margin-bottom: 0.8rem; /* Espacio después de los elementos de texto */
-    line-height: 1.5; /* Espaciado entre líneas para legibilidad */
+    color: #e0e0e0;
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
 }
 
 /* Título del modal */
 .modal-contenido h3 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: #f97316; /* Color de título, similar a la imagen */
+    color: #f97316;
 }
 
 /* Último párrafo/lista no necesita margen inferior extra */
@@ -489,86 +554,86 @@ body {
 
 /* Enlaces dentro del modal */
 .modal-contenido a {
-     color: #f97316; /* Color naranja para enlaces */
-     text-decoration: underline;
+    color: #f97316;
+    text-decoration: underline;
 }
 
 /* Hover para enlaces del modal */
 .modal-contenido a:hover {
-    color: #ea580c; /* Tono más oscuro en hover */
+    color: #ea580c;
 }
 
 /* Botones del modal */
 .modal-botones {
     display: flex;
-    justify-content: flex-end; /* Alinear botones a la derecha */
-    gap: 0.8rem; /* Espacio entre botones */
-    margin-top: 0; /* No necesita margen superior aquí */
-    flex-wrap: wrap; /* Permitir que los botones se envuelvan en pantallas pequeñas */
+    justify-content: flex-end;
+    gap: 0.8rem;
+    margin-top: 0;
+    flex-wrap: wrap;
 }
 
 /* Estilos generales para los botones */
 .modal-botones button {
-    padding: 0.6rem 1.2rem; /* Padding ligeramente mayor */
+    padding: 0.6rem 1.2rem;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-weight: 600; /* Semi-bold */
+    font-weight: 600;
     font-size: 0.95rem;
-    transition: background-color 0.3s ease, opacity 0.3s ease; /* Transición también para opacidad */
+    transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
 .modal-botones button:hover {
-    opacity: 0.9; /* Ligera opacidad en hover */
+    opacity: 0.9;
 }
 
-/* Botón aceptar y rechazar (diseño similar en la imagen) */
+/* Botón aceptar y rechazar */
 .btn-aceptar, .btn-rechazar {
-    background-color: #ea580c; /* Verde/amarillo claro como en la imagen */
-    color: white; /* Texto oscuro */
+    background-color: #ea580c;
+    color: white;
 }
 
-/* Botón gestionar preferencias (diseño transparente con borde) */
+/* Botón gestionar preferencias */
 .btn-manage-preferences {
-    background-color: transparent; /* Fondo transparente */
-    color: #e0e0e0; /* Texto claro */
-    border: 1px solid #e0e0e0; /* Borde claro */
+    background-color: transparent;
+    color: #e0e0e0;
+    border: 1px solid #e0e0e0;
 }
 
 /* Hover para botón gestionar */
 .btn-manage-preferences:hover {
-    background-color: rgba(224, 224, 224, 0.1); /* Ligero fondo semi-transparente en hover */
+    background-color: rgba(224, 224, 224, 0.1);
 }
 
 /* Estilo para el botón 'Leer más...' */
 .read-more-btn {
-    background: none; /* Sin fondo */
-    border: none; /* Sin borde */
-    color: #f97316; /* Color naranja */
+    background: none;
+    border: none;
+    color: #f97316;
     cursor: pointer;
     font-size: 0.9rem;
-    margin-top: 0.5rem; /* Espacio encima del botón */
+    margin-top: 0.5rem;
     text-align: left;
     padding: 0;
 }
 
 .read-more-btn:hover {
-    text-decoration: underline; /* Subrayado en hover */
+    text-decoration: underline;
 }
 
-/* Media query para ajustar el ancho en pantallas más pequeñas si es necesario */
+/* Media query para ajustar el ancho en pantallas más pequeñas */
 @media (max-width: 576px) {
     .modal-contenido {
         padding: 1.5rem;
     }
     .modal-botones {
-        flex-direction: row; /* Cambiado de column a row */
+        flex-direction: row;
         gap: 0.5rem;
-        justify-content: center; /* Centrar los botones */
+        justify-content: center;
     }
     .modal-botones button {
-        width: auto; /* Cambiado de 100% a auto */
-        min-width: 120px; /* Ancho mínimo para los botones */
+        width: auto;
+        min-width: 120px;
     }
 }
 
@@ -583,14 +648,46 @@ html {
 /* Sección hero */
 .hero-section {
     text-align: center;
-    padding: 2rem 0;
+    position: relative;
+    background-image: url('imagen/atardecer.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    border-top: none;
 }
 
-/* Título de la sección hero */
+/* Estilos para el texto dentro de la sección hero */
 .hero-section h1 {
+    color: #B12B00;
+    width: 2000px;
+    height: 86px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
     font-size: 2.5rem;
-    color: #f97316;
-    margin-bottom: 1rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    margin: 0;
+}
+
+.hero-section .quote {
+    color: #B12B00;
+    font-style: italic;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    margin-bottom: 0;
 }
 
 /* Grids para programas y novedades */
@@ -846,7 +943,7 @@ html {
 .section-title {
     color: #f97316;
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: 600; /* Semibold para títulos de sección */
     text-align: center;
     margin-bottom: 3rem;
 }
@@ -858,8 +955,7 @@ html {
 #contacto .section-title {
     color: #f97316;
     font-size: 1.8rem;
-    font-weight: 700;
-    text-align: center;
+    font-weight: 600; /* Semibold para títulos específicos */
     margin-bottom: 3rem;
 }
 
@@ -1111,5 +1207,67 @@ html {
 .hidden {
     display: none !important;
 }
+
+/* ========================================================================== */
+/* Estilos para la nueva sección Nuestros Ejes dentro de Quiénes Somos */
+/* ========================================================================== */
+
+.quienes-somos-ejes-img {
+    width: 597px; /* Ancho especificado */
+    height: 340px; /* Alto especificado */
+    max-width: 100%; /* Asegurar que sea responsive */
+    height: auto; /* Ajustar alto automáticamente para mantener proporción en responsive */
+    display: block;
+    margin: 0 auto; /* Centrar la imagen en móvil si no está en grid de 2 columnas */
+}
+
+@media (min-width: 768px) {
+    .quienes-somos-ejes-img {
+        margin: 0; /* Eliminar margen en grid de 2 columnas */
+    }
+}
+
+.ejes-content {
+    /* Asegurar que el texto se alinee a la izquierda y empiece desde arriba */
+    align-self: start;
+    text-align: left;
+}
+
+.ejes-title {
+    color: #F2920C; /* Color naranja para el título */
+    font-size: 1.8rem;
+    font-weight: 600; /* Semibold para el título Nuestros ejes */
+    margin-bottom: 1.5rem;
+    text-align: left; /* Alinear título a la izquierda */
+}
+
+.ejes-content ul {
+    margin-bottom: 1rem;
+    padding-left: 1.2rem;
+    color: #6b7280;
+}
+
+.ejes-content ul li {
+    margin-bottom: 0.5rem;
+    color: #6b7280;
+    font-size: 18px;
+}
+
+.ejes-content ul li strong {
+    color: #0d0d0e; /* Color para el texto en negrita */
+   
+}
+
+.ejes-quote {
+    color: #f97316; /* Color naranja para la cita */
+ 
+    margin-top: 1.5rem;
+    text-align: left; /* Alinear cita a la izquierda */
+}
+
+/* ========================================================================== */
+/* SECCIÓN PROGRAMAS */
+/* ========================================================================== */
+
   
   
