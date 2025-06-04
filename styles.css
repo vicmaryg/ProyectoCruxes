@@ -393,12 +393,12 @@ body {
     display: inline-block;
     background-color:#E84E1D;
     color: white;
-    padding: 0.75rem 1.5rem;
+    padding: 0.313rem;
     border-radius: 4px;
     text-decoration: none;
     font-weight: 600;
     transition: background-color 0.3s ease;
-    height: 40px; /* Alto especificado */
+    height: 36px; /* Alto especificado */
     font-size: 20px; /* Tamaño de letra especificado */
 }
 
