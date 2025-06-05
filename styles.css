@@ -16,6 +16,7 @@ a {
 
 /* Fondo general de la página */
 body {
+    padding-top: 90px; /* Mismo valor que la altura del header */
     background-color: white;
 }
 
@@ -33,6 +34,13 @@ body {
 .header {
     padding: 1rem 0;
     height: 90px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Contenedor flexible para el header */
