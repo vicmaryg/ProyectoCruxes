@@ -1,0 +1,65 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+/* Estilos base para enlaces */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Fondo general de la página */
+body {
+    padding-top: 90px;
+    background-color: white;
+}
+
+/* Contenedor principal con ancho máximo */
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+/* Configuración de scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Clase para ocultar elementos */
+.hidden {
+    display: none !important;
+}
+
+/* Estilos base para secciones */
+.section {
+    border-top: 2px solid var(--color-primary);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Asegurar que la sección de inicio no tenga margen, relleno ni borde */
+#inicio {
+    margin: 0;
+    padding: 0;
+    border-top: none;
+}
+
+/* Estilos para citas */
+.quote {
+    color: var(--color-primary);
+    font-style: italic;
+}
+
+/* Títulos de sección */
+.section-title {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+} 

@@ -1,0 +1,83 @@
+/* Estilos del footer */
+.footer {
+    background-color: var(--color-primary);
+    color: var(--text-light);
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+}
+
+/* Contenedor del footer */
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Imagen del footer */
+.footer-logo {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Texto del footer */
+.footer .container > p {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Iconos sociales del footer */
+.footer .social-icons {
+    align-self: flex-end;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Enlaces de iconos sociales */
+.footer .social-icons a {
+    color: var(--color-primary) !important;
+    font-size: 2.5rem;
+    margin: 0 0.75rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+/* Hover para iconos sociales */
+.footer .social-icons a:hover {
+    color: var(--color-primary-dark) !important;
+    transform: scale(1.1);
+}
+
+/* Iconos dentro de enlaces sociales */
+.footer .social-icons a i {
+    transition: transform 0.3s ease;
+    font-size: 2.5rem;
+}
+
+/* Hover para iconos */
+.footer .social-icons a:hover i {
+    transform: translateY(-3px);
+}
+
+/* Enlaces del footer */
+.footer-link {
+    color: var(--text-light);
+    font-weight: 500;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 2px solid var(--text-light);
+    border-radius: var(--border-radius);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover para enlaces del footer */
+.footer-link:hover {
+    color: var(--color-primary);
+    background-color: var(--text-light);
+    text-shadow: none;
+    text-decoration: none !important;
+} 

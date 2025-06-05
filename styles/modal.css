@@ -1,0 +1,165 @@
+/* Contenedor del modal (Banner inferior) */
+.modal-cookies {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 30%;
+    width: 60%;
+    background-color: #2d2d2d;
+    z-index: var(--z-modal);
+    padding: var(--spacing-sm);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenido del modal */
+.modal-contenido {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+}
+
+/* Animación de entrada del modal */
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contenedor del texto para la funcionalidad 'leer más...' */
+.modal-text-content {
+    max-height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Gradiente para indicar que el texto está cortado */
+.modal-text-content::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to top, #333, rgba(51, 51, 51, 0));
+    pointer-events: none;
+}
+
+/* Clase para mostrar el contenido completo */
+.modal-text-content.expanded {
+    max-height: none;
+    overflow: visible;
+}
+
+/* Eliminar el gradiente cuando el contenido está expandido */
+.modal-text-content.expanded::after {
+    display: none;
+}
+
+/* Estilos de texto dentro del modal */
+.modal-contenido h3,
+.modal-contenido p,
+.modal-contenido ol,
+.modal-contenido li,
+.modal-contenido strong {
+    color: #e0e0e0;
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+/* Título del modal */
+.modal-contenido h3 {
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
+}
+
+/* Último párrafo/lista no necesita margen inferior extra */
+.modal-text-content > *:last-child {
+    margin-bottom: 0;
+}
+
+/* Enlaces dentro del modal */
+.modal-contenido a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+/* Hover para enlaces del modal */
+.modal-contenido a:hover {
+    color: var(--color-primary-dark);
+}
+
+/* Botones del modal */
+.modal-botones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.8rem;
+    margin-top: 0;
+    flex-wrap: wrap;
+}
+
+/* Estilos generales para los botones */
+.modal-botones button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.modal-botones button:hover {
+    opacity: 0.9;
+}
+
+/* Botón aceptar y rechazar */
+.btn-aceptar, .btn-rechazar {
+    background-color: var(--color-primary-dark);
+    color: var(--text-light);
+}
+
+/* Botón gestionar preferencias */
+.btn-manage-preferences {
+    background-color: transparent;
+    color: #e0e0e0;
+    border: 1px solid #e0e0e0;
+}
+
+/* Hover para botón gestionar */
+.btn-manage-preferences:hover {
+    background-color: rgba(224, 224, 224, 0.1);
+}
+
+/* Estilo para el botón 'Leer más...' */
+.read-more-btn {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: var(--spacing-xs);
+    text-align: left;
+    padding: 0;
+}
+
+.read-more-btn:hover {
+    text-decoration: underline;
+} 

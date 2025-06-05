@@ -1,0 +1,84 @@
+/* Título de novedades */
+#novedades .section-title {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Contenedor de novedades */
+.novedades-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+/* Items de novedad */
+.novedad-item {
+    border: 2px solid var(--color-primary);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Títulos de novedad */
+.novedad-item h4 {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    text-align: center;
+}
+
+/* Párrafos de novedad */
+.novedad-item p {
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-sm);
+    flex-grow: 1;
+}
+
+/* Estilo para flechas placeholder */
+.novedad-item p[style="text-align: right;"] {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+/* Estilos para flechas en novedades */
+.novedad-item .arrow-right {
+    text-align: right;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: var(--text-light);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: var(--shadow-sm);
+    z-index: var(--z-whatsapp);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+}
+
+.whatsapp-float i {
+    color: var(--text-light);
+} 

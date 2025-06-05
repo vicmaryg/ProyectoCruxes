@@ -1,0 +1,137 @@
+/* Título de programas */
+#programas .section-title {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Subsecciones de programas */
+.programa-sub-section {
+    margin-bottom: 4rem;
+}
+
+/* Estilos para CRUXES RSE */
+.programa-sub-section.cruxes-rse .programa-title,
+.programa-sub-section.cruxes-rse .programa-quote,
+.programa-sub-section.cruxes-rse .programa-subtitle,
+.programa-sub-section.cruxes-rse .programa-item h4,
+.programa-sub-section.cruxes-rse .programa-item p,
+.programa-sub-section.cruxes-rse .programa-item ul li {
+    color: var(--color-bermellon);
+}
+
+.programa-sub-section.cruxes-rse .programa-title {
+    border-color: var(--color-bermellon);
+}
+
+.programa-sub-section.cruxes-rse .programa-item {
+    border-color: var(--color-bermellon);
+}
+
+/* Estilos para CRUXES SOLIDARIAS */
+.programa-sub-section.cruxes-solidarias .programa-title,
+.programa-sub-section.cruxes-solidarias .programa-quote,
+.programa-sub-section.cruxes-solidarias .programa-subtitle,
+.programa-sub-section.cruxes-solidarias .programa-item h4,
+.programa-sub-section.cruxes-solidarias .programa-item p,
+.programa-sub-section.cruxes-solidarias .programa-item ul li {
+    color: var(--color-primary);
+}
+
+.programa-sub-section.cruxes-solidarias .programa-title {
+    border-color: var(--color-primary);
+}
+
+.programa-sub-section.cruxes-solidarias .programa-item {
+    border-color: var(--color-primary);
+}
+
+/* Estilos para CRUXES DE LUZ */
+.programa-sub-section.cruxes-de-luz .programa-title,
+.programa-sub-section.cruxes-de-luz .programa-quote,
+.programa-sub-section.cruxes-de-luz .programa-subtitle,
+.programa-sub-section.cruxes-de-luz .programa-item h4,
+.programa-sub-section.cruxes-de-luz .programa-item p,
+.programa-sub-section.cruxes-de-luz .programa-item ul li {
+    color: var(--color-yellow);
+}
+
+.programa-sub-section.cruxes-de-luz .programa-title {
+    border-color: var(--color-yellow);
+}
+
+.programa-sub-section.cruxes-de-luz .programa-item {
+    border-color: var(--color-yellow);
+}
+
+/* Título de programa */
+.programa-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-md);
+    border: 2px solid;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Cita de programa */
+.programa-quote {
+    font-style: italic;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Subtítulo de programa */
+.programa-subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+/* Grid de programas */
+.programas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+/* Items de programa */
+.programa-item {
+    border: 2px solid;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Títulos de items de programa */
+.programa-item h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Párrafos y listas de items de programa */
+.programa-item p,
+.programa-item ul {
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-sm);
+    flex-grow: 1;
+}
+
+/* Listas de items de programa */
+.programa-item ul {
+    padding-left: 1.2rem;
+}
+
+/* Items de lista de programa */
+.programa-item ul li {
+    margin-bottom: var(--spacing-xs);
+} 

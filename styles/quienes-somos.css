@@ -1,0 +1,120 @@
+/* Estilos específicos para la sección Quiénes Somos */
+#quienes-somos {
+    margin-top: var(--spacing-xl);
+    border-top: none;
+}
+
+#quienes-somos .section-title {
+    text-align: left;
+    color: #E84E1D;
+    height: 36px;
+    font-size: 30px;
+}
+
+#quienes-somos p {
+    margin-bottom: var(--spacing-sm);
+    font-size: 18px;
+}
+
+#quienes-somos ul {
+    margin-bottom: var(--spacing-sm);
+    padding-left: 1.2rem;
+}
+
+#quienes-somos .list-decimal li {
+    margin-bottom: var(--spacing-xs);
+}
+
+#quienes-somos .quote {
+    color: var(--color-primary);
+    font-style: italic;
+    margin-top: var(--spacing-lg);
+    margin-bottom: 0;
+    text-align: left;
+}
+
+/* Estilos para la imagen en Quiénes Somos */
+.quienes-somos-img {
+    width: 597px;
+    height: 340px;
+    margin-top: 4rem;
+    display: block;
+}
+
+/* Contenedor de botones en Quiénes Somos */
+.quienes-somos-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+/* Estilos para los enlaces/botones de descarga */
+.button-link {
+    display: inline-block;
+    background-color: #E84E1D;
+    color: var(--text-light);
+    padding: 0.313rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    height: 36px;
+    font-size: 20px;
+}
+
+.button-link:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* Grid de dos columnas */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+}
+
+/* Estilos para la sección Nuestros Ejes */
+.quienes-somos-ejes-img {
+    width: 597px;
+    height: 340px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.ejes-content {
+    align-self: start;
+    text-align: left;
+}
+
+.ejes-title {
+    color: #F2920C;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    text-align: left;
+}
+
+.ejes-content ul {
+    margin-bottom: var(--spacing-sm);
+    padding-left: 1.2rem;
+    color: var(--text-dark);
+}
+
+.ejes-content ul li {
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-dark);
+    font-size: 18px;
+}
+
+.ejes-content ul li strong {
+    color: #0d0d0e;
+}
+
+.ejes-quote {
+    color: var(--color-primary);
+    margin-top: var(--spacing-md);
+    text-align: left;
+} 

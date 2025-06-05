@@ -1,0 +1,95 @@
+/* Contenedor de contacto */
+.contacto-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Información de contacto */
+.contacto-info {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Título de información de contacto */
+.contacto-info h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Formulario de contacto */
+.contacto-form {
+    background-color: #fff;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Grupos de formulario */
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+/* Etiquetas de formulario */
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+/* Campos de formulario */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus en campos de formulario */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.1);
+}
+
+/* Contenedor de checkbox */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    cursor: pointer;
+}
+
+/* Checkbox personalizado */
+.checkbox-container input[type="checkbox"] {
+    width: auto;
+    margin-right: var(--spacing-xs);
+}
+
+/* Botón de envío */
+.btn-enviar {
+    background-color: var(--color-primary);
+    color: var(--text-light);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover para botón de envío */
+.btn-enviar:hover {
+    background-color: var(--color-primary-dark);
+} 

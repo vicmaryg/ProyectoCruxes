@@ -1,0 +1,16 @@
+/* Importación de variables y estilos base */
+@import 'variables.css';
+@import 'base.css';
+
+/* Importación de componentes */
+@import 'header.css';
+@import 'footer.css';
+@import 'hero.css';
+@import 'quienes-somos.css';
+@import 'programas.css';
+@import 'novedades.css';
+@import 'contacto.css';
+@import 'modal.css';
+
+/* Importación de estilos responsive */
+@import 'responsive.css'; 

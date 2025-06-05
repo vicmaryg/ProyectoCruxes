@@ -1,0 +1,173 @@
+/* Media queries para responsive */
+
+/* Ajustes para móvil */
+@media (max-width: 768px) {
+    /* Header y navegación */
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: var(--z-header);
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.98);
+        transition: right 0.3s ease-in-out;
+        z-index: var(--z-header);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav.active {
+        right: 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: var(--spacing-lg);
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav-list li {
+        margin: var(--spacing-md) 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 0.75rem 1.5rem;
+        display: block;
+        width: 100%;
+        border: none;
+        background: none;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: var(--color-primary);
+    }
+
+    /* Ajustes para el header en móvil */
+    .header-flex {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .logo-img {
+        height: 60px;
+    }
+
+    .social-icons {
+        font-size: 1.5rem;
+    }
+
+    .donate-button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+        width: 200px;
+    }
+
+    .nav-header {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .header-right {
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Ajustes para el modal de cookies */
+    .modal-cookies {
+        width: 100%;
+        height: auto;
+        max-height: 80vh;
+    }
+
+    .modal-contenido {
+        padding: var(--spacing-md);
+    }
+
+    .modal-botones {
+        flex-direction: row;
+        gap: var(--spacing-xs);
+        justify-content: center;
+    }
+
+    .modal-botones button {
+        width: auto;
+        min-width: 120px;
+    }
+
+    /* Ajustes para el botón de WhatsApp */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    /* Ajustes para la sección Quiénes Somos */
+    .quienes-somos-ejes-img {
+        margin: 0 auto;
+    }
+}
+
+/* Media queries para grid responsive */
+@media (min-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #quienes-somos.grid-2 {
+        align-items: start;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    #quienes-somos > div:nth-child(1) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    #quienes-somos > div.quienes-somos-img-container {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    #quienes-somos > div.ejes-image {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    #quienes-somos > div.ejes-content {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        text-align: left;
+    }
+
+    /* Ajustes para contacto */
+    .contacto-container {
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    .contacto-info {
+        text-align: left;
+        margin-bottom: 0;
+    }
+} 
