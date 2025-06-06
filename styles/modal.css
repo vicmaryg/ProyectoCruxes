@@ -25,7 +25,7 @@
     background-color: transparent;
     padding: 0;
     border-radius: 0;
-    max-width: 1200px; /* Ancho máximo del contenido */
+    max-width: 1920px;
     width: 100%;
     margin: 0 auto;
     max-height: 80vh;
@@ -36,6 +36,7 @@
     flex-direction: column; /* Mantener contenido en columna */
     align-items: flex-start;
     gap: var(--spacing-sm);
+    padding: 0 var(--spacing-sm);
 }
 
 /* Animación de entrada del modal */

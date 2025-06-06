@@ -1,0 +1,52 @@
+/* Estilos para la página de construcción */
+.pagina-construccion {
+    display: none; /* Oculto por defecto */
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    padding: var(--spacing-lg);
+}
+
+.construccion-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 180px); /* Restamos el padding */
+}
+
+.construccion-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+/* Media query para mostrar la página de construcción en móvil */
+@media (max-width: 768px) {
+    body {
+        padding-top: 0;
+    }
+
+    .pagina-construccion {
+        display: block;
+    }
+
+    main.container {
+        display: none;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    #inicio {
+        display: none;
+    }
+
+    .whatsapp-float {
+        display: none !important;
+    }
+} 

@@ -81,8 +81,9 @@
     display: grid;
     grid-template-columns: 1fr; /* Una columna por defecto */
     gap: var(--spacing-lg);
-    max-width: 1290px;
-    margin: 0 200px;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
 }
 
 /* Información de contacto */
