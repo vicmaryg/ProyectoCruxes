@@ -1,15 +1,23 @@
 /* Contenedor del modal (Banner inferior) */
 .modal-cookies {
-    display: flex;
+    display: none; /* Oculto por defecto */
     position: fixed;
     bottom: 0;
     left: 0;
-    height: 30%;
-    width: 60%;
-    background-color: #2d2d2d;
+    right: 0; /* Ocupar todo el ancho */
+    height: auto; /* Altura automática según contenido */
+    width: 100%; /* Ocupar todo el ancho */
+    background-color: #FEF5E7; /* Color de fondo claro similar a la imagen */
     z-index: var(--z-modal);
-    padding: var(--spacing-sm);
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    padding: var(--spacing-sm) var(--spacing-md); /* Ajustar padding */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Sombra ajustada */
+    align-items: center; /* Centrar contenido verticalmente */
+    justify-content: center; /* Centrar contenido horizontalmente */
+}
+
+/* Estilo para mostrar el modal con JavaScript */
+.modal-cookies.show {
+    display: flex;
 }
 
 /* Contenido del modal */
@@ -17,14 +25,15 @@
     background-color: transparent;
     padding: 0;
     border-radius: 0;
-    max-width: 800px;
+    max-width: 1200px; /* Ancho máximo del contenido */
     width: 100%;
     margin: 0 auto;
     max-height: 80vh;
     overflow-y: auto;
+    overflow-x: hidden; /* Prevenir scroll horizontal */
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Mantener contenido en columna */
     align-items: flex-start;
     gap: var(--spacing-sm);
 }
@@ -33,7 +42,7 @@
 @keyframes modalAppear {
     from {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(100%); /* Animación desde abajo */
     }
     to {
         opacity: 1;
@@ -43,10 +52,11 @@
 
 /* Contenedor del texto para la funcionalidad 'leer más...' */
 .modal-text-content {
-    max-height: 150px;
+    max-height: 150px; /* Altura máxima antes de leer más */
     overflow-y: auto;
     overflow-x: hidden;
     position: relative;
+    padding-right: 15px; /* Espacio para scrollbar */
 }
 
 /* Gradiente para indicar que el texto está cortado */
@@ -55,16 +65,18 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    height: 30px;
-    background: linear-gradient(to top, #333, rgba(51, 51, 51, 0));
+    width: calc(100% - 15px); /* Ajustar ancho por el scrollbar */
+    height: 40px; /* Aumentar altura del gradiente */
+    background: linear-gradient(to top, #FEF5E7, rgba(254, 245, 231, 0)); /* Ajustar gradiente al nuevo fondo */
     pointer-events: none;
 }
 
 /* Clase para mostrar el contenido completo */
 .modal-text-content.expanded {
     max-height: none;
-    overflow: visible;
+    overflow-y: visible;
+    overflow-x: visible;
+    padding-right: 0; /* Eliminar espacio para scrollbar */
 }
 
 /* Eliminar el gradiente cuando el contenido está expandido */
@@ -78,7 +90,7 @@
 .modal-contenido ol,
 .modal-contenido li,
 .modal-contenido strong {
-    color: #e0e0e0;
+    color: #4b5563; /* Color de texto oscuro */
     margin-bottom: 0.8rem;
     line-height: 1.5;
 }
@@ -87,7 +99,8 @@
 .modal-contenido h3 {
     font-size: 1.3rem;
     margin-bottom: var(--spacing-sm);
-    color: var(--color-primary);
+    color: var(--color-primary); /* Color naranja */
+    font-weight: 700; /* Negrita */
 }
 
 /* Último párrafo/lista no necesita margen inferior extra */
@@ -109,9 +122,9 @@
 /* Botones del modal */
 .modal-botones {
     display: flex;
-    justify-content: flex-end;
-    gap: 0.8rem;
-    margin-top: 0;
+    justify-content: flex-start; /* Alinear botones a la izquierda */
+    gap: var(--spacing-sm); /* Espacio entre botones */
+    margin-top: var(--spacing-md); /* Espacio encima de los botones */
     flex-wrap: wrap;
 }
 
@@ -130,22 +143,21 @@
     opacity: 0.9;
 }
 
-/* Botón aceptar y rechazar */
-.btn-aceptar, .btn-rechazar {
-    background-color: var(--color-primary-dark);
+/* Botón aceptar */
+.btn-aceptar {
+    background-color: var(--color-primary-dark); /* Naranja/Rojo */
     color: var(--text-light);
 }
 
-/* Botón gestionar preferencias */
-.btn-manage-preferences {
-    background-color: transparent;
-    color: #e0e0e0;
-    border: 1px solid #e0e0e0;
+/* Botón rechazar */
+.btn-rechazar {
+    background-color: var(--color-primary-light); /* Amarillo/Naranja */
+    color: var(--text-light); /* Color de texto blanco */
 }
 
-/* Hover para botón gestionar */
-.btn-manage-preferences:hover {
-    background-color: rgba(224, 224, 224, 0.1);
+/* Botón gestionar preferencias (ocultar si no se necesita) */
+.btn-manage-preferences {
+    display: none; /* Ocultar según el diseño deseado */
 }
 
 /* Estilo para el botón 'Leer más...' */
@@ -162,4 +174,27 @@
 
 .read-more-btn:hover {
     text-decoration: underline;
+}
+
+/* Media query para ajustar el ancho en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .modal-cookies {
+        padding: var(--spacing-sm);
+    }
+    .modal-contenido {
+        padding: 0;
+    }
+    .modal-botones {
+        flex-direction: row;
+        gap: var(--spacing-xs);
+        justify-content: center;
+    }
+    .modal-botones button {
+        width: auto;
+        min-width: 100px; /* Ajustar ancho mínimo de botón en móvil */
+    }
+
+    .modal-text-content::after {
+        width: 100%; /* Ajustar ancho del gradiente en móvil */
+    }
 } 
