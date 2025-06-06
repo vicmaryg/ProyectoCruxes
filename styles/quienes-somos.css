@@ -2,6 +2,7 @@
 #quienes-somos {
     margin-top: var(--spacing-xl);
     border-top: none;
+    font-family: 'Inter', sans-serif;
 }
 
 #quienes-somos .section-title {
@@ -13,7 +14,7 @@
 
 #quienes-somos p {
     margin-bottom: var(--spacing-sm);
-    font-size: 18px;
+    font-size: 19px;
 }
 
 #quienes-somos ul {
@@ -21,9 +22,11 @@
     padding-left: 1.2rem;
 }
 
-#quienes-somos .list-decimal li {
-    margin-bottom: var(--spacing-xs);
+#quienes-somos li { 
+    font-size: 18px;
 }
+
+
 
 #quienes-somos .quote {
     color: var(--color-primary);
@@ -106,7 +109,7 @@
 .ejes-content ul li {
     margin-bottom: var(--spacing-xs);
     color: var(--text-dark);
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .ejes-content ul li strong {
@@ -117,4 +120,109 @@
     color: var(--color-primary);
     margin-top: var(--spacing-md);
     text-align: left;
-} 
+}
+
+/* Estilos para la sección Visión, Misión y Objetivos */
+
+
+#vision-mision-objetivos {
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+    border-top: 2px solid #F2920C;
+    border-bottom: 2px solid #F2920C;
+}
+
+#vision-mision-objetivos .vision-mision-objetivos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+#vision-mision-objetivos .section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    color: #F2920C;
+    margin-bottom: var(--spacing-sm);
+    border-bottom: none;
+    padding-bottom: 0;
+    text-align: left;
+    margin-top: var(--spacing-md);
+}
+
+/* Estilos para listas dentro de la sección Visión, Misión, Objetivos */
+#vision-mision-objetivos ul {
+    margin-top: var(--spacing-md); 
+    margin-bottom: var(--spacing-md);
+    padding-left: 1.5rem; 
+    list-style: disc; 
+}
+
+#vision-mision-objetivos ul li {
+    font-size: 18px; 
+    
+    margin-bottom: var(--spacing-xs); 
+    font-weight: 400; 
+}
+
+#vision-mision-objetivos p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px
+}
+
+/* Estilos para la sección Nuestro Equipo */
+#nuestro-equipo {
+    margin-top: var(--spacing-xl); 
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg); 
+    border-top: 2px solid #F2920C; 
+    border-bottom: 2px solid #F2920C; 
+}
+
+.nuestro-equipo-grid {
+    display: grid;
+    grid-template-columns: 1fr auto; 
+    gap: var(--spacing-lg); 
+    align-items: center;
+}
+
+
+.nuestro-equipo-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px; 
+    color: #F2920C; 
+    margin-bottom: var(--spacing-md); 
+    text-align: left;
+}
+
+.nuestro-equipo-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px; 
+    margin-bottom: var(--spacing-sm); 
+    line-height: 1.5; 
+}
+
+.nuestro-equipo-quote {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: var(--color-primary); 
+    font-style: italic;
+    margin-top: var(--spacing-md); 
+    text-align: left;
+}
+
+.nuestro-equipo-images {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: var(--spacing-xs); 
+    align-items: center; 
+    justify-content: flex-end; 
+}
+
+.nuestro-equipo-images img {
+    height: 120px; 
+    width: 120PX;
+}
+
+
+
