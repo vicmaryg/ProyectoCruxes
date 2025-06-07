@@ -37,7 +37,14 @@
 }
 
 /* Estilos para la imagen en Quiénes Somos */
+.quienes-somos-img-container {
+    display: flex;
+    justify-content: flex-end; /* Alinea el contenido a la derecha */
+    width: 100%; /* Asegúrate de que el contenedor tenga un ancho definido */
+}
+
 .quienes-somos-img {
+    margin-left: 0; /* Empuja la imagen hacia la derecha */
     width: 597px;
     height: 340px;
     margin-top: 4rem;
@@ -78,7 +85,15 @@
 }
 
 /* Estilos para la sección Nuestros Ejes */
+.ejes-image {
+    width: 100%; /* Asegúrate de que el contenedor tenga un ancho definido */
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+}
+
 .quienes-somos-ejes-img {
+    float: left; /* Alinea la imagen a la izquierda */
+    margin-right: auto; /* Empuja la imagen hacia la izquierda */
     width: 597px;
     height: 340px;
     max-width: 100%;
@@ -126,8 +141,7 @@
 
 
 #vision-mision-objetivos {
-    margin-top: var(--spacing-xl);
-    padding-top: var(--spacing-xl);
+    margin-top: var(--spacing-lg);
     padding-bottom: var(--spacing-xl);
     border-top: 2px solid #F2920C;
 }
@@ -146,6 +160,7 @@
     border-bottom: none;
     padding-bottom: 0;
     text-align: left;
+    margin-top: 48px;
     margin-top: var(--spacing-md);
 }
 
@@ -219,6 +234,13 @@
     height: auto;
     /* Opcional: añadir un poco de margen si el gap no es suficiente o para estilos específicos */
     margin: 2px; 
+}
+
+.objetivo-especifico-title {
+    border-top: 2px solid #F2920C; /* Agrega un borde superior naranja */
+    margin-top: 48px; /* Ajusta la distancia superior */
+    padding-top: 20px; /* Agrega un espacio entre la línea y el texto */
+    /* ... resto de los estilos existentes ... */
 }
 
 
