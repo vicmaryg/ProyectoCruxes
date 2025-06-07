@@ -3,106 +3,159 @@
     color: var(--color-primary);
     font-size: 1.8rem;
     font-weight: 700;
-    text-align: center;
+    text-align: left;
+    margin-top: var(--spacing-xl);
     margin-bottom: var(--spacing-xl);
 }
 
-/* Subsecciones de programas */
+/* Contenedor de cada subsección de programa (el área blanca con borde) */
 .programa-sub-section {
     margin-bottom: 4rem;
+    background-color: white; /* Fondo blanco para el contenido */
+    border-radius: var(--border-radius-lg); /* Bordes redondeados para todo el contenedor */
+    overflow: hidden; 
+    border: none; /* Eliminar el borde */
+    padding: 0; /* Asegurar que no hay padding en el contenedor principal */
+    display: flex; /* Usar flexbox para controlar la disposición */
+    flex-direction: column;
 }
 
-/* Estilos para CRUXES RSE */
-.programa-sub-section.cruxes-rse .programa-title,
-.programa-sub-section.cruxes-rse .programa-quote,
-.programa-sub-section.cruxes-rse .programa-subtitle,
-.programa-sub-section.cruxes-rse .programa-item h4,
-.programa-sub-section.cruxes-rse .programa-item p,
-.programa-sub-section.cruxes-rse .programa-item ul li {
-    color: var(--color-bermellon);
-}
-
-.programa-sub-section.cruxes-rse .programa-title {
-    border-color: var(--color-bermellon);
-}
-
-.programa-sub-section.cruxes-rse .programa-item {
-    border-color: var(--color-bermellon);
-}
-
-/* Estilos para CRUXES SOLIDARIAS */
-.programa-sub-section.cruxes-solidarias .programa-title,
-.programa-sub-section.cruxes-solidarias .programa-quote,
-.programa-sub-section.cruxes-solidarias .programa-subtitle,
-.programa-sub-section.cruxes-solidarias .programa-item h4,
-.programa-sub-section.cruxes-solidarias .programa-item p,
-.programa-sub-section.cruxes-solidarias .programa-item ul li {
-    color: var(--color-primary);
-}
-
-.programa-sub-section.cruxes-solidarias .programa-title {
-    border-color: var(--color-primary);
-}
-
-.programa-sub-section.cruxes-solidarias .programa-item {
-    border-color: var(--color-primary);
-}
-
-/* Estilos para CRUXES DE LUZ */
-.programa-sub-section.cruxes-de-luz .programa-title,
-.programa-sub-section.cruxes-de-luz .programa-quote,
-.programa-sub-section.cruxes-de-luz .programa-subtitle,
-.programa-sub-section.cruxes-de-luz .programa-item h4,
-.programa-sub-section.cruxes-de-luz .programa-item p,
-.programa-sub-section.cruxes-de-luz .programa-item ul li {
-    color: var(--color-yellow);
-}
-
-.programa-sub-section.cruxes-de-luz .programa-title {
-    border-color: var(--color-yellow);
-}
-
-.programa-sub-section.cruxes-de-luz .programa-item {
-    border-color: var(--color-yellow);
-}
-
-/* Título de programa */
+/* Estilos generales para la barra de título del programa */
 .programa-title {
     font-size: 1.5rem;
     font-weight: 600;
-    text-align: center;
-    margin-bottom: var(--spacing-xs);
-    padding: var(--spacing-xs) var(--spacing-md);
-    border: 2px solid;
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center; /* Asegurar centrado */
+    padding: var(--spacing-xs) var(--spacing-md); /* Ajustar padding interno: vertical xs, horizontal md */
+    color: var(--text-light); /* Texto blanco */
     display: block;
+    margin: 0; /* Sin margen para pegar al borde del contenedor principal */
+    /* Bordes redondeados arriba y abajo */
+    border-radius: var(--border-radius-lg); /* Bordes redondeados en todas las esquinas */
+    box-shadow: var(--shadow-sm); /* Sombra sutil debajo del título */
+    /* Los colores de fondo se definirán por las clases específicas */
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    box-sizing: border-box; /* Incluir padding en el ancho */
+}
+
+/* Estilos para CRUXES RSE */
+.programa-sub-section.cruxes-rse .programa-title {
+    background-color:#E84E1D ; /* Color naranja principal */
+}
+
+.programa-sub-section.cruxes-rse .programa-quote {
+    color: #E84E1D;
+}
+
+.programa-sub-section.cruxes-rse .programa-content h4,
+.programa-sub-section.cruxes-rse .programa-content p,
+.programa-sub-section.cruxes-rse .programa-content ul li {
+    color: var(--text-dark);
+}
+
+/* Estilos para CRUXES SOLIDARIAS */
+.programa-sub-section.cruxes-solidarias .programa-title {
+    background-color: #F2920C; /* Color naranja principal */
+}
+
+.programa-sub-section.cruxes-solidarias .programa-quote {
+    color: #F2920C;
+}
+
+.programa-sub-section.cruxes-solidarias .programa-content h4,
+.programa-sub-section.cruxes-solidarias .programa-content p,
+.programa-sub-section.cruxes-solidarias .programa-content ul li {
+    color: var(--text-dark);
+}
+
+/* Estilos para CRUXES DE LUZ */
+.programa-sub-section.cruxes-de-luz .programa-title {
+    background-color: #F2A90C; /* Color amarillo */
+}
+
+.programa-sub-section.cruxes-de-luz .programa-quote {
+    color: #F2A90C;
+}
+
+.programa-sub-section.cruxes-de-luz .programa-content h4,
+.programa-sub-section.cruxes-de-luz .programa-content p,
+.programa-sub-section.cruxes-de-luz .programa-content ul li {
+    color: var(--text-dark);
+}
+
+/* Contenedor para la cita y el contenido - Aseguramos que ocupe todo el ancho y manejamos el padding vertical */
+.programa-bordered-content {
+    border: none; /* Eliminar el borde */
+    padding: var(--spacing-md) 0 var(--spacing-md) 0; /* Padding vertical, sin padding horizontal */
+    background-color: white; /* Asegurar fondo blanco */
+    width: 100%; /* Asegurar que ocupe todo el ancho disponible */
+    box-sizing: border-box;
+    flex-grow: 1; /* Permitir que crezca para llenar el espacio restante */
+    display: flex; /* Usar flexbox para la alineación interna */
+    flex-direction: column;
+    align-items: center; /* Centrar la cita horizontalmente */
 }
 
 /* Cita de programa */
 .programa-quote {
     font-style: italic;
     text-align: center;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md); /* Espacio debajo de la cita */
+    /* El padding horizontal para la cita se añade aquí para alinearla */
+    padding: 0 var(--spacing-md);
+    /* color: se define por las clases de programa */
 }
 
-/* Subtítulo de programa */
-.programa-subtitle {
+/* Contenedor del contenido dentro de la subsección - Este tendrá el borde y el padding */
+.programa-content {
+    padding: var(--spacing-md); /* Padding interno dentro del borde */
+    border: 1px solid #ddd; /* Borde sutil gris */
+    border-radius: var(--border-radius-lg); /* Bordes redondeados */
+    background-color: white; /* Fondo blanco */
+    /* Aseguramos que ocupe el ancho completo y el padding interno cree el espacio */
+    width: 100%; /* Ocupar todo el ancho disponible */
+    box-sizing: border-box; /* Incluir padding y border en el ancho */
+    /* Margen inferior para separar del siguiente bloque si es necesario */
+    margin-bottom: 0; /* Asegurar que no haya margen inferior extra */
+}
+
+/* El resto de estilos para h4, p, ul, li dentro de .programa-content */
+.programa-content h4 {
     font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: var(--spacing-md);
-    text-align: center;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-dark);
+    text-align: left;
 }
 
-/* Grid de programas */
+.programa-content p {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.5;
+    color: var(--text-dark);
+    text-align: left;
+}
+
+.programa-content ul {
+    padding-left: 1.5rem;
+    list-style: disc;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-dark);
+}
+
+.programa-content ul li {
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.5;
+    color: var(--text-dark);
+    text-align: left;
+}
+
+/* Remover estilos antiguos */
+/*
 .programas-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-lg);
 }
 
-/* Items de programa */
 .programa-item {
     border: 2px solid;
     padding: var(--spacing-md);
@@ -111,14 +164,12 @@
     flex-direction: column;
 }
 
-/* Títulos de items de programa */
 .programa-item h4 {
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: var(--spacing-sm);
 }
 
-/* Párrafos y listas de items de programa */
 .programa-item p,
 .programa-item ul {
     color: var(--text-dark);
@@ -126,12 +177,11 @@
     flex-grow: 1;
 }
 
-/* Listas de items de programa */
 .programa-item ul {
     padding-left: 1.2rem;
 }
 
-/* Items de lista de programa */
 .programa-item ul li {
     margin-bottom: var(--spacing-xs);
-} 
+}
+*/ 

@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Control del menú hamburguesa
+  /*
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav');
 
@@ -93,5 +94,55 @@ document.addEventListener('DOMContentLoaded', function() {
         !menuToggle.contains(e.target)) {
       toggleMenu();
     }
+  });
+  */
+
+  // --- Funcionalidad del Carrusel de Novedades ---
+  window.addEventListener('load', function() {
+    const novedadItems = document.querySelectorAll('.novedad-item');
+
+    novedadItems.forEach(item => {
+      const carouselContainer = item.querySelector('.novedad-carousel-container');
+      const leftArrow = item.querySelector('.left-arrow');
+      const rightArrow = item.querySelector('.right-arrow');
+      const carouselItems = carouselContainer ? carouselContainer.querySelectorAll('img, .carousel-image-placeholder, .carousel-content-placeholder') : [];
+      
+      if (carouselItems.length > 0) {
+        const firstItem = carouselItems[0];
+        const itemOffsetWidth = firstItem.offsetWidth;
+        const itemMarginLeft = parseInt(window.getComputedStyle(firstItem).marginLeft);
+        const itemMarginRight = parseInt(window.getComputedStyle(firstItem).marginRight);
+        const itemTotalWidth = itemOffsetWidth + itemMarginLeft + itemMarginRight;
+
+        // Función para avanzar automáticamente
+        const autoScroll = () => {
+          const maxScrollLeft = carouselContainer.scrollWidth - carouselContainer.clientWidth;
+          if (carouselContainer.scrollLeft + itemTotalWidth >= maxScrollLeft) {
+            carouselContainer.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            carouselContainer.scrollBy({ left: itemTotalWidth, behavior: 'smooth' });
+          }
+        };
+
+        // Intervalo para el desplazamiento automático (ajusta el tiempo aquí)
+        const scrollInterval = setInterval(autoScroll, 3000); // Cambia 3000 por el tiempo en milisegundos que desees
+
+        rightArrow.addEventListener('click', () => {
+          clearInterval(scrollInterval); // Detener el desplazamiento automático al hacer clic
+          autoScroll(); // Desplazar manualmente
+        });
+
+        leftArrow.addEventListener('click', () => {
+          clearInterval(scrollInterval); // Detener el desplazamiento automático al hacer clic
+          if (carouselContainer.scrollLeft === 0) {
+            carouselContainer.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
+          } else {
+            carouselContainer.scrollBy({ left: -itemTotalWidth, behavior: 'smooth' });
+          }
+        });
+      } else {
+        console.log(`--- Debug Carrusel: No se encontraron items en el carrusel de ${item.querySelector('.novedad-title')?.textContent} ---`);
+      }
+    });
   });
 }); 

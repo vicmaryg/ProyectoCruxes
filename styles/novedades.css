@@ -3,7 +3,8 @@
     color: var(--color-primary);
     font-size: 1.8rem;
     font-weight: 700;
-    text-align: center;
+    text-align: left;
+    margin-top: 48px;
     margin-bottom: var(--spacing-xl);
 }
 
@@ -12,25 +13,32 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-lg);
+    padding: 0;
 }
 
 /* Items de novedad */
 .novedad-item {
-    border: 2px solid var(--color-primary);
-    padding: var(--spacing-md);
+    border: 1px solid #ddd;
     border-radius: var(--border-radius-lg);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    background-color: white;
+    box-shadow: var(--shadow-sm);
+    padding: var(--spacing-md);
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 /* Títulos de novedad */
-.novedad-item h4 {
-    color: var(--color-primary);
+.novedad-item h4.novedad-title {
     font-size: 1.2rem;
     font-weight: 700;
-    margin-bottom: var(--spacing-sm);
-    text-align: center;
+    color: var(--color-primary);
+    padding-top: 10px;
+    margin: 0;
+    text-align: left;
+    background-color: transparent;
 }
 
 /* Párrafos de novedad */
@@ -81,4 +89,188 @@
 
 .whatsapp-float i {
     color: var(--text-light);
+}
+
+/* Estilos para el contenedor del carrusel en .novedad-item */
+.novedad-carousel-container {
+    flex-grow: 1;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    position: relative;
+    background-color: white;
+    padding-top: 0;
+    padding-bottom: var(--spacing-md);
+    padding-left: 0;
+    padding-right: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilos para las imágenes dentro del carrusel de Alianzas */
+.novedad-item .novedad-carousel-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+    scroll-snap-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.novedad-item .novedad-carousel-container img:first-child {
+   /* margin-right: 60px; */
+}
+
+.novedad-item .novedad-carousel-container img:last-child {
+    margin-right: 0;
+}
+
+/* Estilos para el marcador de posición o contenido dentro del carrusel */
+.carousel-image-placeholder, .carousel-content-placeholder {
+    width: 300px;
+    flex-shrink: 0;
+    text-align: center;
+    color: #555;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    scroll-snap-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Estilos para la navegación del carrusel */
+.carousel-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.arrow {
+    cursor: pointer;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+.left-arrow {
+}
+
+.right-arrow {
+}
+
+/* Bloque Lanzamientos */
+.novedad-item {
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: var(--shadow-sm);
+    padding: var(--spacing-md);
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.novedad-item h4.novedad-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    padding-top: 10px;
+    margin: 0;
+    text-align: left;
+    background-color: transparent;
+}
+
+.novedad-item .novedad-carousel-container {
+    flex-grow: 1;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    position: relative;
+    background-color: white;
+    padding-top: 0;
+    padding-bottom: var(--spacing-md);
+    padding-left: 0;
+    padding-right: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.novedad-item .novedad-carousel-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+    scroll-snap-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.novedad-item .novedad-carousel-container img:first-child {
+    /* margin-right: 60px; */
+}
+
+.novedad-item .novedad-carousel-container img:last-child {
+    margin-right: 0;
+}
+
+.novedad-item .carousel-content-placeholder {
+    width: 300px;
+    flex-shrink: 0;
+    text-align: center;
+    color: #555;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    scroll-snap-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.novedad-item .carousel-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.novedad-item .arrow {
+    cursor: pointer;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+.novedad-item .left-arrow {
+}
+
+.novedad-item .right-arrow {
 } 

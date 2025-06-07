@@ -174,7 +174,6 @@
     padding-top: var(--spacing-lg);
     padding-bottom: var(--spacing-lg); 
     border-top: 2px solid #F2920C; 
-    border-bottom: 2px solid #F2920C; 
     /* Asegurar que use grid para dos columnas en pantallas grandes */
     display: grid;
     grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */

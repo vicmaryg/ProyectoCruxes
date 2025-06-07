@@ -78,6 +78,8 @@
 
 /* Contenedor de contacto */
 .contacto-container {
+    border-top: 2px solid var(--color-primary);
+    padding-top: 48px; /* Aumenta la separación entre la línea y el contenido */
     display: grid;
     grid-template-columns: 1fr; /* Una columna por defecto */
     gap: var(--spacing-lg);
@@ -94,6 +96,7 @@
 
 /* Título principal de contacto (la palabra CONTACTO) */
 #contacto .contacto-main-title {
+    margin-top: 48px; /* Aumenta la separación entre la línea y el título */
     color: #E84E1D; /* Color naranja #E84E1D */
     font-size: 1.8rem;
     font-weight: 700;
@@ -135,6 +138,7 @@
 /* Formulario de contacto */
 .contacto-form {
     background-color: #fff;
+    margin-top: 48px;
     padding: var(--spacing-lg);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-sm);
