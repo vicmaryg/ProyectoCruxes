@@ -14,6 +14,8 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-lg);
     padding: 0;
+    padding-bottom: var(--spacing-xl);
+    border-bottom: 2px solid #F2920C;
 }
 
 /* Items de novedad */
@@ -93,6 +95,7 @@
 
 /* Estilos para el contenedor del carrusel en .novedad-item */
 .novedad-carousel-container {
+    overflow: hidden;
     flex-grow: 1;
     display: flex;
     overflow-x: scroll;
@@ -109,6 +112,16 @@
     -webkit-overflow-scrolling: touch;
     width: 100%;
     box-sizing: border-box;
+}
+
+/* Oculta la barra de desplazamiento predeterminada */
+.novedad-carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.novedad-carousel-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 /* Estilos para las imágenes dentro del carrusel de Alianzas */
@@ -192,6 +205,7 @@
     font-weight: 700;
     color: var(--color-primary);
     padding-top: 10px;
+    padding-bottom: 10px;
     margin: 0;
     text-align: left;
     background-color: transparent;
@@ -205,8 +219,8 @@
     position: relative;
     background-color: white;
     padding-top: 0;
-    padding-bottom: var(--spacing-md);
-    padding-left: 0;
+    padding-bottom: var(--spacing-xl);
+    padding-left: 10px;
     padding-right: 0;
     flex-direction: row;
     flex-wrap: nowrap;

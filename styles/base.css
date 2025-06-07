@@ -37,7 +37,7 @@ html {
 
 /* Estilos base para secciones */
 .section {
-    border-top: 2px solid #E84E1D;
+    border-top: 2px solid #F2920C;
     display: flex;
     flex-direction: column;
 }

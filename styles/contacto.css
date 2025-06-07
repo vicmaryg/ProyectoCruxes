@@ -78,7 +78,6 @@
 
 /* Contenedor de contacto */
 .contacto-container {
-    border-top: 2px solid var(--color-primary);
     padding-top: 48px; /* Aumenta la separación entre la línea y el contenido */
     display: grid;
     grid-template-columns: 1fr; /* Una columna por defecto */

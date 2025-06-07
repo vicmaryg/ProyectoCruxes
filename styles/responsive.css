@@ -136,7 +136,7 @@
 
     #quienes-somos.grid-2 {
         align-items: start;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr 1fr;
         grid-template-rows: auto auto;
     }
 
