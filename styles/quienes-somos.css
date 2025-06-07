@@ -5,6 +5,18 @@
     font-family: 'Inter', sans-serif;
 }
 
+/* Estilos para la primera fila de Quiénes Somos */
+.quienes-somos-top-row.grid-2 {
+    grid-template-columns: 2fr 1fr; /* Texto ancho, imagen estrecha */
+    gap: var(--spacing-lg);
+}
+
+/* Estilos para la segunda fila de Quiénes Somos */
+.quienes-somos-bottom-row.grid-2 {
+    grid-template-columns: 1fr 2fr; /* Imagen estrecha, texto ancho */
+    gap: var(--spacing-lg);
+}
+
 #quienes-somos .section-title {
     text-align: left;
     color: #E84E1D;
@@ -22,11 +34,9 @@
     padding-left: 1.2rem;
 }
 
-#quienes-somos li { 
+#quienes-somos li {
     font-size: 18px;
 }
-
-
 
 #quienes-somos .quote {
     color: var(--color-primary);
@@ -41,14 +51,16 @@
     display: flex;
     justify-content: flex-end; /* Alinea el contenido a la derecha */
     width: 100%; /* Asegúrate de que el contenedor tenga un ancho definido */
+    align-self: center; /* Centra la imagen verticalmente en su celda */
 }
 
 .quienes-somos-img {
-    margin-left: 0; /* Empuja la imagen hacia la derecha */
     width: 597px;
     height: 340px;
-    margin-top: 4rem;
+    margin-top: 4rem; /* Ajusta este margen si es necesario con el nuevo diseño */
     display: block;
+    max-width: 100%; /* Asegurar que la imagen no se desborde */
+    height: auto; /* Mantener la proporción */
 }
 
 /* Contenedor de botones en Quiénes Somos */
@@ -77,10 +89,10 @@
     background-color: var(--color-primary-dark);
 }
 
-/* Grid de dos columnas */
+/* Grid de dos columnas (general, pero ahora se sobrescribe por las clases de fila) */
 .grid-2 {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr); /* Mantener la definición general */
     gap: var(--spacing-lg);
 }
 
@@ -89,15 +101,14 @@
     width: 100%; /* Asegúrate de que el contenedor tenga un ancho definido */
     display: flex;
     justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    align-self: center; /* Centra la imagen verticalmente en su celda */
 }
 
 .quienes-somos-ejes-img {
-    float: left; /* Alinea la imagen a la izquierda */
-    margin-right: auto; /* Empuja la imagen hacia la izquierda */
     width: 597px;
     height: 340px;
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* Asegurar que la imagen no se desborde */
+    height: auto; /* Mantener la proporción */
     display: block;
 }
 
@@ -137,8 +148,6 @@
 }
 
 /* Estilos para la sección Visión, Misión y Objetivos */
-
-
 #vision-mision-objetivos {
     margin-top: var(--spacing-lg);
     padding-bottom: var(--spacing-xl);
@@ -184,7 +193,7 @@
 }
 
 /* Estilos para la sección Nuestro Equipo */
-#nuestro-equipo { 
+#nuestro-equipo {
     padding-top: var(--spacing-lg);
     padding-bottom: var(--spacing-lg); 
     border-top: 2px solid #F2920C; 
