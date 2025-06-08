@@ -83,7 +83,7 @@
     grid-template-columns: 1fr; /* Una columna por defecto */
     gap: var(--spacing-lg);
     max-width: 1920px;
-    margin: 0 auto;
+    margin: 0;
     padding: 0 var(--spacing-sm);
 }
 

@@ -204,47 +204,38 @@ function updateTexts() {
         // Contacto
         const contactoTitle = document.querySelector('.contacto-main-title');
         const masInfoTitle = document.querySelector('#contacto h3:not(.contacto-main-title)');
+        const formText = document.querySelector('.contacto-info p');
         const nombreLabel = document.querySelector('label[for="nombre"]');
         const emailLabel = document.querySelector('label[for="email"]');
         const mensajeLabel = document.querySelector('label[for="mensaje"]');
         const submitButton = document.querySelector('button[type="submit"]');
-        const direccionLabel = document.querySelector('.contacto-direccion');
-        const telefonoLabel = document.querySelector('label[for="telefono"]');
-        const horarioLabel = document.querySelector('.contacto-horario');
         const tipoContactoLabel = document.querySelector('label[for="tipo-contacto"]');
         const tipoContactoSelect = document.querySelector('#tipo-contacto');
-        const privacidadLabel = document.querySelector('.checkbox-container');
+        const telefonoLabel = document.querySelector('label[for="telefono"]');
+        const privacidadText = document.querySelector('#privacidad-texto');
         
         if (contactoTitle) contactoTitle.textContent = t.contacto.title;
         if (masInfoTitle) masInfoTitle.textContent = t.contacto.mas_info;
+        if (formText) formText.textContent = t.contacto.form_text;
         if (nombreLabel) nombreLabel.textContent = t.contacto.nombre;
         if (emailLabel) emailLabel.textContent = t.contacto.email;
         if (mensajeLabel) mensajeLabel.textContent = t.contacto.mensaje;
         if (submitButton) submitButton.textContent = t.contacto.enviar;
-        if (direccionLabel) direccionLabel.textContent = t.contacto.direccion;
-        if (telefonoLabel) telefonoLabel.textContent = t.contacto.telefono;
-        if (horarioLabel) horarioLabel.textContent = t.contacto.horario;
         if (tipoContactoLabel) tipoContactoLabel.textContent = t.contacto.tipo_contacto.label;
-        if (privacidadLabel) {
-            // Encontrar el último nodo de texto después del span.checkmark
-            const checkmark = privacidadLabel.querySelector('.checkmark');
-            if (checkmark) {
-                const textNode = Array.from(privacidadLabel.childNodes)
-                    .find(node => node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== '');
-                if (textNode) {
-                    textNode.textContent = t.contacto.privacidad + ' *';
-                }
-            }
-        }
+        if (telefonoLabel) telefonoLabel.textContent = t.contacto.telefono;
+        if (privacidadText) privacidadText.textContent = t.contacto.privacidad + ' *';
         
         // Actualizar opciones del select
         if (tipoContactoSelect) {
-            tipoContactoSelect.options[0].text = t.contacto.tipo_contacto.placeholder;
-            tipoContactoSelect.options[1].text = t.contacto.tipo_contacto.donar;
-            tipoContactoSelect.options[2].text = t.contacto.tipo_contacto.voluntario;
-            tipoContactoSelect.options[3].text = t.contacto.tipo_contacto.empresa;
-            tipoContactoSelect.options[4].text = t.contacto.tipo_contacto.informacion;
-            tipoContactoSelect.options[5].text = t.contacto.tipo_contacto.otro;
+            const options = tipoContactoSelect.options;
+            if (options.length > 0) {
+                options[0].textContent = t.contacto.tipo_contacto.placeholder;
+                options[1].textContent = t.contacto.tipo_contacto.donar;
+                options[2].textContent = t.contacto.tipo_contacto.voluntario;
+                options[3].textContent = t.contacto.tipo_contacto.empresa;
+                options[4].textContent = t.contacto.tipo_contacto.informacion;
+                options[5].textContent = t.contacto.tipo_contacto.otro;
+            }
         }
         
         // Footer

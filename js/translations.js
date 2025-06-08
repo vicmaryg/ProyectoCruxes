@@ -129,6 +129,11 @@ const translations = {
         "contacto": {
             "title": "Contacto",
             "mas_info": "Para más información:",
+            "form_text": "Completa el formulario y nos pondremos en contacto contigo.",
+            "nombre": "Nombre completo *",
+            "email": "Correo electrónico *",
+            "mensaje": "Mensaje *",
+            "enviar": "Enviar mensaje",
             "tipo_contacto": {
                 "label": "Tipo de contacto *",
                 "placeholder": "Seleccione una opción",
@@ -138,14 +143,7 @@ const translations = {
                 "informacion": "Solicito información",
                 "otro": "Otro"
             },
-            "form_text": "Completa el formulario y nos pondremos en contacto contigo.",
-            "nombre": "Nombre completo*",
-            "email": "Correo electrónico*",
-            "telefono": "Teléfono*",
-            "mensaje": "Mensaje*",
-            "enviar": "Enviar",
-            "direccion": "Dirección",
-            "horario": "Horario de atención",
+            "telefono": "Teléfono",
             "privacidad": "Acepto la política de privacidad y el tratamiento de mis datos personales"
         },
         "footer": {
@@ -288,23 +286,21 @@ const translations = {
         "contacto": {
             "title": "Contact",
             "mas_info": "For more information:",
+            "form_text": "Fill out the form and we will contact you.",
+            "nombre": "Full name *",
+            "email": "Email *",
+            "mensaje": "Message *",
+            "enviar": "Send message",
             "tipo_contacto": {
                 "label": "Contact type *",
                 "placeholder": "Select an option",
                 "donar": "I want to donate",
                 "voluntario": "I want to volunteer",
                 "empresa": "I am a Company",
-                "informacion": "Request information",
+                "informacion": "I request information",
                 "otro": "Other"
             },
-            "form_text": "Fill out the form and we will contact you.",
-            "nombre": "Name",
-            "email": "Email",
-            "mensaje": "Message",
-            "enviar": "Send",
-            "direccion": "Address",
             "telefono": "Phone",
-            "horario": "Business hours",
             "privacidad": "I accept the privacy policy and the processing of my personal data"
         },
         "footer": {
