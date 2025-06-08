@@ -1,0 +1,38 @@
+{
+    "nav": {
+        "inicio": "Inicio",
+        "nosotros": "Nosotros",
+        "servicios": "Servicios",
+        "novedades": "Novedades",
+        "contacto": "Contacto"
+    },
+    "hero": {
+        "title": "CRUXES",
+        "subtitle": "Consultora de Recursos Humanos",
+        "description": "Somos una consultora de recursos humanos que se especializa en la búsqueda y selección de personal, asesoramiento en gestión de talento y desarrollo organizacional."
+    },
+    "servicios": {
+        "title": "Nuestros Servicios",
+        "buscador": {
+            "title": "Buscador de Talento",
+            "description": "Encontramos el mejor talento para tu empresa"
+        },
+        "asesoramiento": {
+            "title": "Asesoramiento en Gestión de Talento",
+            "description": "Te ayudamos a gestionar y desarrollar el talento de tu equipo"
+        },
+        "desarrollo": {
+            "title": "Desarrollo Organizacional",
+            "description": "Mejoramos la estructura y procesos de tu organización"
+        }
+    },
+    "contacto": {
+        "title": "Contacto",
+        "nombre": "Nombre",
+        "email": "Email",
+        "mensaje": "Mensaje",
+        "enviar": "Enviar",
+        "success": "¡Mensaje enviado con éxito!",
+        "error": "Error al enviar el mensaje. Por favor, intente nuevamente."
+    }
+} 

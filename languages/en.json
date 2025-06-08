@@ -1,0 +1,39 @@
+{
+    "nav": {
+        "inicio": "Home",
+        "nosotros": "About Us",
+        "servicios": "Services",
+        "novedades": "News",
+        "contacto": "Contact"
+    },
+    "hero": {
+        "title": "CRUXES",
+        "subtitle": "Human Resources Consulting",
+        "description": "We are a human resources consulting firm specializing in talent search and selection, talent management advisory, and organizational development."
+    },
+    "servicios": {
+        "title": "Our Services",
+        "buscador": {
+            "title": "Talent Search",
+            "description": "We find the best talent for your company"
+        },
+        "asesoramiento": {
+            "title": "Talent Management Advisory",
+            "description": "We help you manage and develop your team's talent"
+        },
+        "desarrollo": {
+            "title": "Organizational Development",
+            "description": "We improve your organization's structure and processes"
+        }
+    },
+    "contacto": {
+        "title": "Contact",
+        "nombre": "Name",
+        "email": "Email",
+        "telefono": "Phone",
+        "mensaje": "Message",
+        "enviar": "Send",
+        "success": "Message sent successfully!",
+        "error": "Error sending message. Please try again."
+    }
+} 

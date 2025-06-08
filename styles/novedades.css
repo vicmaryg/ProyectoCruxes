@@ -1,6 +1,6 @@
 /* Título de novedades */
 #novedades .section-title {
-    color: var(--color-primary);
+    color: #E84E1D;
     font-size: 1.8rem;
     font-weight: 700;
     text-align: left;
@@ -102,16 +102,14 @@
     scroll-behavior: smooth;
     position: relative;
     background-color: white;
-    padding-top: 0;
-    padding-bottom: var(--spacing-md);
-    padding-left: 0;
-    padding-right: 0;
+    padding: 10px;
     flex-direction: row;
     flex-wrap: nowrap;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     width: 100%;
     box-sizing: border-box;
+    gap: 20px;
 }
 
 /* Oculta la barra de desplazamiento predeterminada */
@@ -132,10 +130,9 @@
     flex-shrink: 0;
     object-fit: contain;
     scroll-snap-align: center;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 10px;
-    margin-right: 20px;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .novedad-item .novedad-carousel-container img:first-child {

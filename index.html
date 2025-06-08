@@ -10,6 +10,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        emailjs.init("TU_PUBLIC_KEY"); // Reemplazar con tu clave pública de EmailJS
+      })();
+    </script>
+    <link rel="stylesheet" href="styles/novedades.css">
+    <link rel="stylesheet" href="styles/contacto.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/cookies.css">
+    <link rel="stylesheet" href="styles/construccion.css">
+    <link rel="stylesheet" href="styles/whatsapp.css">
+    <link rel="stylesheet" href="styles/language.css">
   </head>
   <body>
     <!-- Página de construcción para móvil -->
@@ -40,6 +54,16 @@
             <a href="https://www.instagram.com/Cruxes_solidarias" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="mailto:info@cruxes.org" title="Gmail"><i class="fas fa-envelope"></i></a>
           </div>
+          <div class="language-switch">
+            <div class="language-toggle">
+              <input type="checkbox" id="languageToggle" class="language-toggle-input">
+              <label for="languageToggle" class="language-toggle-label">
+                <span class="language-option es">ES</span>
+                <span class="language-option en">EN</span>
+                <span class="language-slider"></span>
+              </label>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -47,8 +71,7 @@
     <!-- Sección INICIO - Movida fuera del contenedor principal -->
     <section id="inicio" class="section">
       <div class="hero-section">
-        <!-- <img src="imagen/atardecer.webp" alt="atardecer" class="atardecer-img"> -->
-        <h1>Bienvenidos a Cruxes de Luz</h1>
+        <h1 class="hero-title">Bienvenidos a Cruxes de Luz</h1>
         <p class="quote">"AMOR en Revolución"</p>
       </div>
     </section>
@@ -223,12 +246,12 @@
           <div class="novedad-item">
             <h4 class="novedad-title">Alianzas</h4>
             <div class="novedad-carousel-container">
-              <!-- Aquí irían las imágenes del carrusel de Alianzas -->
-              <img src="imagen/LOGO- ALIANZAS/LOGO CARITAS SANTA JULIA.webp" alt="Logo Caritas Santa Julia">
-              <img src="imagen/LOGO- ALIANZAS/logo de escuela.webp" alt="Logo de Escuela">
+              <!-- Imágenes del carrusel de Alianzas en el nuevo orden -->
               <img src="imagen/LOGO- ALIANZAS/LOGO ESTUDIO GARADE PNG.png" alt="Logo Estudio Garade">
-              <img src="imagen/LOGO- ALIANZAS/LOGO LUMEN COR.webp" alt="Logo COR">
               <img src="imagen/LOGO- ALIANZAS/LOGO TECLAB.webp" alt="Logo Teclab">
+              <img src="imagen/LOGO- ALIANZAS/logo de escuela.webp" alt="Logo de Escuela">
+              <img src="imagen/LOGO- ALIANZAS/LOGO LUMEN COR.webp" alt="Logo COR">
+              <img src="imagen/LOGO- ALIANZAS/LOGO CARITAS SANTA JULIA.webp" alt="Logo Caritas Santa Julia" style="max-width: 100%; height: auto;">
             </div>
             <div class="carousel-nav">
               <span class="arrow left-arrow"><i class="fas fa-chevron-left"></i></span>
@@ -312,43 +335,8 @@
               <a href="mailto:info@cruxes.org" title="Gmail"><i class="fas fa-envelope"></i></a>
             </div>
           </div>
-          <form id="contacto-form" class="contacto-form">
-            <div class="form-group">
-              <label for="nombre">Nombre completo *</label>
-              <input type="text" id="nombre" name="nombre" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Correo electrónico *</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="telefono">Teléfono</label>
-              <input type="tel" id="telefono" name="telefono">
-            </div>
-            <div class="form-group">
-              <label for="tipo-contacto">Tipo de contacto *</label>
-              <select id="tipo-contacto" name="tipo-contacto" required>
-                <option value="">Seleccione una opción</option>
-                <option value="donacion">Quiero donar</option>
-                <option value="voluntario">Quiero ser voluntario</option>
-                <option value="informacion">Soy Empresa</option>
-                <option value="informacion">Solicito información</option>
-                <option value="otro">Otro</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="mensaje">Mensaje *</label>
-              <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-            </div>
-            <div class="form-group">
-              <label class="checkbox-container">
-                <input type="checkbox" name="privacidad" required>
-                <span class="checkmark"></span>
-                Acepto la política de privacidad y el tratamiento de mis datos personales *
-              </label>
-            </div>
-            <button type="submit" class="btn-enviar">Enviar mensaje</button>
-          </form>
+          <!-- Inclusión del formulario -->
+          <div id="formulario-container"></div>
         </div>
       </section>
     </main>
@@ -399,8 +387,9 @@
       </div>
     </div>
 
+    <!-- Scripts al final del body -->
+    <script src="js/translations.js"></script>
     <script src="script.js"></script>
-    <!-- Enlace al nuevo archivo de script para la gestión de cookies -->
     <script src="cookie_consent.js"></script>
 
     <!-- Botón flotante de WhatsApp -->
