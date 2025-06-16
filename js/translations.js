@@ -150,7 +150,7 @@ const translations = {
             "quote": "Una cadena de amor y servicio en acción",
             "derechos": "Todos los derechos reservados",
             "privacidad": "Política de Privacidad",
-            "cookies": "Política de Cookies",
+            "cookies": "Cookies y políticas de seguridad",
             "siguenos": "Síguenos"
         },
         objetivos_desarrollo: {

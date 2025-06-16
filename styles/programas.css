@@ -1,7 +1,7 @@
 /* Título de programas */
 #programas .section-title {
     color: var(--color-primary);
-    font-size: 1.8rem;
+    font-size: 30px;
     font-weight: 700;
     text-align: left;
     margin-top: var(--spacing-xl);
@@ -22,7 +22,7 @@
 
 /* Estilos generales para la barra de título del programa */
 .programa-title {
-    font-size: 1.5rem;
+    font-size: 30px;
     font-weight: 600;
     text-align: center; /* Asegurar centrado */
     padding: var(--spacing-xs) var(--spacing-md); /* Ajustar padding interno: vertical xs, horizontal md */
@@ -97,12 +97,13 @@
 
 /* Cita de programa */
 .programa-quote {
-    font-style: italic;
+    font-style: normal;
     text-align: center;
-    margin-bottom: var(--spacing-md); /* Espacio debajo de la cita */
-    /* El padding horizontal para la cita se añade aquí para alinearla */
+    margin-bottom: var(--spacing-md);
     padding: 0 var(--spacing-md);
-    /* color: se define por las clases de programa */
+    font-size: 1.2rem;
+    font-weight: 600;
+    /* El color se define por las clases de programa */
 }
 
 /* Contenedor del contenido dentro de la subsección - Este tendrá el borde y el padding */

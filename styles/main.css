@@ -14,4 +14,8 @@
 @import 'construccion.css';
 
 /* Importación de estilos responsive */
-@import 'responsive.css'; 
+@import 'responsive.css';
+
+/* Estilos principales */
+@import 'whatsapp.css';
+@import 'language.css'; 

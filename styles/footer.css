@@ -45,34 +45,32 @@
 /* Iconos sociales del footer */
 .footer .social-icons {
     display: flex;
-    gap: 0.75rem;
+    gap: 12px; /* Coherente con header */
     align-items: center;
-    margin-bottom: 0; /* Eliminar margen inferior */
+    margin-bottom: 0;
 }
 
 /* Enlaces de iconos sociales */
 .footer .social-icons a {
-    color: var(--color-primary) !important;
-    font-size: 2.5rem;
-    transition: all 0.3s ease;
+    color: var(--color-primary-dark) !important; /* Coincide con el color del header */
+    font-size: 20px; /* Coincide con el tamaño del header */
+    transition: color 0.2s; /* Coincide con la transición del header */
     text-decoration: none;
 }
 
 /* Hover para iconos sociales */
 .footer .social-icons a:hover {
-    color: var(--color-primary-dark) !important;
-    transform: scale(1.1);
+    color: var(--color-primary-light) !important; /* Coincide con el color hover del header */
 }
 
 /* Iconos dentro de enlaces sociales */
 .footer .social-icons a i {
-    transition: transform 0.3s ease;
-    font-size: 2.5rem;
+    transition: transform 0.3s ease; /* Mantener la transición si se desea para otros efectos, pero por ahora solo está este */
 }
 
 /* Hover para iconos */
 .footer .social-icons a:hover i {
-    transform: translateY(-3px);
+    /* Eliminado: transform: translateY(-3px); */
 }
 
 /* Enlaces del footer (botón de políticas) */
@@ -85,7 +83,7 @@
     transition: all 0.3s ease;
     padding: var(--spacing-xs) var(--spacing-sm);
     border: 2px solid var(--text-light);
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-lg);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     display: inline-block; /* Asegurar que el padding funcione */
     background-color: #E84E1D;
@@ -100,7 +98,7 @@
 }
 
 /* Media query para ajustar el diseño en pantallas pequeñas */
-@media (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 1024px) {
     .footer .container {
         flex-direction: column;
         align-items: center;

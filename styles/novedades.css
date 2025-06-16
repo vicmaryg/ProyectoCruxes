@@ -1,7 +1,7 @@
 /* Título de novedades */
 #novedades .section-title {
     color: #E84E1D;
-    font-size: 1.8rem;
+    font-size: 36px;
     font-weight: 700;
     text-align: left;
     margin-top: 48px;
@@ -122,9 +122,9 @@
     scrollbar-width: none;
 }
 
-/* Estilos para las imágenes dentro del carrusel de Alianzas */
+/* Estilos para las imágenes dentro del carrusel */
 .novedad-item .novedad-carousel-container img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
     flex-shrink: 0;
@@ -133,14 +133,6 @@
     margin: 10px;
     padding: 10px;
     box-sizing: border-box;
-}
-
-.novedad-item .novedad-carousel-container img:first-child {
-   /* margin-right: 60px; */
-}
-
-.novedad-item .novedad-carousel-container img:last-child {
-    margin-right: 0;
 }
 
 /* Estilos para el marcador de posición o contenido dentro del carrusel */
@@ -155,10 +147,7 @@
     align-items: center;
     font-style: italic;
     scroll-snap-align: center;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 10px;
 }
 
 /* Estilos para la navegación del carrusel */
@@ -177,12 +166,6 @@
     font-size: 1.5rem;
 }
 
-.left-arrow {
-}
-
-.right-arrow {
-}
-
 /* Bloque Lanzamientos */
 .novedad-item {
     border: 1px solid #ddd;
@@ -198,9 +181,9 @@
 }
 
 .novedad-item h4.novedad-title {
-    font-size: 1.2rem;
+    font-size: 29px;
     font-weight: 700;
-    color: var(--color-primary);
+    color: #F2A90C;
     padding-top: 10px;
     padding-bottom: 10px;
     margin: 0;
@@ -240,14 +223,6 @@
     margin-right: 20px;
 }
 
-.novedad-item .novedad-carousel-container img:first-child {
-    /* margin-right: 60px; */
-}
-
-.novedad-item .novedad-carousel-container img:last-child {
-    margin-right: 0;
-}
-
 .novedad-item .carousel-content-placeholder {
     width: 300px;
     flex-shrink: 0;
@@ -280,8 +255,15 @@
     font-size: 1.5rem;
 }
 
-.novedad-item .left-arrow {
-}
 
-.novedad-item .right-arrow {
-} 
+@media (min-width: 480px) and (max-width: 1024px) {
+    .novedades-container {
+        display: block;
+    }
+    .novedad-item {
+       margin-bottom: 5%;
+    .novedad-item .novedad-carousel-container {
+        padding-top: 0;
+    }
+}
+}

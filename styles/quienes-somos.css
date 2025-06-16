@@ -9,6 +9,7 @@
 .quienes-somos-top-row.grid-2 {
     grid-template-columns: 2fr 1fr; /* Texto ancho, imagen estrecha */
     gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
 }
 
 /* Estilos para la segunda fila de Quiénes Somos */
@@ -31,7 +32,6 @@
 
 #quienes-somos ul {
     margin-bottom: var(--spacing-sm);
-    padding-left: 1.2rem;
 }
 
 #quienes-somos li {
@@ -162,7 +162,7 @@
 
 #vision-mision-objetivos .section-title {
     font-family: 'Inter', sans-serif;
-    font-size: 22px;
+    font-size: 29px;
     color: #F2920C;
     margin-bottom: var(--spacing-sm);
     border-bottom: none;
@@ -206,7 +206,7 @@
 
 #nuestro-equipo .section-title {
     font-family: 'Inter', sans-serif;
-    font-size: 22px; 
+    font-size: 29px; 
     color: #F2920C; 
     margin-bottom: var(--spacing-md); 
     text-align: left;
@@ -232,7 +232,7 @@
     display: flex;
     flex-wrap: wrap; /* Permitir que las imágenes salten de línea si no caben */
     gap: var(--spacing-xs); /* Espacio pequeño entre imágenes */
-    justify-content: center; /* Centrar las imágenes si no llenan la fila */
+    justify-content: flex-start; /* Alinear las imágenes a la izquierda */
     align-items: center; /* Centrar verticalmente las imágenes */
     margin-top: var(--spacing-md); /* Espacio encima del contenedor de ODS */
 }
@@ -247,8 +247,113 @@
 .objetivo-especifico-title {
     border-top: 2px solid #F2920C; /* Agrega un borde superior naranja */
     margin-top: 48px; /* Ajusta la distancia superior */
-    padding-top: 20px; /* Agrega un espacio entre la línea y el texto */
+    padding-top: 48px; /* Agrega un espacio entre la línea y el texto */
     /* ... resto de los estilos existentes ... */
+}
+
+/* Media Queries para diseño responsivo */
+@media screen and (max-width: 1024px) {
+    /* Ajustes para la sección Quiénes Somos */
+    .quienes-somos-top-row.grid-2 {
+        grid-template-columns: 1fr; /* Una sola columna para apilar contenido */
+    }
+
+    .quienes-somos-bottom-row.grid-2 {
+        display: flex; /* Cambiar a flexbox para control de orden */
+        flex-direction: column-reverse; /* Poner la imagen después del texto */
+        gap: var(--spacing-lg); /* Mantener el espacio entre elementos */
+    }
+
+    .quienes-somos-img-container,
+    .ejes-image {
+        justify-content: center; /* Centrar imágenes cuando estén solas */
+    }
+
+    .quienes-somos-img,
+    .quienes-somos-ejes-img {
+        width: 100%; /* Ajustar ancho al 100% del contenedor */
+        max-width: 896px; /* Limitar el tamaño máximo de la imagen */
+        margin-top: var(--spacing-md); /* Ajustar margen superior si es necesario */
+    }
+
+    /* Ajustes para la sección Visión, Misión y Objetivos */
+    #vision-mision-objetivos .vision-mision-objetivos-grid {
+        grid-template-columns: 1fr; /* Una sola columna para apilar */
+    }
+
+    #vision-mision-objetivos .section-title {
+        text-align: left; /* Centrar títulos en móvil */
+        margin-top: var(--spacing-xl); /* Espaciado entre secciones */
+    }
+
+    #vision-mision-objetivos p,
+    #vision-mision-objetivos ul {
+        text-align: left;
+    }
+
+   
+
+    /* Ajustes para la sección Nuestro Equipo */
+    #nuestro-equipo {
+        grid-template-columns: 1fr; /* Una sola columna para apilar */
+    }
+
+    #nuestro-equipo .section-title {
+        text-align: left;
+        margin-top: var(--spacing-lg);
+    }
+
+    #nuestro-equipo p,
+    #nuestro-equipo .quote {
+        text-align: left;
+    }
+
+    .ods-container {
+        justify-content: flex-start; /* Alinear las imágenes a la izquierda */
+    }
+
+    .ods-container img {
+        width: 140px;
+    }
+
+    /* Ajustar tamaño de fuente si es necesario para pantallas pequeñas */
+    #quienes-somos .section-title {
+        font-size: 26px;
+        height: auto; /* Permitir que el alto se ajuste al contenido */
+        text-align: left;
+    }
+
+    #quienes-somos p,
+    #quienes-somos li {
+        font-size: 16px;
+    }
+
+    .button-link {
+        width: 25%; /* Botones ocupan todo el ancho */
+        text-align: left;
+        height: auto; /* Altura automática */
+        font-size: 1rem;
+    }
+
+    .quienes-somos-buttons {
+        flex-direction: column; /* Apilar botones verticalmente */
+        align-items: left; /* Centrar botones */
+    }
+
+    .ejes-title {
+        margin-top: 30px;
+        text-align: left;
+    }
+
+    .ejes-content ul {
+        padding-left: 0;
+           
+    }
+
+    .ejes-content ul li {
+        text-align: left;
+        margin-left: 35px;
+    }
 }
 
 

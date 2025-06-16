@@ -97,7 +97,7 @@
 #contacto .contacto-main-title {
     margin-top: 48px; /* Aumenta la separación entre la línea y el título */
     color: #E84E1D; /* Color naranja #E84E1D */
-    font-size: 1.8rem;
+    font-size: 30px;
     font-weight: 700;
     margin-bottom: var(--spacing-sm);
 }
@@ -106,7 +106,7 @@
 .contacto-info h3 {
     color: black;
     margin-bottom: var(--spacing-sm); /* Espacio debajo */
-    font-size: 1.3rem; /* Tamaño ajustado del subtítulo */
+    font-size: 24px; /* Tamaño ajustado del subtítulo */
     font-weight: 700; /* Negrita */
 }
 
@@ -114,7 +114,7 @@
 .contacto-info p {
      color: #4b5563; /* Color de texto oscuro */
      margin-bottom: var(--spacing-md); /* Espacio debajo del párrafo */
-     font-size: 1rem; /* Ajustar tamaño del párrafo */
+     font-size: 18px; /* Ajustar tamaño del párrafo */
 }
 
 /* Iconos sociales dentro de contacto info */
@@ -221,5 +221,12 @@
     .contacto-info {
         margin-bottom: 0; /* Eliminar margen inferior en desktop */
         padding-right: var(--spacing-lg); /* Espacio a la derecha de la info */
+    }
+} 
+
+
+@media (min-width: 480px) and (max-width: 1024px) {
+    .contacto-container {
+        display: block;
     }
 } 

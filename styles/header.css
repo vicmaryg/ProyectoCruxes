@@ -273,9 +273,87 @@
     background: #e8e8e8;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .header-flex {
+        padding: 0 20px;
+    }
+
+    .logo-img {
+        width: 120px;
+        height: auto;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: 15px;
+    }
+
+    .nav-header {
+        display: block;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .nav-header.active {
+        padding: 20px;
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        transform: translateY(-20px);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-header.active .nav-list {
+        transform: translateY(0);
+    }
+
+    .nav-link {
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-header.active .nav-link {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Añadir retraso a cada enlace para crear un efecto cascada */
+    .nav-list li:nth-child(1) .nav-link { transition-delay: 0.1s; }
+    .nav-list li:nth-child(2) .nav-link { transition-delay: 0.15s; }
+    .nav-list li:nth-child(3) .nav-link { transition-delay: 0.2s; }
+    .nav-list li:nth-child(4) .nav-link { transition-delay: 0.25s; }
+    .nav-list li:nth-child(5) .nav-link { transition-delay: 0.3s; }
+    .nav-list li:nth-child(6) .nav-link { transition-delay: 0.35s; }
+
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .social-icons {
+        display: none;
+    }
+
     .language-switch {
-        margin-left: 10px;
+        margin-left: 0;
     }
     
     .language-toggle {
@@ -290,5 +368,40 @@
     
     .language-option {
         font-size: 0.8rem;
+    }
+}
+
+/* Ajustes específicos para pantallas más pequeñas */
+@media (max-width: 480px) {
+    .header-flex {
+        padding: 0 15px;
+    }
+
+    .logo-img {
+        width: 100px;
+    }
+
+    .language-toggle {
+        width: 80px;
+        height: 28px;
+    }
+    
+    .language-slider {
+        width: 36px;
+        height: 24px;
+    }
+    
+    .language-option {
+        font-size: 0.75rem;
+    }
+
+    .menu-toggle {
+        margin-left: 10px;
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+        width: 24px;
     }
 } 

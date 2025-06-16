@@ -241,11 +241,11 @@ function updateTexts() {
         // Footer
         const footerQuote = document.querySelector('.footer-center-content p');
         const footerLink = document.querySelector('.footer-link');
-        const siguenosText = document.querySelector('.footer .social-icons');
+        // const siguenosText = document.querySelector('.footer .social-icons');
         
         if (footerQuote) footerQuote.textContent = t.footer.quote;
         if (footerLink) footerLink.textContent = t.footer.cookies;
-        if (siguenosText) siguenosText.textContent = t.footer.siguenos;
+        // if (siguenosText) siguenosText.textContent = t.footer.siguenos;
         
         // Objetivos de Desarrollo Sostenible
         const todosLosTitulos = document.querySelectorAll('h2.section-title');
@@ -407,15 +407,14 @@ function initializeForm() {
   }
 
   // Control del menú hamburguesa
-  /*
   const menuToggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.nav');
+  const navHeader = document.querySelector('.nav-header');
 
   // Función para alternar el menú
   function toggleMenu() {
     menuToggle.classList.toggle('active');
-    nav.classList.toggle('active');
-    document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+    navHeader.classList.toggle('active');
+    document.body.style.overflow = navHeader.classList.contains('active') ? 'hidden' : '';
   }
 
   // Event listener para el botón del menú
@@ -424,7 +423,7 @@ function initializeForm() {
   // Cerrar el menú al hacer clic en un enlace
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      if (nav.classList.contains('active')) {
+      if (navHeader.classList.contains('active')) {
         toggleMenu();
       }
     });
@@ -432,13 +431,12 @@ function initializeForm() {
 
   // Cerrar el menú al hacer clic fuera
   document.addEventListener('click', (e) => {
-    if (nav.classList.contains('active') && 
-        !nav.contains(e.target) && 
+    if (navHeader.classList.contains('active') && 
+        !navHeader.contains(e.target) && 
         !menuToggle.contains(e.target)) {
       toggleMenu();
     }
   });
-  */
 
   // --- Funcionalidad del Carrusel de Novedades ---
   window.addEventListener('load', function() {
