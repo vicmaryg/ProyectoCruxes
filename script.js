@@ -127,7 +127,14 @@ function updateTexts() {
         const equipoQuote = document.querySelector('#nuestro-equipo .quote');
         const odsTitle = document.querySelector('#nuestro-equipo .section-title:last-child');
         
-        if (equipoTitle) equipoTitle.textContent = t.equipo.title;
+        if (equipoTitle) {
+            console.log('Elemento equipoTitle encontrado:', equipoTitle);
+            console.log('Valor de t.equipo.title:', t.equipo.title);
+            equipoTitle.textContent = t.equipo.title;
+            console.log('equipoTitle.textContent después de la asignación:', equipoTitle.textContent);
+        } else {
+            console.log('Elemento equipoTitle NO encontrado.');
+        }
         if (equipoDesc) equipoDesc.textContent = t.equipo.description;
         if (equipoComite) equipoComite.textContent = t.equipo.comite;
         if (equipoQuote) equipoQuote.textContent = t.equipo.quote;

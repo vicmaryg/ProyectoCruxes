@@ -291,8 +291,6 @@
         text-align: left;
     }
 
-   
-
     /* Ajustes para la sección Nuestro Equipo */
     #nuestro-equipo {
         grid-template-columns: 1fr; /* Una sola columna para apilar */
