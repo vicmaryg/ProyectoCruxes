@@ -66,12 +66,14 @@ html {
 @media (max-width: 1024px) {
     .container {
         max-width: 896px;
+        margin: 0 6%;
     }
 }
 
 @media (max-width: 768px) {
     .container {
         max-width: 640px;
+        margin: 0 6%;
     }
 }
 
@@ -79,6 +81,7 @@ html {
 @media (max-width: 480px) {
     .container {
         max-width: 352px;
+        margin: 0 auto;
     }
 }
 

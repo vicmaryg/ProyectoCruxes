@@ -255,7 +255,8 @@
 @media screen and (max-width: 1024px) {
     /* Ajustes para la sección Quiénes Somos */
     .quienes-somos-top-row.grid-2 {
-        grid-template-columns: 1fr; /* Una sola columna para apilar contenido */
+        grid-template-columns: 1fr;
+        margin: 0 6%;/* Una sola columna para apilar contenido */
     }
 
     .quienes-somos-bottom-row.grid-2 {
@@ -351,6 +352,54 @@
     .ejes-content ul li {
         text-align: left;
         margin-left: 35px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Ajustes específicos para la sección Nuestro Equipo a 480px */
+    #nuestro-equipo {
+        max-width: 352px; /* Ancho máximo de la sección Nuestro Equipo */
+        margin: 0 auto; /* Centrar la sección */
+        grid-template-columns: 1fr; /* Asegurar una sola columna */
+    }
+
+    #nuestro-equipo > div:first-child {
+        width: 100%; /* Asegurar que el contenedor ocupe el 100% del ancho disponible */
+        padding: 0; /* Eliminar cualquier padding que pueda causar desbordamiento */
+        margin: 0; /* Eliminar cualquier margen que pueda causar desbordamiento */
+        min-width: 0; /* Permitir que el div se encoja dentro del grid */
+    }
+
+    #nuestro-equipo .section-title {
+        font-size: 24px; /* Ajuste del tamaño del título para 480px */
+        width: 100%; /* Asegurar que el título tome el 100% del ancho */
+        box-sizing: border-box; /* Incluir padding y border en el ancho total */
+        overflow-wrap: break-word; /* Romper palabras largas */
+        white-space: normal; /* Asegurar que el texto pueda envolver */
+        padding: 0; /* Eliminar padding */
+        margin: 0 0 var(--spacing-sm) 0; /* Ajustar margen inferior si es necesario */
+    }
+
+    #nuestro-equipo p,
+    #nuestro-equipo .quote {
+        font-size: 16px; /* Ajuste del tamaño de texto para 480px */
+        width: 100%; /* Asegurar que los párrafos y la cita tomen el 100% del ancho */
+        box-sizing: border-box; /* Incluir padding y border en el ancho total */
+        overflow-wrap: break-word; /* Romper palabras largas */
+        white-space: normal; /* Asegurar que el texto pueda envolver */
+        padding: 0; /* Eliminar padding */
+        margin: 0 0 var(--spacing-sm) 0; /* Ajustar margen inferior si es necesario */
+    }
+
+    .ods-container img {
+        width: 172px; /* Tamaño de las imágenes ODS para 480px */
+        height: 172px; /* Hacer las imágenes cuadradas */
+        object-fit: cover; /* Asegurar que las imágenes llenen sus dimensiones sin distorsión */
+    }
+
+    .ods-container {
+        gap: var(--spacing-xxs); /* Reducir el espacio entre imágenes ODS */
+        justify-content: center; /* Centrar las imágenes ODS dentro de su contenedor */
     }
 }
 
