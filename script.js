@@ -61,11 +61,11 @@ function updateTexts() {
         // Párrafo base y botones
         const baseText = document.querySelector('#quienes-somos p:not(.section-description)');
         const cartaButton = document.querySelector('#quienes-somos .button-link:first-child');
-        const codigoButton = document.querySelector('#quienes-somos .button-link:last-child');
+        // const codigoButton = document.querySelector('#quienes-somos .button-link:last-child');
 
         if (baseText) baseText.textContent = t.quienes_somos.base_text;
         if (cartaButton) cartaButton.textContent = t.quienes_somos.buttons.carta;
-        if (codigoButton) codigoButton.textContent = t.quienes_somos.buttons.codigo;
+        // if (codigoButton) codigoButton.textContent = t.quienes_somos.buttons.codigo;
         
         // Sección de ejes
         const ejesTitle = document.querySelector('.ejes-title');
