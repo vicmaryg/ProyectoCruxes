@@ -328,8 +328,8 @@
     }
 
     .button-link {
-        width: 25%; /* Botones ocupan todo el ancho */
-        text-align: left;
+        width: 100%; /* Botones ocupan todo el ancho */
+        text-align: center;
         height: auto; /* Altura automática */
         font-size: 1rem;
     }
