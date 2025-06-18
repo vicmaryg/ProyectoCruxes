@@ -4,7 +4,7 @@ const translations = {
         "nav": {
             "inicio": "Inicio",
             "nosotros": "¿Quiénes somos?",
-            "servicios": "Servicios",
+            "servicios": "Programas",
             "novedades": "Novedades",
             "contacto": "Contacto",
             "donar": "Doná"
