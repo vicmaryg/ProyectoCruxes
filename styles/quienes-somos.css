@@ -328,7 +328,7 @@
     }
 
     .button-link {
-        width: 25%; /* Botones ocupan todo el ancho */
+        width: 20%; /* Botones ocupan todo el ancho */
         text-align: left;
         height: auto; /* Altura automática */
         font-size: 1rem;
