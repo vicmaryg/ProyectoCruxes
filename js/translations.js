@@ -83,11 +83,11 @@ const translations = {
                     "title": "Asesoramiento en RSE",
                     "description": "Deseamos ser Nexo entre las necesidades sociales, ambientales y económicas que atienden las organizaciones y el sector privado, a fin de fomentar el responsabilidad social y ODS.",
                     "items": [
-                        "Asesoramiento y ejecución en Proyectos socio-comunitarios y ambientales.",
-                        "Articulación del sector privado con las ONGs.",
-                        "Programa de Voluntariado- RSE, con Talleres y salidas de servicio o Campaña Solidaria.",
-                        "Gestión y acompañamiento en derivación de recursos a ONGs o proyectos.",
-                        "Capacitaciones: en Responsabilidad social, ODS, valores cristianos. Concientización. Herramientas de servicio y voluntariado, habilidades sociales y desarrollo personal."
+                        "Asesoramiento y ejecución en <span class=\"programa-highlight\">Proyectos socio-comunitarios y ambientales.</span>",
+                        "<span class=\"programa-highlight\">Articulación</span> del sector privado con las ONGs.",
+                        "<span class=\"programa-highlight\">Programa de Voluntariado- RSE</span>, con Talleres y salidas de servicio o Campaña Solidaria.",
+                        "Gestión y acompañamiento en <span class=\"programa-highlight\">derivación de recursos</span> a ONGs o proyectos.",
+                        "<span class=\"programa-highlight\">Capacitaciones:</span> en Responsabilidad social, ODS, valores cristianos. Concientización. Herramientas de servicio y voluntariado, habilidades sociales y desarrollo personal."
                     ]
                 }
             },
@@ -98,10 +98,10 @@ const translations = {
                     "title": "Proyectos solidarios",
                     "description": "Potenciando el alcance de las instituciones, sus proyectos y formar a Voluntarios en herramientas de trabajo Social, desarrollo personal y espiritualidad, fomentando el servicio.",
                     "items": [
-                        "Asesoramiento Institucional: Relevamiento y Asistencia en recursos (materiales o de recurso humano) y en proyectos.",
-                        "Programa de Voluntariado: Formación en Valores y ofrecimiento de voluntariado en ONGs o actividades específicas a Escuelas, Empresas u otras Instituciones.",
-                        "Jornadas de Voluntariado, entre las ONGs y Voluntarios, y Capacitaciones sobre herramientas de trabajo social (diagnóstico, confección y ejecución de proyectos, problemáticas sociales- ambientales, en alianza con otras instituciones y especialistas).",
-                        "Bolsa de Oportunidades de Pasantías y/o Empleo."
+                        "<span class=\"programa-highlight\">Asesoramiento Institucional:</span> Relevamiento y Asistencia en recursos (materiales o de recurso humano) y en proyectos.",
+                        "<span class=\"programa-highlight\">Programa de Voluntariado:</span> Formación en Valores y ofrecimiento de voluntariado en ONGs o actividades específicas a Escuelas, Empresas u otras Instituciones.",
+                        "<span class=\"programa-highlight\">Jornadas</span> de Voluntariado, entre las ONGs y Voluntarios, y <span class=\"programa-highlight\">Capacitaciones</span> sobre herramientas de trabajo social (diagnóstico, confección y ejecución de proyectos, problemáticas sociales- ambientales, en alianza con otras instituciones y especialistas).",
+                        "Bolsa de Oportunidades de <span class=\"programa-highlight\">Pasantías y/o Empleo.</span>"
                     ]
                 }
             },
@@ -112,9 +112,9 @@ const translations = {
                     "title": "Espiritualidad",
                     "description": "En base al Amor a Dios, a uno mismo y a los demás, con herramientas de Desarrollo Personal y Servicio social para voluntarios, ONGs, comunidades, empresas, etc.",
                     "items": [
-                        "Jornadas de Espiritualidad.",
-                        "Retiros de 2 días.",
-                        "Charlas Virtuales."
+                        "<span class=\"programa-highlight\">Jornadas</span> de Espiritualidad.",
+                        "<span class=\"programa-highlight\">Retiros</span> de 2 días.",
+                        "<span class=\"programa-highlight\">Charlas</span> Virtuales."
                     ]
                 }
             }
@@ -240,11 +240,11 @@ const translations = {
                     "title": "CSR Advisory",
                     "description": "We want to be a Nexus between the social, environmental and economic needs that organizations and the private sector address, in order to promote social responsibility and SDGs.",
                     "items": [
-                        "Advice and execution in socio-community and environmental Projects.",
-                        "Articulation of the private sector with NGOs.",
-                        "Volunteer Program- CSR, with Workshops and service outings or Solidarity Campaign.",
-                        "Management and support in resource allocation to NGOs or projects.",
-                        "Training: in Social responsibility, SDGs, Christian values. Awareness. Service and volunteer tools, social skills and personal development."
+                        "Advice and execution in <span class=\"programa-highlight\">socio-community and environmental Projects.</span>",
+                        "<span class=\"programa-highlight\">Articulation</span> of the private sector with NGOs.",
+                        "<span class=\"programa-highlight\">Volunteer Program- CSR</span>, with Workshops and service outings or Solidarity Campaign.",
+                        "Management and support in <span class=\"programa-highlight\">resource allocation</span> to NGOs or projects.",
+                        "<span class=\"programa-highlight\">Training:</span> in Social responsibility, SDGs, Christian values. Awareness. Service and volunteer tools, social skills and personal development."
                     ]
                 }
             },
@@ -255,10 +255,10 @@ const translations = {
                     "title": "Solidarity projects",
                     "description": "Enhancing the reach of institutions, their projects and training Volunteers in Social work tools, personal development and spirituality, promoting service.",
                     "items": [
-                        "Institutional Advisory: Survey and Assistance in resources (material or human resource) and in projects.",
-                        "Volunteer Program: Values Training and volunteer offering in NGOs or specific activities to Schools, Companies or other Institutions.",
-                        "Volunteer Days, between NGOs and Volunteers, and Training on social work tools (diagnosis, preparation and execution of projects, social-environmental problems, in alliance with other institutions and specialists).",
-                        "Internship and/or Job Opportunities Bank."
+                        "<span class=\"programa-highlight\">Institutional Advisory:</span> Survey and Assistance in resources (material or human resource) and in projects.",
+                        "<span class=\"programa-highlight\">Volunteer Program:</span> Values Training and volunteer offering in NGOs or specific activities to Schools, Companies or other Institutions.",
+                        "<span class=\"programa-highlight\">Days</span> of Volunteering, between NGOs and Volunteers, and <span class=\"programa-highlight\">Training</span> on social work tools (diagnosis, preparation and execution of projects, social-environmental problems, in alliance with other institutions and specialists).",
+                        "Internship and/or <span class=\"programa-highlight\">Job Opportunities</span> Bank."
                     ]
                 }
             },
@@ -269,9 +269,9 @@ const translations = {
                     "title": "Spirituality",
                     "description": "Based on Love for God, oneself and others, with Personal Development and Social service tools for volunteers, NGOs, communities, companies, etc.",
                     "items": [
-                        "Spirituality Days.",
-                        "2-day Retreats.",
-                        "Virtual Talks."
+                        "<span class=\"programa-highlight\">Days</span> of Spirituality.",
+                        "<span class=\"programa-highlight\">Retreats</span> of 2 days.",
+                        "<span class=\"programa-highlight\">Talks</span> Virtual."
                     ]
                 }
             }

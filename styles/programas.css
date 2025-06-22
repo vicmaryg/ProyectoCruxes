@@ -39,7 +39,7 @@
 
 /* Estilos para CRUXES RSE */
 .programa-sub-section.cruxes-rse .programa-title {
-    background-color:#E84E1D ; /* Color naranja principal */
+    background: linear-gradient(135deg, #E84E1D 0%, #F2920C 100%);
 }
 
 .programa-sub-section.cruxes-rse .programa-quote {
@@ -54,7 +54,7 @@
 
 /* Estilos para CRUXES SOLIDARIAS */
 .programa-sub-section.cruxes-solidarias .programa-title {
-    background-color: #F2920C; /* Color naranja principal */
+    background: linear-gradient(135deg, #F2920C 0%, #F2A90C 100%);
 }
 
 .programa-sub-section.cruxes-solidarias .programa-quote {
@@ -69,7 +69,7 @@
 
 /* Estilos para CRUXES DE LUZ */
 .programa-sub-section.cruxes-de-luz .programa-title {
-    background-color: #F2A90C; /* Color amarillo */
+    background: linear-gradient(135deg, #F2A90C 0%, #F4B400 100%);
 }
 
 .programa-sub-section.cruxes-de-luz .programa-quote {
@@ -147,6 +147,12 @@
     line-height: 1.5;
     color: var(--text-dark);
     text-align: left;
+}
+
+/* Clase para destacar palabras importantes */
+.programa-highlight {
+    font-weight: 700;
+    color: var(--text-dark) !important;
 }
 
 /* Remover estilos antiguos */

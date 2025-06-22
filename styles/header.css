@@ -60,15 +60,28 @@
 
 /* Botón de donación */
 .donate-button {
-    background: var(--color-primary-dark);
+    background: linear-gradient(135deg, #E84E1D 0%, #F2920C 100%);
     color: var(--text-light);
     border: none;
     border-radius: var(--border-radius);
-    padding: 8px 18px;
+    padding: 12px 24px;
     font-weight: 700;
     cursor: pointer;
     font-family: var(--font-family);
     margin: 0;
+    height: 44px;
+    font-size: 16px;
+    line-height: 1.2;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.donate-button:hover {
+    background: linear-gradient(135deg, #F2920C 0%, #E84E1D 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Barra de navegación */

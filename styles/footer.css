@@ -81,18 +81,22 @@
     font-family: inter;
     text-decoration: none !important;
     transition: all 0.3s ease;
-    padding: var(--spacing-xs) var(--spacing-sm);
-    border: 2px solid var(--text-light);
+    padding: 12px 24px;
+    border: none;
     border-radius: var(--border-radius-lg);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     display: inline-block; /* Asegurar que el padding funcione */
-    background-color: #E84E1D;
+    background: linear-gradient(135deg, #E84E1D 0%, #F2920C 100%);
+    height: 44px;
+    line-height: 1.2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Hover para enlaces del footer */
 .footer-link:hover {
-    color: var(--color-primary);
-    background-color: var(--text-light);
+    background: linear-gradient(135deg, #F2920C 0%, #E84E1D 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     text-shadow: none;
     text-decoration: none !important;
 }

@@ -195,20 +195,25 @@
 
 /* Botón de envío */
 .btn-enviar {
-    background-color: var(--color-primary);
+    background: linear-gradient(135deg, #E84E1D 0%, #F2920C 100%);
     color: var(--text-light);
-    padding: 0.75rem 1.5rem;
+    padding: 12px 24px;
     border: none;
     border-radius: var(--border-radius);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    height: 44px;
+    line-height: 1.2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Hover para botón de envío */
 .btn-enviar:hover {
-    background-color: var(--color-primary-dark);
+    background: linear-gradient(135deg, #F2920C 0%, #E84E1D 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Media queries para contacto (diseño de dos columnas en pantallas grandes) */
