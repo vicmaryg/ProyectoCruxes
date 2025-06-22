@@ -4,6 +4,18 @@ console.log('Script.js cargado');
 let currentLanguage = 'es';
 let scrollInterval;
 
+// Función para manejar el efecto blur del header
+function handleHeaderScroll() {
+    const header = document.querySelector('.header');
+    if (header) {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }
+}
+
 // Función para cambiar el idioma
 function changeLanguage() {
     currentLanguage = currentLanguage === 'es' ? 'en' : 'es';
@@ -292,6 +304,18 @@ function initLanguageSystem() {
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM cargado');
     initLanguageSystem();
+    
+    // Agregar listener para el efecto blur del header después de un pequeño delay
+    setTimeout(() => {
+        window.addEventListener('scroll', handleHeaderScroll);
+        handleHeaderScroll(); // Ejecutar una vez al cargar
+    }, 100);
+});
+
+// También agregar cuando la página esté completamente cargada
+window.addEventListener('load', () => {
+    window.addEventListener('scroll', handleHeaderScroll);
+    handleHeaderScroll();
 });
 
 // Cargar el formulario

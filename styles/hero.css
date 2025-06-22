@@ -17,6 +17,23 @@
     border-top: none;
 }
 
+/* Overlay para la imagen de fondo */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(232, 78, 29, 0.3) 0%,
+        rgba(242, 146, 12, 0.4) 50%,
+        rgba(242, 169, 12, 0.3) 100%
+    );
+    z-index: 1;
+}
+
 /* Estilos para el texto dentro de la sección hero */
 .hero-section h1 {
     color: #B12B00;
@@ -30,19 +47,21 @@
     font-size: 2.5rem;
     font-weight: 700;
     font-family: var(--font-family);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 2;
     margin: 0;
     padding: 0 var(--spacing-sm);
+    position: relative;
 }
 
 .hero-section .quote {
     color: #B12B00;
     font-style: italic;
     font-size: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 2;
     margin-bottom: 0;
+    position: relative;
 }
 
 /* Imagen de atardecer */
@@ -50,4 +69,42 @@
     width: 1320px;
     height: 630px;
     object-fit: cover;
+}
+
+/* Estilos responsive para la sección hero */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 250px;
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+        height: auto;
+        min-height: 60px;
+        padding: 0 var(--spacing-xs);
+    }
+
+    .hero-section .quote {
+        font-size: 1.2rem;
+        margin-top: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        min-height: 200px;
+        padding: var(--spacing-sm);
+    }
+
+    .hero-section h1 {
+        font-size: 1.5rem;
+        min-height: 50px;
+        padding: 0 var(--spacing-xs);
+    }
+
+    .hero-section .quote {
+        font-size: 1rem;
+        margin-top: var(--spacing-xs);
+    }
 } 
