@@ -155,6 +155,31 @@ const translations = {
         },
         objetivos_desarrollo: {
             title: "Objetivos de desarrollo sostenible"
+        },
+        "dona": {
+            "main_title": "Doná",
+            "unica_vez": "Doná por única vez",
+            "sumate": "Sumate como colaborador",
+            "rse": "Donaciones RSE",
+            "donar_ahora": "Donar ahora",
+            "quiero_sumarme": "Quiero sumarme",
+            "contactarme": "Contactarme"
+        },
+        "modal_dona": {
+            "header": "Elegí tu opción de donación",
+            "basica_title": "Donación Básica",
+            "basica_desc": "Apoya nuestros proyectos con una donación básica",
+            "media_title": "Donación Media",
+            "media_desc": "Contribuye con una donación intermedia",
+            "prepremium_title": "Donación Pre-premium",
+            "prepremium_desc": "Haz una donación significativa",
+            "premium_title": "Donación Premium",
+            "premium_desc": "Elige el monto que desees donar",
+            "donar_2000": "Donar $2000",
+            "donar_3000": "Donar $3000",
+            "donar_5000": "Donar $5000",
+            "donar_15000": "Donar $15000",
+            "cancelar": "Cancelar"
         }
     },
     'en': {
@@ -312,6 +337,31 @@ const translations = {
         },
         objetivos_desarrollo: {
             title: "Sustainable Development Goals"
+        },
+        "dona": {
+            "main_title": "Donate",
+            "unica_vez": "One-time donation",
+            "sumate": "Join as a collaborator",
+            "rse": "CSR Donations",
+            "donar_ahora": "Donate now",
+            "quiero_sumarme": "I want to join",
+            "contactarme": "Contact me"
+        },
+        "modal_dona": {
+            "header": "Choose your donation option",
+            "basica_title": "Basic Donation",
+            "basica_desc": "Support our projects with a basic donation",
+            "media_title": "Medium Donation",
+            "media_desc": "Contribute with an intermediate donation",
+            "prepremium_title": "Pre-premium Donation",
+            "prepremium_desc": "Make a significant donation",
+            "premium_title": "Premium Donation",
+            "premium_desc": "Choose the amount you want to donate",
+            "donar_2000": "Donate $2000",
+            "donar_3000": "Donate $3000",
+            "donar_5000": "Donate $5000",
+            "donar_15000": "Donate $15000",
+            "cancelar": "Cancel"
         }
     }
 }; 

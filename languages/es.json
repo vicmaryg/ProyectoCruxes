@@ -34,5 +34,30 @@
         "enviar": "Enviar",
         "success": "¡Mensaje enviado con éxito!",
         "error": "Error al enviar el mensaje. Por favor, intente nuevamente."
+    },
+    "dona": {
+        "main_title": "Doná",
+        "unica_vez": "Doná por única vez",
+        "sumate": "Sumate como colaborador",
+        "rse": "Donaciones RSE",
+        "donar_ahora": "Donar ahora",
+        "quiero_sumarme": "Quiero sumarme",
+        "contactarme": "Contactarme"
+    },
+    "modal_dona": {
+        "header": "Elegí tu opción de donación",
+        "basica_title": "Donación Básica",
+        "basica_desc": "Apoya nuestros proyectos con una donación básica",
+        "media_title": "Donación Media",
+        "media_desc": "Contribuye con una donación intermedia",
+        "prepremium_title": "Donación Pre-premium",
+        "prepremium_desc": "Haz una donación significativa",
+        "premium_title": "Donación Premium",
+        "premium_desc": "Elige el monto que desees donar",
+        "donar_2000": "Donar $2000",
+        "donar_3000": "Donar $3000",
+        "donar_5000": "Donar $5000",
+        "donar_15000": "Donar $15000",
+        "cancelar": "Cancelar"
     }
 } 

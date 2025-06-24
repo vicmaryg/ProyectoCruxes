@@ -198,4 +198,41 @@
     .modal-text-content::after {
         width: 100%; /* Ajustar ancho del gradiente en móvil */
     }
+}
+
+/* Media query específica para pantallas de 480px */
+@media (max-width: 480px) {
+    .modal-cookies {
+        padding: 10px;
+    }
+    
+    .modal-contenido {
+        padding: 0 5px;
+    }
+    
+    .modal-botones {
+        flex-direction: column; /* Apilar botones verticalmente */
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modal-botones button {
+        width: 100%; /* Botones ocupan todo el ancho disponible */
+        max-width: 280px; /* Ancho máximo para evitar que sean muy anchos */
+        min-width: auto; /* Eliminar ancho mínimo */
+        padding: 10px 15px; /* Reducir padding */
+        font-size: 0.9rem; /* Reducir tamaño de fuente */
+        white-space: normal; /* Permitir que el texto se envuelva */
+        word-wrap: break-word; /* Romper palabras largas */
+        line-height: 1.2; /* Ajustar altura de línea */
+    }
+    
+    .modal-contenido h3 {
+        font-size: 1.1rem; /* Reducir tamaño del título */
+    }
+    
+    .modal-text-content {
+        max-height: 120px; /* Reducir altura máxima */
+    }
 } 

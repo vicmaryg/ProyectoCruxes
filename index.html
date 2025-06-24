@@ -303,29 +303,29 @@
       <section id="contacto" class="section">
 
         <!-- Nueva sección de Donaciones -->
-        <!--
         <div class="dona-section">
-          <h3 class="dona-main-title">Doná</h3>
+          <h3 class="dona-main-title" data-i18n="dona.main_title">Doná</h3>
           <div class="dona-grid">
             <div class="dona-item">
-              <h4 class="dona-title">Doná por única vez</h4>
+              <h4 class="dona-title" data-i18n="dona.unica_vez">Doná por única vez</h4>
               <p class="dona-text">Texto</p>
-              <a href="#" class="dona-button">Donar ahora</a>
+              <a href="#" class="dona-button" id="donarAhoraBtn" data-i18n="dona.donar_ahora">Donar ahora</a>
             </div>
             <div class="dona-item">
-              <h4 class="dona-title">Sumate como colaborador</h4>
+              <h4 class="dona-title" data-i18n="dona.sumate">Sumate como colaborador</h4>
               <p class="dona-text">Texto (el boton va hacia el contacto)</p>
-              <a href="#contacto-form" class="dona-button">Quiero sumarme</a>
+              <a href="#contacto-form" class="dona-button" data-i18n="dona.quiero_sumarme">Quiero sumarme</a>
             </div>
             <div class="dona-item">
-              <h4 class="dona-title">Donaciones RSE</h4>
+              <h4 class="dona-title" data-i18n="dona.rse">Donaciones RSE</h4>
               <p class="dona-text">Texto (el boton va hacia el contacto)</p>
-              <a href="#contacto-form" class="dona-button">Contactarme</a>
+              <a href="#contacto-form" class="dona-button" data-i18n="dona.contactarme">Contactarme</a>
             </div>
           </div>
         </div>
-        -->
         <!-- Fin sección de Donaciones -->
+        <!-- Contenedor para el modal de donaciones -->
+        <div id="modal-donaciones-container"></div>
 
         <div class="contacto-container">
           <div class="contacto-info">
@@ -389,6 +389,8 @@
         </div>
       </div>
     </div>
+
+    
 
     <!-- Scripts al final del body -->
     <script src="js/translations.js"></script>

@@ -20,6 +20,7 @@ function handleHeaderScroll() {
 function changeLanguage() {
     currentLanguage = currentLanguage === 'es' ? 'en' : 'es';
     updateTexts();
+    translateDataI18n();
     localStorage.setItem('preferredLanguage', currentLanguage);
 }
 
@@ -298,6 +299,7 @@ function initLanguageSystem() {
     }
     
     updateTexts();
+    translateDataI18n();
 }
 
 // Inicializar cuando el DOM esté listo
@@ -336,6 +338,12 @@ if (formularioContainer) {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const targetId = this.getAttribute('href');
+      
+      // Saltar enlaces con href="#" o selectores inválidos
+      if (targetId === '#' || targetId.length <= 1) {
+        return;
+      }
+      
       const targetElement = document.querySelector(targetId);
       
       if (targetElement) {
@@ -538,4 +546,139 @@ function initializeForm() {
         console.log(`--- Debug Carrusel: No se encontraron items en el carrusel de ${item.querySelector('.novedad-title')?.textContent} ---`);
       }
   });
-}); 
+});
+
+/* Modal de Donación 2025*/
+// --- Funciones del Modal de Donación ---
+
+// Función para abrir el modal de donación
+function openDonationModal() {
+  const modal = document.getElementById('modal-donacion');
+  if (modal) {
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden'; // Prevenir scroll del body
+  }
+}
+
+// Función para cerrar el modal de donación
+function closeDonationModal() {
+  var modal = document.getElementById('modal-donacion');
+  if(modal) modal.style.display = 'none';
+  // Limpia el contenedor para evitar duplicados si se vuelve a abrir
+  var cont = document.getElementById('modal-donaciones-container');
+  if(cont) cont.innerHTML = '';
+}
+
+// Cerrar modal al hacer clic fuera del contenido
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('modal-donacion');
+  if (modal) {
+      modal.addEventListener('click', function(e) {
+          if (e.target === modal) {
+              closeDonationModal();
+          }
+      });
+  }
+  
+  // Cerrar modal con la tecla Escape
+  document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+          closeDonationModal();
+      }
+  });
+});
+
+// Modal de donaciones dinámico
+function cargarModalDonaciones() {
+  console.log('Iniciando carga del modal...');
+  fetch('modal_donaciones.html')
+    .then(res => {
+      console.log('Respuesta del fetch:', res.status, res.statusText);
+      return res.text();
+    })
+    .then(html => {
+      console.log('HTML del modal cargado, longitud:', html.length);
+      const container = document.getElementById('modal-donaciones-container');
+      console.log('Container encontrado:', container);
+      container.innerHTML = html;
+      const modal = document.getElementById('modal-donacion');
+      console.log('Modal encontrado después de insertar HTML:', modal);
+      if (modal) {
+        modal.style.display = 'flex';
+        // Cerrar modal al hacer clic en la X
+        const cerrarBtn = document.getElementById('cerrarModalDonaciones');
+        if (cerrarBtn) {
+          cerrarBtn.onclick = function() {
+            modal.style.display = 'none';
+          };
+        }
+        // Cerrar modal al hacer clic fuera del contenido
+        modal.onclick = function(e) {
+          if (e.target === modal) {
+            modal.style.display = 'none';
+          }
+        };
+        
+        // Traducir el modal después de un pequeño delay
+        setTimeout(() => {
+          console.log('Traduciendo modal...');
+          translateDataI18n();
+        }, 100);
+      } else {
+        console.log('No se encontró el modal después de insertar el HTML');
+      }
+    })
+    .catch(error => {
+      console.error('Error al cargar el modal:', error);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const donarAhoraBtn = document.getElementById('donarAhoraBtn');
+  if (donarAhoraBtn) {
+    donarAhoraBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      cargarModalDonaciones();
+    });
+  }
+});
+
+// Función para traducir elementos con data-i18n
+function translateDataI18n() {
+    const t = translations[currentLanguage];
+    if (!t) {
+        console.warn('No hay traducciones disponibles para:', currentLanguage);
+        return;
+    }
+    
+    console.log('Buscando elementos con data-i18n...');
+    const elements = document.querySelectorAll('[data-i18n]');
+    console.log('Elementos encontrados:', elements.length);
+    
+    // Recorrer todos los elementos con data-i18n
+    elements.forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const keys = key.split('.');
+        let value = t;
+        
+        // Navegar por el objeto de traducciones usando las claves anidadas
+        for (const k of keys) {
+            if (value && value[k] !== undefined) {
+                value = value[k];
+            } else {
+                console.warn(`Traducción no encontrada para: ${key}`);
+                return;
+            }
+        }
+        
+        // Aplicar la traducción
+        if (typeof value === 'string') {
+            console.log(`Traduciendo ${key}: "${element.textContent}" -> "${value}"`);
+            element.textContent = value;
+        } else if (typeof value === 'object') {
+            console.warn(`Valor de traducción no es string para: ${key}`, value);
+        }
+    });
+    
+    console.log('Traducción completada');
+} 

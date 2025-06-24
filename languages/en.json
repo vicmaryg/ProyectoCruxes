@@ -35,5 +35,30 @@
         "enviar": "Send",
         "success": "Message sent successfully!",
         "error": "Error sending message. Please try again."
+    },
+    "dona": {
+        "main_title": "Donate",
+        "unica_vez": "One-time donation",
+        "sumate": "Join as a collaborator",
+        "rse": "CSR Donations",
+        "donar_ahora": "Donate now",
+        "quiero_sumarme": "I want to join",
+        "contactarme": "Contact me"
+    },
+    "modal_dona": {
+        "header": "Choose your donation option",
+        "basica_title": "Basic Donation",
+        "basica_desc": "Support our projects with a basic donation",
+        "media_title": "Medium Donation",
+        "media_desc": "Contribute with an intermediate donation",
+        "prepremium_title": "Pre-premium Donation",
+        "prepremium_desc": "Make a significant donation",
+        "premium_title": "Premium Donation",
+        "premium_desc": "Choose the amount you want to donate",
+        "donar_2000": "Donate $2000",
+        "donar_3000": "Donate $3000",
+        "donar_5000": "Donate $5000",
+        "donar_15000": "Donate $15000",
+        "cancelar": "Cancel"
     }
 } 
