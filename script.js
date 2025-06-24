@@ -562,11 +562,22 @@ function openDonationModal() {
 
 // Función para cerrar el modal de donación
 function closeDonationModal() {
+  // Cerrar modal dinámico
   var modal = document.getElementById('modal-donacion');
   if(modal) modal.style.display = 'none';
+  
+  // Cerrar modal de respaldo
+  var backupModal = document.getElementById('modal-donacion-backup');
+  if(backupModal) backupModal.style.display = 'none';
+  
   // Limpia el contenedor para evitar duplicados si se vuelve a abrir
   var cont = document.getElementById('modal-donaciones-container');
-  if(cont) cont.innerHTML = '';
+  if(cont) {
+    // Solo limpiar si no hay modal de respaldo
+    if (!document.getElementById('modal-donacion-backup')) {
+      cont.innerHTML = '';
+    }
+  }
 }
 
 // Cerrar modal al hacer clic fuera del contenido
@@ -591,20 +602,43 @@ document.addEventListener('DOMContentLoaded', function() {
 // Modal de donaciones dinámico
 function cargarModalDonaciones() {
   console.log('Iniciando carga del modal...');
+  
+  // Verificar si el botón existe
+  const donarBtn = document.getElementById('donarAhoraBtn');
+  if (!donarBtn) {
+    console.error('Botón "Donar ahora" no encontrado');
+    return;
+  }
+  
+  // Verificar si el container existe
+  const container = document.getElementById('modal-donaciones-container');
+  if (!container) {
+    console.error('Container modal-donaciones-container no encontrado');
+    return;
+  }
+  
+  // Intentar cargar el modal
   fetch('modal_donaciones.html')
     .then(res => {
       console.log('Respuesta del fetch:', res.status, res.statusText);
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
       return res.text();
     })
     .then(html => {
       console.log('HTML del modal cargado, longitud:', html.length);
-      const container = document.getElementById('modal-donaciones-container');
-      console.log('Container encontrado:', container);
+      if (html.length === 0) {
+        throw new Error('El archivo modal_donaciones.html está vacío');
+      }
+      
       container.innerHTML = html;
       const modal = document.getElementById('modal-donacion');
       console.log('Modal encontrado después de insertar HTML:', modal);
+      
       if (modal) {
         modal.style.display = 'flex';
+        
         // Cerrar modal al hacer clic en la X
         const cerrarBtn = document.getElementById('cerrarModalDonaciones');
         if (cerrarBtn) {
@@ -612,6 +646,7 @@ function cargarModalDonaciones() {
             modal.style.display = 'none';
           };
         }
+        
         // Cerrar modal al hacer clic fuera del contenido
         modal.onclick = function(e) {
           if (e.target === modal) {
@@ -624,20 +659,79 @@ function cargarModalDonaciones() {
           console.log('Traduciendo modal...');
           translateDataI18n();
         }, 100);
+        
+        console.log('Modal cargado y mostrado exitosamente');
       } else {
-        console.log('No se encontró el modal después de insertar el HTML');
+        console.error('No se encontró el modal después de insertar el HTML');
+        // Usar modal de respaldo
+        showBackupModal();
       }
     })
     .catch(error => {
       console.error('Error al cargar el modal:', error);
+      // Usar modal de respaldo
+      showBackupModal();
     });
+}
+
+// Función para mostrar el modal de respaldo
+function showBackupModal() {
+  console.log('Mostrando modal de respaldo');
+  const backupModal = document.getElementById('modal-donacion-backup');
+  if (backupModal) {
+    backupModal.style.display = 'flex';
+    
+    // Cerrar modal al hacer clic en la X
+    const cerrarBtn = backupModal.querySelector('.modal-close-btn');
+    if (cerrarBtn) {
+      cerrarBtn.onclick = function() {
+        backupModal.style.display = 'none';
+      };
+    }
+    
+    // Cerrar modal al hacer clic fuera del contenido
+    backupModal.onclick = function(e) {
+      if (e.target === backupModal) {
+        backupModal.style.display = 'none';
+      }
+    };
+    
+    // Traducir el modal de respaldo
+    setTimeout(() => {
+      console.log('Traduciendo modal de respaldo...');
+      translateDataI18n();
+    }, 100);
+    
+    console.log('Modal de respaldo mostrado exitosamente');
+  } else {
+    console.error('Modal de respaldo no encontrado');
+    alert('Error al cargar el modal de donaciones. Por favor, intente nuevamente.');
+  }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
   const donarAhoraBtn = document.getElementById('donarAhoraBtn');
   if (donarAhoraBtn) {
+    console.log('Botón "Donar ahora" encontrado, agregando event listener');
     donarAhoraBtn.addEventListener('click', function(e) {
       e.preventDefault();
+      console.log('Clic en botón "Donar ahora" detectado');
+      cargarModalDonaciones();
+    });
+  } else {
+    console.error('Botón "Donar ahora" no encontrado en DOMContentLoaded');
+  }
+});
+
+// También agregar event listener cuando el DOM esté completamente cargado
+window.addEventListener('load', function() {
+  const donarAhoraBtn = document.getElementById('donarAhoraBtn');
+  if (donarAhoraBtn && !donarAhoraBtn.hasAttribute('data-listener-added')) {
+    console.log('Botón "Donar ahora" encontrado en window.load, agregando event listener');
+    donarAhoraBtn.setAttribute('data-listener-added', 'true');
+    donarAhoraBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      console.log('Clic en botón "Donar ahora" detectado (window.load)');
       cargarModalDonaciones();
     });
   }
