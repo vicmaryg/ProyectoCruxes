@@ -156,14 +156,14 @@
 /* Estilos para la sección Visión, Misión y Objetivos */
 #vision-mision-objetivos {
     margin-top: var(--spacing-lg);
-    padding-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-md);
     border-top: 2px solid #F2920C;
 }
 
 #vision-mision-objetivos .vision-mision-objetivos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
 }
 
 #vision-mision-objetivos .section-title {
@@ -253,7 +253,7 @@
 .objetivo-especifico-title {
     border-top: 2px solid #F2920C; /* Agrega un borde superior naranja */
     margin-top: 48px; /* Ajusta la distancia superior */
-    padding-top: 48px; /* Agrega un espacio entre la línea y el texto */
+    padding-top: var(--spacing-md); /* Agrega un espacio entre la línea y el texto */
     /* ... resto de los estilos existentes ... */
 }
 
@@ -362,6 +362,12 @@
 }
 
 @media screen and (max-width: 480px) {
+
+    #vision-mision-objetivos .section-title {
+        font-size: 22px;
+        margin-bottom: var(--spacing-sm);
+        margin-top: var(--spacing-sm);
+    }
     /* Ajustes específicos para la sección Nuestro Equipo a 480px */
     #nuestro-equipo {
         max-width: 352px; /* Ancho máximo de la sección Nuestro Equipo */
