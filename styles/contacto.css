@@ -3,15 +3,12 @@
 /* ========================================================================== */
 
 #contacto {
-    margin-top: var(--spacing-xl); /* Añadir espacio en la parte superior */
+    margin-top: var(--spacing-md); /* Añadir espacio en la parte superior */
     border-top: none; /* Eliminar la línea naranja superior */
-    margin-bottom: var(--spacing-xl); /* Añadir espacio en la parte inferior */
+    margin-bottom: var(--spacing-md); /* Añadir espacio en la parte inferior */
 }
 
 /* Estilos para la sección de Donaciones */
-.dona-section {
-    margin-bottom: var(--spacing-xl); /* Espacio debajo de la sección de donaciones */
-}
 
 .dona-main-title {
     color: var(--color-primary);
@@ -29,7 +26,7 @@
     height: 2px;
     background-color: var(--color-primary); /* Color naranja */
     margin-top: var(--spacing-md);
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
 }
 
 .dona-grid {
@@ -103,7 +100,6 @@
 
 /* Título principal de contacto (la palabra CONTACTO) */
 #contacto .contacto-main-title {
-    margin-top: 48px; /* Aumenta la separación entre la línea y el título */
     color: #E84E1D; /* Color naranja #E84E1D */
     font-size: 30px;
     font-weight: 700;
@@ -145,7 +141,6 @@
 /* Formulario de contacto */
 .contacto-form {
     background-color: #fff;
-    margin-top: 48px;
     padding: var(--spacing-lg);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-sm);

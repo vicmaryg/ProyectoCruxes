@@ -15,6 +15,23 @@
     padding-bottom: 0;
     margin-top: 0;
     border-top: none;
+    animation: heroBackgroundMove 20s ease-in-out infinite alternate;
+}
+
+/* Animación del fondo */
+@keyframes heroBackgroundMove {
+    0% {
+        background-position: left center;
+        background-size: 100% auto;
+    }
+    50% {
+        background-position: center center;
+        background-size: 110% auto;
+    }
+    100% {
+        background-position: right center;
+        background-size: 120% auto;
+    }
 }
 
 /* Overlay para la imagen de fondo */
@@ -49,7 +66,7 @@
     font-family: var(--font-family);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     z-index: 2;
-    margin: 0;
+    margin: 0 0 1rem 0;
     padding: 0 var(--spacing-sm);
     position: relative;
 }

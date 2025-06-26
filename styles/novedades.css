@@ -4,8 +4,8 @@
     font-size: 36px;
     font-weight: 700;
     text-align: left;
-    margin-top: 48px;
-    margin-bottom: var(--spacing-xl);
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
 }
 
 /* Contenedor de novedades */

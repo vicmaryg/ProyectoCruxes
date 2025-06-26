@@ -10,7 +10,7 @@ const translations = {
             "donar": "Doná"
         },
         "hero": {
-            "title": "Bienvenidos a Cruxes de Luz",
+            "title": "Bienvenidos a Cruxes<br>de Luz",
             "subtitle": "AMOR en Revolución",
             "quote": "AMOR en Revolución",
             "description": "Somos una fundación que promueve la espiritualidad, la solidaridad y el desarrollo personal, construyendo puentes entre diferentes sectores."
@@ -192,7 +192,7 @@ const translations = {
             "donar": "Donate"
         },
         "hero": {
-            "title": "Welcome to Cruxes de Luz",
+            "title": "Welcome to Cruxes<br>de Luz",
             "subtitle": "LOVE in Revolution",
             "quote": "LOVE in Revolution",
             "description": "We are a foundation that promotes spirituality, solidarity and personal development, building bridges between different sectors."

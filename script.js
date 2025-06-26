@@ -53,7 +53,7 @@ function updateTexts() {
         const heroSubtitle = document.querySelector('.hero-subtitle');
         const heroDescription = document.querySelector('.hero-description');
         
-        if (heroTitle) heroTitle.textContent = t.hero.title;
+        if (heroTitle) heroTitle.innerHTML = t.hero.title;
         if (heroQuote) heroQuote.textContent = t.hero.quote;
         if (heroSubtitle) heroSubtitle.textContent = t.hero.subtitle;
         if (heroDescription) heroDescription.textContent = t.hero.description;

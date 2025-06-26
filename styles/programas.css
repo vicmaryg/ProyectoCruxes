@@ -4,13 +4,12 @@
     font-size: 30px;
     font-weight: 700;
     text-align: left;
-    margin-top: var(--spacing-xl);
-    margin-bottom: var(--spacing-xl);
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
 }
 
 /* Contenedor de cada subsección de programa (el área blanca con borde) */
 .programa-sub-section {
-    margin-bottom: 4rem;
     background-color: white; /* Fondo blanco para el contenido */
     border-radius: var(--border-radius-lg); /* Bordes redondeados para todo el contenedor */
     overflow: hidden; 
