@@ -104,7 +104,7 @@
 
     .hero-section .quote {
         font-size: 1.2rem;
-        margin-top: var(--spacing-sm);
+        margin-top: 0.5rem;
     }
 }
 
@@ -122,6 +122,6 @@
 
     .hero-section .quote {
         font-size: 1rem;
-        margin-top: var(--spacing-xs);
+        margin-top: 0.3rem;
     }
 } 
