@@ -4,8 +4,8 @@
     font-size: 30px;
     font-weight: 700;
     text-align: left;
-    margin-top: var(--spacing-md);
-    margin-bottom: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
 }
 
 /* Contenedor de cada subsección de programa (el área blanca con borde) */

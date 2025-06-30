@@ -177,7 +177,7 @@
     padding-bottom: 0;
     text-align: left;
     margin-top: 48px;
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-sm);
 }
 
 /* Estilos para listas dentro de la sección Visión, Misión, Objetivos */
@@ -202,7 +202,7 @@
 
 /* Estilos para la sección Nuestro Equipo */
 #nuestro-equipo {
-    padding-top: var(--spacing-lg);
+    padding-top: var(--spacing-sm);
     padding-bottom: var(--spacing-lg); 
     border-top: 2px solid #F2920C; 
     /* Asegurar que use grid para dos columnas en pantallas grandes */
@@ -216,7 +216,7 @@
     font-family: 'Inter', sans-serif;
     font-size: 29px; 
     color: #F2920C; 
-    margin-bottom: var(--spacing-md); 
+    margin-bottom: var(--spacing-sm); 
     text-align: left;
 }
 
@@ -255,7 +255,7 @@
 .objetivo-especifico-title {
     border-top: 2px solid #F2920C; /* Agrega un borde superior naranja */
     margin-top: 48px; /* Ajusta la distancia superior */
-    padding-top: var(--spacing-md); /* Agrega un espacio entre la línea y el texto */
+    padding-top: var(--spacing-sm); /* Agrega un espacio entre la línea y el texto */
     /* ... resto de los estilos existentes ... */
 }
 

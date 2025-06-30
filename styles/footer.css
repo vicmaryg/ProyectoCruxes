@@ -2,7 +2,7 @@
 .footer {
     background-color: #FEF5E7;
     color: var(--text-light);
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-md) 0;
     text-align: center;
 }
 
