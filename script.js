@@ -775,4 +775,21 @@ function translateDataI18n() {
     });
     
     console.log('Traducción completada');
-} 
+}
+
+// Mostrar/ocultar flecha de scroll-top y funcionalidad
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    if (!scrollTopBtn) return;
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            scrollTopBtn.classList.remove('hidden');
+        } else {
+            scrollTopBtn.classList.add('hidden');
+        }
+    });
+    scrollTopBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}); 
