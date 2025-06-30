@@ -1,6 +1,6 @@
 /* Estilos específicos para la sección Quiénes Somos */
 #quienes-somos {
-    margin-top: var(--spacing-xl);
+    margin-top: var(--spacing-sm);
     border-top: none;
     font-family: 'Inter', sans-serif;
 }
@@ -61,6 +61,7 @@
     display: block;
     max-width: 100%; /* Asegurar que la imagen no se desborde */
     height: auto; /* Mantener la proporción */
+    border-radius: var(--border-radius);
 }
 
 /* Contenedor de botones en Quiénes Somos */
@@ -116,6 +117,7 @@
     max-width: 100%; /* Asegurar que la imagen no se desborde */
     height: auto; /* Mantener la proporción */
     display: block;
+    border-radius: var(--border-radius);
 }
 
 .ejes-content {

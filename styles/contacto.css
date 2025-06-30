@@ -144,6 +144,7 @@
     padding: var(--spacing-lg);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-sm);
+    border: 2px solid var(--color-primary);
 }
 
 /* Grupos de formulario */

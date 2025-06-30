@@ -20,7 +20,7 @@
 
 /* Items de novedad */
 .novedad-item {
-    border: 1px solid #ddd;
+    border: 2px solid var(--color-primary);
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     display: flex;
@@ -110,6 +110,7 @@
     width: 100%;
     box-sizing: border-box;
     gap: 20px;
+    transition: scroll-left 6s ease-in-out;
 }
 
 /* Oculta la barra de desplazamiento predeterminada */
@@ -168,7 +169,7 @@
 
 /* Bloque Lanzamientos */
 .novedad-item {
-    border: 1px solid #ddd;
+    border: 2px solid var(--color-primary);
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     display: flex;
@@ -208,6 +209,7 @@
     -webkit-overflow-scrolling: touch;
     width: 100%;
     box-sizing: border-box;
+    transition: scroll-left 6s ease-in-out;
 }
 
 .novedad-item .novedad-carousel-container img {

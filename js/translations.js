@@ -10,13 +10,15 @@ const translations = {
             "donar": "Doná"
         },
         "hero": {
-            "title": "Bienvenidos a Cruxes<br>de Luz",
+            "title": "BIENVENIDOS A CRUXES<br>DE LUZ",
+            "title_left": "BIENVENIDOS A CRUXES",
+            "title_right": "DE LUZ",
             "subtitle": "AMOR en Revolución",
             "quote": "AMOR en Revolución",
             "description": "Somos una fundación que promueve la espiritualidad, la solidaridad y el desarrollo personal, construyendo puentes entre diferentes sectores."
         },
         "quienes_somos": {
-            "title": "¿Quiénes Somos?",
+            "title": "¿QUIÉNES SOMOS?",
             "description": "Somos una Fundación con el objetivo de promover la Espiritualidad, la Solidaridad y el Desarrollo Personal; Construir Puentes entre los diferentes sectores (privado, público y ONGs);",
             "objetivos": [
                 "Somos una Fundación con el objetivo de promover la <strong>Espiritualidad</strong>, la <strong>Solidaridad</strong> y el <strong>Desarrollo Personal</strong>; Construir <strong>Puentes</strong> entre los diferentes sectores (privado, público y ONGs);",
@@ -75,7 +77,7 @@ const translations = {
             "ods_title": "Objetivos de desarrollo sostenible"
         },
         "programas": {
-            "title": "Nuestros programas",
+            "title": "PROGRAMAS",
             "cruxes_rse": {
                 "title": "Cruxes RSE",
                 "quote": "Puente que une, inspira y Transforma",
@@ -120,14 +122,14 @@ const translations = {
             }
         },
         "novedades": {
-            "title": "Novedades",
+            "title": "NOVEDADES",
             "ver_mas": "Ver más",
             "alianzas": "Alianzas",
-            "proyectos_solidarios": "Proyectos solidarios",
+            "jornada_espiritualidad": "Jornada Espiritualidad",
             "lanzamientos": "Lanzamientos"
         },
         "contacto": {
-            "title": "Contacto",
+            "title": "CONTACTO",
             "mas_info": "Para más información:",
             "form_text": "Completa el formulario y nos pondremos en contacto contigo.",
             "nombre": "Nombre completo *",
@@ -157,7 +159,7 @@ const translations = {
             title: "Objetivos de desarrollo sostenible"
         },
         "dona": {
-            "main_title": "Doná",
+            "main_title": "DONÁ",
             "unica_vez": "Doná por única vez",
             "sumate": "Sumate como colaborador",
             "rse": "Donaciones RSE",
@@ -192,13 +194,15 @@ const translations = {
             "donar": "Donate"
         },
         "hero": {
-            "title": "Welcome to Cruxes<br>de Luz",
+            "title": "WELCOME TO CRUXES<br>DE LUZ",
+            "title_left": "WELCOME TO CRUXES",
+            "title_right": "DE LUZ",
             "subtitle": "LOVE in Revolution",
             "quote": "LOVE in Revolution",
             "description": "We are a foundation that promotes spirituality, solidarity and personal development, building bridges between different sectors."
         },
         "quienes_somos": {
-            "title": "Who We Are",
+            "title": "WHO WE ARE",
             "description": "We are a Foundation with the goal of promoting Spirituality, Solidarity and Personal Development; Building Bridges between different sectors (private, public and NGOs);",
             "objetivos": [
                 "We are a Foundation with the goal of promoting <strong>Spirituality</strong>, <strong>Solidarity</strong> and <strong>Personal Development</strong>; Building <strong>Bridges</strong> between different sectors (private, public and NGOs);",
@@ -257,7 +261,7 @@ const translations = {
             "ods_title": "Sustainable Development Goals"
         },
         "programas": {
-            "title": "Our programs",
+            "title": "PROGRAMS",
             "cruxes_rse": {
                 "title": "Cruxes CSR",
                 "quote": "Bridge that unites, inspires and Transforms",
@@ -302,14 +306,14 @@ const translations = {
             }
         },
         "novedades": {
-            "title": "News",
+            "title": "NEWS",
             "ver_mas": "See more",
             "alianzas": "Alliances",
-            "proyectos_solidarios": "Solidarity Projects",
+            "jornada_espiritualidad": "Spirituality Day",
             "lanzamientos": "Launches"
         },
         "contacto": {
-            "title": "Contact",
+            "title": "CONTACT",
             "mas_info": "For more information:",
             "form_text": "Fill out the form and we will contact you.",
             "nombre": "Full name *",
@@ -339,7 +343,7 @@ const translations = {
             title: "Sustainable Development Goals"
         },
         "dona": {
-            "main_title": "Donate",
+            "main_title": "DONATE",
             "unica_vez": "One-time donation",
             "sumate": "Join as a collaborator",
             "rse": "CSR Donations",

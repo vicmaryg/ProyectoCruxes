@@ -218,7 +218,7 @@ function updateTexts() {
         if (novedadesTitle) novedadesTitle.textContent = t.novedades.title;
         if (verMasBtn) verMasBtn.textContent = t.novedades.ver_mas;
         if (alianzasTitle) alianzasTitle.textContent = t.novedades.alianzas;
-        if (proyectosTitle) proyectosTitle.textContent = t.novedades.proyectos_solidarios;
+        if (proyectosTitle) proyectosTitle.textContent = t.novedades.jornada_espiritualidad;
         if (lanzamientosTitle) lanzamientosTitle.textContent = t.novedades.lanzamientos;
         
         // Contacto

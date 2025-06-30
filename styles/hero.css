@@ -21,16 +21,16 @@
 /* Animación del fondo */
 @keyframes heroBackgroundMove {
     0% {
-        background-position: left center;
+        background-position: center center;
         background-size: 100% auto;
     }
     50% {
         background-position: center center;
-        background-size: 110% auto;
+        background-size: 120% auto;
     }
     100% {
-        background-position: right center;
-        background-size: 120% auto;
+        background-position: center center;
+        background-size: 140% auto;
     }
 }
 
@@ -62,10 +62,10 @@
     right: 0;
     bottom: 0;
     background: linear-gradient(
-        135deg,
-        rgba(232, 78, 29, 0.3) 0%,
-        rgba(242, 146, 12, 0.4) 50%,
-        rgba(242, 169, 12, 0.3) 100%
+        0deg,
+        rgba(232, 78, 29, 0.2) 0%,
+        rgba(242, 146, 12, 0.3) 50%,
+        rgba(242, 169, 12, 0.4) 100%
     );
     z-index: 1;
 }
@@ -143,4 +143,71 @@
         font-size: 1rem;
         margin-top: 0;
     }
-} 
+}
+
+
+/* Estilos para el nuevo diseño de texto dividido */
+.split-text-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    overflow: hidden;
+    z-index: 2;
+    position: relative;
+    text-shadow: 3px 3px 6px rgba(139, 69, 19, 0.8);
+    margin-bottom: 1rem;
+}
+
+.text-part {
+    display: inline-block;
+    position: relative;
+    transform: translateX(0);
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    line-height: 1.2;
+}
+
+.text-part.left {
+    transform: translateX(-200%);
+    animation-name: slide-in-left;
+}
+
+.text-part.right {
+    transform: translateX(200%);
+    animation-name: slide-in-right;
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Estilos responsive para el texto dividido */
+@media (max-width: 768px) {
+    .split-text-container {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .split-text-container {
+        font-size: 2rem;
+    }
+}
