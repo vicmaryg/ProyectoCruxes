@@ -53,7 +53,7 @@ function updateTexts() {
         const heroSubtitle = document.querySelector('.hero-subtitle');
         const heroDescription = document.querySelector('.hero-description');
         
-        if (heroTitle) heroTitle.innerHTML = t.hero.title;
+        if (heroTitle) heroTitle.textContent = t.hero.title.replace(/<br>/g, '\n');
         if (heroQuote) heroQuote.textContent = t.hero.quote;
         if (heroSubtitle) heroSubtitle.textContent = t.hero.subtitle;
         if (heroDescription) heroDescription.textContent = t.hero.description;
@@ -391,59 +391,72 @@ function initializeForm() {
       
       const nombre = document.getElementById('nombre').value.trim();
       const email = document.getElementById('email').value.trim();
-            const telefono = document.getElementById('telefono').value.trim();
-            const tipoContacto = document.getElementById('tipo-contacto').value;
+      const telefono = document.getElementById('telefono').value.trim();
+      const tipoContacto = document.getElementById('tipo-contacto').value;
       const mensaje = document.getElementById('mensaje').value.trim();
+      
+      // Validación mejorada
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       
       if (!nombre || !email || !mensaje) {
         alert('Por favor, complete todos los campos requeridos.');
         return;
       }
       
-            // Mostrar indicador de carga
-            const submitButton = contactoForm.querySelector('.btn-enviar');
-            const originalButtonText = submitButton.textContent;
-            submitButton.textContent = 'Enviando...';
-            submitButton.disabled = true;
-            
-            // Preparar los datos para enviar
-            const formData = {
-                nombre: nombre,
-                email: email,
-                telefono: telefono,
-                tipoContacto: tipoContacto,
-                mensaje: mensaje
-            };
+      if (!emailRegex.test(email)) {
+        alert('Por favor, ingrese un email válido.');
+        return;
+      }
+      
+      // Mostrar indicador de carga
+      const submitButton = contactoForm.querySelector('.btn-enviar');
+      const originalButtonText = submitButton.textContent;
+      submitButton.textContent = 'Enviando...';
+      submitButton.disabled = true;
+      
+      // Preparar los datos para enviar
+      const formData = {
+          nombre: nombre,
+          email: email,
+          telefono: telefono,
+          tipoContacto: tipoContacto,
+          mensaje: mensaje
+      };
 
-            // Enviar los datos al servidor
-            fetch('enviar_correo.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-      alert('¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.');
-      contactoForm.reset();
-                } else {
-                    throw new Error(data.error || 'Error al enviar el mensaje');
-                }
-            })
-            .catch(error => {
-                alert('Hubo un error al enviar el mensaje. Por favor, intente nuevamente más tarde.');
-                console.error('Error:', error);
-            })
-            .finally(() => {
-                // Restaurar el botón
-                submitButton.textContent = originalButtonText;
-                submitButton.disabled = false;
-            });
-        });
-    }
+      // Enviar los datos al servidor
+      fetch('enviar_correo.php', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+      })
+      .then(response => {
+          if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+      })
+      .then(data => {
+          if (data.success) {
+              alert('¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.');
+              contactoForm.reset();
+          } else {
+              throw new Error(data.error || 'Error al enviar el mensaje');
+          }
+      })
+      .catch(error => {
+          console.error('Error en fetch:', error);
+          alert('Hubo un error al enviar el mensaje. Por favor, intente nuevamente más tarde.');
+      })
+      .finally(() => {
+          // Restaurar el botón
+          submitButton.textContent = originalButtonText;
+          submitButton.disabled = false;
+      });
+    });
   }
+}
 
   // Control del menú hamburguesa
   const menuToggle = document.querySelector('.menu-toggle');
@@ -494,6 +507,9 @@ function initializeForm() {
         const itemMarginRight = parseInt(window.getComputedStyle(firstItem).marginRight);
         const itemTotalWidth = itemOffsetWidth + itemMarginLeft + itemMarginRight;
 
+        // Variable local para el intervalo de este carrusel específico
+        let carouselInterval;
+
         // Función para avanzar automáticamente
         const autoScroll = () => {
           const maxScrollLeft = carouselContainer.scrollWidth - carouselContainer.clientWidth;
@@ -504,49 +520,49 @@ function initializeForm() {
           }
         };
 
-            // Intervalo para el desplazamiento automático
-            scrollInterval = setInterval(autoScroll, 3000);
+        // Intervalo para el desplazamiento automático
+        carouselInterval = setInterval(autoScroll, 3000);
 
-            // Función para manejar el clic en la flecha derecha
+        // Función para manejar el clic en la flecha derecha
         rightArrow.addEventListener('click', () => {
-                clearInterval(scrollInterval);
-                const maxScrollLeft = carouselContainer.scrollWidth - carouselContainer.clientWidth;
-                if (carouselContainer.scrollLeft + itemTotalWidth >= maxScrollLeft) {
-                    carouselContainer.scrollTo({ left: 0, behavior: 'smooth' });
-                } else {
-                    carouselContainer.scrollBy({ left: itemTotalWidth, behavior: 'smooth' });
-                }
-                scrollInterval = setInterval(autoScroll, 3000);
-            });
+          clearInterval(carouselInterval);
+          const maxScrollLeft = carouselContainer.scrollWidth - carouselContainer.clientWidth;
+          if (carouselContainer.scrollLeft + itemTotalWidth >= maxScrollLeft) {
+            carouselContainer.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            carouselContainer.scrollBy({ left: itemTotalWidth, behavior: 'smooth' });
+          }
+          carouselInterval = setInterval(autoScroll, 3000);
+        });
 
-            // Función para manejar el clic en la flecha izquierda
+        // Función para manejar el clic en la flecha izquierda
         leftArrow.addEventListener('click', () => {
-                clearInterval(scrollInterval);
+          clearInterval(carouselInterval);
           if (carouselContainer.scrollLeft === 0) {
-                    carouselContainer.scrollTo({ 
-                        left: carouselContainer.scrollWidth - carouselContainer.clientWidth, 
-                        behavior: 'smooth' 
-                    });
+            carouselContainer.scrollTo({ 
+              left: carouselContainer.scrollWidth - carouselContainer.clientWidth, 
+              behavior: 'smooth' 
+            });
           } else {
             carouselContainer.scrollBy({ left: -itemTotalWidth, behavior: 'smooth' });
           }
-                scrollInterval = setInterval(autoScroll, 3000);
-            });
+          carouselInterval = setInterval(autoScroll, 3000);
+        });
 
-            // Pausar el desplazamiento automático cuando el mouse está sobre el carrusel
-            carouselContainer.addEventListener('mouseenter', () => {
-                clearInterval(scrollInterval);
-            });
+        // Pausar el desplazamiento automático cuando el mouse está sobre el carrusel
+        carouselContainer.addEventListener('mouseenter', () => {
+          clearInterval(carouselInterval);
+        });
 
-            // Reanudar el desplazamiento automático cuando el mouse sale del carrusel
-            carouselContainer.addEventListener('mouseleave', () => {
-                scrollInterval = setInterval(autoScroll, 3000);
+        // Reanudar el desplazamiento automático cuando el mouse sale del carrusel
+        carouselContainer.addEventListener('mouseleave', () => {
+          carouselInterval = setInterval(autoScroll, 3000);
         });
       } else {
         console.log(`--- Debug Carrusel: No se encontraron items en el carrusel de ${item.querySelector('.novedad-title')?.textContent} ---`);
       }
+    });
   });
-});
 
 /* Modal de Donación 2025*/
 // --- Funciones del Modal de Donación ---
