@@ -34,11 +34,11 @@
 }
 
 /* Texto del footer */
-.footer-center-content p {
-    color: black;
+.footer-center-content .footer-text {
+    color: var(--color-primary);
     font-size: 1.2rem;
     font-weight: 600;
-    margin-bottom: var(--spacing-sm); /* Espacio entre texto y botón */
+    margin-bottom: var(--spacing-sm);
     font-style: italic;
 }
 

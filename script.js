@@ -76,7 +76,7 @@ function updateTexts() {
         const cartaButton = document.querySelector('#quienes-somos .button-link:first-child');
         // const codigoButton = document.querySelector('#quienes-somos .button-link:last-child');
 
-        if (baseText) baseText.textContent = t.quienes_somos.base_text;
+        if (baseText) baseText.innerHTML = t.quienes_somos.base_text;
         if (cartaButton) cartaButton.textContent = t.quienes_somos.buttons.carta;
         // if (codigoButton) codigoButton.textContent = t.quienes_somos.buttons.codigo;
         
@@ -102,8 +102,7 @@ function updateTexts() {
         }
 
         if (ejesQuote) {
-            console.log('Cita de ejes encontrada:', ejesQuote);
-            ejesQuote.textContent = t.quienes_somos.ejes.quote;
+            ejesQuote.innerHTML = t.quienes_somos.ejes.quote;
         } else {
             console.log('No se encontró la cita de ejes');
         }

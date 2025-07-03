@@ -19,13 +19,16 @@ const translations = {
         },
         "quienes_somos": {
             "title": "¿QUIÉNES SOMOS?",
-            "description": "Somos una Fundación con el objetivo de promover la Espiritualidad, la Solidaridad y el Desarrollo Personal; Construir Puentes entre los diferentes sectores (privado, público y ONGs);",
+            "description": "Somos FUNDACIÓN CRUXES:",
             "objetivos": [
-                "Somos una Fundación con el objetivo de promover la <strong>Espiritualidad</strong>, la <strong>Solidaridad</strong> y el <strong>Desarrollo Personal</strong>; Construir <strong>Puentes</strong> entre los diferentes sectores (privado, público y ONGs);",
-                "Brindar <strong>Asesoramiento institucional</strong>, con una <strong>Propuesta innovadora</strong> y metodológica profesional, en especial, de Trabajo Social, y en articulación con otras organizaciones, tejiendo redes desde Argentina al mundo.",
-                "Responder <strong>Dónde y Cómo ayudar</strong>, creando una Red de cruces de Alianzas; Despertar nuestro <strong>Ser Espiritual y Solidario</strong>; Comprometernos con los <strong>Objetivos de Desarrollo Sostenible</strong> y acompañar proyectos de <strong>Responsabilidad Social Empresarial (RSE)</strong>;"
+                "Somos FUNDACIÓN CRUXES:",
+                "",
+                "• Promoviendo la <span class=\"programa-highlight\">Espiritualidad</span>, la <span class=\"programa-highlight\">Solidaridad</span> y el <span class=\"programa-highlight\">Desarrollo Personal</span>;",
+                "• Respondiendo <span class=\"programa-highlight\">Dónde y Cómo ayudar</span>, en ONGs o proyectos con impacto social;",
+                "• Construyendo <span class=\"programa-highlight\">Puentes</span> entre Empresas y voluntarios que desean ayudar con las ONGs que requieren ayuda, generando lazos, visibilidad, concientización, asesoramiento, voluntariado y capacitaciones.",
+                "• Ofreciendo <span class=\"programa-highlight\">Retiros</span> y <span class=\"programa-highlight\">Jornadas</span>, para auto-conocernos, crecer espiritual y solidariamente, promoviendo agentes de cambio."
             ],
-            "base_text": "Nuestra base está en los Valores Cristianos, bajo las Normas Internacionales, alcanzando los Objetivos de Desarrollo Sostenible y tramitando la inscripción en la Oficina Anticorrupción y Registro de Integridad para una mayor transparencia y gestión.",
+            "base_text": "Nuestras bases son los <span class=\"programa-highlight\">valores cristianos</span>, con una <span class=\"programa-highlight\">mirada integral</span>, y una propuesta innovadora y metodológica, creando Redes, convocando y uniendo a distintos actores o especialistas en cada acción. Comprometiéndonos con los <span class=\"programa-highlight\">Objetivos de Desarrollo Sostenible (ODS)</span>, el Desarrollo Humano Integral y Solidario de la <span class=\"programa-highlight\">Doctrina Social</span> y la <span class=\"programa-highlight\">Responsabilidad Social Empresarial (RSE)</span>;",
             "buttons": {
                 "carta": "Carta de presentación",
                 "codigo": "Código de ética"
@@ -33,11 +36,11 @@ const translations = {
             "ejes": {
                 "title": "Nuestros ejes",
                 "items": [
-                    "<strong>ESPIRITUALIDAD-FE:</strong> Amar a Dios- Escuela de Espiritualidad y Desarrollo Personal. Jornadas y/o Retiros espirituales.",
-                    "<strong>SOLIDARIDAD-CARIDAD:</strong> Amar a los demás- Programa de Voluntariado, conectando con las ONGs que lo requieren, Capacitaciones, Proyectos Solidarios, RSE, entre otros.",
-                    "<strong>DESARROLLO PERSONAL-ESPERANZA:</strong> Amarse como Dios te ama- Bolsa de Oportunidades de Trabajo y Escuela de Valores (comunicación, habilidades sociales, liderazgo, etc)."
+                    " <span class=\"programa-highlight\">SOLIDARIDAD:</span> Acompañar Proyectos Solidarios de ONGs con Recursos materiales, Asesoramiento y Fortalecimiento Institucional, Articulaciones, Programa de Voluntariado y Pasantías, Capacitaciones y Encuentros Comunitarios- RSE.",
+                    " <span class=\"programa-highlight\">DESARROLLO PERSONAL:</span> Escuela Integral <em>Nueva Vida</em> de Autoconocimiento: habilidades sociales, liderazgo, emociones, valores, diálogo, entre otros.",
+                    " <span class=\"programa-highlight\">ESPIRITUALIDAD:</span> Jornadas y/o Retiros para un crecimiento personal, espiritual y solidario, como agentes de cambio."
                 ],
-                "quote": "Cruxes, un Sol Naciente, que desea iluminar el SER desde el Corazón, donde están las verdades de Dios, y actuar con Pasión y Amor"
+                "quote": "<span style=\"color: #d97c1a;\">“Cruxes, un Nuevo Amanecer, para cruzarnos y potenciar nuestro SER”</span>"
             },
             "mision": "Misión",
             "mision_text": "Vivir en el mandamiento del Amor de Jesucristo, amando a Dios sobre todas las cosas, y a los demás como a uno mismo, por medio de acciones y redes solidarias, asesoramiento, información y acompañamiento en el desarrollo personal y espiritual.",
@@ -203,13 +206,16 @@ const translations = {
         },
         "quienes_somos": {
             "title": "WHO WE ARE",
-            "description": "We are a Foundation with the goal of promoting Spirituality, Solidarity and Personal Development; Building Bridges between different sectors (private, public and NGOs);",
+            "description": "We are FUNDACIÓN CRUXES:",
             "objetivos": [
-                "We are a Foundation with the goal of promoting <strong>Spirituality</strong>, <strong>Solidarity</strong> and <strong>Personal Development</strong>; Building <strong>Bridges</strong> between different sectors (private, public and NGOs);",
-                "Provide <strong>Institutional Advisory</strong>, with an <strong>Innovative Proposal</strong> and professional methodology, especially in Social Work, and in articulation with other organizations, building networks from Argentina to the world.",
-                "Answer <strong>Where and How to help</strong>, creating a Network of Alliance Crosses; Awaken our <strong>Spiritual and Solidarity Being</strong>; Commit to <strong>Sustainable Development Goals</strong> and support <strong>Corporate Social Responsibility (CSR)</strong> projects;"
+                "We are FUNDACIÓN CRUXES:",
+                "",
+                "• Promoting <strong>Spirituality</strong>, <strong>Solidarity</strong> and <strong>Personal Development</strong>;",
+                "• Answering <strong>Where and How to help</strong>, in NGOs or projects with social impact;",
+                "• Building <strong>Bridges</strong> between Companies and volunteers who want to help with NGOs that need support, generating bonds, visibility, awareness, advisory, volunteering, and training.",
+                "• Offering <strong>Retreats</strong> and <strong>Workshops</strong> to get to know ourselves, grow spiritually and in solidarity, promoting agents of change."
             ],
-            "base_text": "Our foundation is based on Christian Values, under International Standards, achieving Sustainable Development Goals and processing registration with the Anti-Corruption Office and Integrity Registry for greater transparency and management.",
+            "base_text": "Our foundations are Christian values, with a comprehensive approach and an innovative and methodological proposal, creating Networks, convening and uniting different actors or specialists in each action. Committing ourselves to the Sustainable Development Goals (SDGs), Integral and Solidary Human Development of Social Doctrine, and Corporate Social Responsibility (CSR);",
             "buttons": {
                 "carta": "Presentation Letter",
                 "codigo": "Code of Ethics"

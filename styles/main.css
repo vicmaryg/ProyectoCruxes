@@ -241,6 +241,7 @@
   transition: background 0.2s, box-shadow 0.2s;
   box-shadow: 0 2px 8px rgba(255,121,0,0.08);
   display: inline-block;
+  text-transform: uppercase;
 }
 .dona-button:hover {
   background: linear-gradient(90deg, #e86c00 0%, #ffd700 100%);

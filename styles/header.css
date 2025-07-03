@@ -95,9 +95,12 @@
     font-size: 16px;
     line-height: 1.2;
     text-decoration: none;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
 }
 
 .donate-button:hover {
@@ -116,8 +119,15 @@
 .nav-list {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: var(--spacing-md);
     list-style: none;
+}
+
+.nav-list li {
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 /* Enlaces de navegación */
@@ -129,6 +139,7 @@
     position: relative;
     transition: color 0.3s ease;
     font-family: var(--font-family);
+    text-transform: uppercase;
 }
 
 /* Efecto hover para enlaces de navegación */

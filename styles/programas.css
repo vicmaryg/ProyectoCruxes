@@ -151,7 +151,7 @@
 /* Clase para destacar palabras importantes */
 .programa-highlight {
     font-weight: 700;
-    color: var(--text-dark) !important;
+    color: black !important;
 }
 
 /* Remover estilos antiguos */
