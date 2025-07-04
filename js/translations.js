@@ -128,7 +128,7 @@ const translations = {
             "title": "NOVEDADES",
             "ver_mas": "Ver más",
             "alianzas": "Alianzas",
-            "jornada_espiritualidad": "Jornada Espiritualidad",
+            "jornada_espiritualidad": "Proyectos",
             "lanzamientos": "Lanzamientos"
         },
         "contacto": {
@@ -315,7 +315,7 @@ const translations = {
             "title": "NEWS",
             "ver_mas": "See more",
             "alianzas": "Alliances",
-            "jornada_espiritualidad": "Spirituality Day",
+            "jornada_espiritualidad": "Projects",
             "lanzamientos": "Launches"
         },
         "contacto": {

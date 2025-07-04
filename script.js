@@ -505,11 +505,12 @@ function initializeForm() {
           }
         };
 
-            // Intervalo para el desplazamiento automático
-            scrollInterval = setInterval(autoScroll, 3000);
+            // Intervalo para el desplazamiento automático - más lento en pantallas pequeñas
+            const scrollSpeed = window.innerWidth <= 1024 ? 6000 : 3000;
+            scrollInterval = setInterval(autoScroll, scrollSpeed);
 
             // Función para manejar el clic en la flecha derecha
-        rightArrow.addEventListener('click', () => {
+                    rightArrow.addEventListener('click', () => {
                 clearInterval(scrollInterval);
                 const maxScrollLeft = carouselContainer.scrollWidth - carouselContainer.clientWidth;
                 if (carouselContainer.scrollLeft + itemTotalWidth >= maxScrollLeft) {
@@ -517,11 +518,11 @@ function initializeForm() {
                 } else {
                     carouselContainer.scrollBy({ left: itemTotalWidth, behavior: 'smooth' });
                 }
-                scrollInterval = setInterval(autoScroll, 3000);
+                scrollInterval = setInterval(autoScroll, scrollSpeed);
             });
 
             // Función para manejar el clic en la flecha izquierda
-        leftArrow.addEventListener('click', () => {
+                    leftArrow.addEventListener('click', () => {
                 clearInterval(scrollInterval);
           if (carouselContainer.scrollLeft === 0) {
                     carouselContainer.scrollTo({ 
@@ -531,7 +532,7 @@ function initializeForm() {
           } else {
             carouselContainer.scrollBy({ left: -itemTotalWidth, behavior: 'smooth' });
           }
-                scrollInterval = setInterval(autoScroll, 3000);
+                scrollInterval = setInterval(autoScroll, scrollSpeed);
             });
 
             // Pausar el desplazamiento automático cuando el mouse está sobre el carrusel
@@ -541,7 +542,7 @@ function initializeForm() {
 
             // Reanudar el desplazamiento automático cuando el mouse sale del carrusel
             carouselContainer.addEventListener('mouseleave', () => {
-                scrollInterval = setInterval(autoScroll, 3000);
+                scrollInterval = setInterval(autoScroll, scrollSpeed);
         });
       } else {
         console.log(`--- Debug Carrusel: No se encontraron items en el carrusel de ${item.querySelector('.novedad-title')?.textContent} ---`);
