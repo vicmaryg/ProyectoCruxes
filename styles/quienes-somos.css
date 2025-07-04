@@ -38,6 +38,11 @@
     font-size: 18px;
 }
 
+/* Eliminar el punto del primer elemento de la lista "Somos FUNDACIÓN CRUXES:" */
+#quienes-somos ul li:first-child {
+    list-style: none;
+}
+
 #quienes-somos .quote {
     color: var(--color-primary);
     font-style: italic;
@@ -364,6 +369,10 @@
 }
 
 @media screen and (max-width: 480px) {
+
+    #quienes-somos .section-title {
+        font-size: 1.25rem;
+    }
 
     #vision-mision-objetivos .section-title {
         font-size: 22px;
