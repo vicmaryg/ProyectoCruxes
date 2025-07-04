@@ -199,7 +199,7 @@ const translations = {
         "hero": {
             "title": "WELCOME TO CRUXES<br>DE LUZ",
             "title_left": "WELCOME TO CRUXES",
-            "title_right": "DE LUZ",
+            "title_right": "OF LIGHT",
             "subtitle": "Bridges of Light and Union",
             "quote": "Bridges of Light and Union",
             "description": "We are a foundation that promotes spirituality, solidarity and personal development, building bridges between different sectors."
