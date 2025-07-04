@@ -49,12 +49,14 @@ function updateTexts() {
         
         // Hero
         const heroTitle = document.querySelector('.hero-title');
-        const heroQuote = document.querySelector('.hero-section .quote');
+        const heroQuote = document.querySelector('.hero-section .quote, .hero-section q.quote');
         const heroSubtitle = document.querySelector('.hero-subtitle');
         const heroDescription = document.querySelector('.hero-description');
         
         if (heroTitle) heroTitle.innerHTML = t.hero.title;
-        if (heroQuote) heroQuote.textContent = t.hero.quote;
+        if (heroQuote) {
+            heroQuote.textContent = t.hero.quote;
+        }
         if (heroSubtitle) heroSubtitle.textContent = t.hero.subtitle;
         if (heroDescription) heroDescription.textContent = t.hero.description;
         

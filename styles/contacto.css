@@ -238,4 +238,36 @@
     .contacto-container {
         display: block;
     }
+    
+    /* Estilos para la sección de donaciones en 1024px hacia abajo */
+    .dona-section {
+        text-align: center;
+    }
+    
+    .dona-main-title {
+        text-align: center;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .dona-grid {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: var(--spacing-md);
+        max-width: 400px; /* Limitar el ancho máximo */
+        margin: 0 auto; /* Centrar el grid */
+    }
+    
+    .dona-item {
+        align-items: center; /* Centrar elementos */
+        text-align: center;
+    }
+    
+    .dona-title {
+        text-align: center;
+    }
+    
+    .dona-button {
+        width: 100%; /* Botones ocupan todo el ancho */
+        max-width: 300px; /* Limitar ancho máximo del botón */
+        text-align: center;
+    }
 } 
