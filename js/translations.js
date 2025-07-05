@@ -9,6 +9,9 @@ const translations = {
             "contacto": "Contacto",
             "donar": "Doná"
         },
+        "header": {
+            "tagline": "Somos puente que une y transforma"
+        },
         "hero": {
             "title": "BIENVENIDOS A CRUXES<br>DE LUZ",
             "title_left": "BIENVENIDOS A CRUXES",
@@ -168,7 +171,8 @@ const translations = {
             "rse": "Donaciones RSE",
             "donar_ahora": "Donar ahora",
             "quiero_sumarme": "Quiero sumarme",
-            "contactarme": "Contactarme"
+            "contactarme": "Contactarme",
+            "contactarme_button": "CONTACTARME"
         },
         "modal_dona": {
             "header": "Elegí tu opción de donación",
@@ -195,6 +199,9 @@ const translations = {
             "novedades": "News",
             "contacto": "Contact",
             "donar": "Donate"
+        },
+        "header": {
+            "tagline": "We are a bridge that unites and transforms"
         },
         "hero": {
             "title": "WELCOME TO CRUXES<br>DE LUZ",
@@ -355,7 +362,8 @@ const translations = {
             "rse": "CSR Donations",
             "donar_ahora": "Donate now",
             "quiero_sumarme": "I want to join",
-            "contactarme": "Contact me"
+            "contactarme": "Contact me",
+            "contactarme_button": "CONTACT ME"
         },
         "modal_dona": {
             "header": "Choose your donation option",

@@ -43,6 +43,8 @@ function updateTexts() {
             }
         });
         
+
+        
         // Botón de donación
         const donateButton = document.querySelector('.donate-button');
         if (donateButton) donateButton.textContent = t.nav.donar;
