@@ -310,6 +310,7 @@
     /* Ajustes para la sección Visión, Misión y Objetivos */
     #vision-mision-objetivos .vision-mision-objetivos-grid {
         grid-template-columns: 1fr; /* Una sola columna para apilar */
+        gap: 0; /* Eliminar el gap entre columnas */
     }
 
     #vision-mision-objetivos .section-title {
@@ -325,6 +326,7 @@
     /* Ajustes para la sección Nuestro Equipo */
     #nuestro-equipo {
         grid-template-columns: 1fr; /* Una sola columna para apilar */
+        gap: 0; /* Eliminar el gap entre columnas */
     }
 
     #nuestro-equipo .section-title {
@@ -399,7 +401,6 @@
     }
     /* Ajustes específicos para la sección Nuestro Equipo a 480px */
     #nuestro-equipo {
-        max-width: 352px; /* Ancho máximo de la sección Nuestro Equipo */
         margin: 0 auto; /* Centrar la sección */
         grid-template-columns: 1fr; /* Asegurar una sola columna */
     }

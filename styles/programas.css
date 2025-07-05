@@ -49,6 +49,7 @@
 .programa-sub-section.cruxes-rse .programa-content p,
 .programa-sub-section.cruxes-rse .programa-content ul li {
     color: var(--text-dark);
+    text-align: justify;
 }
 
 /* Estilos para CRUXES SOLIDARIAS */
@@ -64,6 +65,7 @@
 .programa-sub-section.cruxes-solidarias .programa-content p,
 .programa-sub-section.cruxes-solidarias .programa-content ul li {
     color: var(--text-dark);
+    text-align: justify;
 }
 
 /* Estilos para CRUXES DE LUZ */
@@ -116,6 +118,7 @@
     box-sizing: border-box; /* Incluir padding y border en el ancho */
     /* Margen inferior para separar del siguiente bloque si es necesario */
     margin-bottom: 0; /* Asegurar que no haya margen inferior extra */
+    text-align: justify;
 }
 
 /* El resto de estilos para h4, p, ul, li dentro de .programa-content */
@@ -139,6 +142,7 @@
     list-style: disc;
     margin-bottom: var(--spacing-sm);
     color: var(--text-dark);
+    text-align: justify;
 }
 
 .programa-content ul li {
