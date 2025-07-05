@@ -23,21 +23,25 @@
     color: #E84E1D;
     height: 36px;
     font-size: 30px;
+    margin-bottom: var(--spacing-md);
 }
 
 #quienes-somos p {
-    margin-bottom: var(--spacing-sm);
-    font-size: 19px;
+    margin-bottom: var(--spacing-md);
+    font-size: 18px;
     text-align: justify;
+    line-height: 1.6;
 }
 
 #quienes-somos ul {
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
     text-align: justify;
 }
 
 #quienes-somos li {
     font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-xs);
 }
 
 /* Eliminar el punto del primer elemento de la lista "Somos FUNDACIÓN CRUXES:" */
@@ -49,9 +53,11 @@
 #quienes-somos .quote {
     color: var(--color-primary);
     font-style: italic;
-    margin-top: var(--spacing-lg);
-    margin-bottom: 0;
-    text-align: left;
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 /* Estilos para la imagen en Quiénes Somos */
@@ -135,7 +141,7 @@
 
 .ejes-title {
     color: #F2920C;
-    font-size: 1.8rem;
+    font-size: 30px;
     font-weight: 600;
     margin-bottom: var(--spacing-md);
     text-align: left;
@@ -143,13 +149,14 @@
 }
 
 .ejes-content ul {
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
     padding-left: 1.2rem;
 }
 
 .ejes-content ul li {
     margin-bottom: var(--spacing-xs);
     font-size: 18px;
+    line-height: 1.6;
 }
 
 .ejes-content ul li strong {
@@ -159,8 +166,9 @@
 .ejes-quote {
     color: var(--color-primary);
     margin-top: var(--spacing-md);
-    text-align: left;
-    font-size: 19px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 /* Estilos para la sección Visión, Misión y Objetivos */
@@ -174,18 +182,18 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
 }
 
 #vision-mision-objetivos .section-title {
     font-family: 'Inter', sans-serif;
-    font-size: 29px;
+    font-size: 30px;
     color: #F2920C;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
     border-bottom: none;
     padding-bottom: 0;
     text-align: left;
-    margin-top: 48px;
-    margin-top: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
 }
 
 /* Estilos para listas dentro de la sección Visión, Misión, Objetivos */
@@ -198,7 +206,7 @@
 
 #vision-mision-objetivos ul li {
     font-size: 18px; 
-    
+    line-height: 1.6;
     margin-bottom: var(--spacing-xs); 
     font-weight: 400; 
 }
@@ -207,6 +215,8 @@
     font-family: 'Inter', sans-serif;
     font-size: 18px;
     text-align: justify;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
 }
 
 /* Estilos para la sección Nuestro Equipo */
@@ -223,17 +233,18 @@
 
 #nuestro-equipo .section-title {
     font-family: 'Inter', sans-serif;
-    font-size: 29px; 
+    font-size: 30px; 
     color: #F2920C; 
-    margin-bottom: var(--spacing-sm); 
+    margin-bottom: var(--spacing-md); 
     text-align: left;
 }
 
 #nuestro-equipo p {
     font-family: 'Inter', sans-serif;
     font-size: 18px; 
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
     text-align: justify;
+    line-height: 1.6;
 }
 
 #nuestro-equipo .quote {
@@ -242,7 +253,8 @@
     font-style: italic;
     color: var(--color-primary);
     margin-top: var(--spacing-md);
-    text-align: left;
+    text-align: justify;
+    line-height: 1.6;
 }
 
 /* Estilos para el contenedor de las imágenes de los ODS */
@@ -322,7 +334,7 @@
 
     #nuestro-equipo p,
     #nuestro-equipo .quote {
-        text-align: left;
+        text-align: justify;
     }
 
     .ods-container {
@@ -418,7 +430,8 @@
         overflow-wrap: break-word; /* Romper palabras largas */
         white-space: normal; /* Asegurar que el texto pueda envolver */
         padding: 0; /* Eliminar padding */
-        margin: 0 0 var(--spacing-sm) 0; /* Ajustar margen inferior si es necesario */
+        margin: 0 0 var(--spacing-md) 0; /* Ajustar margen inferior si es necesario */
+        line-height: 1.6;
     }
 
     .ods-container img {
