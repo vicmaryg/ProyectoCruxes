@@ -24,7 +24,7 @@
 /* Información de contacto */
 .contacto-info {
     text-align: left; /* Alinear a la izquierda */
-    margin-bottom: var(--spacing-lg); /* Espacio debajo en móvil */
+    margin-bottom: var(--spacing-sm); /* Espacio debajo en móvil */
 }
 
 /* Título principal de contacto (la palabra CONTACTO) */

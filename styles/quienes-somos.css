@@ -43,6 +43,7 @@
 /* Eliminar el punto del primer elemento de la lista "Somos FUNDACIÓN CRUXES:" */
 #quienes-somos ul li:first-child {
     list-style: none;
+    text-align: justify;
 }
 
 #quienes-somos .quote {
@@ -306,7 +307,7 @@
 
     #vision-mision-objetivos p,
     #vision-mision-objetivos ul {
-        text-align: left;
+        text-align: justify;
     }
 
     /* Ajustes para la sección Nuestro Equipo */
@@ -342,6 +343,7 @@
     #quienes-somos p,
     #quienes-somos li {
         font-size: 16px;
+        text-align: justify;
     }
 
     .button-link {
@@ -409,6 +411,7 @@
 
     #nuestro-equipo p,
     #nuestro-equipo .quote {
+        text-align: justify;
         font-size: 16px; /* Ajuste del tamaño de texto para 480px */
         width: 100%; /* Asegurar que los párrafos y la cita tomen el 100% del ancho */
         box-sizing: border-box; /* Incluir padding y border en el ancho total */
