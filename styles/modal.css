@@ -96,6 +96,11 @@
     line-height: 1.5;
 }
 
+/* Justificar párrafos en el modal */
+.modal-contenido p {
+    text-align: justify;
+}
+
 /* Título del modal */
 .modal-contenido h3 {
     font-size: 1.3rem;

@@ -80,7 +80,7 @@ html {
 
 @media (max-width: 480px) {
     .container {
-        max-width: 352px;
+        max-width: 80%;
         margin: 0 auto;
     }
 }
