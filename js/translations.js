@@ -291,7 +291,7 @@ const translations = {
                 }
             },
             "cruxes_solidarias": {
-                "title": "Cruxes Solidarias",
+                "title": "Solidarity Cruxes",
                 "quote": "A chain of Love and service in Action",
                 "proyectos": {
                     "title": "Solidarity projects",
