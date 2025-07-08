@@ -37,13 +37,14 @@ const translations = {
                 "codigo": "Código de ética"
             },
             "ejes": {
-                "title": "Nuestros ejes",
-                "items": [
-                    " <span class=\"programa-highlight\">SOLIDARIDAD:</span> Acompañar Proyectos Solidarios de ONGs con Recursos materiales, Asesoramiento y Fortalecimiento Institucional, Articulaciones, Programa de Voluntariado y Pasantías, Capacitaciones y Encuentros Comunitarios- RSE.",
-                    " <span class=\"programa-highlight\">DESARROLLO PERSONAL:</span> Escuela Integral <em>Nueva Vida</em> de Autoconocimiento: habilidades sociales, liderazgo, emociones, valores, diálogo, entre otros.",
-                    " <span class=\"programa-highlight\">ESPIRITUALIDAD:</span> Jornadas y/o Retiros para un crecimiento personal, espiritual y solidario, como agentes de cambio."
-                ],
-                "quote": "<span style=\"color: #d97c1a;\">“Cruxes, un Nuevo Amanecer, para cruzarnos y potenciar nuestro SER”</span>"
+                "title": "NUESTROS EJES",
+                "solidaridad_titulo": "SOLIDARIDAD:",
+                "solidaridad_texto": "Acompañar Proyectos Solidarios de ONGs con Recursos materiales, Asesoramiento y Fortalecimiento Institucional, Articulaciones, Programa de Voluntariado y Pasantías, Capacitaciones y Encuentros Comunitarios- RSE.",
+                "desarrollo_titulo": "DESARROLLO PERSONAL:",
+                "desarrollo_texto": "Escuela Integral Nueva Vida de Autoconocimiento: habilidades sociales, liderazgo, emociones, valores, diálogo, entre otros.",
+                "espiritualidad_titulo": "ESPIRITUALIDAD:",
+                "espiritualidad_texto": "Jornadas y/o Retiros para un crecimiento personal, espiritual y solidario, como agentes de cambio.",
+                "quote": "Cruxes, un Nuevo Amanecer, para cruzarnos y potenciar nuestro SER"
             },
             "mision": "Misión",
             "mision_text": "Vivir en el mandamiento del Amor de Jesucristo, amando a Dios sobre todas las cosas, y a los demás como a uno mismo, por medio de acciones y redes solidarias, asesoramiento, información y acompañamiento en el desarrollo personal y espiritual.",
@@ -54,11 +55,11 @@ const translations = {
             "title": "Visión, Misión y Objetivos",
             "vision": {
                 "title": "Visión",
-                "content": "Construir la Nueva Civilización del Amor, uniendo y creando nuevas Alianzas, siendo en el Espíritu Santo, auténticamente hombres y mujeres en Dios, accionando desde el Amor y entrarnos en un nuevo estilo de vida en Cristo."
+                "content": "Crear una Red de Alianzas, en base a los valores cristianos, el servicio y la autenticidad del Ser, accionando desde el Amor."
             },
             "mision": {
                 "title": "Misión",
-                "content": "Vivir en el mandamiento del Amor de Jesucristo, amando a Dios sobre todas las cosas, y a los demás como a uno mismo, por medio de acciones y redes solidarias, asesoramiento, información y acompañamiento en el desarrollo personal y espiritual."
+                "content": "Vivir el mandamiento de Jesucristo, amando a Dios, y a los demás como a uno mismo, por medio de acciones y redes solidarias, asesoramiento, y acompañamiento espiritual y personal."
             },
             "objetivo_general": {
                 "title": "Objetivo general",
@@ -67,11 +68,11 @@ const translations = {
             "objetivo_especifico": {
                 "title": "Objetivo específico",
                 "items": [
-                    "Construir puentes que unen, inspiran y transforman corazones y realidades, entre el sector privado y social, acompañando acciones con impacto social y/o ambiental;",
-                    "Cruzar voluntades de personas/instituciones que desean ayudar, con ONGs que requieren de ayuda material, monetaria o de voluntariado;",
-                    "Brindar asesoramiento profesional, confección de proyectos socio-comunitarios y programas de voluntariado o de RSE;",
-                    "Ofrecer espacios de concientización y sensibilización, y formación sobre el Servicio Social, la Responsabilidad Social y el Desarrollo Personal.",
-                    "Acompañar búsquedas de crecimiento espiritual y autoconocimiento, por medio de una Escuela de Espiritualidad y Desarrollo personal, Retiros y/o Jornadas sobre el Amor."
+                    "Construir puentes que unen, inspiran y transforman realidades, entre el sector privado y social, acompañando acciones con impacto social y/o ambiental;",
+                    "Cruzar voluntades de personas/instituciones que desean ayudar, con ONGs que requieren de ayuda material, monetaria o de voluntariado, por medio de Programas de RSE o padrinazgo.",
+                    "Brindar un Programa de Voluntariado o Pasantías a Escuelas, Universidades o Empresas, con asesoramiento profesional y confección de proyectos sociales.",
+                    "Ofrecer espacios de concientización, y formación sobre el Servicio Social, la Responsabilidad Social y el Desarrollo Personal.",
+                    "Acompañar búsquedas de crecimiento espiritual y autoconocimiento, por medio de una Escuela de Espiritualidad y Desarrollo personal, Retiros y/o Jornadas."
                 ]
             }
         },
@@ -172,7 +173,8 @@ const translations = {
             "donar_ahora": "Donar ahora",
             "quiero_sumarme": "Quiero sumarme",
             "contactarme": "Contactarme",
-            "contactarme_button": "CONTACTARME"
+            "contactarme_button": "CONTACTARME",
+            "donacion_mensual": "Donación mensual"
         },
         "modal_dona": {
             "header": "Elegí tu opción de donación",
@@ -222,19 +224,20 @@ const translations = {
                 "• Building <strong>Bridges</strong> between Companies and volunteers who want to help with NGOs that need support, generating bonds, visibility, awareness, advisory, volunteering, and training.",
                 "• Offering <strong>Retreats</strong> and <strong>Workshops</strong> to get to know ourselves, grow spiritually and in solidarity, promoting agents of change."
             ],
-            "base_text": "Our foundations are Christian values, with a comprehensive approach and an innovative and methodological proposal, creating Networks, convening and uniting different actors or specialists in each action. Committing ourselves to the Sustainable Development Goals (SDGs), Integral and Solidary Human Development of Social Doctrine, and Corporate Social Responsibility (CSR);",
+            "base_text": "Our foundations are <strong>Christian values</strong>, with a <strong>comprehensive approach</strong> and an innovative and methodological proposal, creating Networks, convening and uniting different actors or specialists in each action. Committing ourselves to the <strong>Sustainable Development Goals (SDGs)</strong>, Integral and Solidary Human Development of <strong>Social Doctrine</strong>, and <strong>Corporate Social Responsibility (CSR)</strong>;",
             "buttons": {
                 "carta": "Presentation Letter",
                 "codigo": "Code of Ethics"
             },
             "ejes": {
-                "title": "Our Axes",
-                "items": [
-                    "<strong>SPIRITUALITY-FAITH:</strong> Love God- School of Spirituality and Personal Development. Spiritual Days and/or Retreats.",
-                    "<strong>SOLIDARITY-CHARITY:</strong> Love others- Volunteer Program, connecting with NGOs that require it, Training, Solidarity Projects, CSR, among others.",
-                    "<strong>PERSONAL DEVELOPMENT-HOPE:</strong> Love yourself as God loves you- Job Opportunities Bank and School of Values (communication, social skills, leadership, etc)."
-                ],
-                "quote": "Cruxes, a Rising Sun, that desires to illuminate the BEING from the Heart, where God's truths are, and act with Passion and Love"
+                "title": "OUR AXES",
+                "solidaridad_titulo": "SOLIDARITY:",
+                "solidaridad_texto": "Support Solidarity Projects of NGOs with material resources, Advisory and Institutional Strengthening, Networking, Volunteering and Internship Programs, Training and Community Meetings - CSR.",
+                "desarrollo_titulo": "PERSONAL DEVELOPMENT:",
+                "desarrollo_texto": "Comprehensive School New Life of Self-Knowledge: social skills, leadership, emotions, values, dialogue, among others.",
+                "espiritualidad_titulo": "SPIRITUALITY:",
+                "espiritualidad_texto": "Workshops and/or Retreats for personal, spiritual, and solidarity growth, as agents of change.",
+                "quote": "Cruxes, a New Dawn, to cross paths and empower our BEING"
             },
             "mision": "Mission",
             "mision_text": "To live in Jesus Christ's commandment of Love, loving God above all things, and others as ourselves, through actions and solidarity networks, advice, information and support in personal and spiritual development.",
@@ -245,24 +248,24 @@ const translations = {
             "title": "Vision, Mission and Objectives",
             "vision": {
                 "title": "Vision",
-                "content": "To build the New Civilization of Love, uniting and creating new Alliances, being in the Holy Spirit, authentically men and women in God, acting from Love and entering a new lifestyle in Christ."
+                "content": "Create a Network of Alliances, based on Christian values, service, and the authenticity of Being, acting from Love."
             },
             "mision": {
                 "title": "Mission",
-                "content": "To live in Jesus Christ's commandment of Love, loving God above all things, and others as ourselves, through actions and solidarity networks, advice, information and support in personal and spiritual development."
+                "content": "Live the commandment of Jesus Christ, loving God and others as oneself, through actions and solidarity networks, counseling, and spiritual and personal accompaniment."
             },
             "objetivo_general": {
                 "title": "General objective",
-                "text": "To promote Solidarity actions, encourage Personal Development and facilitate spiritual life, in Christian values"
+                "text": "Promote actions of Solidarity, encourage Personal Development, and facilitate spiritual life, in Christian values."
             },
             "objetivo_especifico": {
                 "title": "Specific objective",
                 "items": [
-                    "Build bridges that unite, inspire and transform hearts and realities, between the private and social sector, supporting actions with social and/or environmental impact;",
-                    "Cross wills of people/institutions that want to help, with NGOs that require material, monetary or volunteer help;",
-                    "Provide professional advice, preparation of socio-community projects and volunteer or CSR programs;",
-                    "Offer spaces for awareness and sensitization, and training on Social Service, Social Responsibility and Personal Development.",
-                    "Accompany spiritual growth and self-knowledge searches, through a School of Spirituality and Personal Development, Retreats and/or Days about Love."
+                    "Build bridges that unite, inspire and transform realities, between the private and social sector, supporting actions with social and/or environmental impact;",
+                    "Connect the will of people/institutions who want to help, with NGOs that require material, monetary or volunteer help, through CSR Programs or sponsorship.",
+                    "Provide a Volunteer or Internship Program to Schools, Universities or Companies, with professional advice and preparation of social projects.",
+                    "Offer spaces for awareness and training on Social Service, Social Responsibility and Personal Development.",
+                    "Accompany searches for spiritual growth and self-knowledge, through a School of Spirituality and Personal Development, Retreats and/or Workshops."
                 ]
             }
         },
@@ -291,7 +294,7 @@ const translations = {
                 }
             },
             "cruxes_solidarias": {
-                "title": "Solidarity Cruxes",
+                "title": "Cruxes Solidarias",
                 "quote": "A chain of Love and service in Action",
                 "proyectos": {
                     "title": "Solidarity projects",
@@ -363,7 +366,8 @@ const translations = {
             "donar_ahora": "Donate now",
             "quiero_sumarme": "I want to join",
             "contactarme": "Contact me",
-            "contactarme_button": "CONTACT ME"
+            "contactarme_button": "CONTACT ME",
+            "donacion_mensual": "Monthly donation"
         },
         "modal_dona": {
             "header": "Choose your donation option",

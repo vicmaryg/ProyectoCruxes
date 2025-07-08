@@ -54,4 +54,7 @@ config.local.json
 *~
 
 # Archivos de caché de navegador
-.cursor/ 
+.cursor/
+
+# Archivos de documentación para colaboradores
+GUIA_GIT_COLABORADOR.md 

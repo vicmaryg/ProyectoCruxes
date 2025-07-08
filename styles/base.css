@@ -51,7 +51,7 @@ html {
 /* Estilos para citas */
 .quote {
     color: var(--color-primary);
-    font-style: italic;
+    
 }
 
 /* Títulos de sección */

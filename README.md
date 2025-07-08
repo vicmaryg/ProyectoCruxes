@@ -46,7 +46,6 @@ proyecto_cruxes/
 │   ├── novedades.css            # Estilos de la sección novedades
 │   ├── quienes-somos.css        # Estilos de la sección equipo
 │   ├── contacto.css             # Estilos de la sección contacto
-│   ├── dona.css                 # Estilos de la sección donaciones
 │   ├── modal.css                # Estilos de modales
 │   ├── cookies.css              # Estilos de política de cookies
 │   ├── language.css             # Estilos del selector de idioma
@@ -101,20 +100,16 @@ proyecto_cruxes/
 
 ### 🎨 **Secciones del Sitio**
 - **Hero Section:** Presentación principal con llamadas a la acción
-- **Quiénes Somos:** Información sobre el equipo y la fundación
 - **Programas:** Información detallada sobre los programas de la fundación
 - **Novedades:** Últimas noticias y actualizaciones
-- **Donaciones:** Sección dedicada para contribuciones y apoyo
+- **Quiénes Somos:** Información sobre el equipo y la fundación
 - **Contacto:** Formulario y información de contacto
 
 ### 🔧 **Optimizaciones Técnicas**
 - Imágenes optimizadas en formato WebP
-- CSS modular y organizado con separación por funcionalidad
+- CSS modular y organizado
 - JavaScript modular y eficiente
 - Carga rápida y rendimiento optimizado
-- Resolución máxima optimizada a 1630px para escritorio
-- Textos justificados para mejor apariencia profesional
-- Espaciados y tamaños de fuente estandarizados
 
 ## Características de Desarrollo
 
@@ -122,10 +117,8 @@ proyecto_cruxes/
 El proyecto utiliza un sistema de CSS modular con archivos separados por funcionalidad:
 - Variables CSS centralizadas en `variables.css`
 - Estilos base en `base.css`
-- Estilos específicos por sección (quienes-somos.css, programas.css, dona.css, etc.)
+- Estilos específicos por sección
 - Media queries organizadas en `responsive.css`
-- Separación clara entre estilos de contacto y donaciones
-- Estandarización de tamaños de fuente y espaciados
 
 ### Sistema de Traducciones
 - Archivos JSON separados por idioma
@@ -178,15 +171,5 @@ Para más información sobre el proyecto o la fundación:
 Este proyecto es propiedad de la Fundación Cruxes de Luz. Todos los derechos reservados.
 
 ---
-
-## Últimas Actualizaciones
-
-### 🆕 **Mejoras Recientes (Diciembre 2024)**
-- **Separación de estilos**: Creado `dona.css` para organizar mejor los estilos de donaciones
-- **Textos justificados**: Aplicado `text-align: justify` para mejor apariencia profesional
-- **Estandarización**: Corregidos tamaños de fuente y espaciados en toda la sección "Quiénes Somos"
-- **Interlineado consistente**: `line-height: 1.6` en todos los textos para mejor legibilidad
-- **Resolución optimizada**: Cambio de resolución máxima a 1630px para escritorio
-- **Estructura mejorada**: CSS más organizado y mantenible
 
 *Nota: Este proyecto está en constante desarrollo. Las características y la estructura pueden cambiar en futuras actualizaciones.*
