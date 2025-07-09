@@ -26,6 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('cookiesAccepted', 'true');
         hideModal();
         
+        // Marcar la casilla de privacidad en el formulario si existe
+        const privacidadCheckbox = document.querySelector('input[name="privacidad"]');
+        if (privacidadCheckbox) {
+            privacidadCheckbox.checked = true;
+        }
+        
         // Mostrar el botón de WhatsApp
         const whatsappButton = document.querySelector('.whatsapp-float');
         if (whatsappButton) {
@@ -43,6 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleRejectCookies() {
         localStorage.setItem('cookiesAccepted', 'false');
         hideModal();
+        
+        // Desmarcar la casilla de privacidad en el formulario si existe
+        const privacidadCheckbox = document.querySelector('input[name="privacidad"]');
+        if (privacidadCheckbox) {
+            privacidadCheckbox.checked = false;
+        }
         
         // Mantener oculto el botón de WhatsApp
         const whatsappButton = document.querySelector('.whatsapp-float');

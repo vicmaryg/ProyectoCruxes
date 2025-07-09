@@ -37,12 +37,27 @@
 #quienes-somos ul {
     margin-bottom: var(--spacing-md);
     text-align: justify;
+    list-style: none;
+    padding-left: 0;
 }
 
 #quienes-somos li {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: var(--spacing-xs);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+#quienes-somos li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 8px;
+    height: 8px;
+    background-color: #F2920C;
+    border-radius: 0;
 }
 
 
@@ -151,13 +166,27 @@
 
 .ejes-content ul {
     margin-bottom: var(--spacing-md);
-    padding-left: 1.2rem;
+    list-style: none;
+    padding-left: 0;
 }
 
 .ejes-content ul li {
     margin-bottom: var(--spacing-xs);
     font-size: 18px;
     line-height: 1.6;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.ejes-content ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 8px;
+    height: 8px;
+    background-color: #F2920C;
+    border-radius: 0;
 }
 
 .ejes-content ul li strong {
@@ -193,8 +222,8 @@
 #vision-mision-objetivos ul {
     margin-top: var(--spacing-md); 
     margin-bottom: var(--spacing-md);
-    padding-left: 1.5rem; 
-    list-style: disc; 
+    list-style: none;
+    padding-left: 0;
 }
 
 #vision-mision-objetivos ul li {
@@ -203,6 +232,19 @@
     margin-bottom: var(--spacing-xs); 
     font-weight: 400; 
     text-align: justify;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+#vision-mision-objetivos ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 8px;
+    height: 8px;
+    background-color: #F2920C;
+    border-radius: 0;
 }
 
 #vision-mision-objetivos p {

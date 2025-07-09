@@ -65,13 +65,13 @@ function updateTexts() {
         // Quiénes Somos
         const quienesSomosTitle = document.querySelector('#quienes-somos .section-title');
         const quienesSomosDesc = document.querySelector('#quienes-somos .section-description');
-        const quienesSomosList = document.querySelector('#quienes-somos ul');
+        const quienesSomosList = document.querySelector('#quienes-somos-list');
         
         if (quienesSomosTitle) quienesSomosTitle.textContent = t.quienes_somos.title;
         if (quienesSomosDesc) quienesSomosDesc.textContent = t.quienes_somos.description;
-        if (quienesSomosList) {
+        if (quienesSomosList && t.quienes_somos.objetivos) {
             quienesSomosList.innerHTML = t.quienes_somos.objetivos
-                .map(objetivo => `<li>${objetivo}</li>`)
+                .map(objetivo => `<li>${objetivo.replace(/^\s*•\s*/, '')}</li>`)
                 .join('');
         }
         
@@ -247,6 +247,22 @@ function updateTexts() {
         if (tipoContactoLabel) tipoContactoLabel.textContent = t.contacto.tipo_contacto.label;
         if (telefonoLabel) telefonoLabel.textContent = t.contacto.telefono;
         if (privacidadText) privacidadText.textContent = t.contacto.privacidad + ' *';
+        
+        // Agregar funcionalidad para abrir modal de política de privacidad al hacer clic en la casilla
+        const privacidadCheckbox = document.querySelector('input[name="privacidad"]');
+        if (privacidadCheckbox) {
+            privacidadCheckbox.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevenir que se marque automáticamente
+                this.checked = false; // Mantener desmarcado hasta que se acepte
+                
+                // Mostrar el modal de cookies (que ahora contiene la política de privacidad)
+                const modalCookies = document.getElementById('modal-cookies');
+                if (modalCookies) {
+                    modalCookies.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        }
         
         // Actualizar opciones del select
         if (tipoContactoSelect) {

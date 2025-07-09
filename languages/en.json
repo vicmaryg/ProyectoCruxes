@@ -63,8 +63,28 @@
         "cancelar": "Cancel"
     },
     "quienes_somos": {
+        "title": "Who We Are?",
+        "description": "We are a foundation that promotes spirituality, solidarity and personal development.",
+        "objetivos": [
+            "We are FUNDACIÓN CRUXES:",
+            "Promoting Spirituality, Solidarity and Personal Development;",
+            "Answering Where and How to help, in NGOs or projects with social impact;",
+            "Building Bridges between Companies and volunteers who want to help with NGOs that need help, generating bonds, visibility, awareness, advisory, volunteering and training.",
+            "Offering Retreats and Workshops, to get to know ourselves, grow spiritually and in solidarity, promoting agents of change."
+        ],
+        "base_text": "Our foundations are Christian values, with a comprehensive approach, and an innovative and methodological proposal, creating Networks, convening and uniting different actors or specialists in each action. Committing ourselves to the Sustainable Development Goals (SDGs), Integral and Solidary Human Development of Social Doctrine and Corporate Social Responsibility (CSR);",
+        "buttons": {
+            "carta": "Presentation Letter",
+            "codigo": "Code of Ethics"
+        },
         "ejes": {
-            "desarrollo_texto": "Virtual Integral School Nueva Vida: Self-awareness, social skills, leadership, emotions, values, dialogue, among others."
+            "title": "OUR AXES",
+            "items": [
+                "<span class=\"programa-highlight\">SOLIDARITY:</span> Support Solidarity Projects of NGOs with material resources, Advisory and Institutional Strengthening, Networking, Volunteering and Internship Programs, Training and Community Meetings - CSR.",
+                "<span class=\"programa-highlight\">PERSONAL DEVELOPMENT:</span> Comprehensive School New Life of Self-Knowledge: social skills, leadership, emotions, values, dialogue, among others.",
+                "<span class=\"programa-highlight\">SPIRITUALITY:</span> Workshops and/or Retreats for personal, spiritual, and solidarity growth, as agents of change."
+            ],
+            "quote": "\"Cruxes, a New Dawn, to cross paths and empower our BEING\""
         }
     }
 } 
