@@ -16,8 +16,8 @@ const translations = {
             "title": "BIENVENIDOS A CRUXES<br>DE LUZ",
             "title_left": "BIENVENIDOS A CRUXES",
             "title_right": "DE LUZ",
-            "subtitle": "Puentes de Luz y Unión",
-            "quote": "Puentes de Luz y Unión",
+            "subtitle": "AMOR en revolución",
+            "quote": "AMOR en revolución",
             "description": "Somos una fundación que promueve la espiritualidad, la solidaridad y el desarrollo personal, construyendo puentes entre diferentes sectores."
         },
         "quienes_somos": {
@@ -206,11 +206,11 @@ const translations = {
             "tagline": "We are a bridge that unites and transforms"
         },
         "hero": {
-            "title": "WELCOME TO CRUXES<br>DE LUZ",
+            "title": "WELCOME TO CRUXES<br>OF LIGHT",
             "title_left": "WELCOME TO CRUXES",
             "title_right": "OF LIGHT",
-            "subtitle": "Bridges of Light and Union",
-            "quote": "Bridges of Light and Union",
+            "subtitle": "LOVE in revolution",
+            "quote": "LOVE in revolution",
             "description": "We are a foundation that promotes spirituality, solidarity and personal development, building bridges between different sectors."
         },
         "quienes_somos": {
