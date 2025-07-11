@@ -86,5 +86,12 @@
             ],
             "quote": "\"Cruxes, a New Dawn, to cross paths and empower our BEING\""
         }
+    },
+    "agradecimiento": {
+        "title": "Thank you for your donation!",
+        "subtitle": "Your generosity makes a difference",
+        "message": "Thank you for your valuable contribution. Your donation helps us continue our mission to promote solidarity, personal development and spirituality. Together we build a chain of love and service in action.",
+        "continuar": "Continue",
+        "contactar": "Contact"
     }
 } 

@@ -191,6 +191,13 @@ const translations = {
             "donar_5000": "Donar $5000",
             "donar_15000": "Donar $15000",
             "cancelar": "Cancelar"
+        },
+        "agradecimiento": {
+            "title": "¡Gracias por tu donación!",
+            "subtitle": "Tu generosidad hace la diferencia",
+            "message": "Gracias por tu valiosa contribución. Tu donación nos ayuda a continuar con nuestra misión de promover la solidaridad, el desarrollo personal y la espiritualidad. Juntos construimos una cadena de amor y servicio en acción.",
+            "continuar": "Continuar",
+            "contactar": "Contactar"
         }
     },
     'en': {
@@ -384,6 +391,13 @@ const translations = {
             "donar_5000": "Donate $5000",
             "donar_15000": "Donate $15000",
             "cancelar": "Cancel"
+        },
+        "agradecimiento": {
+            "title": "Thank you for your donation!",
+            "subtitle": "Your generosity makes a difference",
+            "message": "Thank you for your valuable contribution. Your donation helps us continue our mission to promote solidarity, personal development and spirituality. Together we build a chain of love and service in action.",
+            "continuar": "Continue",
+            "contactar": "Contact"
         }
     }
 }; 

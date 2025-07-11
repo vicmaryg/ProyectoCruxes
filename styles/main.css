@@ -20,6 +20,7 @@
 /* Estilos principales */
 @import 'whatsapp.css';
 @import 'language.css';
+@import 'agradecimiento.css';
 
 /* ====== MODAL DONACIONES ====== */
 .modal-donacion {
@@ -254,3 +255,5 @@
   list-style: none;
   padding-left: 0;
 } 
+
+ 

@@ -358,28 +358,28 @@
                 <div class="donacion-opcion">
                   <h4 data-i18n="modal_dona.basica_title">Donación Básica</h4>
                   <p data-i18n="modal_dona.basica_desc">Apoya nuestros proyectos con una donación básica</p>
-                  <a href="https://live.decidir.com/web/checkout/08371FA05F508523D34C19BEF49CC56C" class="donacion-btn" target="_blank" rel="noopener" data-i18n="modal_dona.donar_2000">
+                  <a href="https://mpago.li/2bxJrxM" class="donacion-btn" target="_blank" rel="noopener noreferrer" data-i18n="modal_dona.donar_2000" onclick="handleDonationClick(event, 2000)">
                     Donar $2000
                   </a>
                 </div>
                 <div class="donacion-opcion">
                   <h4 data-i18n="modal_dona.media_title">Donación Media</h4>
                   <p data-i18n="modal_dona.media_desc">Contribuye con una donación intermedia</p>
-                  <a href="https://live.decidir.com/web/checkout/12826B5AE019E7E898C7E71F58269AAD" class="donacion-btn" target="_blank" rel="noopener" data-i18n="modal_dona.donar_3000">
+                  <a href="https://mpago.li/2LbBM9m" class="donacion-btn" target="_blank" rel="noopener noreferrer" data-i18n="modal_dona.donar_3000" onclick="handleDonationClick(event, 3000)">
                     Donar $3000
                   </a>
                 </div>
                 <div class="donacion-opcion">
                   <h4 data-i18n="modal_dona.prepremium_title">Donación Pre-premium</h4>
                   <p data-i18n="modal_dona.prepremium_desc">Haz una donación significativa</p>
-                  <a href="https://live.decidir.com/web/checkout/C4EB5A8C189806BB8B236F69F56EB777" class="donacion-btn" target="_blank" rel="noopener" data-i18n="modal_dona.donar_5000">
+                  <a href="https://mpago.la/1RZ97sr" class="donacion-btn" target="_blank" rel="noopener noreferrer" data-i18n="modal_dona.donar_5000" onclick="handleDonationClick(event, 5000)">
                     Donar $5000
                   </a>
                 </div>
                 <div class="donacion-opcion">
                   <h4 data-i18n="modal_dona.premium_title">Donación Premium</h4>
                   <p data-i18n="modal_dona.premium_desc">Elige el monto que desees donar</p>
-                  <a href="https://live.decidir.com/web/checkout/F3C32983FEE2CFA7D523902F19495AAB" class="donacion-btn" target="_blank" rel="noopener" data-i18n="modal_dona.donar_15000">
+                  <a href="https://mpago.li/1U2iExZ" class="donacion-btn" target="_blank" rel="noopener noreferrer" data-i18n="modal_dona.donar_15000" onclick="handleDonationClick(event, 15000)">
                     Donar $15000
                   </a>
                 </div>
@@ -407,6 +407,33 @@
         </div>
       </section>
     </main>
+
+    <!-- Modal de Agradecimiento -->
+    <div id="modal-agradecimiento" class="modal-agradecimiento">
+      <div class="modal-agradecimiento-contenido">
+        <div class="modal-agradecimiento-header">
+          <h3 data-i18n="agradecimiento.title">¡Gracias por tu donación!</h3>
+          <button class="modal-close-btn" onclick="closeAgradecimientoModal()">&times;</button>
+        </div>
+        <div class="agradecimiento-content">
+          <div class="agradecimiento-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h4 data-i18n="agradecimiento.subtitle">Tu generosidad hace la diferencia</h4>
+          <p data-i18n="agradecimiento.message">
+            Gracias por tu valiosa contribución. Tu donación nos ayuda a continuar con nuestra misión de promover la solidaridad, el desarrollo personal y la espiritualidad. Juntos construimos una cadena de amor y servicio en acción.
+          </p>
+          <div class="agradecimiento-actions">
+            <button class="btn-continuar" onclick="closeAgradecimientoModal()" data-i18n="agradecimiento.continuar">
+              Continuar
+            </button>
+            <a href="https://wa.me/+5491131560677" class="btn-contactar" target="_blank" rel="noopener noreferrer" data-i18n="agradecimiento.contactar">
+              <i class="fab fa-whatsapp"></i> Contactar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer">
       <div class="container">

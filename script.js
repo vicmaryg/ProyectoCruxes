@@ -573,10 +573,30 @@ function initializeForm() {
 
 // Función para abrir el modal de donación
 function openDonationModal() {
-  const modal = document.getElementById('modal-donacion');
+  const modal = document.getElementById('modal-donacion-backup');
   if (modal) {
-      modal.classList.add('show');
+      modal.style.display = 'flex';
       document.body.style.overflow = 'hidden'; // Prevenir scroll del body
+      
+      // Cerrar modal al hacer clic en la X
+      const cerrarBtn = modal.querySelector('.modal-close-btn');
+      if (cerrarBtn) {
+        cerrarBtn.onclick = function() {
+          closeDonationModal();
+        };
+      }
+      
+      // Cerrar modal al hacer clic fuera del contenido
+      modal.onclick = function(e) {
+        if (e.target === modal) {
+          closeDonationModal();
+        }
+      };
+      
+      // Traducir el modal
+      setTimeout(() => {
+        translateDataI18n();
+      }, 100);
   }
 }
 
@@ -623,75 +643,8 @@ document.addEventListener('DOMContentLoaded', function() {
 function cargarModalDonaciones() {
   console.log('Iniciando carga del modal...');
   
-  // Verificar si el botón existe
-  const donarBtn = document.getElementById('donarAhoraBtn');
-  if (!donarBtn) {
-    console.error('Botón "Donar ahora" no encontrado');
-    return;
-  }
-  
-  // Verificar si el container existe
-  const container = document.getElementById('modal-donaciones-container');
-  if (!container) {
-    console.error('Container modal-donaciones-container no encontrado');
-    return;
-  }
-  
-  // Intentar cargar el modal
-  fetch('modal_donaciones.html')
-    .then(res => {
-      console.log('Respuesta del fetch:', res.status, res.statusText);
-      if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`);
-      }
-      return res.text();
-    })
-    .then(html => {
-      console.log('HTML del modal cargado, longitud:', html.length);
-      if (html.length === 0) {
-        throw new Error('El archivo modal_donaciones.html está vacío');
-      }
-      
-      container.innerHTML = html;
-      const modal = document.getElementById('modal-donacion');
-      console.log('Modal encontrado después de insertar HTML:', modal);
-      
-      if (modal) {
-        modal.style.display = 'flex';
-        
-        // Cerrar modal al hacer clic en la X
-        const cerrarBtn = document.getElementById('cerrarModalDonaciones');
-        if (cerrarBtn) {
-          cerrarBtn.onclick = function() {
-            modal.style.display = 'none';
-          };
-        }
-        
-        // Cerrar modal al hacer clic fuera del contenido
-        modal.onclick = function(e) {
-          if (e.target === modal) {
-            modal.style.display = 'none';
-          }
-        };
-        
-        // Traducir el modal después de un pequeño delay
-        setTimeout(() => {
-          console.log('Traduciendo modal...');
-          translateDataI18n();
-        }, 100);
-        
-        console.log('Modal cargado y mostrado exitosamente');
-      } else {
-        console.error('No se encontró el modal después de insertar el HTML');
-        // Usar modal de respaldo
-        showBackupModal();
-      }
-    })
-    .catch(error => {
-      console.error('Error al cargar el modal:', error);
-      // Usar modal de respaldo
-      showBackupModal();
-    });
+  // Usar directamente la función openDonationModal que ya está configurada
+  openDonationModal();
 }
 
 // Función para mostrar el modal de respaldo
@@ -729,6 +682,38 @@ function showBackupModal() {
   }
 }
 
+// Detectar cuando el usuario regresa de Mercado Pago
+window.addEventListener('focus', function() {
+  // Verificar si hay una donación pendiente en localStorage
+  const pendingDonation = localStorage.getItem('pendingDonation');
+  if (pendingDonation) {
+    // Limpiar la donación pendiente
+    localStorage.removeItem('pendingDonation');
+    
+    // Mostrar el modal de agradecimiento
+    setTimeout(() => {
+      openAgradecimientoModal();
+    }, 500);
+  }
+});
+
+// Marcar donación pendiente cuando se hace clic en un botón de donación
+function handleDonationClick(event, amount) {
+  // Cerrar el modal de donaciones
+  closeDonationModal();
+  
+  // Marcar que hay una donación pendiente
+  localStorage.setItem('pendingDonation', amount.toString());
+  
+  // Mostrar el modal de agradecimiento después de un pequeño delay
+  setTimeout(() => {
+    openAgradecimientoModal();
+  }, 300);
+  
+  // Continuar con la redirección a Mercado Pago
+  // El enlace se abrirá en nueva pestaña como está configurado
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   const donarAhoraBtn = document.getElementById('donarAhoraBtn');
   if (donarAhoraBtn) {
@@ -736,7 +721,7 @@ document.addEventListener('DOMContentLoaded', function() {
     donarAhoraBtn.addEventListener('click', function(e) {
       e.preventDefault();
       console.log('Clic en botón "Donar ahora" detectado');
-      cargarModalDonaciones();
+      openDonationModal();
     });
   } else {
     console.error('Botón "Donar ahora" no encontrado en DOMContentLoaded');
@@ -752,10 +737,50 @@ window.addEventListener('load', function() {
     donarAhoraBtn.addEventListener('click', function(e) {
       e.preventDefault();
       console.log('Clic en botón "Donar ahora" detectado (window.load)');
-      cargarModalDonaciones();
+      openDonationModal();
     });
   }
 });
+
+// Función para abrir el modal de agradecimiento
+function openAgradecimientoModal() {
+  const modal = document.getElementById('modal-agradecimiento');
+  if (modal) {
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Prevenir scroll del body
+    
+    // Cerrar modal al hacer clic en la X
+    const cerrarBtn = modal.querySelector('.modal-close-btn');
+    if (cerrarBtn) {
+      cerrarBtn.onclick = function() {
+        closeAgradecimientoModal();
+      };
+    }
+    
+    // Cerrar modal al hacer clic fuera del contenido
+    modal.onclick = function(e) {
+      if (e.target === modal) {
+        closeAgradecimientoModal();
+      }
+    };
+    
+    // Traducir el modal
+    setTimeout(() => {
+      translateDataI18n();
+    }, 100);
+  }
+}
+
+// Función para cerrar el modal de agradecimiento
+function closeAgradecimientoModal() {
+  const modal = document.getElementById('modal-agradecimiento');
+  if (modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restaurar scroll del body
+  }
+}
+
+
 
 // Función para traducir elementos con data-i18n
 function translateDataI18n() {

@@ -85,5 +85,12 @@
             ],
             "quote": "\"Cruxes, un Nuevo Amanecer, para cruzarnos y potenciar nuestro SER\""
         }
+    },
+    "agradecimiento": {
+        "title": "¡Gracias por tu donación!",
+        "subtitle": "Tu generosidad hace la diferencia",
+        "message": "Gracias por tu valiosa contribución. Tu donación nos ayuda a continuar con nuestra misión de promover la solidaridad, el desarrollo personal y la espiritualidad. Juntos construimos una cadena de amor y servicio en acción.",
+        "continuar": "Continuar",
+        "contactar": "Contactar"
     }
 } 

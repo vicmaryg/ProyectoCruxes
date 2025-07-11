@@ -22,8 +22,6 @@ body {
 .container {
     max-width: 1630px;
     margin: 0 auto;
-    padding-left: 24px;
-    padding-right: 24px;
 }
 
 /* Configuración de scroll suave */
