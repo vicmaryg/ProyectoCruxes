@@ -20,6 +20,7 @@ body {
 
 /* Contenedor principal con ancho máximo */
 .container {
+    width: 90%;
     max-width: 1630px;
     margin: 0 auto;
 }
@@ -65,22 +66,25 @@ html {
 
 @media (max-width: 1024px) {
     .container {
+        width: 90%;
         max-width: 896px;
-        margin: 0 6%;
+        margin: 0 auto;
     }
 }
 
 @media (max-width: 768px) {
     .container {
+        width: 90%;
         max-width: 640px;
-        margin: 0 6%;
+        margin: 0 auto;
     }
 }
 
 
 @media (max-width: 480px) {
     .container {
-        max-width: 80%;
+        width: 90%;
+        max-width: 90%;
         margin: 0 auto;
     }
 }
