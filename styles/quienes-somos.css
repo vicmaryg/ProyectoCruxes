@@ -311,9 +311,17 @@
 
 
 .objetivo-especifico-row {
+    display: grid;
+    grid-template-columns: 1fr auto; /* El texto ocupa todo el espacio, la imagen solo lo necesario */
+    gap: var(--spacing-lg); /* O el valor de gap que prefieras */
     border-top: 2px solid #F2920C;
     margin-top: 48px;
     padding-top: var(--spacing-sm);
+}
+.objetivo-especifico-img-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* Centra verticalmente la imagen respecto al texto */
 }
 
 .objetivo-especifico-img-container img {
