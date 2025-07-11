@@ -256,4 +256,13 @@
   padding-left: 0;
 } 
 
+html {
+  scroll-padding-top: 100px;
+}
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 70px; /* O el valor que tenga tu header en móvil */
+  }
+} 
+
  
