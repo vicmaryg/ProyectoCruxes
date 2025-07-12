@@ -87,7 +87,6 @@
 .quienes-somos-img {
     width: 597px;
     height: 340px;
-    margin-top: 4rem; /* Ajusta este margen si es necesario con el nuevo diseño */
     display: block;
     max-width: 100%; /* Asegurar que la imagen no se desborde */
     height: auto; /* Mantener la proporción */
@@ -315,7 +314,6 @@
     grid-template-columns: 1fr auto; /* El texto ocupa todo el espacio, la imagen solo lo necesario */
     gap: var(--spacing-lg); /* O el valor de gap que prefieras */
     border-top: 2px solid #F2920C;
-    margin-top: 48px;
     padding-top: var(--spacing-sm);
 }
 .objetivo-especifico-img-container {

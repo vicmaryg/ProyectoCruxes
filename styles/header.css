@@ -1,7 +1,6 @@
 /* Estilos del encabezado */
 .header {
-    padding: var(--spacing-sm) 0;
-    height: 90px;
+    height: 65px;
     position: fixed;
     top: 0;
     left: 0;
