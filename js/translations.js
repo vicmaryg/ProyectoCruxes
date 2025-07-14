@@ -280,7 +280,7 @@ const translations = {
             "title": "Our team",
             "description": "It is made up of specialists and volunteers (social workers, catechists, coaches, accountants, lawyers, entrepreneurs, etc.) who donate their time to help others, advise, and manage aid and projects that meet the main objective.",
             "comite": "Ethics Committee- Executive. Administrative/Communication/Programs/Training/CSR Team.",
-            "quote": "We believe that united and in God we can create a chain of love and service in action.",
+            "quote": "We believe that united we can create a chain of love and service.",
             "ods_title": "Sustainable Development Goals"
         },
         "programas": {
