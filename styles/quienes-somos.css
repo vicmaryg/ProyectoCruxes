@@ -348,7 +348,6 @@
     /* Ajustes para la sección Quiénes Somos */
     .quienes-somos-top-row.grid-2 {
         grid-template-columns: 1fr;
-        margin: 0 6%;/* Una sola columna para apilar contenido */
     }
 
     .quienes-somos-bottom-row.grid-2 {
@@ -366,7 +365,6 @@
     .quienes-somos-ejes-img {
         width: 100%; /* Ajustar ancho al 100% del contenedor */
         max-width: 896px; /* Limitar el tamaño máximo de la imagen */
-        margin-top: var(--spacing-md); /* Ajustar margen superior si es necesario */
     }
 
     /* Ajustes para la sección Visión, Misión y Objetivos */
