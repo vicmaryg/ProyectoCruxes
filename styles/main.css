@@ -56,14 +56,14 @@
 }
 .modal-donacion-header h3 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: var(--font-size-xxl);
   font-weight: 700;
 }
 .modal-close-btn {
   background: none;
   border: none;
   color: #fff;
-  font-size: 2rem;
+  font-size: var(--font-size-xxxl);
   cursor: pointer;
   line-height: 1;
 }
@@ -94,7 +94,7 @@
 }
 .donacion-opcion p {
   color: #888;
-  font-size: 1rem;
+  font-size: var(--font-size-md);
   margin-bottom: 1rem;
 }
 .donacion-btn {
@@ -103,7 +103,7 @@
   border: none;
   border-radius: 7px;
   padding: 0.7rem 2.2rem;
-  font-size: 1.1rem;
+  font-size: var(--font-size-lg);
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
@@ -128,7 +128,7 @@
   border: none;
   border-radius: 6px;
   padding: 0.6rem 2.2rem;
-  font-size: 1rem;
+  font-size: var(--font-size-md);
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -155,10 +155,10 @@
     padding-right: 0.8rem;
   }
   .modal-donacion-header h3 {
-    font-size: 1rem;
+    font-size: var(--font-size-md);
   }
   .modal-close-btn {
-    font-size: 1.3rem;
+    font-size: var(--font-size-xl);
     padding: 3px;
     min-width: 25px;
     min-height: 25px;
@@ -167,20 +167,20 @@
     padding: 10px;
   }
   .donacion-opcion h4 {
-    font-size: 0.9rem;
+    font-size: var(--font-size-sm);
     margin-bottom: 0.2rem;
   }
   .donacion-opcion p {
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
     margin-bottom: 0.5rem;
   }
   .donacion-btn {
     padding: 0.4rem 1rem;
-    font-size: 0.9rem;
+    font-size: var(--font-size-sm);
   }
   .btn-cancelar {
     padding: 0.3rem 1rem;
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
     min-height: 35px;
   }
 }
@@ -196,7 +196,7 @@
     padding: 0.6rem 0.8rem;
   }
   .modal-donacion-header h3 {
-    font-size: 0.95rem;
+    font-size: var(--font-size-sm);
   }
   .donacion-opciones {
     padding: 0.6rem 0.3rem 0.3rem 0.3rem;
@@ -210,19 +210,19 @@
     margin-bottom: 0.1rem;
   }
   .donacion-opcion p {
-    font-size: 0.75rem;
+    font-size: var(--font-size-sm);
     margin-bottom: 0.4rem;
   }
   .donacion-btn {
     padding: 0.3rem 0.8rem;
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
   }
   .modal-donacion-footer {
     padding: 0.5rem 0.8rem 0.8rem 0.8rem;
   }
   .btn-cancelar {
     padding: 0.2rem 0.8rem;
-    font-size: 0.75rem;
+    font-size: var(--font-size-sm);
     min-height: 30px;
   }
 }
@@ -235,7 +235,7 @@
   border: none;
   border-radius: 7px;
   padding: 0.7rem 2.2rem;
-  font-size: 1.1rem;
+  font-size: var(--font-size-lg);
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;

@@ -53,14 +53,14 @@
 /* Estilos del texto del logo */
 .logo {
     color: var(--color-primary);
-    font-size: 2rem;
+    font-size: var(--font-size-xxxl);
     font-weight: bold;
 }
 
 /* Subtítulo del logo */
 .logo span {
     display: block;
-    font-size: 1.25rem;
+    font-size: var(--font-size-xl);
 }
 
 
@@ -73,7 +73,7 @@
 
 .social-icons a {
     color: var(--color-primary-dark);
-    font-size: 20px;
+    font-size: var(--font-size-xl);
     transition: color 0.2s;
 }
 
@@ -93,7 +93,7 @@
     font-family: var(--font-family);
     margin: 0;
     height: 44px;
-    font-size: 16px;
+    font-size: var(--font-size-md);
     line-height: 1.2;
     text-decoration: none;
     display: flex;
@@ -272,7 +272,7 @@
     top: 50%;
     transform: translateY(-50%);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: var(--font-size-sm);
     transition: all 0.3s ease;
     z-index: 2;
 }
@@ -414,7 +414,7 @@
     }
     
     .language-option {
-        font-size: 0.8rem;
+        font-size: var(--font-size-sm);
     }
 }
 
@@ -439,7 +439,7 @@
     }
     
     .language-option {
-        font-size: 0.75rem;
+        font-size: var(--font-size-sm);
     }
 
     .menu-toggle {

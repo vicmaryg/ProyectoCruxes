@@ -1,7 +1,7 @@
 /* Título de programas */
 #programas .section-title {
     color: var(--color-primary);
-    font-size: 30px;
+    font-size: var(--font-size-xxxl);
     font-weight: 700;
     text-align: left;
     margin-top: var(--spacing-sm);
@@ -21,7 +21,7 @@
 
 /* Estilos generales para la barra de título del programa */
 .programa-title {
-    font-size: 30px;
+    font-size: var(--font-size-xxl);
     font-weight: 600;
     text-align: center; /* Asegurar centrado */
     padding: var(--spacing-xs) var(--spacing-md); /* Ajustar padding interno: vertical xs, horizontal md */
@@ -102,7 +102,7 @@
     text-align: center;
     margin-bottom: var(--spacing-md);
     padding: 0 var(--spacing-md);
-    font-size: 1.2rem;
+    font-size: var(--font-size-xl);
     font-weight: 600;
     /* El color se define por las clases de programa */
 }

@@ -2,7 +2,7 @@
 #quienes-somos {
     margin-top: var(--spacing-sm);
     border-top: none;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-family);
 }
 
 /* Estilos para la primera fila de Quiénes Somos */
@@ -22,14 +22,14 @@
     text-align: left;
     color: #E84E1D;
     height: 36px;
-    font-size: 30px;
+    font-size: var(--font-size-xxxl);
     margin-bottom: var(--spacing-md);
     margin-top: 1.3rem;
 }
 
 #quienes-somos p {
     margin-bottom: var(--spacing-md);
-    font-size: 18px;
+    font-size: var(--font-size-lg);
     text-align: justify;
     line-height: 1.6;
 }
@@ -42,7 +42,7 @@
 }
 
 #quienes-somos li {
-    font-size: 18px;
+    font-size: var(--font-size-lg);
     line-height: 1.6;
     margin-bottom: var(--spacing-xs);
     position: relative;
@@ -63,11 +63,11 @@
 
 .quote, .ejes-quote {
     color: var(--color-primary);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-family);
     margin-top: var(--spacing-md);
     margin-bottom: var(--spacing-md);
     text-align: justify;
-    font-size: 18px;
+    font-size: var(--font-size-lg);
     line-height: 1.6;
     font-style: italic;
 }
@@ -112,7 +112,7 @@
     font-weight: 600;
     transition: all 0.3s ease;
     height: 44px;
-    font-size: 16px;
+    font-size: var(--font-size-md);
     line-height: 1.2;
     border: none;
     cursor: pointer;
@@ -156,7 +156,7 @@
 
 .ejes-title {
     color: #F2920C;
-    font-size: 30px;
+    font-size: var(--font-size-xxl);
     font-weight: 600;
     margin-bottom: var(--spacing-md);
     text-align: left;
@@ -171,7 +171,7 @@
 
 .ejes-content ul li {
     margin-bottom: var(--spacing-xs);
-    font-size: 18px;
+    font-size: var(--font-size-lg);
     line-height: 1.6;
     position: relative;
     padding-left: 1.5rem;
@@ -219,8 +219,8 @@
 }
 
 #vision-mision-objetivos .section-title {
-    font-family: 'Inter', sans-serif;
-    font-size: 30px;
+    font-family: var(--font-family);
+    font-size: var(--font-size-xxxl);
     color: #F2920C;
     margin-bottom: var(--spacing-md);
     border-bottom: none;
@@ -238,7 +238,7 @@
 }
 
 #vision-mision-objetivos ul li {
-    font-size: 18px; 
+    font-size: var(--font-size-lg); 
     line-height: 1.6;
     margin-bottom: var(--spacing-xs); 
     font-weight: 400; 
@@ -259,7 +259,7 @@
 }
 
 #vision-mision-objetivos p {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-family);
     font-size: var(--font-size-xl);
     text-align: justify;
     line-height: 1.6;
@@ -279,8 +279,8 @@
 }
 
 #nuestro-equipo .section-title {
-    font-family: 'Inter', sans-serif;
-    font-size: 30px; 
+    font-family: var(--font-family);
+    font-size: var(--font-size-xxxl); 
     color: #F2920C; 
     margin-bottom: var(--spacing-md); 
     text-align: left;
@@ -295,8 +295,8 @@
 }
 
 #nuestro-equipo .quote {
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-family: var(--font-family);
+    font-size: var(--font-size-lg);
     
     color: var(--color-primary);
     margin-top: var(--spacing-md);
@@ -409,7 +409,7 @@
 
     /* Ajustar tamaño de fuente si es necesario para pantallas pequeñas */
     #quienes-somos .section-title {
-        font-size: 26px;
+        font-size: var(--font-size-xxl);
         height: auto; /* Permitir que el alto se ajuste al contenido */
         text-align: left;
     }
@@ -424,7 +424,7 @@
         width: 100%; /* Botones ocupan todo el ancho */
         text-align: center;
         height: 44px; /* Mantener altura estándar */
-        font-size: 16px;
+        font-size: var(--font-size-md);
         padding: 12px 24px;
     }
 
@@ -474,11 +474,11 @@
     }
 
     #quienes-somos .section-title {
-        font-size: 1.25rem;
+        font-size: var(--font-size-xxxl);
     }
 
     #vision-mision-objetivos .section-title {
-        font-size: 22px;
+        font-size: var(--font-size-xxl);
         margin-bottom: var(--spacing-sm);
         margin-top: var(--spacing-sm);
     }
@@ -496,7 +496,7 @@
     }
 
     #nuestro-equipo .section-title {
-        font-size: 24px; /* Ajuste del tamaño del título para 480px */
+        font-size: var(--font-size-xxl); /* Ajuste del tamaño del título para 480px */
         width: 100%; /* Asegurar que el título tome el 100% del ancho */
         box-sizing: border-box; /* Incluir padding y border en el ancho total */
         overflow-wrap: break-word; /* Romper palabras largas */
@@ -508,7 +508,7 @@
     #nuestro-equipo p,
     #nuestro-equipo .quote {
         text-align: justify;
-        font-size: 16px; /* Ajuste del tamaño de texto para 480px */
+        font-size: var(--font-size-md); /* Ajuste del tamaño de texto para 480px */
         width: 100%; /* Asegurar que los párrafos y la cita tomen el 100% del ancho */
         box-sizing: border-box; /* Incluir padding y border en el ancho total */
         overflow-wrap: break-word; /* Romper palabras largas */

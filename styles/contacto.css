@@ -30,7 +30,7 @@
 /* Título principal de contacto (la palabra CONTACTO) */
 #contacto .contacto-main-title {
     color: #E84E1D; /* Color naranja #E84E1D */
-    font-size: 30px;
+    font-size: var(--font-size-xxxl);
     font-weight: 700;
     margin-bottom: var(--spacing-sm);
 }
@@ -39,7 +39,7 @@
 .contacto-info h3 {
     color: black;
     margin-bottom: var(--spacing-sm); /* Espacio debajo */
-    font-size: 24px; /* Tamaño ajustado del subtítulo */
+    font-size: var(--font-size-xxl); /* Tamaño ajustado del subtítulo */
     font-weight: 700; /* Negrita */
 }
 
@@ -47,7 +47,7 @@
 .contacto-info p {
      color: #4b5563; /* Color de texto oscuro */
      margin-bottom: var(--spacing-md); /* Espacio debajo del párrafo */
-     font-size: 18px; /* Ajustar tamaño del párrafo */
+     font-size: var(--font-size-lg); /* Ajustar tamaño del párrafo */
 }
 
 /* Iconos sociales dentro de contacto info */
@@ -59,7 +59,7 @@
 
 .contacto-info .social-icons a {
     color: var(--color-primary); /* Color naranja */
-    font-size: 1.5rem; /* Tamaño de los iconos */
+    font-size: var(--font-size-xxl); /* Tamaño de los iconos */
     transition: color 0.3s ease;
 }
 
@@ -97,7 +97,7 @@
     padding: 0.75rem;
     border: 1px solid #e5e7eb;
     border-radius: var(--border-radius);
-    font-size: 1rem;
+    font-size: var(--font-size-md);
     transition: border-color 0.3s ease;
 }
 
@@ -117,7 +117,7 @@
     gap: 0.5rem;
     cursor: pointer;
     color: #4b5563; /* Color de texto oscuro */
-    font-size: 0.9rem; /* Tamaño de fuente del texto del checkbox */
+    font-size: var(--font-size-sm); /* Tamaño de fuente del texto del checkbox */
 }
 
 /* Checkbox personalizado */
@@ -133,7 +133,7 @@
     padding: 12px 24px;
     border: none;
     border-radius: var(--border-radius);
-    font-size: 16px;
+    font-size: var(--font-size-md);
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -187,15 +187,15 @@
     }
     
     .contacto-main-title {
-        font-size: 1.5rem;
+        font-size: var(--font-size-xxl);
     }
     
     .contacto-info h3 {
-        font-size: 1.2rem;
+        font-size: var(--font-size-xl);
     }
     
     .contacto-info p {
-        font-size: 1rem;
+        font-size: var(--font-size-md);
     }
     
     /* Centrar el botón de enviar mensaje en móvil */

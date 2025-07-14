@@ -36,7 +36,7 @@
 /* Texto del footer */
 .footer-center-content .footer-text {
     color: var(--color-primary);
-    font-size: 1.2rem;
+    font-size: var(--font-size-xl);
     font-weight: 600;
     margin-bottom: var(--spacing-sm);
     font-style: italic;
@@ -53,7 +53,7 @@
 /* Enlaces de iconos sociales */
 .footer .social-icons a {
     color: var(--color-primary-dark) !important; /* Coincide con el color del header */
-    font-size: 20px; /* Coincide con el tamaño del header */
+    font-size: var(--font-size-xl); /* Coincide con el tamaño del header */
     transition: color 0.2s; /* Coincide con la transición del header */
     text-decoration: none;
 }
@@ -77,8 +77,8 @@
 .footer-link {
     color: var(--text-light);
     font-weight: 700;
-    font-size: 20px;
-    font-family: inter;
+    font-size: var(--font-size-xl);
+    font-family: var(--font-family);
     text-decoration: none !important;
     transition: all 0.3s ease;
     padding: 12px 24px;
@@ -148,14 +148,14 @@
     }
 
     .footer-center-content p {
-        font-size: 1rem;
+        font-size: var(--font-size-md);
         margin-bottom: var(--spacing-sm);
     }
 
     .footer-link {
         width: 100%; /* Botón ocupa todo el ancho disponible */
         max-width: 300px; /* Ancho máximo para evitar que sea muy ancho */
-        font-size: 14px; /* Reducir tamaño de fuente */
+        font-size: var(--font-size-sm); /* Reducir tamaño de fuente */
         padding: 10px 15px; /* Reducir padding */
         height: auto; /* Altura automática */
         min-height: 44px; /* Altura mínima */

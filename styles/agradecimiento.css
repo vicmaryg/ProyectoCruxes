@@ -48,7 +48,7 @@
 
 .modal-agradecimiento-header h3 {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: var(--font-size-xxxl);
   font-weight: 700;
   flex: 1;
 }
@@ -79,7 +79,7 @@
 
 .agradecimiento-content h4 {
   color: #E84E1D;
-  font-size: 1.4rem;
+  font-size: var(--font-size-xxl);
   font-weight: 600;
   margin-bottom: 1rem;
   margin-top: 0;
@@ -87,7 +87,7 @@
 
 .agradecimiento-content p {
   color: #666;
-  font-size: 1.1rem;
+  font-size: var(--font-size-lg);
   line-height: 1.6;
   margin-bottom: 2rem;
   margin-top: 0;
@@ -106,7 +106,7 @@
   border: none;
   border-radius: 8px;
   padding: 0.8rem 2rem;
-  font-size: 1.1rem;
+  font-size: var(--font-size-lg);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -125,7 +125,7 @@
   border: none;
   border-radius: 8px;
   padding: 0.8rem 2rem;
-  font-size: 1.1rem;
+  font-size: var(--font-size-lg);
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
@@ -155,7 +155,7 @@
   }
   
   .modal-agradecimiento-header h3 {
-    font-size: 1.4rem;
+    font-size: var(--font-size-xxl);
   }
   
   .agradecimiento-content {
@@ -167,11 +167,11 @@
   }
   
   .agradecimiento-content h4 {
-    font-size: 1.2rem;
+    font-size: var(--font-size-xl);
   }
   
   .agradecimiento-content p {
-    font-size: 1rem;
+    font-size: var(--font-size-md);
   }
   
   .agradecimiento-actions {
@@ -182,7 +182,7 @@
   .btn-continuar,
   .btn-contactar {
     padding: 0.7rem 1.5rem;
-    font-size: 1rem;
+    font-size: var(--font-size-md);
   }
 }
 
@@ -197,7 +197,7 @@
   }
   
   .modal-agradecimiento-header h3 {
-    font-size: 1.2rem;
+    font-size: var(--font-size-xl);
   }
   
   .agradecimiento-content {
@@ -205,14 +205,14 @@
   }
   
   .agradecimiento-icon i {
-    font-size: 2.5rem;
+    font-size: var(--font-size-xxxxl);
   }
   
   .agradecimiento-content h4 {
-    font-size: 1.1rem;
+    font-size: var(--font-size-lg);
   }
   
   .agradecimiento-content p {
-    font-size: 0.95rem;
+    font-size: var(--font-size-sm);
   }
 } 

@@ -80,7 +80,7 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    font-size: 2.5rem;
+    font-size: var(--font-size-xxxxl);
     font-weight: 700;
     font-family: var(--font-family);
     text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.8);
@@ -93,7 +93,7 @@
 .hero-section .quote {
     color: #FFFFFF;
     font-style: italic;
-    font-size: 1.5rem;
+    font-size: var(--font-size-xxl);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     z-index: 2;
     margin-bottom: 0;
@@ -115,14 +115,14 @@
     }
 
     .hero-section h1 {
-        font-size: 1.8rem;
+        font-size: var(--font-size-xxxl);
         height: auto;
         min-height: 60px;
         padding: 0 var(--spacing-xs);
     }
 
     .hero-section .quote {
-        font-size: 1.2rem;
+        font-size: var(--font-size-xl);
         margin-top: 0.5rem;
     }
 }
@@ -140,7 +140,7 @@
     }
 
     .hero-section .quote {
-        font-size: 1rem;
+        font-size: var(--font-size-md);
         margin-top: 0;
     }
 }
@@ -202,12 +202,12 @@
 /* Estilos responsive para el texto dividido */
 @media (max-width: 768px) {
     .split-text-container {
-        font-size: 2.5rem;
+        font-size: var(--font-size-xxxxl);
     }
 }
 
 @media (max-width: 480px) {
     .split-text-container {
-        font-size: 1.5rem;
+        font-size: var(--font-size-xxl);
     }
 }
