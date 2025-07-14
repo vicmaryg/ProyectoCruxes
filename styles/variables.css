@@ -12,6 +12,13 @@
     
     /* Fuentes */
     --font-family: 'Inter', sans-serif;
+    --font-size-sm: 14px;
+    --font-size-md: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 20px;
+    --font-size-xxl: 24px;
+    --font-size-xxxl: 32px;
+    --font-size-xxxxl: 40px;
     
     /* Espaciado */
     --spacing-xs: 0.5rem;
