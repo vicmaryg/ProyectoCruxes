@@ -192,6 +192,18 @@
     color: #0d0d0e;
 }
 
+.corazon-banner {
+    display: block;
+    width: 100%;
+    height: 300px;      /* ¡Esto es clave! */
+    margin: 0 auto;
+    max-width: 100vw;
+    object-fit: unset; /* O puedes quitar esta línea */
+    border: none;
+    margin: 24px auto 0 auto;
+    border-radius: var(--border-radius);
+  }
+
 /* Estilos para la sección Visión, Misión y Objetivos */
 #vision-mision-objetivos {
     margin-top: var(--spacing-lg);
@@ -506,6 +518,18 @@
     .ods-container {
         gap: var(--spacing-xxs); /* Reducir el espacio entre imágenes ODS */
         justify-content: center; /* Centrar las imágenes ODS dentro de su contenedor */
+    }
+
+    @media (max-width: 480px) {
+      .corazon-banner {
+        height: 120px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin: 16px auto 0 auto;
+        width: 100%;
+        max-width: 100vw;
+        display: block;
+      }
     }
 }
 

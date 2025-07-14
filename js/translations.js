@@ -28,10 +28,10 @@ const translations = {
                 "",
                 "• Promoviendo la <span class=\"programa-highlight\">Espiritualidad</span>, la <span class=\"programa-highlight\">Solidaridad</span> y el <span class=\"programa-highlight\">Desarrollo Personal</span>;",
                 "• Respondiendo <span class=\"programa-highlight\">Dónde y Cómo ayudar</span>, en ONGs o proyectos con impacto social;",
-                "• Construyendo <span class=\"programa-highlight\">Puentes</span> entre Empresas y voluntarios que desean ayudar con las ONGs que requieren ayuda, generando lazos, visibilidad, concientización, asesoramiento, voluntariado y capacitaciones.",
-                "• Ofreciendo <span class=\"programa-highlight\">Retiros</span> y <span class=\"programa-highlight\">Jornadas</span>, para auto-conocernos, crecer espiritual y solidariamente, promoviendo agentes de cambio."
+                "• Construyendo <span class=\"programa-highlight\">Puentes</span> entre Empresas y voluntarios que desean ayudar con las ONGs que requieren ayuda, generando lazos, visibilidad y concientización.",
+                "• Ofreciendo <span class=\"programa-highlight\">Retiros</span> y <span class=\"programa-highlight\">Jornadas</span>, para auto-conocernos, crecer espiritual y solidariamente, promoviendo <span class=\"programa-highlight\">Agentes de cambio </span>."
             ],
-            "base_text": "Nuestras bases son los <span class=\"programa-highlight\">valores cristianos</span>, con una <span class=\"programa-highlight\">mirada integral</span>, y una propuesta innovadora y metodológica, creando Redes, convocando y uniendo a distintos actores o especialistas en cada acción. Comprometiéndonos con los <span class=\"programa-highlight\">Objetivos de Desarrollo Sostenible (ODS)</span>, el Desarrollo Humano Integral y Solidario de la <span class=\"programa-highlight\">Doctrina Social</span> y la <span class=\"programa-highlight\">Responsabilidad Social Empresarial (RSE)</span>;",
+            "base_text": "Nuestras bases son los <span class=\"programa-highlight\">valores cristianos</span>, con una <span class=\"programa-highlight\">mirada integral</span>, y una propuesta innovadora y metodológica, creando Redes y uniendo a distintos actores en cada acción. Comprometiéndonos con los <span class=\"programa-highlight\">Objetivos de Desarrollo Sostenible (ODS)</span>, la <span class=\"programa-highlight\">Doctrina Social</span> y la <span class=\"programa-highlight\">Responsabilidad Social Empresarial (RSE)</span>;",
             "buttons": {
                 "carta": "Carta de presentación",
                 "codigo": "Código de ética"
@@ -228,10 +228,10 @@ const translations = {
                 "",
                 "• Promoting <strong>Spirituality</strong>, <strong>Solidarity</strong> and <strong>Personal Development</strong>;",
                 "• Answering <strong>Where and How to help</strong>, in NGOs or projects with social impact;",
-                "• Building <strong>Bridges</strong> between Companies and volunteers who want to help with NGOs that need support, generating bonds, visibility, awareness, advisory, volunteering, and training.",
-                "• Offering <strong>Retreats</strong> and <strong>Workshops</strong> to get to know ourselves, grow spiritually and in solidarity, promoting agents of change."
+                "• Building <strong>Bridges</strong> between Companies and volunteers who want to help with NGOs that need support, generating bonds, visibility and awareness.",
+                "• Offering <strong>Retreats</strong> and <strong>Workshops</strong> to get to know ourselves, grow spiritually and in solidarity, promoting  <span class=\"programa-highlight\">Agents of change</span>."
             ],
-            "base_text": "Our foundations are <strong>Christian values</strong>, with a <strong>comprehensive approach</strong> and an innovative and methodological proposal, creating Networks, convening and uniting different actors or specialists in each action. Committing ourselves to the <strong>Sustainable Development Goals (SDGs)</strong>, Integral and Solidary Human Development of <strong>Social Doctrine</strong>, and <strong>Corporate Social Responsibility (CSR)</strong>;",
+            "base_text": "Our foundations are <strong>Christian values</strong>, with a <strong>comprehensive approach</strong> and an innovative and methodological proposal, creating Networks and uniting different actors in each action. Committing ourselves to the <strong>Sustainable Development Goals (SDGs)</strong>, of <strong>Social Doctrine</strong>, and <strong>Corporate Social Responsibility (CSR)</strong>;",
             "buttons": {
                 "carta": "Presentation Letter",
                 "codigo": "Code of Ethics"
