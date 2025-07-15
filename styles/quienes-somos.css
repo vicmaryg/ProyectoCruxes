@@ -516,6 +516,7 @@
     }
 
     .ods-container img {
+        width: 110px;
         object-fit: cover; /* Asegurar que las imágenes llenen sus dimensiones sin distorsión */
     }
 
