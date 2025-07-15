@@ -74,7 +74,7 @@ html {
 
 @media (max-width: 768px) {
     .container {
-        width: 90%;
+        width: 80%;
         max-width: 640px;
         margin: 0 auto;
     }
