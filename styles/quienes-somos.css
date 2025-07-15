@@ -516,8 +516,6 @@
     }
 
     .ods-container img {
-        width: 152px; /* Tamaño de las imágenes ODS para 480px */
-        height: 172px; /* Hacer las imágenes cuadradas */
         object-fit: cover; /* Asegurar que las imágenes llenen sus dimensiones sin distorsión */
     }
 
