@@ -320,6 +320,142 @@
     background: #e8e8e8;
 }
 
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .header-flex {
+        padding: 0 25px;
+    }
+
+    .logo-img {
+        width: 140px;
+        gap: 15px;
+    }
+
+    .nav-list {
+        gap: 20px;
+    }
+
+    .nav-link {
+        padding: var(--spacing-xs) 12px;
+        font-size: var(--font-size-sm);
+    }
+
+    .donate-button {
+        padding: 10px 20px;
+        font-size: var(--font-size-sm);
+        height: 40px;
+    }
+
+    .language-toggle {
+        width: 95px;
+        height: 34px;
+    }
+
+    .language-slider {
+        width: 42px;
+        height: 28px;
+    }
+
+    .language-option {
+        font-size: var(--font-size-sm);
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .social-icons a {
+        font-size: 18px;
+    }
+
+    .header-right {
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1265px) {
+    .logo-img {
+        width: 130px;
+        gap: 12px;
+    }
+    
+    .header-right {
+        gap: 30px;
+    }
+    
+    .donate-button {
+        margin-right: 15px;
+    }
+    
+    .social-icons {
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1210px) {
+    .logo-img {
+        width: 125px;
+        gap: 10px;
+    }
+    
+    .social-icons {
+        display: none;
+    }
+    
+    .header-right {
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1100px) {
+    .logo-img {
+        width: 120px;
+        gap: 8px;
+    }
+    
+    .language-toggle {
+        width: 90px;
+        height: 32px;
+    }
+    
+    .language-slider {
+        width: 40px;
+        height: 26px;
+    }
+    
+    .language-option {
+        font-size: var(--font-size-sm);
+    }
+    
+    .header-right {
+        gap: 15px;
+    }
+    
+    .donate-button {
+        margin-right: 10px;
+    }
+    
+    .language-switch {
+        margin-left: 10px;
+    }
+    
+    .language-option.es {
+        left: 8px;
+    }
+    
+    .language-option.en {
+        right: 8px;
+    }
+    .nav-list {
+        gap: 0;
+    }
+}
+
+@media (min-width: 1100px) and (max-width: 1265px) {
+    .logo-img {
+        margin-right: 15px;
+    }
+}
+
 @media (max-width: 1024px) {
     .header-flex {
         padding: 0 20px;
@@ -451,4 +587,11 @@
     .hamburger::after {
         width: 24px;
     }
+} 
+
+@media (min-width: 1024px) {
+  /* Eliminar el margin-left del logo para volver al estado anterior */
+  .logo-img {
+    margin-left: 0;
+  }
 } 
