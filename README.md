@@ -1,175 +1,270 @@
-# Proyecto Cruxes de Luz
+# 🌟 Fundación Cruxes de Luz - Sitio Web Oficial
 
-## Descripción
+## 📋 Descripción
 
-Este proyecto es el sitio web oficial de la Fundación Cruxes de Luz. El sitio web presenta una interfaz moderna y responsiva que incluye información sobre la fundación, sus programas, novedades y una sección de contacto. El sitio cuenta con soporte multiidioma (español e inglés) y una política de cookies integrada.
+Sitio web oficial de la **Fundación Cruxes de Luz**, una organización que promueve la espiritualidad, solidaridad y desarrollo personal. El sitio presenta una interfaz moderna, responsiva y accesible con soporte multiidioma (español/inglés), sistema de donaciones integrado y diseño optimizado para todos los dispositivos.
 
-## Tecnologías Utilizadas
+## ✨ Características Principales
 
-- **HTML5** - Estructura semántica y accesible
-- **CSS3** - Estilos modernos con animaciones, efectos y diseño responsivo
-- **JavaScript (ES6+)** - Funcionalidades interactivas y gestión de idiomas
-- **Diseño Responsivo** - Adaptable a todos los dispositivos (móvil, tablet, desktop)
-- **Optimización de Imágenes** - Formato WebP para mejor rendimiento
-- **Internacionalización** - Soporte completo para español e inglés
+### 🌍 **Internacionalización Completa**
+- Soporte nativo para **español** e **inglés**
+- Cambio de idioma en tiempo real sin recarga
+- Traducciones dinámicas con archivos JSON
+- Interfaz adaptada culturalmente
 
-## Configuración e Instalación
+### 📱 **Diseño Responsivo Avanzado**
+- **Mobile-first** con breakpoints optimizados
+- Adaptación perfecta a móvil, tablet y desktop
+- Navegación adaptativa y menú hamburguesa
+- Imágenes optimizadas para cada resolución
 
-Este es un proyecto frontend que no requiere instalación de dependencias complejas. Para ejecutarlo localmente:
+### 💝 **Sistema de Donaciones**
+- Modal de donaciones con múltiples opciones
+- Integración con Mercado Pago
+- Donaciones únicas y mensuales
+- Opciones para empresas (RSE)
 
-1. Clona el repositorio:
+### 🍪 **Gestión de Privacidad**
+- Modal de consentimiento de cookies
+- Cumplimiento GDPR/LOPD
+- Almacenamiento seguro de preferencias
+- Interfaz accesible y clara
+
+### 🎯 **Experiencia de Usuario**
+- Scroll suave entre secciones
+- Header fijo con navegación intuitiva
+- Botón flotante de WhatsApp
+- Animaciones y transiciones fluidas
+
+## 🛠️ Tecnologías Utilizadas
+
+| Tecnología | Versión | Propósito |
+|------------|---------|-----------|
+| **HTML5** | - | Estructura semántica y accesible |
+| **CSS3** | - | Estilos modernos con variables CSS |
+| **JavaScript** | ES6+ | Funcionalidades interactivas |
+| **PHP** | 7.4+ | Backend para formularios |
+| **WebP** | - | Imágenes optimizadas |
+| **Git** | - | Control de versiones |
+
+## 🚀 Instalación y Configuración
+
+### Requisitos Previos
+- Navegador web moderno
+- Servidor web (para funcionalidades PHP)
+- Git (para desarrollo)
+
+### Pasos de Instalación
+
+1. **Clonar el repositorio**
    ```bash
    git clone https://github.com/Crisca-cyver/ProyectoCruxes
-   ```
-2. Navega al directorio del proyecto:
-   ```bash
    cd proyecto_cruxes
    ```
-3. Abre el archivo `index.html` en tu navegador web preferido.
 
-## Estructura del Proyecto
+2. **Configurar servidor local** (opcional)
+   ```bash
+   # Con PHP integrado
+   php -S localhost:8000
+   
+   # Con Python
+   python -m http.server 8000
+   ```
+
+3. **Abrir en navegador**
+   ```
+   http://localhost:8000
+   ```
+
+## 📁 Estructura del Proyecto
 
 ```
 proyecto_cruxes/
-├── index.html                    # Página principal del sitio
-├── formulario.html              # Página de formulario de contacto
-├── enviar_correo.php            # Script PHP para envío de correos
-├── composer.json                # Configuración de dependencias PHP
-├── CNAME                        # Configuración de dominio personalizado
-├── styles/                      # Directorio de estilos CSS
-│   ├── base.css                 # Estilos base y variables CSS
-│   ├── main.css                 # Estilos principales
-│   ├── header.css               # Estilos del encabezado
-│   ├── footer.css               # Estilos del pie de página
-│   ├── hero.css                 # Estilos de la sección hero
-│   ├── programas.css            # Estilos de la sección programas
-│   ├── novedades.css            # Estilos de la sección novedades
-│   ├── quienes-somos.css        # Estilos de la sección equipo
-│   ├── contacto.css             # Estilos de la sección contacto
-│   ├── modal.css                # Estilos de modales
-│   ├── cookies.css              # Estilos de política de cookies
-│   ├── language.css             # Estilos del selector de idioma
-│   ├── whatsapp.css             # Estilos del botón de WhatsApp
-│   └── responsive.css           # Media queries y diseño responsivo
-├── js/                          # Directorio de scripts JavaScript
-│   ├── script.js                # Funcionalidades principales
-│   ├── translations.js          # Sistema de traducciones
-│   └── cookie_consent.js        # Gestión de cookies
-├── languages/                   # Archivos de traducción
-│   ├── es.json                  # Traducciones en español
-│   └── en.json                  # Traducciones en inglés
-├── imagen/                      # Directorio de imágenes optimizadas
-│   ├── Lanzamientos/            # Imágenes de lanzamientos
-│   ├── LOGO- ALIANZAS/          # Logos de aliados
-│   ├── ProyectosSolidarios/     # Imágenes de proyectos
-│   └── *.webp                   # Imágenes optimizadas en formato WebP
-└── README.md                    # Este archivo
+├── 📄 index.html                 # Página principal
+├── 📄 formulario.html            # Formulario de contacto
+├── 📄 enviar_correo.php          # Backend PHP
+├── 📄 composer.json              # Dependencias PHP
+├── 📄 CNAME                      # Configuración de dominio
+├── 📁 styles/                    # Estilos CSS modulares
+│   ├── 🎨 variables.css          # Variables CSS globales
+│   ├── 🎨 base.css               # Estilos base y reset
+│   ├── 🎨 main.css               # Importaciones principales
+│   ├── 🎨 header.css             # Estilos del header
+│   ├── 🎨 footer.css             # Estilos del footer
+│   ├── 🎨 hero.css               # Sección hero
+│   ├── 🎨 quienes-somos.css      # Sección "Quiénes Somos"
+│   ├── 🎨 programas.css          # Sección programas
+│   ├── 🎨 novedades.css          # Sección novedades
+│   ├── 🎨 contacto.css           # Sección contacto
+│   ├── 🎨 dona.css               # Sistema de donaciones
+│   ├── 🎨 modal.css              # Modales y overlays
+│   ├── 🎨 cookies.css            # Política de cookies
+│   ├── 🎨 language.css           # Selector de idioma
+│   ├── 🎨 whatsapp.css           # Botón flotante
+│   ├── 🎨 agradecimiento.css     # Página de agradecimiento
+│   └── 🎨 responsive.css         # Media queries
+├── 📁 js/                        # Scripts JavaScript
+│   ├── 🟨 script.js              # Funcionalidades principales
+│   ├── 🟨 translations.js        # Sistema de traducciones
+│   └── 🟨 cookie_consent.js      # Gestión de cookies
+├── 📁 languages/                 # Archivos de traducción
+│   ├── 🇪🇸 es.json               # Español
+│   └── 🇺🇸 en.json               # Inglés
+├── 📁 imagen/                    # Recursos multimedia
+│   ├── 🖼️ Lanzamientos/          # Imágenes de lanzamientos
+│   ├── 🖼️ LOGO- ALIANZAS/        # Logos de aliados
+│   ├── 🖼️ ProyectosSolidarios/   # Imágenes de proyectos
+│   └── 🖼️ *.webp                 # Imágenes optimizadas
+└── 📄 README.md                  # Documentación
 ```
 
-## Características Principales
+## 🎨 Secciones del Sitio
 
-### 🌐 **Internacionalización**
-- Soporte completo para español e inglés
-- Cambio de idioma en tiempo real sin recargar la página
-- Traducciones almacenadas en archivos JSON
-- Interfaz de usuario adaptada a ambos idiomas
+### 🏠 **Hero Section**
+- Presentación principal con animaciones
+- Llamadas a la acción prominentes
+- Imagen de fondo dinámica
+- Texto dividido con efectos
 
-### 📱 **Diseño Responsivo**
-- Adaptable a todos los dispositivos y tamaños de pantalla
-- Breakpoints optimizados para móvil, tablet y desktop
-- Navegación adaptativa según el tamaño de pantalla
-- Imágenes optimizadas para diferentes resoluciones
+### 👥 **Quiénes Somos**
+- Información de la fundación
+- Valores y misión
+- Equipo y especialistas
+- Objetivos de desarrollo sostenible
 
-### 🍪 **Política de Cookies**
-- Modal de consentimiento de cookies
-- Almacenamiento local de preferencias del usuario
-- Cumplimiento con regulaciones de privacidad (GDPR)
-- Interfaz intuitiva y accesible
+### 🎯 **Programas**
+- **Cruxes RSE**: Responsabilidad social empresarial
+- **Cruxes Solidarias**: Proyectos solidarios
+- **Cruxes de Luz**: Espiritualidad y desarrollo personal
 
-### 🎯 **Navegación y UX**
-- Scroll suave entre secciones
-- Menú de navegación fijo con indicadores activos
-- Botón flotante de WhatsApp para contacto directo
-- Animaciones y transiciones suaves
+### 📰 **Novedades**
+- Carrusel de alianzas
+- Proyectos solidarios
+- Lanzamientos recientes
+- Navegación interactiva
 
-### 📧 **Formulario de Contacto**
-- Validación de campos en tiempo real
-- Integración con PHP para envío de correos
-- Diseño intuitivo y accesible
-- Mensajes de confirmación y error
+### 💰 **Donaciones**
+- Modal de opciones de donación
+- Integración con Mercado Pago
+- Donaciones únicas y recurrentes
+- Opciones para empresas
 
-### 🎨 **Secciones del Sitio**
-- **Hero Section:** Presentación principal con llamadas a la acción
-- **Programas:** Información detallada sobre los programas de la fundación
-- **Novedades:** Últimas noticias y actualizaciones
-- **Quiénes Somos:** Información sobre el equipo y la fundación
-- **Contacto:** Formulario y información de contacto
+### 📞 **Contacto**
+- Formulario de contacto completo
+- Validación en tiempo real
+- Integración con PHP
+- Información de contacto
 
-### 🔧 **Optimizaciones Técnicas**
-- Imágenes optimizadas en formato WebP
-- CSS modular y organizado
-- JavaScript modular y eficiente
-- Carga rápida y rendimiento optimizado
+## 🔧 Características Técnicas
 
-## Características de Desarrollo
-
-### CSS Modular
-El proyecto utiliza un sistema de CSS modular con archivos separados por funcionalidad:
-- Variables CSS centralizadas en `variables.css`
-- Estilos base en `base.css`
-- Estilos específicos por sección
-- Media queries organizadas en `responsive.css`
+### CSS Modular y Organizado
+```css
+/* Variables CSS centralizadas */
+:root {
+    --color-primary: #f97316;
+    --font-family: 'Inter', sans-serif;
+    --spacing-sm: 1rem;
+    /* ... más variables */
+}
+```
 
 ### Sistema de Traducciones
-- Archivos JSON separados por idioma
-- Carga dinámica de traducciones
-- Cambio de idioma sin recarga de página
-- Fallbacks para textos no traducidos
+- **Archivos JSON** separados por idioma
+- **Carga dinámica** sin recarga de página
+- **Fallbacks** para textos faltantes
+- **Interfaz adaptativa** por idioma
 
-### Gestión de Cookies
-- Consentimiento explícito del usuario
-- Almacenamiento de preferencias
-- Cumplimiento normativo
-- Interfaz accesible
+### Optimización de Rendimiento
+- **Imágenes WebP** para mejor compresión
+- **CSS modular** para carga eficiente
+- **JavaScript optimizado** y modular
+- **Lazy loading** de recursos
 
-## Contribución
+### Accesibilidad
+- **Navegación por teclado** completa
+- **Contraste adecuado** en colores
+- **Textos alternativos** en imágenes
+- **Estructura semántica** HTML5
 
-Para contribuir al proyecto:
+## 📱 Diseño Responsivo
 
-1. Haz un Fork del repositorio
-2. Crea una rama para tu feature (`git checkout -b feature/NuevaFuncionalidad`)
-3. Commit tus cambios (`git commit -m 'Agregar nueva funcionalidad'`)
-4. Push a la rama (`git push origin feature/NuevaFuncionalidad`)
-5. Abre un Pull Request
+### Breakpoints Optimizados
+```css
+/* Desktop: > 1024px */
+/* Tablet: 768px - 1024px */
+/* Mobile: < 768px */
+/* Small Mobile: < 480px */
+```
 
-### Guías de Contribución
-- Mantén el código limpio y bien documentado
-- Sigue las convenciones de nomenclatura existentes
-- Prueba los cambios en diferentes dispositivos
-- Verifica que las traducciones estén completas
+### Características Responsivas
+- **Header adaptativo** con menú hamburguesa
+- **Imágenes flexibles** que se ajustan
+- **Tipografía escalable** con rem
+- **Espaciado adaptativo** por dispositivo
 
-## Despliegue
+## 🚀 Despliegue
 
-El sitio está configurado para ser desplegado en servicios de hosting estático:
-- GitHub Pages
-- Netlify
-- Vercel
-- Cualquier servidor web estático
+### Opciones de Hosting
+- ✅ **GitHub Pages** (recomendado)
+- ✅ **Netlify** 
+- ✅ **Vercel**
+- ✅ **Cualquier servidor web estático**
 
 ### Configuración de Dominio
-El archivo `CNAME` permite configurar un dominio personalizado para el sitio.
+El archivo `CNAME` permite configurar dominios personalizados.
 
-## Contacto
+## 🤝 Contribución
 
-Para más información sobre el proyecto o la fundación:
-- Utiliza el formulario de contacto en el sitio web
-- Contacta a través del botón de WhatsApp
-- Revisa la información de contacto en la sección correspondiente
+### Cómo Contribuir
+1. **Fork** del repositorio
+2. **Crea una rama** para tu feature
+3. **Desarrolla** tus cambios
+4. **Prueba** en diferentes dispositivos
+5. **Commit** con mensajes descriptivos
+6. **Push** y crea un Pull Request
 
-## Licencia
+### Guías de Desarrollo
+- Mantén el **código limpio** y documentado
+- Sigue las **convenciones** existentes
+- Prueba en **múltiples dispositivos**
+- Verifica las **traducciones**
+- Optimiza las **imágenes**
 
-Este proyecto es propiedad de la Fundación Cruxes de Luz. Todos los derechos reservados.
+## 📞 Contacto y Soporte
+
+### Para Usuarios
+- 📧 **Formulario de contacto** en el sitio
+- 📱 **WhatsApp** flotante para consultas rápidas
+- 🌐 **Información** en la sección de contacto
+
+### Para Desarrolladores
+- 🐛 **Issues** en GitHub para reportar bugs
+- 💡 **Discussions** para sugerencias
+- 📧 **Email** para consultas técnicas
+
+## 📄 Licencia
+
+Este proyecto es propiedad de la **Fundación Cruxes de Luz**. Todos los derechos reservados.
 
 ---
 
-*Nota: Este proyecto está en constante desarrollo. Las características y la estructura pueden cambiar en futuras actualizaciones.*
+## 🎯 Roadmap
+
+### Próximas Características
+- [ ] **Blog integrado** para noticias
+- [ ] **Sistema de usuarios** para voluntarios
+- [ ] **Calendario de eventos** interactivo
+- [ ] **Galería de proyectos** mejorada
+- [ ] **PWA** (Progressive Web App)
+
+### Mejoras Técnicas
+- [ ] **Optimización SEO** avanzada
+- [ ] **Analytics** integrado
+- [ ] **Cache** inteligente
+- [ ] **CDN** para recursos estáticos
+
+---
+
+*Última actualización: Diciembre 2024*  
+*Versión: 2.0.0*  
+*Desarrollado con ❤️ para la Fundación Cruxes de Luz*

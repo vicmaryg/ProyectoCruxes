@@ -79,10 +79,11 @@ const translations = {
         "equipo": {
             "title": "Nuestro equipo",
             "description": "Esta nutrido de especialistas y voluntarios (trabajadoras sociales, catequistas, coachs, contadores, abogados, empresarios, etc) que donan su tiempo para ayudar a otros, asesorar, y gestionar ayudas y proyectos que respondan al objetivo principal.",
-            "comite": "Comité de Ética- Ejecutivo. Equipo Administrativo/Comunicación/ Programas/ Capacitaciones/RSE.",
+            "comite": "Comité de Ética-Ejecutivo. Equipo Administrativo/Comunicación/SProgramas/ Capacitaciones/RSE.",
             "quote": "Creemos que unidos y en Dios podemos crear una cadena de amor y de servicio en acción.",
             "ods_title": "Objetivos de desarrollo sostenible"
         },
+        /*
         "programas": {
             "title": "PROGRAMAS",
             "cruxes_rse": {
@@ -128,6 +129,7 @@ const translations = {
                 }
             }
         },
+*/
         "novedades": {
             "title": "NOVEDADES",
             "ver_mas": "Ver más",
@@ -283,6 +285,7 @@ const translations = {
             "quote": "We believe that united we can create a chain of love and service.",
             "ods_title": "Sustainable Development Goals"
         },
+        /*
         "programas": {
             "title": "PROGRAMS",
             "cruxes_rse": {
@@ -328,6 +331,7 @@ const translations = {
                 }
             }
         },
+*/
         "novedades": {
             "title": "NEWS",
             "ver_mas": "See more",

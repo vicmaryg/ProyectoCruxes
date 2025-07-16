@@ -93,7 +93,9 @@
             <ul id="quienes-somos-list">
               <!-- El contenido se cargará dinámicamente desde las traducciones -->
             </ul>
-            <p>Nuestras bases son los <span class="programa-highlight">valores cristianos</span>, con una <span class="programa-highlight">mirada integral</span>, y una propuesta innovadora y metodológica, creando Redes, convocando y uniendo a distintos actores o especialistas en cada acción. Comprometiéndonos con los <span class="programa-highlight">Objetivos de Desarrollo Sostenible (ODS)</span>, el Desarrollo Humano Integral y Solidario de la <span class="programa-highlight">Doctrina Social</span> y la <span class="programa-highlight">Responsabilidad Social Empresarial (RSE)</span>;</p>
+            <!-- Botón y contenedor para mostrar/ocultar el texto base dinámico -->
+            <span id="btn-mas-info"> + info...</span>
+            <div id="mas-info-texto" style="display:none;"></div>
             <!-- Botones para descargar PDFs -->
             <div class="quienes-somos-buttons">
               <a href="documentos/carta.pdf" download class="button-link">Carta de presentación</a>
@@ -164,10 +166,11 @@
             <ul data-i18n="vision_mision.objetivo_especifico.items">
               <li>Construir puentes que unen, inspiran y transforman realidades, entre el sector privado y social, acompañando acciones con impacto social y/o ambiental;</li>
               <li>Cruzar voluntades de personas/instituciones que desean ayudar, con ONGs que requieren de ayuda material, monetaria o de voluntariado, por medio de Programas de RSE o padrinazgo.</li>
-              <li>Brindar un Programa de Voluntariado o Pasantías a Escuelas, Universidades o Empresas, con asesoramiento profesional y confección de proyectos sociales.</li>
-              <li>Ofrecer espacios de concientización, y formación sobre el Servicio Social, la Responsabilidad Social y el Desarrollo Personal.</li>
-              <li>Acompañar búsquedas de crecimiento espiritual y autoconocimiento, por medio de una Escuela de Espiritualidad y Desarrollo personal, Retiros y/o Jornadas.</li>
             </ul>
+            <div class="objetivo-extra-container">
+              <span id="btn-mas-info-objetivos">+ info...</span>
+              <div id="mas-info-objetivos" style="display:none;"></div>
+            </div>
           </div>
           <div class="objetivo-especifico-img-container">
             <img src="imagen/ProyectosSolidarios/0.webp" alt="Amor en acción, puentes de unión">
@@ -202,15 +205,54 @@
 
       <!-- Sección PROGRAMAS -->
       <section id="programas" class="section">
+        <h2 class="section-title">NUESTROS PROGRAMAS</h2>
+        <div class="cards-container">
+          <div class="card-flip">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="imagen/programas1.webp" alt="Programa 1" />
+                <div class="card-title-bar">PROGRAMA DE RSE</div>
+              </div>
+              <div class="card-back">
+                <p>Texto del programa 1</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-flip">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="imagen/programas2.webp" alt="Programa 2" />
+                <div class="card-title-bar">PROGRAMA 2</div>
+              </div>
+              <div class="card-back">
+                <p>Texto del programa 2</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-flip">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="imagen/programas3.webp" alt="Programa 3" />
+                <div class="card-title-bar">PROGRAMA 3</div>
+              </div>
+              <div class="card-back">
+                <p>Texto del programa 3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--
+      <section id="programas" class="section">
         <h2 class="section-title">Nuestros programas</h2>
 
-        <!-- CRUXES RSE -->
+       
         <div class="programa-sub-section cruxes-rse">
           <h3 class="programa-title">Cruxes RSE</h3>
-          <!-- Contenedor para la cita y el contenido con borde -->
+          
           <div class="programa-bordered-content">
             <q class="programa-quote">Puente que une, inspira y Transforma</q>
-            <!-- Contenido de Asesoramiento en RSE -->
+           
             <div class="programa-content">
               <h4>Asesoramiento en RSE</h4>
               <p>Deseamos ser Nexo entre las necesidades sociales, ambientales y económicas que atienden las organizaciones y el sector privado, a fin de fomentar el responsabilidad social y ODS.</p>
@@ -225,13 +267,13 @@
           </div>
         </div>
 
-        <!-- CRUXES SOLIDARIAS -->
+        
         <div class="programa-sub-section cruxes-solidarias">
           <h3 class="programa-title">Cruxes Solidarias</h3>
-          <!-- Contenedor para la cita y el contenido con borde -->
+          
           <div class="programa-bordered-content">
             <q class="programa-quote">Una cadena de Amor y servicio en Acción</q>
-            <!-- Contenido de Proyectos solidarios -->
+            
             <div class="programa-content">
               <h4>Proyectos solidarios</h4>
               <p>Potenciando el alcance de las instituciones, sus proyectos y formar a Voluntarios en herramientas de trabajo Social, desarrollo personal y espiritualidad, fomentando el servicio.</p>
@@ -245,13 +287,13 @@
           </div>
         </div>
 
-        <!-- CRUXES DE LUZ -->
+       
         <div class="programa-sub-section cruxes-de-luz">
           <h3 class="programa-title">Cruxes de Luz</h3>
-          <!-- Contenedor para la cita y el contenido con borde -->
+          
           <div class="programa-bordered-content">
             <q class="programa-quote">Un Renacer del Espíritu y el Amor</q>
-            <!-- Contenido de Espiritualidad -->
+            <
             <div class="programa-content">
               <h4>Espiritualidad</h4>
               <p>En base al Amor a Dios, a uno mismo y a los demás, con herramientas de Desarrollo Personal y Servicio social para voluntarios, ONGs, comunidades, empresas, etc.</p>
@@ -264,6 +306,8 @@
           </div>
         </div>
       </section>
+    -->
+
 
       <!-- Sección NOVEDADES -->
       <section id="novedades" class="section">

@@ -131,7 +131,9 @@ function updateTexts() {
         if (objetivoGeneralText) objetivoGeneralText.textContent = t.vision_mision.objetivo_general.text;
         if (objetivoEspecificoTitle) objetivoEspecificoTitle.textContent = t.vision_mision.objetivo_especifico.title;
         if (objetivoEspecificoList) {
+            // Solo los dos primeros ítems en la lista
             objetivoEspecificoList.innerHTML = t.vision_mision.objetivo_especifico.items
+                .slice(0, 2)
                 .map(item => `<li>${item}</li>`)
                 .join('');
         }
@@ -157,6 +159,7 @@ function updateTexts() {
         if (odsTitle) odsTitle.textContent = t.equipo.ods_title;
         
         // Programas
+        /*
         const programasTitle = document.querySelector('#programas .section-title');
         if (programasTitle) programasTitle.textContent = t.programas.title;
         
@@ -210,6 +213,7 @@ function updateTexts() {
                 .map(item => `<li>${item}</li>`)
                 .join('');
         }
+*/
         
         // Novedades
         const novedadesTitle = document.querySelector('#novedades .section-title');
@@ -838,3 +842,70 @@ document.addEventListener('DOMContentLoaded', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }); 
+
+// === Mostrar/ocultar texto base de quienes somos ===
+document.addEventListener('DOMContentLoaded', function() {
+  const btnMasInfo = document.getElementById('btn-mas-info');
+  const masInfoTexto = document.getElementById('mas-info-texto');
+  if (btnMasInfo && masInfoTexto) {
+      function updateMasInfoText() {
+          const t = translations[currentLanguage];
+          if (t && t.quienes_somos && t.quienes_somos.base_text) {
+              masInfoTexto.innerHTML = t.quienes_somos.base_text;
+          }
+      }
+      // Siempre oculto al inicio
+      masInfoTexto.style.display = 'none';
+      btnMasInfo.addEventListener('click', function() {
+          updateMasInfoText();
+          masInfoTexto.style.display = 'block';
+          btnMasInfo.style.display = 'none'; // Oculta el link después del clic
+      });
+      // Si cambias de idioma, vuelve a ocultar la info y mostrar el link
+      const originalUpdateTexts = updateTexts;
+      window.updateTexts = function() {
+          originalUpdateTexts();
+          masInfoTexto.style.display = 'none';
+          btnMasInfo.style.display = 'inline';
+          btnMasInfo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
+      };
+      btnMasInfo.style.cursor = 'pointer';
+  }
+});
+
+// === Mostrar/ocultar los tres ítems específicos de objetivo_especifico ===
+document.addEventListener('DOMContentLoaded', function() {
+    const btnMasInfoObj = document.getElementById('btn-mas-info-objetivos');
+    const masInfoObj = document.getElementById('mas-info-objetivos');
+    if (btnMasInfoObj && masInfoObj) {
+        function updateMasInfoObjText() {
+            const t = translations[currentLanguage];
+            if (t && t.vision_mision && t.vision_mision.objetivo_especifico && t.vision_mision.objetivo_especifico.items) {
+                const items = t.vision_mision.objetivo_especifico.items.slice(-3);
+                masInfoObj.innerHTML = '<ul>' + items.map(item => `<li>${item}</li>`).join('') + '</ul>';
+            }
+        }
+        masInfoObj.style.display = 'none';
+        btnMasInfoObj.addEventListener('click', function() {
+            updateMasInfoObjText();
+            masInfoObj.style.display = 'block';
+            btnMasInfoObj.style.display = 'none';
+        });
+        const originalUpdateTexts = window.updateTexts;
+        window.updateTexts = function() {
+            originalUpdateTexts();
+            masInfoObj.style.display = 'none';
+            btnMasInfoObj.style.display = 'inline';
+            btnMasInfoObj.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
+        };
+        btnMasInfoObj.style.cursor = 'pointer';
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.card-flip').forEach(card => {
+    card.addEventListener('click', function() {
+      card.classList.toggle('flipped');
+    });
+  });
+});
