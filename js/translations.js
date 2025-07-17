@@ -194,6 +194,39 @@ const translations = {
             "donar_15000": "Donar $15000",
             "cancelar": "Cancelar"
         },
+        "programas": {
+            "title": "NUESTROS PROGRAMAS",
+            "card_info": "Click para más info",
+            "rse": {
+                "title": "PROGRAMA DE RSE",
+                "items": [
+                    "✓ Nexo entre el Sector Privado y Social;",
+                    "✓ Apadrinar ONG en recursos materiales y sociales.",
+                    "✓ Asesorar y ejecutar Proyectos con Impacto social;",
+                    "✓ Enviar Reporte de Seguimiento- RSE."
+                ]
+            },
+            "voluntariado": {
+                "title": "VOLUNTARIADO/ CAMPAÑA SOLIDARIA",
+                "items": [
+                    "✓ Brindar espacios de concientización.",
+                    "✓ Capacitaciones sobre el servicio y voluntariado.",
+                    "✓ Ofrecer voluntariado en una ONG o proyecto;",
+                    "✓ Armar y gestionar Campaña Solidaria."
+                ]
+            },
+            "escuela_valores": {
+                "title": "ESCUELA DE VALORES- RSE",
+                "subtitle": "Brindar Talleres sobre Desarrollo Personal:",
+                "items": [
+                    "✓ Habilidades sociales.",
+                    "✓ Comunicación y Liderazgo.",
+                    "✓ Desarrollo humano y valores.",
+                    "✓ Emociones y Estados de Ánimo.",
+                    "✓ Solidaridad y servicio; Otros."
+                ]
+            }
+        },
         "agradecimiento": {
             "title": "¡Gracias por tu donación!",
             "subtitle": "Tu generosidad hace la diferencia",
@@ -395,6 +428,39 @@ const translations = {
             "donar_5000": "Donate $5000",
             "donar_15000": "Donate $15000",
             "cancelar": "Cancel"
+        },
+        "programas": {
+            "title": "OUR PROGRAMS",
+            "card_info": "Click for more info",
+            "rse": {
+                "title": "CSR PROGRAM",
+                "items": [
+                    "✓ Link between Private and Social Sector;",
+                    "✓ Sponsor NGOs with material and social resources.",
+                    "✓ Advise and execute Projects with Social Impact;",
+                    "✓ Send Follow-up Report- CSR."
+                ]
+            },
+            "voluntariado": {
+                "title": "VOLUNTEERING/ SOLIDARITY CAMPAIGN",
+                "items": [
+                    "✓ Provide awareness spaces.",
+                    "✓ Training on service and volunteering.",
+                    "✓ Offer volunteering in an NGO or project;",
+                    "✓ Organize and manage Solidarity Campaign."
+                ]
+            },
+            "escuela_valores": {
+                "title": "VALUES SCHOOL- CSR",
+                "subtitle": "Provide Personal Development Workshops:",
+                "items": [
+                    "✓ Social skills.",
+                    "✓ Communication and Leadership.",
+                    "✓ Human development and values.",
+                    "✓ Emotions and Mood States.",
+                    "✓ Solidarity and service; Others."
+                ]
+            }
         },
         "agradecimiento": {
             "title": "Thank you for your donation!",

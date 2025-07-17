@@ -86,6 +86,39 @@
             "quote": "\"Cruxes, un Nuevo Amanecer, para cruzarnos y potenciar nuestro SER\""
         }
     },
+    "programas": {
+        "title": "NUESTROS PROGRAMAS",
+        "card_info": "Click para más info",
+        "rse": {
+            "title": "PROGRAMA DE RSE",
+            "items": [
+                "✓ Nexo entre el Sector Privado y Social;",
+                "✓ Apadrinar ONG en recursos materiales y sociales.",
+                "✓ Asesorar y ejecutar Proyectos con Impacto social;",
+                "✓ Enviar Reporte de Seguimiento- RSE."
+            ]
+        },
+        "voluntariado": {
+            "title": "VOLUNTARIADO/ CAMPAÑA SOLIDARIA",
+            "items": [
+                "✓ Brindar espacios de concientización.",
+                "✓ Capacitaciones sobre el servicio y voluntariado.",
+                "✓ Ofrecer voluntariado en una ONG o proyecto;",
+                "✓ Armar y gestionar Campaña Solidaria."
+            ]
+        },
+        "escuela_valores": {
+            "title": "ESCUELA DE VALORES- RSE",
+            "subtitle": "Brindar Talleres sobre Desarrollo Personal:",
+            "items": [
+                "✓ Habilidades sociales.",
+                "✓ Comunicación y Liderazgo.",
+                "✓ Desarrollo humano y valores.",
+                "✓ Emociones y Estados de Ánimo.",
+                "✓ Solidaridad y servicio; Otros."
+            ]
+        }
+    },
     "agradecimiento": {
         "title": "¡Gracias por tu donación!",
         "subtitle": "Tu generosidad hace la diferencia",

@@ -87,6 +87,39 @@
             "quote": "\"Cruxes, a New Dawn, to cross paths and empower our BEING\""
         }
     },
+    "programas": {
+        "title": "OUR PROGRAMS",
+        "card_info": "Click for more info",
+        "rse": {
+            "title": "CSR PROGRAM",
+            "items": [
+                "✓ Link between Private and Social Sector;",
+                "✓ Sponsor NGOs with material and social resources.",
+                "✓ Advise and execute Projects with Social Impact;",
+                "✓ Send Follow-up Report- CSR."
+            ]
+        },
+        "voluntariado": {
+            "title": "VOLUNTEERING/ SOLIDARITY CAMPAIGN",
+            "items": [
+                "✓ Provide awareness spaces.",
+                "✓ Training on service and volunteering.",
+                "✓ Offer volunteering in an NGO or project;",
+                "✓ Organize and manage Solidarity Campaign."
+            ]
+        },
+        "escuela_valores": {
+            "title": "VALUES SCHOOL- CSR",
+            "subtitle": "Provide Personal Development Workshops:",
+            "items": [
+                "✓ Social skills.",
+                "✓ Communication and Leadership.",
+                "✓ Human development and values.",
+                "✓ Emotions and Mood States.",
+                "✓ Solidarity and service; Others."
+            ]
+        }
+    },
     "agradecimiento": {
         "title": "Thank you for your donation!",
         "subtitle": "Your generosity makes a difference",

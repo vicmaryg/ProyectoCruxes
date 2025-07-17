@@ -195,3 +195,17 @@
     margin-bottom: var(--spacing-xs);
 }
 */ 
+
+.programa-subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.programa-check-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+} 
