@@ -131,9 +131,9 @@ function updateTexts() {
         if (objetivoGeneralText) objetivoGeneralText.textContent = t.vision_mision.objetivo_general.text;
         if (objetivoEspecificoTitle) objetivoEspecificoTitle.textContent = t.vision_mision.objetivo_especifico.title;
         if (objetivoEspecificoList) {
-            // Solo los dos primeros ítems en la lista
+            // Mostrar los tres primeros ítems en la lista
             objetivoEspecificoList.innerHTML = t.vision_mision.objetivo_especifico.items
-                .slice(0, 2)
+                .slice(0, 3)
                 .map(item => `<li>${item}</li>`)
                 .join('');
         }
@@ -856,10 +856,16 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       // Siempre oculto al inicio
       masInfoTexto.style.display = 'none';
-      btnMasInfo.addEventListener('click', function() {
-          updateMasInfoText();
-          masInfoTexto.style.display = 'block';
-          btnMasInfo.style.display = 'none'; // Oculta el link después del clic
+      btnMasInfo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
+      btnMasInfo.addEventListener('click', function toggleInfo() {
+          if (masInfoTexto.style.display === 'none' || masInfoTexto.style.display === '') {
+              updateMasInfoText();
+              masInfoTexto.style.display = 'block';
+              btnMasInfo.textContent = currentLanguage === 'es' ? '- info...' : '- info...';
+          } else {
+              masInfoTexto.style.display = 'none';
+              btnMasInfo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
+          }
       });
       // Si cambias de idioma, vuelve a ocultar la info y mostrar el link
       const originalUpdateTexts = updateTexts;
@@ -873,7 +879,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// === Mostrar/ocultar los tres ítems específicos de objetivo_especifico ===
+// === Mostrar/ocultar los ítems extra de objetivo_especifico ===
 document.addEventListener('DOMContentLoaded', function() {
     const btnMasInfoObj = document.getElementById('btn-mas-info-objetivos');
     const masInfoObj = document.getElementById('mas-info-objetivos');
@@ -881,15 +887,21 @@ document.addEventListener('DOMContentLoaded', function() {
         function updateMasInfoObjText() {
             const t = translations[currentLanguage];
             if (t && t.vision_mision && t.vision_mision.objetivo_especifico && t.vision_mision.objetivo_especifico.items) {
-                const items = t.vision_mision.objetivo_especifico.items.slice(-3);
+                const items = t.vision_mision.objetivo_especifico.items.slice(3); // Mostrar desde el cuarto ítem
                 masInfoObj.innerHTML = '<ul>' + items.map(item => `<li>${item}</li>`).join('') + '</ul>';
             }
         }
         masInfoObj.style.display = 'none';
-        btnMasInfoObj.addEventListener('click', function() {
-            updateMasInfoObjText();
-            masInfoObj.style.display = 'block';
-            btnMasInfoObj.style.display = 'none';
+        btnMasInfoObj.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
+        btnMasInfoObj.addEventListener('click', function toggleInfoObj() {
+            if (masInfoObj.style.display === 'none' || masInfoObj.style.display === '') {
+                updateMasInfoObjText();
+                masInfoObj.style.display = 'block';
+                btnMasInfoObj.textContent = currentLanguage === 'es' ? '- info...' : '- info...';
+            } else {
+                masInfoObj.style.display = 'none';
+                btnMasInfoObj.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
+            }
         });
         const originalUpdateTexts = window.updateTexts;
         window.updateTexts = function() {

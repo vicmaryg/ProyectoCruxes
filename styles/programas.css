@@ -132,7 +132,7 @@
 
 .programa-content p {
     margin-bottom: var(--spacing-sm);
-    line-height: 1.5;
+    line-height: 1.2;
     color: var(--text-dark);
     text-align: justify;
 }
@@ -147,7 +147,7 @@
 
 .programa-content ul li {
     margin-bottom: var(--spacing-xs);
-    line-height: 1.5;
+    line-height: 1.2;
     color: var(--text-dark);
     text-align: left;
 }

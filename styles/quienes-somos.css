@@ -22,7 +22,7 @@
     text-align: left;
     color: #E84E1D;
     height: 36px;
-    font-size: var(--font-size-xxxl);
+    font-size: var(--font-size-xxl);
     margin-bottom: var(--spacing-md);
     margin-top: 1.3rem;
 }
@@ -31,7 +31,7 @@
     margin-bottom: var(--spacing-md);
     font-size: var(--font-size-lg);
     text-align: justify;
-    line-height: 1.6;
+    line-height: 1.2;
 }
 
 #quienes-somos ul {
@@ -43,7 +43,7 @@
 
 #quienes-somos li {
     font-size: var(--font-size-lg);
-    line-height: 1.6;
+    line-height: 1.2;
     margin-bottom: var(--spacing-xs);
     position: relative;
     padding-left: 1.5rem;
@@ -68,7 +68,7 @@
     margin-bottom: var(--spacing-md);
     text-align: justify;
     font-size: var(--font-size-lg);
-    line-height: 1.6;
+    line-height: 1.2;
     font-style: italic;
 }
 
@@ -88,8 +88,7 @@
     width: 597px;
     height: 340px;
     display: block;
-    max-width: 100%; /* Asegurar que la imagen no se desborde */
-    height: auto; /* Mantener la proporción */
+    max-width: 100%; /* Asegurar que la imagen no se desborde */ /* Mantener la proporción */
     border-radius: var(--border-radius);
 }
 
@@ -179,7 +178,7 @@
 .ejes-content ul li {
     margin-bottom: var(--spacing-xs);
     font-size: var(--font-size-lg);
-    line-height: 1.6;
+    line-height: 1.2;
     position: relative;
     padding-left: 1.5rem;
 }
@@ -202,7 +201,7 @@
 .corazon-banner {
     display: block;
     width: 100%;
-    height: 300px;      /* ¡Esto es clave! */
+    height: 220px;      /* ¡Esto es clave! */
     margin: 0 auto;
     max-width: 100vw;
     object-fit: unset; /* O puedes quitar esta línea */
@@ -227,7 +226,7 @@
 
 #vision-mision-objetivos .section-title {
     font-family: var(--font-family);
-    font-size: var(--font-size-xxxl);
+    font-size: var(--font-size-xxl);
     color: #F2920C;
     margin-bottom: var(--spacing-md);
     border-bottom: none;
@@ -246,7 +245,7 @@
 
 #vision-mision-objetivos ul li {
     font-size: var(--font-size-lg); 
-    line-height: 1.6;
+    line-height: 1.2;
     margin-bottom: var(--spacing-xs); 
     font-weight: 400; 
     text-align: justify;
@@ -267,9 +266,9 @@
 
 #vision-mision-objetivos p {
     font-family: var(--font-family);
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-lg);
     text-align: justify;
-    line-height: 1.6;
+    line-height: 1.2;
     margin-bottom: var(--spacing-md);
 }
 
@@ -295,10 +294,10 @@
 
 #nuestro-equipo p {
     font-family: 'Inter', sans-serif;
-    font-size: 18px; 
+    font-size: var(--font-size-lg); 
     margin-bottom: var(--spacing-md);
     text-align: justify;
-    line-height: 1.6;
+    line-height: 1.2;
 }
 
 #nuestro-equipo .quote {
@@ -308,7 +307,7 @@
     color: var(--color-primary);
     margin-top: var(--spacing-md);
     text-align: justify;
-    line-height: 1.6;
+    line-height: 1.2;
 }
 
 .cards-container {
@@ -382,17 +381,29 @@
   }
   
   .card-back {
-    background: #f5f5f5;
-    color: #222;
+    background: #FDBA74;
+    color: #000;
     transform: rotateY(180deg);
     padding: 2rem 1rem;
     font-size: var(--font-size-lg);
     text-align: left;
     display: flex;
-    line-height: 1.6;
+    line-height: 1.2;
     align-items: center;
     justify-content: center;
   }
+
+.card-back ul li {
+  color: #000;
+}
+
+.card-back ul li::before {
+  color: #000;
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  font-size: 1.1em;
+}
 
 .card-front {
   position: relative;
@@ -404,18 +415,19 @@
   right: 0;
   bottom: 0;
   height: 70px;
-  background: linear-gradient(180deg, #f8c7b0 0%, #e89b7c 100%);
+  background: linear-gradient(135deg, #E84E1D 0%, #F2920C 100%); /* Degradado naranja con colores primarios */
   color: white;
   font-size: var(--font-size-xl);
   font-weight: 500;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center !important; /* Forzar centrado siempre */
   border-bottom-left-radius: var(--border-radius-xl);
   border-bottom-right-radius: var(--border-radius-xl);
   letter-spacing: 0.5px;
   z-index: 2;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  text-align: center !important; /* Asegurar centrado de texto */
 }
 
 .card-info-indicator {
@@ -494,6 +506,10 @@
     .quienes-somos-top-row.grid-2 {
         grid-template-columns: 1fr;
     }
+    #btn-mas-info, #btn-mas-info-objetivos {
+        font-size: var(--font-size-md);
+    }
+
 
     .quienes-somos-bottom-row.grid-2 {
         display: flex; /* Cambiar a flexbox para control de orden */
@@ -561,7 +577,7 @@
 
     #quienes-somos p,
     #quienes-somos li {
-        font-size: var(--font-size-xl);
+        font-size: var(--font-size-md);
         text-align: justify;
     }
 
@@ -607,6 +623,11 @@
         flex-direction: column-reverse;
         gap: 1.5rem;
     }
+
+    #btn-mas-info, #btn-mas-info-objetivos {
+        font-size: var(--font-size-md);
+    }
+
     .objetivo-especifico-img-container img {
         width: 100%;
         height: 200px;
@@ -616,7 +637,7 @@
     }
 
     #quienes-somos .section-title {
-        font-size: var(--font-size-xxxl);
+        font-size: var(--font-size-xxl);
     }
 
     #vision-mision-objetivos .section-title {
@@ -657,7 +678,7 @@
         white-space: normal; /* Asegurar que el texto pueda envolver */
         padding: 0; /* Eliminar padding */
         margin: 0 0 var(--spacing-md) 0; /* Ajustar margen inferior si es necesario */
-        line-height: 1.6;
+        line-height: 1.2;
     }
 
     .ods-container img {
@@ -699,7 +720,6 @@
     
     .quienes-somos-top-row .quienes-somos-img-container {
         order: -1;
-        margin-bottom: var(--spacing-md);
     }
     
     .quienes-somos-bottom-row.grid-2 {
@@ -716,6 +736,39 @@
     #quienes-somos .section-title {
         margin-top: 0;
         margin-bottom: var(--spacing-sm);
+    }
+}
+
+/* Media query para pantallas de 1024px y menores */
+@media screen and (max-width: 1024px) {
+    #quienes-somos p,
+    #quienes-somos li {
+        font-size: var(--font-size-md);
+        text-align: justify;
+    }
+
+    .quote, .ejes-quote {
+        font-size: var(--font-size-md);
+    }
+
+    #vision-mision-objetivos ul li {
+        font-size: var(--font-size-md);
+    }
+
+    #vision-mision-objetivos p {
+        font-size: var(--font-size-md);
+    }
+
+    #nuestro-equipo p {
+        font-size: var(--font-size-md);
+    }
+
+    #nuestro-equipo .quote {
+        font-size: var(--font-size-md);
+    }
+
+    #btn-mas-info, #btn-mas-info-objetivos {
+        font-size: var(--font-size-md);
     }
 }
 

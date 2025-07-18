@@ -159,7 +159,7 @@
         padding: 10px 15px; /* Reducir padding */
         height: auto; /* Altura automática */
         min-height: 44px; /* Altura mínima */
-        line-height: 1.3; /* Ajustar altura de línea */
+        line-height: 1.2; /* Ajustar altura de línea */
         white-space: normal; /* Permitir que el texto se envuelva */
         word-wrap: break-word; /* Romper palabras largas */
         text-align: center; /* Centrar texto */
