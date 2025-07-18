@@ -300,6 +300,11 @@
     line-height: 1.2;
 }
 
+/* Centrar el texto del comité de ética */
+#nuestro-equipo p:nth-child(3) {
+    text-align: center;
+}
+
 #nuestro-equipo .quote {
     font-family: var(--font-family);
     font-size: var(--font-size-lg);
@@ -771,6 +776,11 @@
         font-size: var(--font-size-md);
     }
 }
+
+
+
+
+
 
 
 
