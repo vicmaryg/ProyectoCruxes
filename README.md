@@ -17,6 +17,7 @@ Sitio web oficial de la **Fundación Cruxes de Luz**, una organización que prom
 - Adaptación perfecta a móvil, tablet y desktop
 - Navegación adaptativa y menú hamburguesa
 - Imágenes optimizadas para cada resolución
+- Imágenes optimizadas para cada resolución
 
 ### 💝 **Sistema de Donaciones**
 - Modal de donaciones con múltiples opciones
