@@ -2,7 +2,7 @@
 
 .dona-main-title {
     color: var(--color-primary);
-    font-size: var(--font-size-xxxl);
+    font-size: var(--font-size-xxl);
     font-weight: 700;
     text-align: left; /* Alinear a la izquierda como en la imagen */
     margin-bottom: var(--spacing-md);

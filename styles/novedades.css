@@ -1,7 +1,7 @@
 /* Título de novedades */
 #novedades .section-title {
     color: #E84E1D;
-    font-size: var(--font-size-xxxl);
+    font-size: var(--font-size-xxl);
     font-weight: 700;
     text-align: left;
     margin-top: var(--spacing-sm);
