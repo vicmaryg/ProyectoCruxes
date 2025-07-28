@@ -66,7 +66,7 @@
     font-family: var(--font-family);
     margin-top: var(--spacing-md);
     margin-bottom: var(--spacing-md);
-    text-align: justify;
+    text-align: center;
     font-size: var(--font-size-lg);
     line-height: 1.2;
     font-style: italic;
@@ -86,7 +86,7 @@
 
 .quienes-somos-img {
     width: 597px;
-    height: 340px;
+    height: 200px;
     display: block;
     max-width: 100%; /* Asegurar que la imagen no se desborde */ /* Mantener la proporción */
     border-radius: var(--border-radius);
@@ -148,7 +148,7 @@
 
 .quienes-somos-ejes-img {
     width: 597px;
-    height: 340px;
+    height: 200px;
     max-width: 100%; /* Asegurar que la imagen no se desborde */
     height: auto; /* Mantener la proporción */
     display: block;
@@ -286,7 +286,7 @@
 
 #nuestro-equipo .section-title {
     font-family: var(--font-family);
-    font-size: var(--font-size-xxxl); 
+    font-size: var(--font-size-xxl); 
     color: #F2920C; 
     margin-bottom: var(--spacing-sm); 
     text-align: left;
@@ -311,8 +311,15 @@
     
     color: var(--color-primary);
     margin-top: var(--spacing-md);
-    text-align: justify;
+    text-align: center !important;
     line-height: 1.2;
+}
+
+/* Estilo adicional con mayor especificidad para asegurar que esté centrado */
+#nuestro-equipo q.quote {
+    text-align: center !important;
+    display: block;
+    width: 100%;
 }
 
 .cards-container {
@@ -560,9 +567,12 @@
         margin-top: var(--spacing-sm);
     }
 
-    #nuestro-equipo p,
-    #nuestro-equipo .quote {
+    #nuestro-equipo p {
         text-align: justify;
+    }
+
+    #nuestro-equipo .quote {
+        text-align: center;
     }
 
     .ods-container {
@@ -673,11 +683,22 @@
         margin: 0 0 var(--spacing-sm) 0; /* Ajustar margen inferior si es necesario */
     }
 
-    #nuestro-equipo p,
-    #nuestro-equipo .quote {
+    #nuestro-equipo p {
         text-align: justify;
         font-size: var(--font-size-md); /* Ajuste del tamaño de texto para 480px */
-        width: 100%; /* Asegurar que los párrafos y la cita tomen el 100% del ancho */
+        width: 100%; /* Asegurar que los párrafos tomen el 100% del ancho */
+        box-sizing: border-box; /* Incluir padding y border en el ancho total */
+        overflow-wrap: break-word; /* Romper palabras largas */
+        white-space: normal; /* Asegurar que el texto pueda envolver */
+        padding: 0; /* Eliminar padding */
+        margin: 0 0 var(--spacing-md) 0; /* Ajustar margen inferior si es necesario */
+        line-height: 1.2;
+    }
+
+    #nuestro-equipo .quote {
+        text-align: center;
+        font-size: var(--font-size-md); /* Ajuste del tamaño de texto para 480px */
+        width: 100%; /* Asegurar que la cita tome el 100% del ancho */
         box-sizing: border-box; /* Incluir padding y border en el ancho total */
         overflow-wrap: break-word; /* Romper palabras largas */
         white-space: normal; /* Asegurar que el texto pueda envolver */
@@ -770,6 +791,7 @@
 
     #nuestro-equipo .quote {
         font-size: var(--font-size-md);
+        text-align: center !important;
     }
 
     #btn-mas-info, #btn-mas-info-objetivos {
