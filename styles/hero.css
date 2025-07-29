@@ -150,7 +150,7 @@
 .split-text-container {
     display: flex;
     flex-direction: column;
-    font-size: 3.5rem;
+    font-size: var(--font-size-xxxxl);
     font-weight: bold;
     text-transform: uppercase;
     color: #fff;

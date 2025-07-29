@@ -8,8 +8,8 @@
 /* Estilos para la primera fila de Quiénes Somos */
 .quienes-somos-top-row.grid-2 {
     grid-template-columns: 2fr 1fr; /* Texto ancho, imagen estrecha */
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-lg);
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
 }
 
 /* Estilos para la segunda fila de Quiénes Somos */
@@ -85,8 +85,9 @@
 }
 
 .quienes-somos-img {
-    width: 597px;
-    height: 200px;
+    width: 550px;
+    height: 270px;
+    margin-bottom: var(--spacing-xl);
     display: block;
     max-width: 100%; /* Asegurar que la imagen no se desborde */ /* Mantener la proporción */
     border-radius: var(--border-radius);
@@ -798,12 +799,4 @@
         font-size: var(--font-size-md);
     }
 }
-
-
-
-
-
-
-
-
 
