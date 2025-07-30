@@ -213,8 +213,9 @@
 
 /* Estilos para la sección Visión, Misión y Objetivos */
 #vision-mision-objetivos {
-    margin-top: var(--spacing-lg);
-    padding-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-sm);
+    padding-bottom: var(--spacing-lg);
     border-top: 2px solid #F2920C;
 }
 
@@ -222,18 +223,69 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-md);
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Estilos para las cajas individuales */
+#vision-mision-objetivos .vision,
+#vision-mision-objetivos .mision,
+#vision-mision-objetivos .objetivo-general {
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+   
+    min-height: 200px;
+  
+    justify-content: flex-start;
+}
+
+/* Bordes de colores específicos para cada caja */
+#vision-mision-objetivos .vision {
+    
+    border-radius: 15px;
+    margin-top: var(--spacing-lg);
+    border: 15px solid #ffeb3b; /* Amarillo */
+}
+
+#vision-mision-objetivos .mision {
+    border-radius: 15px;
+    margin-top: var(--spacing-lg);
+    border: 15px solid #ff9800; /* Naranja-amarillo */
+}
+
+#vision-mision-objetivos .objetivo-general {
+    border-radius: 15px;
+    margin-top: var(--spacing-lg);
+    border: 15px solid #ea580c; /* Naranja */
 }
 
 #vision-mision-objetivos .section-title {
     font-family: var(--font-family);
     font-size: var(--font-size-xxl);
-    color: #F2920C;
+    color: #E84E1D; /* Color naranja para los títulos */
     margin-bottom: var(--spacing-md);
     border-bottom: none;
     padding-bottom: 0;
-    text-align: left;
-    margin-top: var(--spacing-sm);
+    text-align: center;
+    margin-top: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Estilos para el contenido de las cajas */
+#vision-mision-objetivos .vision-content,
+#vision-mision-objetivos .mision-content,
+#vision-mision-objetivos .objetivo-content {
+    font-family: var(--font-family);
+    font-size: var(--font-size-lg);
+    text-align: justify;
+    line-height: 1.4;
+    margin-bottom: 0;
+    color: #000;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
 }
 
 /* Estilos para listas dentro de la sección Visión, Misión, Objetivos */
@@ -496,7 +548,7 @@
     grid-template-columns: 1fr auto; /* El texto ocupa todo el espacio, la imagen solo lo necesario */
     gap: var(--spacing-lg); /* O el valor de gap que prefieras */
     border-top: 2px solid #F2920C;
-    padding-top: var(--spacing-sm);
+    padding-top: var(--spacing-xl);
 }
 .objetivo-especifico-img-container {
     display: flex;
@@ -544,12 +596,27 @@
     /* Ajustes para la sección Visión, Misión y Objetivos */
     #vision-mision-objetivos .vision-mision-objetivos-grid {
         grid-template-columns: 1fr; /* Una sola columna para apilar */
-        gap: 0; /* Eliminar el gap entre columnas */
+        gap: var(--spacing-md); /* Mantener espacio entre cajas */
+    }
+
+    #vision-mision-objetivos .vision,
+    #vision-mision-objetivos .mision,
+    #vision-mision-objetivos .objetivo-general {
+        min-height: auto;
+        padding: var(--spacing-md);
     }
 
     #vision-mision-objetivos .section-title {
-        text-align: left; /* Centrar títulos en móvil */
-        margin-top: var(--spacing-sm); /* Espaciado entre secciones */
+        text-align: center; /* Mantener centrado en móvil */
+        margin-top: 0;
+        font-size: var(--font-size-xl);
+    }
+
+    #vision-mision-objetivos .vision-content,
+    #vision-mision-objetivos .mision-content,
+    #vision-mision-objetivos .objetivo-content {
+        text-align: justify;
+        font-size: var(--font-size-md);
     }
 
     #vision-mision-objetivos p,
@@ -657,9 +724,24 @@
     }
 
     #vision-mision-objetivos .section-title {
-        font-size: var(--font-size-xxl);
+        font-size: var(--font-size-xl);
         margin-bottom: var(--spacing-sm);
-        margin-top: var(--spacing-sm);
+        margin-top: 0;
+        text-align: center;
+    }
+
+    #vision-mision-objetivos .vision,
+    #vision-mision-objetivos .mision,
+    #vision-mision-objetivos .objetivo-general {
+        padding: var(--spacing-sm);
+        min-height: auto;
+    }
+
+    #vision-mision-objetivos .vision-content,
+    #vision-mision-objetivos .mision-content,
+    #vision-mision-objetivos .objetivo-content {
+        font-size: var(--font-size-md);
+        text-align: justify;
     }
     /* Ajustes específicos para la sección Nuestro Equipo a 480px */
     #nuestro-equipo {
