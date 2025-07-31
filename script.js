@@ -25,6 +25,24 @@ function changeLanguage() {
 }
 
 // Función para actualizar los textos en la página
+// Función para cargar la lista de "Quienes somos"
+function loadQuienesSomosList() {
+    const quienesSomosList = document.getElementById('quienes-somos-list');
+    if (quienesSomosList) {
+        const t = translations[currentLanguage];
+        if (t && t.quienes_somos && t.quienes_somos.objetivos) {
+            quienesSomosList.innerHTML = '';
+            
+            t.quienes_somos.objetivos.forEach(objetivo => {
+                const li = document.createElement('li');
+                li.innerHTML = objetivo;
+                quienesSomosList.appendChild(li);
+            });
+        }
+    }
+}
+
+// Modificar la función updateTexts para incluir la carga de la lista
 function updateTexts() {
     console.log('Actualizando textos con idioma:', currentLanguage);
     const t = translations[currentLanguage];
@@ -955,9 +973,11 @@ function updateTexts() {
     // Agregar al final de la función updateTexts
     translateDataI18n();
     updateCardBackTitles();
+    loadQuienesSomosList(); // Agregar esta línea
 }
 
-// Corregir el DOMContentLoaded incompleto al final del archivo
+// También cargar al inicio
 document.addEventListener('DOMContentLoaded', function() {
+    loadQuienesSomosList();
     updateCardBackTitles();
 });
