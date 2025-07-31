@@ -1,11 +1,11 @@
 /* Título de novedades */
 #novedades .section-title {
-    color: #E84E1D;
+    color: var(--color-bermellon);
     font-size: var(--font-size-xxl);
     font-weight: 700;
     text-align: left;
-    margin-top: var(--spacing-sm);
-    margin-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
 }
 
 /* Contenedor de novedades */

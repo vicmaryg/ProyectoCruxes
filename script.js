@@ -921,3 +921,43 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// Función corregida para actualizar títulos de card-back
+function updateCardBackTitles() {
+    const cardBacks = document.querySelectorAll('.card-back[data-i18n-title]');
+    
+    cardBacks.forEach(cardBack => {
+        const titleKey = cardBack.getAttribute('data-i18n-title');
+        const keys = titleKey.split('.');
+        let value = translations[currentLanguage];
+        
+        // Navegar por el objeto de traducciones usando las claves anidadas
+        for (const k of keys) {
+            if (value && value[k] !== undefined) {
+                value = value[k];
+            } else {
+                console.warn(`Traducción no encontrada para: ${titleKey}`);
+                return;
+            }
+        }
+        
+        // Establecer el título si se encontró la traducción
+        if (typeof value === 'string') {
+            cardBack.setAttribute('data-title', value);
+        }
+    });
+}
+
+// Modificar la función updateTexts existente para incluir updateCardBackTitles
+function updateTexts() {
+    console.log('Textos actualizados exitosamente');
+    
+    // Agregar al final de la función updateTexts
+    translateDataI18n();
+    updateCardBackTitles();
+}
+
+// Corregir el DOMContentLoaded incompleto al final del archivo
+document.addEventListener('DOMContentLoaded', function() {
+    updateCardBackTitles();
+});

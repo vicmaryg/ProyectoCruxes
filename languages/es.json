@@ -99,7 +99,7 @@
             ]
         },
         "voluntariado": {
-            "title": "VOLUNTARIADO/ CAMPAÑA SOLIDARIA",
+            "title": "PROGRAMA DE VOLUNTARIADO - CAMPAÑA SOLIDARIA",
             "items": [
                 "✓ Brindar espacios de concientización.",
                 "✓ Capacitaciones sobre el servicio y voluntariado.",
@@ -126,4 +126,4 @@
         "continuar": "Continuar",
         "contactar": "Contactar"
     }
-} 
+}

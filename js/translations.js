@@ -207,7 +207,7 @@ const translations = {
                 ]
             },
             "voluntariado": {
-                "title": "VOLUNTARIADO/ CAMPAÑA SOLIDARIA",
+                "title": "PROGRAMA DE VOLUNTARIADO - CAMPAÑA SOLIDARIA",
                 "items": [
                     "✓ Brindar espacios de concientización.",
                     "✓ Capacitaciones sobre el servicio y voluntariado.",
@@ -216,7 +216,7 @@ const translations = {
                 ]
             },
             "escuela_valores": {
-                "title": "ESCUELA DE VALORES- RSE",
+                "title": "ESCUELA DE VALORES",
                 "subtitle": "Brindar Talleres sobre Desarrollo Personal:",
                 "items": [
                     "✓ Habilidades sociales.",
@@ -442,7 +442,7 @@ const translations = {
                 ]
             },
             "voluntariado": {
-                "title": "VOLUNTEERING/ SOLIDARITY CAMPAIGN",
+                "title": "VOLUNTEER PROGRAM - SOLIDARITY CAMPAIGN",
                 "items": [
                     "✓ Provide awareness spaces.",
                     "✓ Training on service and volunteering.",
@@ -451,7 +451,7 @@ const translations = {
                 ]
             },
             "escuela_valores": {
-                "title": "VALUES SCHOOL- CSR",
+                "title": "VALUES SCHOOL",
                 "subtitle": "Provide Personal Development Workshops:",
                 "items": [
                     "✓ Social skills.",
@@ -470,4 +470,4 @@ const translations = {
             "contactar": "Contact"
         }
     }
-}; 
+};
