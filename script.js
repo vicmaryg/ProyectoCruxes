@@ -44,7 +44,6 @@ function loadQuienesSomosList() {
 
 // Modificar la función updateTexts para incluir la carga de la lista
 function updateTexts() {
-    console.log('Actualizando textos con idioma:', currentLanguage);
     const t = translations[currentLanguage];
     
     if (!t) {
@@ -148,12 +147,28 @@ function updateTexts() {
         if (objetivoGeneralTitle) objetivoGeneralTitle.textContent = t.vision_mision.objetivo_general.title;
         if (objetivoGeneralText) objetivoGeneralText.textContent = t.vision_mision.objetivo_general.text;
         if (objetivoEspecificoTitle) objetivoEspecificoTitle.textContent = t.vision_mision.objetivo_especifico.title;
+        
+        // Asegurar que el elemento existe antes de modificarlo
         if (objetivoEspecificoList) {
+            console.log('Elemento ul encontrado, actualizando contenido...');
+            console.log('Items disponibles:', t.vision_mision.objetivo_especifico.items);
             // Mostrar los tres primeros ítems en la lista
             objetivoEspecificoList.innerHTML = t.vision_mision.objetivo_especifico.items
                 .slice(0, 3)
                 .map(item => `<li>${item}</li>`)
                 .join('');
+            console.log('Contenido actualizado:', objetivoEspecificoList.innerHTML);
+        } else {
+            console.log('Elemento ul NO encontrado');
+            // Intentar con un selector más específico
+            const alternativeList = document.querySelector('.objetivo-especifico-row ul');
+            if (alternativeList) {
+                console.log('Elemento ul encontrado con selector alternativo');
+                alternativeList.innerHTML = t.vision_mision.objetivo_especifico.items
+                    .slice(0, 3)
+                    .map(item => `<li>${item}</li>`)
+                    .join('');
+            }
         }
         
         // Nuestro Equipo
@@ -924,6 +939,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const originalUpdateTexts = window.updateTexts;
         window.updateTexts = function() {
             originalUpdateTexts();
+            if (masInfoObj.style.display === 'block') {
+                updateMasInfoObjText();
+            }
             masInfoObj.style.display = 'none';
             btnMasInfoObj.style.display = 'inline';
             btnMasInfoObj.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
@@ -966,18 +984,22 @@ function updateCardBackTitles() {
     });
 }
 
-// Modificar la función updateTexts existente para incluir updateCardBackTitles
-function updateTexts() {
-    console.log('Textos actualizados exitosamente');
-    
-    // Agregar al final de la función updateTexts
-    translateDataI18n();
-    updateCardBackTitles();
-    loadQuienesSomosList(); // Agregar esta línea
-}
-
 // También cargar al inicio
 document.addEventListener('DOMContentLoaded', function() {
     loadQuienesSomosList();
     updateCardBackTitles();
+});
+
+// Forzar actualización de la lista de objetivos específicos
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(() => {
+        const objetivoEspecificoList = document.querySelector('#vision-mision-objetivos ul') || document.querySelector('.objetivo-especifico-row ul');
+        if (objetivoEspecificoList && translations[currentLanguage]) {
+            const t = translations[currentLanguage];
+            objetivoEspecificoList.innerHTML = t.vision_mision.objetivo_especifico.items
+                .slice(0, 3)
+                .map(item => `<li>${item}</li>`)
+                .join('');
+        }
+    }, 100);
 });

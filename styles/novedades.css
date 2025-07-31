@@ -113,6 +113,22 @@
     transition: scroll-left 6s ease-in-out;
 }
 
+/* Gradientes específicos para cada contenedor del carrusel */
+/* Contenedor Alianzas - Gradiente amarillo (igual que card 1) */
+.novedad-item:nth-child(1) .novedad-carousel-container {
+    background: linear-gradient(135deg, var(--color-yellow) 0%, #F9A825 100%);
+}
+
+/* Contenedor Proyectos - Gradiente naranja-amarillo (igual que card 2) */
+.novedad-item:nth-child(2) .novedad-carousel-container {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, #C2410C 100%);
+}
+
+/* Contenedor Lanzamientos - Gradiente bermellón (igual que card 3) */
+.novedad-item:nth-child(3) .novedad-carousel-container {
+    background: linear-gradient(135deg, var(--color-bermellon) 0%, #B91C1C 100%);
+}
+
 /* Oculta la barra de desplazamiento predeterminada */
 .novedad-carousel-container::-webkit-scrollbar {
     display: none;
@@ -161,15 +177,31 @@
     box-sizing: border-box;
 }
 
+/* Gradientes específicos para cada navegación del carrusel */
+/* Navegación Alianzas - Gradiente amarillo (igual que card 1) */
+.novedad-item:nth-child(1) .carousel-nav {
+    background: linear-gradient(135deg, var(--color-yellow) 0%, #F9A825 100%);
+}
+
+/* Navegación Proyectos - Gradiente naranja-amarillo (igual que card 2) */
+.novedad-item:nth-child(2) .carousel-nav {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, #C2410C 100%);
+}
+
+/* Navegación Lanzamientos - Gradiente bermellón (igual que card 3) */
+.novedad-item:nth-child(3) .carousel-nav {
+    background: linear-gradient(135deg, var(--color-bermellon) 0%, #B91C1C 100%);
+}
+
 .arrow {
     cursor: pointer;
-    color: var(--color-primary);
+    color: white;
     font-size: var(--font-size-xxl);
 }
 
 /* Bloque Lanzamientos */
 .novedad-item {
-    border: 2px solid var(--color-primary);
+    border: none;
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     display: flex;
@@ -181,10 +213,26 @@
     padding-bottom: 0;
 }
 
+/* Gradientes específicos para cada bloque del carrusel */
+/* Bloque Alianzas - Gradiente amarillo (igual que card 1) */
+.novedad-item:nth-child(1) {
+    background: linear-gradient(135deg, var(--color-yellow) 0%, #F9A825 100%);
+}
+
+/* Bloque Proyectos - Gradiente naranja-amarillo (igual que card 2) */
+.novedad-item:nth-child(2) {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, #C2410C 100%);
+}
+
+/* Bloque Lanzamientos - Gradiente bermellón (igual que card 3) */
+.novedad-item:nth-child(3) {
+    background: linear-gradient(135deg, var(--color-bermellon) 0%, #B91C1C 100%);
+}
+
 .novedad-item h4.novedad-title {
     font-size: var(--font-size-xxl);
     font-weight: 700;
-    color: #F2A90C;
+    color: white;
     padding-top: 10px;
     padding-bottom: 10px;
     margin: 0;
@@ -253,7 +301,7 @@
 
 .novedad-item .arrow {
     cursor: pointer;
-    color: var(--color-primary);
+    color: white;
     font-size: var(--font-size-xxl);
 }
 
