@@ -158,6 +158,13 @@
     color: black !important;
 }
 
+.programa-highlight-spaced {
+    font-weight: 700;
+    color: var(--color-bermellon) !important;
+    padding: 0.1rem 0.3rem;
+    margin: 0 0.2rem;
+}
+
 /* Remover estilos antiguos */
 /*
 .programas-grid {
