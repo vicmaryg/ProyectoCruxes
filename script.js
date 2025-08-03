@@ -878,38 +878,75 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // === Mostrar/ocultar texto base de quienes somos ===
 document.addEventListener('DOMContentLoaded', function() {
-  const btnMasInfo = document.getElementById('btn-mas-info');
-  const masInfoTexto = document.getElementById('mas-info-texto');
-  if (btnMasInfo && masInfoTexto) {
-      function updateMasInfoText() {
-          const t = translations[currentLanguage];
-          if (t && t.quienes_somos && t.quienes_somos.base_text) {
-              masInfoTexto.innerHTML = t.quienes_somos.base_text;
-          }
-      }
-      // Siempre oculto al inicio
-      masInfoTexto.style.display = 'none';
-      btnMasInfo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
-      btnMasInfo.addEventListener('click', function toggleInfo() {
-          if (masInfoTexto.style.display === 'none' || masInfoTexto.style.display === '') {
-              updateMasInfoText();
-              masInfoTexto.style.display = 'block';
-              btnMasInfo.textContent = currentLanguage === 'es' ? '- info...' : '- info...';
-          } else {
-              masInfoTexto.style.display = 'none';
-              btnMasInfo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
-          }
-      });
-      // Si cambias de idioma, vuelve a ocultar la info y mostrar el link
-      const originalUpdateTexts = updateTexts;
-      window.updateTexts = function() {
-          originalUpdateTexts();
-          masInfoTexto.style.display = 'none';
-          btnMasInfo.style.display = 'inline';
-          btnMasInfo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
-      };
-      btnMasInfo.style.cursor = 'pointer';
-  }
+    const btnMasInfo = document.getElementById('btn-mas-info');
+    const masInfoTexto = document.getElementById('mas-info-texto');
+    if (btnMasInfo && masInfoTexto) {
+        function updateMasInfoText() {
+            const t = translations[currentLanguage];
+            if (t && t.quienes_somos && t.quienes_somos.base_text) {
+                masInfoTexto.innerHTML = t.quienes_somos.base_text;
+            }
+        }
+        // Siempre oculto al inicio
+        masInfoTexto.style.display = 'none';
+        btnMasInfo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
+        btnMasInfo.addEventListener('click', function toggleInfo() {
+            if (masInfoTexto.style.display === 'none' || masInfoTexto.style.display === '') {
+                updateMasInfoText();
+                masInfoTexto.style.display = 'block';
+                btnMasInfo.textContent = currentLanguage === 'es' ? '- info...' : '- info...';
+            } else {
+                masInfoTexto.style.display = 'none';
+                btnMasInfo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
+            }
+        });
+        // Si cambias de idioma, vuelve a ocultar la info y mostrar el link
+        const originalUpdateTexts = updateTexts;
+        window.updateTexts = function() {
+            originalUpdateTexts();
+            masInfoTexto.style.display = 'none';
+            btnMasInfo.style.display = 'inline';
+            btnMasInfo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
+        };
+        btnMasInfo.style.cursor = 'pointer';
+    }
+});
+
+// === Mostrar/ocultar texto del equipo ===
+document.addEventListener('DOMContentLoaded', function() {
+    const btnMasInfoEquipo = document.getElementById('btn-mas-info-equipo');
+    const masInfoEquipo = document.getElementById('mas-info-equipo');
+    if (btnMasInfoEquipo && masInfoEquipo) {
+        function updateMasInfoEquipoText() {
+            const t = translations[currentLanguage];
+            if (t && t.equipo && t.equipo.description) {
+                masInfoEquipo.innerHTML = `<p data-i18n="equipo.description">${t.equipo.description}</p>`;
+            }
+        }
+        masInfoEquipo.style.display = 'none';
+        btnMasInfoEquipo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
+        btnMasInfoEquipo.addEventListener('click', function toggleInfoEquipo() {
+            if (masInfoEquipo.style.display === 'none' || masInfoEquipo.style.display === '') {
+                updateMasInfoEquipoText();
+                masInfoEquipo.style.display = 'block';
+                btnMasInfoEquipo.textContent = currentLanguage === 'es' ? '- info...' : '- info...';
+            } else {
+                masInfoEquipo.style.display = 'none';
+                btnMasInfoEquipo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
+            }
+        });
+        const originalUpdateTexts = window.updateTexts;
+        window.updateTexts = function() {
+            originalUpdateTexts();
+            if (masInfoEquipo.style.display === 'block') {
+                updateMasInfoEquipoText();
+            }
+            masInfoEquipo.style.display = 'none';
+            btnMasInfoEquipo.style.display = 'inline';
+            btnMasInfoEquipo.textContent = currentLanguage === 'es' ? '+ info...' : '+ info...';
+        };
+        btnMasInfoEquipo.style.cursor = 'pointer';
+    }
 });
 
 // === Mostrar/ocultar los ítems extra de objetivo_especifico ===

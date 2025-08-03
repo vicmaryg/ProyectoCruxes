@@ -125,7 +125,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-#btn-mas-info, #btn-mas-info-objetivos {
+#btn-mas-info, #btn-mas-info-objetivos, #btn-mas-info-equipo {
     cursor:pointer; 
     color:#444;
     text-decoration:underline;
@@ -420,7 +420,7 @@
     .quienes-somos-top-row.grid-2 {
         grid-template-columns: 1fr;
     }
-    #btn-mas-info, #btn-mas-info-objetivos {
+    #btn-mas-info, #btn-mas-info-objetivos, #btn-mas-info-equipo {
         font-size: var(--font-size-md);
     }
 
@@ -557,7 +557,7 @@
         padding: 0;
     }
 
-    #btn-mas-info, #btn-mas-info-objetivos {
+    #btn-mas-info, #btn-mas-info-objetivos, #btn-mas-info-equipo {
         font-size: var(--font-size-md);
     }
 
@@ -724,7 +724,7 @@
         text-align: center !important;
     }
 
-    #btn-mas-info, #btn-mas-info-objetivos {
+    #btn-mas-info, #btn-mas-info-objetivos, #btn-mas-info-equipo {
         font-size: var(--font-size-md);
     }
 }

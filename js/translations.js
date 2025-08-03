@@ -26,10 +26,10 @@ const translations = {
             "objetivos": [
                 "Somos FUNDACIÓN CRUXES:",
                 "",
-                "• Promoviendo la <span class=\"programa-highlight\">Espiritualidad</span>, la <span class=\"programa-highlight\">Solidaridad</span> y el <span class=\"programa-highlight\">Desarrollo Personal</span>;",
-                "• Respondiendo <span class=\"programa-highlight\">Dónde y Cómo ayudar</span>, en ONGs o proyectos con impacto social;",
-                "• Construyendo <span class=\"programa-highlight\">Puentes</span> entre Empresas y voluntarios que desean ayudar con las ONGs que requieren ayuda, generando lazos, visibilidad y concientización.",
-                "• Ofreciendo <span class=\"programa-highlight\">Retiros</span> y <span class=\"programa-highlight\">Jornadas</span>, para auto-conocernos, crecer espiritual y solidariamente, promoviendo <span class=\"programa-highlight\">Agentes de cambio </span>."
+                " Promoviendo la <span class=\"programa-highlight\">Espiritualidad</span>, la <span class=\"programa-highlight\">Solidaridad</span> y el <span class=\"programa-highlight\">Desarrollo Personal</span>;",
+                " Respondiendo <span class=\"programa-highlight\">Dónde y Cómo ayudar</span>, en ONGs o proyectos con impacto social;",
+                " Construyendo <span class=\"programa-highlight\">Puentes</span> entre Empresas y voluntarios que desean ayudar con las ONGs que requieren ayuda, generando lazos, visibilidad y concientización.",
+                " Ofreciendo <span class=\"programa-highlight\">Retiros</span> y <span class=\"programa-highlight\">Jornadas</span>, para auto-conocernos, crecer espiritual y solidariamente, promoviendo <span class=\"programa-highlight\">Agentes de cambio </span>."
             ],
             "base_text": "Nuestras bases son los <span class=\"programa-highlight\">valores cristianos</span>, con una <span class=\"programa-highlight\">mirada integral</span>, y una propuesta innovadora y metodológica, creando Redes y uniendo a distintos actores en cada acción. Comprometiéndonos con los <span class=\"programa-highlight\">Objetivos de Desarrollo Sostenible (ODS)</span>, la <span class=\"programa-highlight\">Doctrina Social</span> y la <span class=\"programa-highlight\">Responsabilidad Social Empresarial (RSE)</span>;",
             "buttons": {
