@@ -216,7 +216,7 @@ const translations = {
                 ]
             },
             "escuela_valores": {
-                "title": "ESCUELA DE VALORES",
+                "title": "TALLERES- AGENTES DE CAMBIO",
                 "subtitle": "Brindar Talleres sobre Desarrollo Personal:",
                 "items": [
                     "✓ Habilidades sociales.",
@@ -224,6 +224,38 @@ const translations = {
                     "✓ Desarrollo humano y valores.",
                     "✓ Emociones y Estados de Ánimo.",
                     "✓ Solidaridad y servicio; Otros."
+                ]
+            },
+            "jornada_espitualidad": {
+                "title": "TALLER DE ESPIRITUALIDAD",
+                "items": [
+                    "✓ Duración: 1 día, 4 o 5 horas.",
+                    "✓ Tema: \"Amor en Revolución\"",
+                    "✓ Amar a uno mismo, a los demás y a Dios.",
+                    "✓ Metodología: charla, oración, descanso.",
+                    "✓ Compartir encuentro comunitario.",
+                    "✓ Opcional: en San Nicolás con recorrido."
+                ]
+            },
+            "retiro_espiritual": {
+                "title": "RETIRO ESPIRITUAL",
+                "items": [
+                    "✓ Duración: 2 días en San Nicolás, Bs. As.",
+                    "✓ Tema: \"Retiro para encontrarte\"",
+                    "✓ Amar a uno mismo, a los demás y a Dios.",
+                    "✓ Espiritualidad y Desarrollo Personal.",
+                    "✓ Metodología: charla, oración, descanso.",
+                    "✓ Compartir encuentro comunitario."
+                ]
+            },
+            "escuela_espiritual": {
+                "title": "ESCUELA DE DESARROLLO ESPIRITUAL",
+                "items": [
+                    "✓ Modalidad: virtual.",
+                    "✓ Temas: espiritualidad, desarrollo personal y servicio",
+                    "✓ Quién eres, Qué deseas, Qué eliges, Cómo amas y Cómo servir.",
+                    "✓ Frecuencia: una vez al mes.",
+                    "✓ Para todo público."
                 ]
             }
         },
@@ -459,6 +491,38 @@ const translations = {
                     "✓ Human development and values.",
                     "✓ Emotions and Mood States.",
                     "✓ Solidarity and service; Others."
+                ]
+            },
+            "jornada_espitualidad": {
+                "title": "SPIRITUALITY WORKSHOP",
+                "items": [
+                    "✓ Duration: 1 day, 4 or 5 hours.",
+                    "✓ Theme: \"Love in Revolution\"",
+                    "✓ Love yourself, others and God.",
+                    "✓ Methodology: talk, prayer, rest.",
+                    "✓ Share community gathering.",
+                    "✓ Optional: in San Nicolás with tour."
+                ]
+            },
+            "retiro_espiritual": {
+                "title": "SPIRITUAL RETREAT",
+                "items": [
+                    "✓ Duration: 2 days in San Nicolás, Bs. As.",
+                    "✓ Theme: \"Retreat to find yourself\"",
+                    "✓ Love yourself, others and God.",
+                    "✓ Spirituality and Personal Development.",
+                    "✓ Methodology: talk, prayer, rest.",
+                    "✓ Share a community gathering."
+                ]
+            },
+            "escuela_espiritual": {
+                "title": "SPIRITUAL DEVELOPMENT SCHOOL",
+                "items": [
+                    "✓ Modality: virtual.",
+                    "✓ Topics: spirituality, personal development and service",
+                    "✓ Who you are, What you desire, What you choose, How you love and How to serve.",
+                    "✓ Frequency: once a month.",
+                    "✓ For all audiences."
                 ]
             }
         },
