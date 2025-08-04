@@ -117,6 +117,38 @@
                 "✓ Emociones y Estados de Ánimo.",
                 "✓ Solidaridad y servicio; Otros."
             ]
+        },
+         "jornada_espitualidad": {
+            "title": "JORNADA DE ESPIRITUALIDAD",
+            "items": [
+                "✓ Duración 1 día, 4 o 5 horas.",
+                "✓ Tema: \"Amor en Revolución\"",
+                "✓ Amarse, amar a los demás y a Dios.",
+                "✓ Metodología: charla, oración, descanso.",
+                "✓ Compartir encuentro comunitario.",
+                "✓ Opcional: en San Nicolás con paseo."
+            ]
+        },
+        "retiro_espiritual": {
+            "title": "RETIRO ESPIRITUAL",
+            "items": [
+                "✓ Duración 2 día en San Nicolás, Bs. As.",
+                "✓ Tema: \"Retirarse para encontrarse\"",
+                "✓ Amarse, amar a los demás y a Dios.",
+                "✓ Espiritualidad y Desarrollo Personal.",
+                "✓ Metodología: charla, oración, descanso.",
+                "✓ Compartir un encuentro comunitario."
+            ]
+        },
+        "escuela_espiritualidad": {
+            "title": "ESCUELA DE DESARROLLO ESPIRITUAL",
+            "items": [
+                "✓ Modalidad: virtual.",
+                "✓ Temas: espiritualidad, desarrollo personal y servicio",
+                "✓ Quién sos, Qué deseas, Qué elegís, Cómo amas y Cómo servir.",
+                "✓ Frecuencia: 1 vez por mes.",
+                "✓ Para todo público."
+            ]
         }
     },
     "agradecimiento": {
