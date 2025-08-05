@@ -478,9 +478,9 @@
     color: #ffffff;
 }
 
-/* Card 4 - Yellow */
+/* Card 4 - Taller de Espiritualidad - Light Blue */
 .card-flip:nth-child(4) .card-back {
-    background: linear-gradient(135deg, var(--color-yellow) 0%, #F9A825 100%);
+    background: linear-gradient(135deg, #87CEEB 0%, #4682B4 100%);
     color: #ffffff;
 }
 
@@ -489,6 +489,48 @@
 }
 
 .card-flip:nth-child(4) .card-back ul li::before {
+    color: #ffffff;
+}
+
+/* JORNADA DE ESPIRITUALIDAD - Light Blue (primer card en sección Espiritualidad) */
+.cards-container:nth-of-type(2) .card-flip:nth-child(1) .card-back {
+    background: linear-gradient(135deg, #87CEEB 0%, #4682B4 100%);
+    color: #ffffff;
+}
+
+.cards-container:nth-of-type(2) .card-flip:nth-child(1) .card-back ul li {
+    color: #ffffff;
+}
+
+.cards-container:nth-of-type(2) .card-flip:nth-child(1) .card-back ul li::before {
+    color: #ffffff;
+}
+
+/* RETIRO ESPIRITUAL - Dark Blue (segundo card en sección Espiritualidad) */
+.cards-container:nth-of-type(2) .card-flip:nth-child(2) .card-back {
+    background: linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%);
+    color: #ffffff;
+}
+
+.cards-container:nth-of-type(2) .card-flip:nth-child(2) .card-back ul li {
+    color: #ffffff;
+}
+
+.cards-container:nth-of-type(2) .card-flip:nth-child(2) .card-back ul li::before {
+    color: #ffffff;
+}
+
+/* ESCUELA DE DESARROLLO ESPIRITUAL - Light Pink (tercer card en sección Espiritualidad) */
+.cards-container:nth-of-type(2) .card-flip:nth-child(3) .card-back {
+    background: linear-gradient(135deg, #F9A8D4 0%, #EC4899 100%);
+    color: #ffffff;
+}
+
+.cards-container:nth-of-type(2) .card-flip:nth-child(3) .card-back ul li {
+    color: #ffffff;
+}
+
+.cards-container:nth-of-type(2) .card-flip:nth-child(3) .card-back ul li::before {
     color: #ffffff;
 }
 
@@ -554,6 +596,7 @@
     color: #ffffff;
 }
 
+
 /* Card 2 - Programa de Voluntariado - Primary Dark */
 .card-flip:nth-child(2) .card-title-bar {
     background: linear-gradient(135deg, var(--color-primary-dark) 0%, #C2410C 100%);
@@ -566,9 +609,27 @@
     color: #ffffff;
 }
 
-/* Card 4 - Yellow */
+/* Card 4 - Taller de Espiritualidad - Light Blue */
 .card-flip:nth-child(4) .card-title-bar {
-    background: linear-gradient(135deg, var(--color-yellow) 0%, #F9A825 100%);
+    background: linear-gradient(135deg, #87CEEB 0%, #4682B4 100%);
+    color: #ffffff;
+}
+
+/* JORNADA DE ESPIRITUALIDAD - Light Blue (primer card en sección Espiritualidad) */
+.cards-container:nth-of-type(2) .card-flip:nth-child(1) .card-title-bar {
+    background: linear-gradient(135deg, #87CEEB 0%, #4682B4 100%);
+    color: #ffffff;
+}
+
+/* RETIRO ESPIRITUAL - Dark Blue (segundo card en sección Espiritualidad) */
+.cards-container:nth-of-type(2) .card-flip:nth-child(2) .card-title-bar {
+    background: linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%);
+    color: #ffffff;
+}
+
+/* ESCUELA DE DESARROLLO ESPIRITUAL - Light Pink (tercer card en sección Espiritualidad) */
+.cards-container:nth-of-type(2) .card-flip:nth-child(3) .card-title-bar {
+    background: linear-gradient(135deg, #F9A8D4 0%, #e2579d 100%);
     color: #ffffff;
 }
 

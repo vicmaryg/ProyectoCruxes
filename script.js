@@ -376,18 +376,8 @@ window.addEventListener('load', () => {
     handleHeaderScroll();
 });
 
-// Cargar el formulario
-const formularioContainer = document.getElementById('formulario-container');
-if (formularioContainer) {
-    fetch('formulario.html')
-        .then(response => response.text())
-        .then(html => {
-            formularioContainer.innerHTML = html;
-            // Inicializar el manejo del formulario después de cargarlo
-            initializeForm();
-        })
-        .catch(error => console.error('Error cargando el formulario:', error));
-}
+// Inicializar el formulario de contacto
+initializeForm();
 
   // Navegación suave
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -447,59 +437,70 @@ function initializeForm() {
       
       const nombre = document.getElementById('nombre').value.trim();
       const email = document.getElementById('email').value.trim();
-            const telefono = document.getElementById('telefono').value.trim();
-            const tipoContacto = document.getElementById('tipo-contacto').value;
+      const telefono = document.getElementById('telefono').value.trim();
+      const tipoContacto = document.getElementById('tipo-contacto').value;
+      const politicaPrivacidad = document.getElementById('politica-privacidad').checked;
       const mensaje = document.getElementById('mensaje').value.trim();
       
-      if (!nombre || !email || !mensaje) {
-        alert('Por favor, complete todos los campos requeridos.');
+      if (!nombre || !email || !telefono || !mensaje || !politicaPrivacidad) {
+        alert('Por favor, complete todos los campos requeridos y acepte la política de privacidad.');
         return;
       }
       
-            // Mostrar indicador de carga
-            const submitButton = contactoForm.querySelector('.btn-enviar');
-            const originalButtonText = submitButton.textContent;
-            submitButton.textContent = 'Enviando...';
-            submitButton.disabled = true;
-            
-            // Preparar los datos para enviar
-            const formData = {
-                nombre: nombre,
-                email: email,
-                telefono: telefono,
-                tipoContacto: tipoContacto,
-                mensaje: mensaje
-            };
+      // Mostrar indicador de carga
+      const submitButton = contactoForm.querySelector('.form-submit-btn');
+      const originalButtonText = submitButton.textContent;
+      submitButton.textContent = 'Enviando...';
+      submitButton.disabled = true;
+      
+      // Preparar los datos para enviar
+      const formData = {
+          nombre: nombre,
+          email: email,
+          telefono: telefono,
+          tipoContacto: tipoContacto,
+          mensaje: mensaje
+      };
 
-            // Enviar los datos al servidor
-            fetch('enviar_correo.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-      alert('¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.');
-      contactoForm.reset();
-                } else {
-                    throw new Error(data.error || 'Error al enviar el mensaje');
-                }
-            })
-            .catch(error => {
-                alert('Hubo un error al enviar el mensaje. Por favor, intente nuevamente más tarde.');
-                console.error('Error:', error);
-            })
-            .finally(() => {
-                // Restaurar el botón
-                submitButton.textContent = originalButtonText;
-                submitButton.disabled = false;
-            });
-        });
-    }
+      // Simular envío (reemplazar con tu endpoint real)
+      setTimeout(() => {
+          alert('¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.');
+          contactoForm.reset();
+          submitButton.textContent = originalButtonText;
+          submitButton.disabled = false;
+      }, 1000);
+      
+      // Código original para envío real (descomentar cuando tengas el backend)
+      /*
+      fetch('enviar_correo.php', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+      })
+      .then(response => response.json())
+      .then(data => {
+          if (data.success) {
+              alert('¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.');
+              contactoForm.reset();
+          } else {
+              throw new Error(data.error || 'Error al enviar el mensaje');
+          }
+      })
+      .catch(error => {
+          alert('Hubo un error al enviar el mensaje. Por favor, intente nuevamente más tarde.');
+          console.error('Error:', error);
+      })
+      .finally(() => {
+          // Restaurar el botón
+          submitButton.textContent = originalButtonText;
+          submitButton.disabled = false;
+      });
+      */
+    });
   }
+}
 
   // Control del menú hamburguesa
   const menuToggle = document.querySelector('.menu-toggle');

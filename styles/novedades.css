@@ -158,7 +158,7 @@
     flex-shrink: 0;
     text-align: center;
     color: #555;
-    min-height: 150px;
+    min-height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -278,7 +278,7 @@
     flex-shrink: 0;
     text-align: center;
     color: #555;
-    min-height: 150px;
+    min-height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -312,6 +312,7 @@
     }
     .novedad-item {
        margin-bottom: 5%;
+    }
     .novedad-item .novedad-carousel-container {
         padding-top: 0;
     }

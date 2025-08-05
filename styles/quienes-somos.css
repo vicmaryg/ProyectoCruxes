@@ -336,6 +336,13 @@
     gap: var(--spacing-lg); /* Espacio entre columnas */
     align-items: start; /* Alinear items al inicio de la columna */
 }
+.solidaridad-title, .espiritualidad-title {
+    font-family: var(--font-family);
+    font-size: var(--font-size-xxl); 
+    color: #E84E1D;
+    margin-top: var(--spacing-sm); 
+    margin-left: 3rem;
+}
 
 #nuestro-equipo .section-title {
     font-family: var(--font-family);
@@ -382,13 +389,14 @@
     gap: var(--spacing-xs); /* Espacio pequeño entre imágenes */
     justify-content: flex-start; /* Alinear las imágenes a la izquierda */
     align-items: center; /* Centrar verticalmente las imágenes */
-    margin-top: var(--spacing-md); /* Espacio encima del contenedor de ODS */
+    margin-top: var(--spacing-xl); /* Espacio encima del contenedor de ODS */
 }
 
 .ods-container img {
-    width: 120px; 
+    
+    width: 75px; 
     height: auto;
-    margin: 2px; 
+    margin: 1px; 
 }
 
 
