@@ -6,6 +6,13 @@
     font-family: var(--font-family);
 }
 
+body {
+    padding-top: 80px;
+    background-color: white;
+    line-height: 1.2;
+    cursor: url('../imagen/cursor.png'), auto;
+}
+
 /* Estilos base para enlaces */
 a {
     text-decoration: none;
@@ -69,6 +76,31 @@ html {
   text-align: justify;
   font-family: var(--font-family);
   font-size: var(--font-size-lg);
+}
+
+/* Estilos para cursores personalizados */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-help {
+    cursor: help;
+}
+
+.cursor-wait {
+    cursor: wait;
+}
+
+.cursor-not-allowed {
+    cursor: not-allowed;
+}
+
+.cursor-zoom-in {
+    cursor: zoom-in;
+}
+
+.cursor-custom {
+    cursor: url('../imagen/cursor.png'), auto;
 }
 
 @media (max-width: 1024px) {
