@@ -10,7 +10,7 @@ body {
     padding-top: 80px;
     background-color: white;
     line-height: 1.2;
-    cursor: url('../imagen/cursor.png'), auto;
+    cursor: url('../imagen/cursor.png') 35 35, auto;
 }
 
 /* Estilos base para enlaces */
@@ -21,7 +21,7 @@ a {
 
 /* Fondo general de la página */
 body {
-    padding-top: 80px;
+    padding-top: 70px;
     background-color: white;
     line-height: 1.2;
 }
@@ -73,9 +73,9 @@ html {
 }
 
 #mas-info-texto {
-  text-align: justify;
-  font-family: var(--font-family);
-  font-size: var(--font-size-lg);
+    text-align: justify;
+    font-family: var(--font-family);
+    font-size: var(--font-size-lg);
 }
 
 /* Estilos para cursores personalizados */

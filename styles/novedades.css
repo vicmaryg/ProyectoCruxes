@@ -248,7 +248,6 @@
     position: relative;
     background-color: white;
     padding-top: 0;
-    padding-bottom: var(--spacing-xl);
     padding-left: 10px;
     padding-right: 0;
     flex-direction: row;
