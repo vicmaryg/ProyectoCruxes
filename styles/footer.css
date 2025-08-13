@@ -153,19 +153,19 @@
     }
 
     .footer-link {
-        width: 100%; /* Botón ocupa todo el ancho disponible */
-        max-width: 300px; /* Ancho máximo para evitar que sea muy ancho */
-        font-size: var(--font-size-sm); /* Reducir tamaño de fuente */
-        padding: 10px 15px; /* Reducir padding */
-        height: auto; /* Altura automática */
-        min-height: 44px; /* Altura mínima */
-        line-height: 1.2; /* Ajustar altura de línea */
-        white-space: normal; /* Permitir que el texto se envuelva */
-        word-wrap: break-word; /* Romper palabras largas */
-        text-align: center; /* Centrar texto */
-        display: flex; /* Usar flexbox para centrado vertical */
-        align-items: center; /* Centrar verticalmente */
-        justify-content: center; /* Centrar horizontalmente */
+        width: 100%;
+        max-width: 300px;
+        font-size: var(--font-size-sm);
+        padding: 10px 15px;
+        height: auto;
+        min-height: 44px;
+        line-height: 1.2;
+        white-space: normal;
+        word-wrap: break-word;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .footer .social-icons {

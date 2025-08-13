@@ -37,6 +37,11 @@
     .quienes-somos-ejes-img {
         margin: 0 auto;
     }
+
+    /* Ocultar imagen corazones.webp en móvil */
+    img[src*="corazon.webp"] {
+        display: none;
+    }
 }
 
 /* Media queries para grid responsive */
@@ -75,4 +80,4 @@
         text-align: left;
         margin-bottom: 0;
     }
-} 
+}

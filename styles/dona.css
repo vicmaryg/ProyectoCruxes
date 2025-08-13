@@ -1,11 +1,12 @@
 /* Estilos para la sección de Donaciones */
 
 .dona-main-title {
-    color: var(--color-primary);
+    color: var(--color-bermellon);
     font-size: var(--font-size-xxl);
     font-weight: 700;
     text-align: left; /* Alinear a la izquierda como en la imagen */
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
 }
 
 /* Línea separadora */
@@ -118,6 +119,7 @@
         text-align: center;
         margin-bottom: var(--spacing-md);
         font-size: var(--font-size-xxl);
+        margin: 0;
     }
     
     .dona-grid {
@@ -146,4 +148,4 @@
         font-size: var(--font-size-sm);
         padding: 10px 20px;
     }
-} 
+}

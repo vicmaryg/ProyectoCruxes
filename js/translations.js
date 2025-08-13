@@ -26,10 +26,10 @@ const translations = {
             "objetivos": [
                 "Somos FUNDACIÓN CRUXES:",
                 "",
-                "• Promoviendo la <span class=\"programa-highlight\">Espiritualidad</span>, la <span class=\"programa-highlight\">Solidaridad</span> y el <span class=\"programa-highlight\">Desarrollo Personal</span>;",
-                "• Respondiendo <span class=\"programa-highlight\">Dónde y Cómo ayudar</span>, en ONGs o proyectos con impacto social;",
-                "• Construyendo <span class=\"programa-highlight\">Puentes</span> entre Empresas y voluntarios que desean ayudar con las ONGs que requieren ayuda, generando lazos, visibilidad y concientización.",
-                "• Ofreciendo <span class=\"programa-highlight\">Retiros</span> y <span class=\"programa-highlight\">Jornadas</span>, para auto-conocernos, crecer espiritual y solidariamente, promoviendo <span class=\"programa-highlight\">Agentes de cambio </span>."
+                " Promoviendo la <span class=\"programa-highlight\">Espiritualidad</span>, la <span class=\"programa-highlight\">Solidaridad</span> y el <span class=\"programa-highlight\">Desarrollo Personal</span>;",
+                " Respondiendo <span class=\"programa-highlight\">Dónde y Cómo ayudar</span>, en ONGs o proyectos con impacto social;",
+                " Construyendo <span class=\"programa-highlight\">Puentes</span> entre Empresas y voluntarios que desean ayudar con las ONGs que requieren ayuda, generando lazos, visibilidad y concientización.",
+                " Ofreciendo <span class=\"programa-highlight\">Retiros</span> y <span class=\"programa-highlight\">Jornadas</span>, para auto-conocernos, crecer espiritual y solidariamente, promoviendo <span class=\"programa-highlight\">Agentes de cambio </span>."
             ],
             "base_text": "Nuestras bases son los <span class=\"programa-highlight\">valores cristianos</span>, con una <span class=\"programa-highlight\">mirada integral</span>, y una propuesta innovadora y metodológica, creando Redes y uniendo a distintos actores en cada acción. Comprometiéndonos con los <span class=\"programa-highlight\">Objetivos de Desarrollo Sostenible (ODS)</span>, la <span class=\"programa-highlight\">Doctrina Social</span> y la <span class=\"programa-highlight\">Responsabilidad Social Empresarial (RSE)</span>;",
             "buttons": {
@@ -207,7 +207,7 @@ const translations = {
                 ]
             },
             "voluntariado": {
-                "title": "VOLUNTARIADO/ CAMPAÑA SOLIDARIA",
+                "title": "PROGRAMA DE VOLUNTARIADO - CAMPAÑA SOLIDARIA",
                 "items": [
                     "✓ Brindar espacios de concientización.",
                     "✓ Capacitaciones sobre el servicio y voluntariado.",
@@ -216,7 +216,7 @@ const translations = {
                 ]
             },
             "escuela_valores": {
-                "title": "ESCUELA DE VALORES- RSE",
+                "title": "TALLERES- AGENTES DE CAMBIO",
                 "subtitle": "Brindar Talleres sobre Desarrollo Personal:",
                 "items": [
                     "✓ Habilidades sociales.",
@@ -224,6 +224,38 @@ const translations = {
                     "✓ Desarrollo humano y valores.",
                     "✓ Emociones y Estados de Ánimo.",
                     "✓ Solidaridad y servicio; Otros."
+                ]
+            },
+            "jornada_espitualidad": {
+                "title": "TALLER DE ESPIRITUALIDAD",
+                "items": [
+                    "✓ Duración: 1 día, 4 o 5 horas.",
+                    "✓ Tema: \"Amor en Revolución\"",
+                    "✓ Amar a uno mismo, a los demás y a Dios.",
+                    "✓ Metodología: charla, oración, descanso.",
+                    "✓ Compartir encuentro comunitario.",
+                    "✓ Opcional: en San Nicolás con recorrido."
+                ]
+            },
+            "retiro_espiritual": {
+                "title": "RETIRO ESPIRITUAL",
+                "items": [
+                    "✓ Duración: 2 días en San Nicolás, Bs. As.",
+                    "✓ Tema: \"Retiro para encontrarte\"",
+                    "✓ Amar a uno mismo, a los demás y a Dios.",
+                    "✓ Espiritualidad y Desarrollo Personal.",
+                    "✓ Metodología: charla, oración, descanso.",
+                    "✓ Compartir encuentro comunitario."
+                ]
+            },
+            "escuela_espiritual": {
+                "title": "ESCUELA DE DESARROLLO ESPIRITUAL",
+                "items": [
+                    "✓ Modalidad: virtual.",
+                    "✓ Temas: espiritualidad, desarrollo personal y servicio",
+                    "✓ Quién eres, Qué deseas, Qué eliges, Cómo amas y Cómo servir.",
+                    "✓ Frecuencia: una vez al mes.",
+                    "✓ Para todo público."
                 ]
             }
         },
@@ -442,7 +474,7 @@ const translations = {
                 ]
             },
             "voluntariado": {
-                "title": "VOLUNTEERING/ SOLIDARITY CAMPAIGN",
+                "title": "VOLUNTEER PROGRAM - SOLIDARITY CAMPAIGN",
                 "items": [
                     "✓ Provide awareness spaces.",
                     "✓ Training on service and volunteering.",
@@ -451,7 +483,7 @@ const translations = {
                 ]
             },
             "escuela_valores": {
-                "title": "VALUES SCHOOL- CSR",
+                "title": "VALUES SCHOOL",
                 "subtitle": "Provide Personal Development Workshops:",
                 "items": [
                     "✓ Social skills.",
@@ -459,6 +491,38 @@ const translations = {
                     "✓ Human development and values.",
                     "✓ Emotions and Mood States.",
                     "✓ Solidarity and service; Others."
+                ]
+            },
+            "jornada_espitualidad": {
+                "title": "SPIRITUALITY WORKSHOP",
+                "items": [
+                    "✓ Duration: 1 day, 4 or 5 hours.",
+                    "✓ Theme: \"Love in Revolution\"",
+                    "✓ Love yourself, others and God.",
+                    "✓ Methodology: talk, prayer, rest.",
+                    "✓ Share community gathering.",
+                    "✓ Optional: in San Nicolás with tour."
+                ]
+            },
+            "retiro_espiritual": {
+                "title": "SPIRITUAL RETREAT",
+                "items": [
+                    "✓ Duration: 2 days in San Nicolás, Bs. As.",
+                    "✓ Theme: \"Retreat to find yourself\"",
+                    "✓ Love yourself, others and God.",
+                    "✓ Spirituality and Personal Development.",
+                    "✓ Methodology: talk, prayer, rest.",
+                    "✓ Share a community gathering."
+                ]
+            },
+            "escuela_espiritual": {
+                "title": "SPIRITUAL DEVELOPMENT SCHOOL",
+                "items": [
+                    "✓ Modality: virtual.",
+                    "✓ Topics: spirituality, personal development and service",
+                    "✓ Who you are, What you desire, What you choose, How you love and How to serve.",
+                    "✓ Frequency: once a month.",
+                    "✓ For all audiences."
                 ]
             }
         },
@@ -470,4 +534,4 @@ const translations = {
             "contactar": "Contact"
         }
     }
-}; 
+};
