@@ -17,7 +17,6 @@ Sitio web oficial de la **Fundación Cruxes de Luz**, una organización que prom
 - Adaptación perfecta a móvil, tablet y desktop
 - Navegación adaptativa y menú hamburguesa
 - Imágenes optimizadas para cada resolución
-- Imágenes optimizadas para cada resolución
 
 ### 💝 **Sistema de Donaciones**
 - Modal de donaciones con múltiples opciones
@@ -40,7 +39,7 @@ Sitio web oficial de la **Fundación Cruxes de Luz**, una organización que prom
 ## 🛠️ Tecnologías Utilizadas
 
 | Tecnología | Versión | Propósito |
-|------------|---------|-----------|
+|------------|---------|------------|
 | **HTML5** | - | Estructura semántica y accesible |
 | **CSS3** | - | Estilos modernos con variables CSS |
 | **JavaScript** | ES6+ | Funcionalidades interactivas |
@@ -246,6 +245,16 @@ El archivo `CNAME` permite configurar dominios personalizados.
 ## 📄 Licencia
 
 Este proyecto es propiedad de la **Fundación Cruxes de Luz**. Todos los derechos reservados.
+
+---
+
+## 📝 Últimas Actualizaciones
+
+### Versión 2.1.0 (Enero 2024)
+- Logo clickeable para navegación a inicio
+- Optimización de media queries en programas.css
+- Ajuste de tamaño de fuente para tarjetas en móvil
+- Limpieza y organización de código CSS
 
 ---
 
