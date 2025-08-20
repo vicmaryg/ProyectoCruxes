@@ -412,7 +412,7 @@
 }
 
 .objetivo-especifico-img-container img {
-    height: 400px;
+    height: 300px;
     margin-top: var(--spacing-sm);
     object-fit: contain;
     border-radius: var(--border-radius);

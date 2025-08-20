@@ -26,6 +26,7 @@
     --spacing-md: 1.5rem;
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
+    --spacing-xxl: 4rem;
     
     /* Bordes */
     --border-radius: 4px;
@@ -43,4 +44,4 @@
     
     --objetivo-img-width: 530px;
     --objetivo-img-height: 300px;
-} 
+}

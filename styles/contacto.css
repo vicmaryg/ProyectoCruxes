@@ -5,7 +5,7 @@
 #contacto {
     margin-top: var(--spacing-md); /* Añadir espacio en la parte superior */
     border-top: none; /* Eliminar la línea naranja superior */
-    margin-bottom: var(--spacing-md); /* Añadir espacio en la parte inferior */
+    margin-bottom: var(--spacing-xxl); /* Añadir espacio en la parte inferior */
 }
 
 
@@ -17,7 +17,7 @@
     grid-template-columns: 1fr; /* Una columna por defecto */
     gap: var(--spacing-lg);
     max-width: 1920px;
-    margin: 0;
+    margin: var(--spacing-xxl) auto;
     padding: 0 var(--spacing-sm);
 }
 

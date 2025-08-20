@@ -25,6 +25,7 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grid responsive */
     gap: var(--spacing-lg);
     text-align: left; /* Alinear contenido de los items a la izquierda */
+    margin-bottom: var(--spacing-xxl);
 }
 
 .dona-item {

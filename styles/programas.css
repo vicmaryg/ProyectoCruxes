@@ -230,9 +230,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin: var(--spacing-lg) auto;
+    margin: var(--spacing-xxl) auto;
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     padding: 0 var(--spacing-md);
 }
 
