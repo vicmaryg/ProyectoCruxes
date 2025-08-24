@@ -445,6 +445,7 @@
         width: 80%; /* Ajustar ancho al 100% del contenedor */
         max-width: 896px; /* Limitar el tamaño máximo de la imagen */
         height: 170px;
+        margin-bottom: var(--spacing-sm);
     }
 
     /* Ajustes para la sección Visión, Misión y Objetivos */
